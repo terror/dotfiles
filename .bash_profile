@@ -16,6 +16,7 @@ alias gst="git status"
 
 # Commands
 alias v="vim"
+alias run="g++ solution.cpp && ./a.out"
 
 # CD
 alias c="cd ~/Github/CompetitiveProgramming"
