@@ -26,7 +26,6 @@ set ai
 set number
 set hlsearch
 set ruler
-set paste
 set numberwidth=1
 set backspace=indent,eol,start
 set belloff=all
@@ -37,16 +36,18 @@ let g:molokai_original = 1
 colorscheme molokai
 
 " No need for arrow keys
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
-inoremap <Up> <Nop>
-
 nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 nnoremap <Up> <Nop>
 
+" Automatically closing braces & quotes
+inoremap { {}<Esc>ha
+inoremap ( ()<Esc>ha
+inoremap [ []<Esc>ha
+inoremap " ""<Esc>ha
+inoremap ' ''<Esc>ha
+inoremap ` ``<Esc>ha
 
 " Enable autoformat on save
 autocmd FileType c,cpp ClangFormatAutoEnable
