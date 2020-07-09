@@ -29,6 +29,8 @@ set ruler
 set numberwidth=1
 set backspace=indent,eol,start
 set belloff=all
+set splitbelow
+set termwinsize=10x0
 highlight Comment ctermfg=green
 
 " Color scheme
