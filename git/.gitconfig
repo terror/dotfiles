@@ -1,0 +1,12 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Liam
+	email = terroridk@gmail.com
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true

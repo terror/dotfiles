@@ -1,0 +1,7 @@
+.vscode/extensions
+.vim/bundle
+.vim/plugged
+config/Microsoft\\VisualStudio\ Services/
+config/configstore
+config/gatsby
+config/stetic
