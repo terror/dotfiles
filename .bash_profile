@@ -16,7 +16,8 @@ alias gst="git status"
 
 # Commands
 alias v="vim"
-alias run="g++ solution.cpp && ./a.out"
+alias run="g++ *.cpp && ./a.out"
+alias runpy="python3 *.py"
 
 # CD
 alias c="cd ~/Github/CompetitiveProgramming"
