@@ -6,6 +6,20 @@ export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="/Users/liam/Desktop/kattis-cli:$PATH"
 
+# Functions
+
+function run_cpp {
+  g++ "$@".cpp && ./a.out;
+}
+
+function run_python {
+  python3 "$@".py;
+}
+
+function mkcd {
+  mkdir -p "$@" && cd "$@"
+}
+
 # Git Aliases
 alias ga="git add"
 alias gc="git commit"
@@ -16,8 +30,9 @@ alias gst="git status"
 
 # Commands
 alias v="vim"
-alias run="g++ *.cpp && ./a.out"
-alias runpy="python3 *.py"
+alias run="run_cpp"
+alias runpy="run_python"
+alias mkcd="mkcd"
 
 # CD
 alias c="cd ~/Github/CompetitiveProgramming"

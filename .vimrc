@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'prettier/vim-prettier'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 call vundle#end()            " required
 filetype plugin on    " required
@@ -34,14 +35,14 @@ set termwinsize=10x0
 highlight Comment ctermfg=green
 
 " Color scheme
-let g:molokai_original = 1
-colorscheme molokai
+" let g:molokai_original = 1
+" colorscheme molokai
 
-" No need for arrow keys
-nnoremap <Down> <Nop>
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-nnoremap <Up> <Nop>
+" Hard Mode
+" nnoremap <Down> <Nop>
+" nnoremap <Left> <Nop>
+" nnoremap <Right> <Nop>
+" nnoremap <Up> <Nop>
 
 " Automatically closing braces & quotes
 inoremap { {}<Esc>ha
@@ -50,6 +51,22 @@ inoremap [ []<Esc>ha
 inoremap " ""<Esc>ha
 inoremap ' ''<Esc>ha
 inoremap ` ``<Esc>ha
+
+" Tabs
+nnoremap <Leader>1 1gt
+nnoremap <Leader>2 2gt
+nnoremap <Leader>3 3gt
+nnoremap <Leader>4 4gt
+nnoremap <Leader>5 5gt
+nnoremap <Leader>6 6gt
+nnoremap <Leader>7 7gt
+nnoremap <Leader>8 8gt
+nnoremap <Leader>9 9gt
+noremap <Leader>tN :tabnew<CR>
+noremap <Leader>tc :tabclose<CR>
+noremap <Leader>tm :tabmove<CR>
+noremap <Leader>tn :tabnext<CR>
+noremap <Leader>tp :tabprevious<CR>
 
 " Enable autoformat on save
 autocmd FileType c,cpp ClangFormatAutoEnable
