@@ -9,11 +9,11 @@ export PATH="/Users/liam/Desktop/kattis-cli:$PATH"
 # Functions
 
 function run_cpp {
-  g++ "$@".cpp && ./a.out;
+  g++ "$@" && ./a.out;
 }
 
 function run_python {
-  python3 "$@".py;
+  python3 "$@";
 }
 
 function mkcd {
@@ -31,7 +31,7 @@ alias gst="git status"
 # Commands
 alias v="vim"
 alias run="run_cpp"
-alias runpy="run_python"
+alias py="run_python"
 alias mkcd="mkcd"
 
 # CD

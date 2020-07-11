@@ -14,6 +14,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'prettier/vim-prettier'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'hugolgst/vimsence'
 
 call vundle#end()            " required
 filetype plugin on    " required
