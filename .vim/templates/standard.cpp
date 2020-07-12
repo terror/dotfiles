@@ -10,7 +10,7 @@ typedef vector<int> vi;
 typedef vector<ll> vl;
 typedef vector<vi> vvi;
 typedef vector<vl> vvl;
-typedef pair<int, int> pi;
+typedef pair<int, int> ii;
 typedef map<int, int> MPII;
 typedef set<int> SETI;
 
@@ -29,7 +29,7 @@ const ld prec = .000001;
 #define rall(c) c.end(), c.begin()
 
 int n, m, t, a[mxN];
-vi v(mxN);
+vi v;
 
 void fast() { ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0); }
 

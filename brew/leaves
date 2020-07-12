@@ -1,0 +1,10 @@
+clang-format
+heroku/brew/heroku
+hugo
+llvm
+mongodb/brew/mongodb-community
+mongodb/brew/mongodb-community-shell
+shellcheck
+vim
+wget
+yarn
