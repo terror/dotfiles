@@ -15,6 +15,7 @@ Plugin 'prettier/vim-prettier'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'hugolgst/vimsence'
+Plugin 'tell-k/vim-autopep8'
 
 call vundle#end()            " required
 filetype plugin on    " required
@@ -69,14 +70,16 @@ noremap <Leader>tm :tabmove<CR>
 noremap <Leader>tn :tabnext<CR>
 noremap <Leader>tp :tabprevious<CR>
 
-" Enable autoformat on save
+" Enable clang format autoformat on save
 autocmd FileType c,cpp ClangFormatAutoEnable
+
+" autopep8
+let g:autopep8_on_save = 1
+let g:autopep8_disable_show_diff=1
 
 " Disable Terminal bell
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
-
 " C++ Template
 :autocmd BufNewFile *.cpp 0r ~/.vim/templates/standard.cpp
-
