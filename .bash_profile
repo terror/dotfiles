@@ -5,6 +5,11 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="/Users/liam/Desktop/kattis-cli:$PATH"
+export PATH="/Users/liam/Desktop/contest-cli:$PATH"
+
+# Neofetch
+neofetch
+cd ~
 
 # shhh
 export BASH_SILENCE_DEPRECATION_WARNING=1

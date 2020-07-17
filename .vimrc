@@ -26,9 +26,10 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set ai
-set number
+set si
 set hlsearch
 set ruler
+set number
 set numberwidth=1
 set backspace=indent,eol,start
 set belloff=all
