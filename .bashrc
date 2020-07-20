@@ -26,12 +26,15 @@ alias gp="git pull"
 alias gd="git diff"
 alias gch="git checkout"
 alias gst="git status"
+alias gp="git push -u origin master"
 
 # Commands
 alias v="vim"
 alias run="run_cpp"
 alias py="run_python"
 alias mkcd="mkcd"
+alias l="ls"
+alias la="ls -a"
 
 # CD
 alias c="cd ~/Github/CompetitiveProgramming"

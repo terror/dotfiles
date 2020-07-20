@@ -26,7 +26,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set ai
-set si
 set hlsearch
 set ruler
 set number
