@@ -70,6 +70,9 @@ noremap <Leader>tm :tabmove<CR>
 noremap <Leader>tn :tabnext<CR>
 noremap <Leader>tp :tabprevious<CR>
 
+" Terminal
+map <C-a> :ter<CR>
+
 " Enable clang format autoformat on save
 autocmd FileType c,cpp ClangFormatAutoEnable
 

@@ -27,6 +27,7 @@ alias gd="git diff"
 alias gch="git checkout"
 alias gst="git status"
 alias gp="git push -u origin master"
+alias gpo="git push origin"
 
 # Commands
 alias v="vim"
@@ -35,6 +36,8 @@ alias py="run_python"
 alias mkcd="mkcd"
 alias l="ls"
 alias la="ls -a"
+alias e="exit"
 
 # CD
 alias c="cd ~/Github/CompetitiveProgramming"
+alias h="cd ~"
