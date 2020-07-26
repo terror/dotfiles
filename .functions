@@ -1,9 +1,9 @@
 # Functions
-function run_cpp {
+function run {
   g++ "$@" && ./a.out;
 }
 
-function run_python {
+function py {
   python3 "$@";
 }
 
