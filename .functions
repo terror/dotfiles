@@ -1,1 +1,13 @@
-/Users/liam/.functions
+# Functions
+function run_cpp {
+  g++ "$@" && ./a.out;
+}
+
+function run_python {
+  python3 "$@";
+}
+
+function mkcd {
+  mkdir -p "$@" && cd "$@"
+}
+

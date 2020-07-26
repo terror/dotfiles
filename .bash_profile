@@ -21,4 +21,3 @@ for file in ~/.{bashrc,aliases,functions}; do
 done;
 unset file;
   
-
