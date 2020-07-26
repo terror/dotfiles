@@ -9,39 +9,3 @@ parse_git_branch() {
 # Add colors to Terminal
 export PS1="\[\033[38;5;51m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;10m\]\h\[$(tput sgr0)\]\[\033[38;5;226m\]\w\[$(tput sgr0)\]\$(parse_git_branch)\[\033[00m\]\[\033[38;5;15m\]\\$\[$(tput sgr0)\]"
 export EDITOR='vim'
-
-# Functions
-function run_cpp {
-  g++ "$@" && ./a.out;
-}
-
-function run_python {
-  python3 "$@";
-}
-
-function mkcd {
-  mkdir -p "$@" && cd "$@"
-}
-
-# Git Aliases
-alias ga="git add"
-alias gc="git commit"
-alias gp="git pull"
-alias gd="git diff"
-alias gch="git checkout"
-alias gst="git status"
-alias gp="git push -u origin master"
-alias gpo="git push origin"
-
-# Commands
-alias v="vim"
-alias run="run_cpp"
-alias py="run_python"
-alias mkcd="mkcd"
-alias l="ls"
-alias la="ls -a"
-alias e="exit"
-
-# CD
-alias c="cd ~/Github/CompetitiveProgramming"
-alias h="cd ~"

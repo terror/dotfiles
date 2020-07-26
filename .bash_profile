@@ -15,8 +15,10 @@ cd ~
 # shhh
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-# bashrc
-if [ -f $HOME/.bashrc ];then
-    source $HOME/.bashrc
-fi
+# Load dotfiles
+for file in ~/.{bashrc,aliases,functions}; do
+	  source "$file";
+done;
+unset file;
+  
 
