@@ -2,10 +2,7 @@
 My personal dotfiles for Mac OSX
 
 # Current Specs
-Hardware: MB Pro 15 Inch  
-Terminal: iTerm2  
-Shell: Bash  
-Text Editor: Vim  
-VCS: Git  
-WM: Spectacle  
-Font: CascadiaCode-Regular 12  
+
+| Hardware   |      Terminal      |  Shell |  Text Editor   |      VCS      |  WM | Font |
+|----------|----------|----------|----------|----------|----------|----------|
+| MB Pro 15 Inch |  iTerm2 | Bash | Vim |  Git | Spectacle | CascadiaCode-Regular 12 |
