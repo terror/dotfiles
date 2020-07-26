@@ -4,5 +4,5 @@ config/Microsoft\\VisualStudio\ Services/
 config/configstore
 config/gatsby
 config/stetic
-bundle/*
-!bundle/Vundle.vim
+.vim/bundle/*
+!.vim/bundle/Vundle.vim
