@@ -7,6 +7,8 @@ alias gch="git checkout"
 alias gst="git status"
 alias gp="git push -u origin master"
 alias gpo="git push origin"
+alias gb="git branch"
+alias gcb="git checkout -b"
 
 # Commands
 alias v="vim"

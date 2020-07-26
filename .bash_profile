@@ -16,8 +16,7 @@ cd ~
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # Load dotfiles
-for file in ~/.{bashrc,aliases,functions}; do
-	  source "$file";
-done;
-unset file;
-  
+if [ -f $HOME/.bashrc ];then
+    source $HOME/.bashrc
+fi
+
