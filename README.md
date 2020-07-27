@@ -9,4 +9,4 @@ My personal dotfiles for Mac OSX
 
 # Screenshots
 
-![](/screenshots/terminal\ +\ vim.png)
+![](screenshots/terminalvim.png)
