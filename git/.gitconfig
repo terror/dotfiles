@@ -10,3 +10,9 @@
 	rebase = true
 [rebase]
 	autoStash = true
+[alias]
+  f = fetch
+  fu = fetch upstream master
+  track = branch --set-upstream-to=upstream/master master
+[core]
+  hooksPath= "/Users/liam/.hooks"

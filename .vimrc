@@ -10,10 +10,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
+Plugin 'sheerun/vim-polyglot'
 Plugin 'vim-airline/vim-airline'
 Plugin 'prettier/vim-prettier'
 Plugin 'rhysd/vim-clang-format'
-Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'hugolgst/vimsence'
 Plugin 'tell-k/vim-autopep8'
 

@@ -1,13 +1,14 @@
-# Functions
-function run {
+#!/bin/bash
+
+function run() {
   g++ "$@" && ./a.out;
 }
 
-function py {
+function py() {
   python3 "$@";
 }
 
-function mkcd {
+function mkcd() {
   mkdir -p "$@" && cd "$@"
 }
 
