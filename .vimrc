@@ -10,15 +10,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
-Plugin 'sheerun/vim-polyglot'
 Plugin 'vim-airline/vim-airline'
 Plugin 'prettier/vim-prettier'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'hugolgst/vimsence'
 Plugin 'tell-k/vim-autopep8'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()            " required
-filetype plugin on    " required
+filetype plugin indent on    " required
 
 " Config
 syntax on
@@ -34,11 +34,8 @@ set backspace=indent,eol,start
 set belloff=all
 set splitbelow
 set termwinsize=10x0
+:hi Error NONE
 highlight Comment ctermfg=green
-
-" Color scheme
-" let g:molokai_original = 1
-" colorscheme molokai
 
 " Hard Mode
 " nnoremap <Down> <Nop>
@@ -53,22 +50,6 @@ inoremap [ []<Esc>ha
 inoremap " ""<Esc>ha
 inoremap ' ''<Esc>ha
 inoremap ` ``<Esc>ha
-
-" Tabs
-nnoremap <Leader>1 1gt
-nnoremap <Leader>2 2gt
-nnoremap <Leader>3 3gt
-nnoremap <Leader>4 4gt
-nnoremap <Leader>5 5gt
-nnoremap <Leader>6 6gt
-nnoremap <Leader>7 7gt
-nnoremap <Leader>8 8gt
-nnoremap <Leader>9 9gt
-noremap <Leader>tN :tabnew<CR>
-noremap <Leader>tc :tabclose<CR>
-noremap <Leader>tm :tabmove<CR>
-noremap <Leader>tn :tabnext<CR>
-noremap <Leader>tp :tabprevious<CR>
 
 " Terminal
 map <C-a> :ter<CR>
