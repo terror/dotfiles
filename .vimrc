@@ -16,6 +16,7 @@ Plugin 'rhysd/vim-clang-format'
 Plugin 'hugolgst/vimsence'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -42,14 +43,6 @@ highlight Comment ctermfg=green
 " nnoremap <Left> <Nop>
 " nnoremap <Right> <Nop>
 " nnoremap <Up> <Nop>
-
-" Automatically closing braces & quotes
-inoremap { {}<Esc>ha
-inoremap ( ()<Esc>ha
-inoremap [ []<Esc>ha
-inoremap " ""<Esc>ha
-inoremap ' ''<Esc>ha
-inoremap ` ``<Esc>ha
 
 " Terminal
 map <C-a> :ter<CR>
