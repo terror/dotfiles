@@ -60,3 +60,7 @@ autocmd GUIEnter * set visualbell t_vb=
 
 " C++ Template
 :autocmd BufNewFile *.cpp 0r ~/.vim/templates/standard.cpp
+
+" Auto Pairs
+let g:AutoPairsFlyMode = 1
+let g:AutoPairsShortcutBackInsert = '<M-b>'

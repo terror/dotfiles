@@ -1,0 +1,17 @@
+add_newline = false
+prompt_order = ["username", "directory", "git_branch","character"]
+
+[username]
+style_user = "bold cyan"
+show_always = true
+
+[directory]
+style = "bold yellow"
+
+[character]
+symbol = "$"
+style_failure	= "bold green"
+
+[git_branch]
+symbol = ""
+style = "bold green"
