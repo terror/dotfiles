@@ -5,8 +5,8 @@ My personal dotfiles for Mac OSX
 
 | Hardware   |      Terminal      |  Shell |  Text Editor   |      VCS      |  WM | Font |
 |----------|----------|----------|----------|----------|----------|----------|
-| MB Pro 15 Inch |  iTerm2 | Bash | Vim |  Git | Spectacle | CascadiaCode-Regular 12 |
+| MB Pro 15 Inch |  iTerm2 | Bash | Vim |  Git | Spectacle | Cascadia Code |
 
 # Screenshots
 
-![](screenshots/terminalvim.png)
+![](screenshots/terminal.png)
