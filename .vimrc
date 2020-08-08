@@ -17,9 +17,11 @@ Plugin 'hugolgst/vimsence'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()            " required
-filetype plugin indent on    " required
+filetype plugin on    " required
 
 " Config
 syntax on

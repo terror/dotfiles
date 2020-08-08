@@ -8,6 +8,9 @@ export PATH="/Users/liam/Desktop/kattis-cli:$PATH"
 export PATH="/Users/liam/Desktop/contest-cli:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Set colors to match iTerm2 Terminal Colors
+export TERM=xterm-color
+
 # Neofetch
 neofetch
 cd ~
