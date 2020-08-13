@@ -37,14 +37,21 @@ set backspace=indent,eol,start
 set belloff=all
 set splitbelow
 set termwinsize=10x0
+
+" Permanent undo
+set undodir=~/.vim/.vimdid
+set undofile
+
 :hi Error NONE
 highlight Comment ctermfg=green
 
-" Hard Mode
-" nnoremap <Down> <Nop>
-" nnoremap <Left> <Nop>
-" nnoremap <Right> <Nop>
-" nnoremap <Up> <Nop>
+" God Mode
+" nnoremap <up> <nop>
+" nnoremap <down> <nop>
+" inoremap <up> <nop>
+" inoremap <down> <nop>
+" inoremap <left> <nop>
+" inoremap <right> <nop>
 
 " Terminal
 map <C-a> :ter<CR>
@@ -66,3 +73,4 @@ autocmd GUIEnter * set visualbell t_vb=
 " Auto Pairs
 let g:AutoPairsFlyMode = 0
 let g:AutoPairsShortcutBackInsert = '<M-b>'
+
