@@ -1,0 +1,21 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.vim: .vim
+    ~/.vimrc: .vimrc
+    ~/.config: config
+    ~/.gitconfig: git/.gitconfig
+    ~/.hooks: hooks
+    ~/.bash_profile: .bash_profile
+    ~/.bashrc: .bashrc
+    ~/.functions: .functions
+    ~/.aliases: .aliases
+    ~/.vscode: .vscode
+    ~/.hushlogin: .hushlogin
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

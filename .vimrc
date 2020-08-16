@@ -10,20 +10,32 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
+
+" Status/tabline
 Plugin 'vim-airline/vim-airline'
-Plugin 'prettier/vim-prettier'
-Plugin 'rhysd/vim-clang-format'
+
+" Discord Rich Presence
 Plugin 'hugolgst/vimsence'
+
+" Code formatting 
 Plugin 'tell-k/vim-autopep8'
+Plugin 'rhysd/vim-clang-format'
+Plugin 'prettier/vim-prettier'
+
+" Syntax support for many languages
 Plugin 'sheerun/vim-polyglot'
+
+" ( == ()
 Plugin 'jiangmiao/auto-pairs'
+
+" Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()            " required
 filetype plugin on    " required
 
-" Config
+" Basic settings 
 syntax on
 set tabstop=2
 set shiftwidth=2
@@ -37,6 +49,7 @@ set backspace=indent,eol,start
 set belloff=all
 set splitbelow
 set termwinsize=10x0
+set nofoldenable    " disable folding
 
 " Permanent undo
 set undodir=~/.vim/.vimdid
@@ -74,3 +87,7 @@ autocmd GUIEnter * set visualbell t_vb=
 let g:AutoPairsFlyMode = 0
 let g:AutoPairsShortcutBackInsert = '<M-b>'
 
+" Vim Markdown
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
+let g:markdown_folding = 0

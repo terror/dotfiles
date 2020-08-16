@@ -3,6 +3,7 @@
 # Shortcuts
 alias c="cd ~/Github/CompetitiveProgramming"
 alias h="cd ~"
+alias ..="cd .."
 
 # Git
 alias ga="git add"
@@ -16,10 +17,13 @@ alias gpo="git push origin"
 alias gb="git branch"
 alias gcb="git checkout -b"
 
+# ls aliases
+alias l="ls"
+alias ll="ls -lah"
+alias la="ls -a"
+
 # Commands
 alias v="vim"
-alias l="ls"
-alias la="ls -a"
 alias e="exit"
 alias g="git"
 
@@ -27,5 +31,4 @@ alias g="git"
 alias reload="exec ${SHELL} -l"
 # open new chrome tab
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-
 

@@ -8,8 +8,19 @@ function py() {
   python3 "$@";
 }
 
+# Create and CD into directory
 function mkcd() {
   mkdir -p "$@" && cd "$@"
+}
+
+# See total lines of code in a git repo
+function loc() {
+  git ls-files | xargs wc -l
+}
+
+# Generate a SHA-256 hash
+function sha() {
+  echo -n "$@" | shasum -a 256
 }
 
 function note() {
@@ -31,6 +42,16 @@ function note() {
       ;;
     *)
       vim "$notes_dir/$1"
+  esac
+}
+
+function journal() {
+  local journal_dir="$HOME/Dropbox/Notes/daily/journals"
+  case "$1" in
+    new)
+      cd $journal_dir
+      vi $(date -u '+%Y-%m-%d').md
+      ;;
   esac
 }
 
