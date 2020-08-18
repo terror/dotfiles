@@ -15,5 +15,7 @@
   fu = fetch upstream master
   track = branch --set-upstream-to=upstream/master master
   parent = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
+  lg = log --oneline
+  last = log -1 HEAD
 [core]
   hooksPath= "/Users/liam/.hooks"

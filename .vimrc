@@ -1,5 +1,5 @@
 " Vundle
-set nocompatible             
+set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
@@ -17,7 +17,7 @@ Plugin 'vim-airline/vim-airline'
 " Discord Rich Presence
 Plugin 'hugolgst/vimsence'
 
-" Code formatting 
+" Code formatting
 Plugin 'tell-k/vim-autopep8'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'prettier/vim-prettier'
@@ -25,7 +25,7 @@ Plugin 'prettier/vim-prettier'
 " Syntax support for many languages
 Plugin 'sheerun/vim-polyglot'
 
-" ( == ()
+" ( -> ()
 Plugin 'jiangmiao/auto-pairs'
 
 " Markdown
@@ -35,7 +35,7 @@ Plugin 'plasticboy/vim-markdown'
 call vundle#end()            " required
 filetype plugin on    " required
 
-" Basic settings 
+" Basic settings
 syntax on
 set tabstop=2
 set shiftwidth=2
@@ -91,3 +91,7 @@ let g:AutoPairsShortcutBackInsert = '<M-b>'
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_conceal_code_blocks = 0
 let g:markdown_folding = 0
+
+" Stop trailing whitespace
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
