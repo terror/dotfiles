@@ -14,6 +14,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Status/tabline
 Plugin 'vim-airline/vim-airline'
 
+" File system explorer
+Plugin 'scrooloose/nerdtree'
+
 " Discord Rich Presence
 Plugin 'hugolgst/vimsence'
 
@@ -27,6 +30,12 @@ Plugin 'sheerun/vim-polyglot'
 
 " ( -> ()
 Plugin 'jiangmiao/auto-pairs'
+
+" C# Development
+Plugin 'OmniSharp/omnisharp-vim'
+
+" Code linting
+Plugin 'w0rp/ale'
 
 " Markdown
 Plugin 'godlygeek/tabular'
@@ -50,13 +59,12 @@ set belloff=all
 set splitbelow
 set termwinsize=10x0
 set nofoldenable    " disable folding
+:hi Error NONE
+highlight Comment ctermfg=green
 
 " Permanent undo
 set undodir=~/.vim/.vimdid
 set undofile
-
-:hi Error NONE
-highlight Comment ctermfg=green
 
 " God Mode
 " nnoremap <up> <nop>
@@ -66,13 +74,13 @@ highlight Comment ctermfg=green
 " inoremap <left> <nop>
 " inoremap <right> <nop>
 
-" Terminal
+" Terminal to Ctrl+a
 map <C-a> :ter<CR>
 
 " Enable clang format autoformat on save
 autocmd FileType c,cpp ClangFormatAutoEnable
 
-" autopep8
+" Autopep8 code formatting for Python
 let g:autopep8_on_save = 1
 let g:autopep8_disable_show_diff=1
 
@@ -95,3 +103,23 @@ let g:markdown_folding = 0
 " Stop trailing whitespace
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
+" Omnisharp
+let g:OmniSharp_server_use_mono = 1
+  autocmd FileType cs nmap <silent> <buffer> <Leader>os= <Plug>(omnisharp_code_format)
+inoremap <expr> <Tab> pumvisible() ? '<C-n>' :                                                                                                                    
+\ getline('.')[col('.')-2] =~# '[[:alnum:].-_#$]' ? '<C-x><C-o>' : '<Tab>'
+nnoremap <C-o><C-r> :!dotnet run
+let g:OmniSharp_want_snippet=1
+
+" Ale Config
+let g:ale_linters = {
+\ 'cs': ['OmniSharp']
+\}
+let g:ale_fix_on_save = 1
+let g:ale_set_highlights = 0
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+" Nerd Tree Ctrl+O
+map <C-o> :NERDTreeToggle<CR>

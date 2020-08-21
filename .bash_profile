@@ -11,12 +11,8 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-color
 
-# Run neofetch on start
-neofetch
 cd ~
-
 # Load dotfiles
 if [ -f $HOME/.bashrc ];then
     source $HOME/.bashrc
 fi
-

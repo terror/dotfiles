@@ -8,6 +8,12 @@ function py() {
   python3 "$@";
 }
 
+# Run dotnet core project
+function cs() {
+  local dir="$@"
+  dotnet "${dir}/bin/debug/netcoreapp3.1/${dir}.dll";
+}
+
 # Create and CD into directory
 function mkcd() {
   mkdir -p "$@" && cd "$@"
@@ -54,4 +60,3 @@ function journal() {
       ;;
   esac
 }
-

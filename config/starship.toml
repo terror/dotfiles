@@ -1,5 +1,5 @@
 add_newline = false
-prompt_order = ["username", "directory", "git_branch","character"]
+prompt_order = ["username","directory","git_branch","character"]
 
 [username]
 style_user = "bold cyan"
