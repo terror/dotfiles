@@ -18,6 +18,16 @@ function cs() {
   dotnet "${dir}/bin/debug/netcoreapp3.1/${dir}.dll";
 }
 
+# Startup Redis
+function rdis() {
+ redis-server /usr/local/etc/redis.conf
+}
+
+# Open in chrome
+function oc() {
+  open -a "Google Chrome" "$@"
+}
+
 # Create and CD into directory
 function mkcd() {
   mkdir -p "$@" && cd "$@"
