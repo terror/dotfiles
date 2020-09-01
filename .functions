@@ -38,9 +38,18 @@ function loc() {
   git ls-files | xargs wc -l
 }
 
+# Number of commits
+function noc() {
+  git rev-list --count HEAD
+}
+
 # Generate a SHA-256 hash
 function sha() {
   echo -n "$@" | shasum -a 256
+}
+
+function sol() {
+  touch solution."$@" && vi solution."$@"
 }
 
 function note() {
@@ -87,4 +96,9 @@ function fs() {
 	else
 		du $arg .[^.]* ./*;
 	fi;
+}
+
+# See abs path
+function realpath() {
+    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
 }
