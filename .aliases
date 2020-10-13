@@ -1,11 +1,19 @@
 #!/bin/bash
 
-# Shortcuts
+# shortcuts
 alias c="cd ~/Github/CompetitiveProgramming"
-alias h="cd ~"
-alias ..="cd .."
+alias gh="cd ~/Github"
 
-# Git
+# Easier navigation: .., ..., ...., ....., ~ and -
+# from https://github.com/mathiasbynens/dotfiles/blob/main/.aliases
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+# git
 alias ga="git add"
 alias gc="git commit"
 alias gp="git pull"
@@ -17,12 +25,12 @@ alias gpo="git push origin"
 alias gb="git branch"
 alias gcb="git checkout -b"
 
-# ls aliases
+# ls
 alias l="ls"
 alias ll="ls -lah"
 alias la="ls -a"
 
-# Commands
+# commands
 alias v="vim"
 alias e="exit"
 alias g="git"
@@ -31,4 +39,5 @@ alias g="git"
 alias reload="exec ${SHELL} -l"
 # open new chrome tab
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-
+# cordless is sick 
+alias discord='cordless'

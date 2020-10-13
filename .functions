@@ -19,7 +19,7 @@ function cs() {
 }
 
 # Startup Redis
-function rdis() {
+function redis() {
  redis-server /usr/local/etc/redis.conf
 }
 
@@ -30,7 +30,7 @@ function oc() {
 
 # Create and CD into directory
 function mkcd() {
-  mkdir -p "$@" && cd "$@"
+  mkdir -p "$@" && cd "$@" || exit
 }
 
 # See total lines of code in a git repo
@@ -56,18 +56,18 @@ function note() {
   local notes_dir="$HOME/Dropbox/Notes"
   case "$1" in
     c)
-      cd $notes_dir
+      cd "$notes_dir" || exit
       ;;
     l)
-      ls $notes_dir
+      ls "$notes_dir"
       ;;
     p)
-      pushd $notes_dir
+      pushd "$notes_dir" || exit
       msg="Regenerated at $(date -u '+%Y-%m-%d %H:%M:%S') UTC"
       git add .
       git commit -m "$msg"
       git push origin master
-      popd
+      popd || exit
       ;;
     *)
       vim "$notes_dir/$1"
@@ -78,13 +78,14 @@ function journal() {
   local journal_dir="$HOME/Dropbox/Notes/daily/journals"
   case "$1" in
     new)
-      cd $journal_dir
-      vi $(date -u '+%Y-%m-%d').md
+      cd "$journal_dir" || exit
+      vi "$(date -u '+%Y-%m-%d')".md
       ;;
   esac
 }
 
 # Determine size of a file or total size of a directory
+# from https://github.com/mathiasbynens/dotfiles/blob/main/.functions
 function fs() {
 	if du -b /dev/null > /dev/null 2>&1; then
 		local arg=-sbh;
@@ -101,4 +102,9 @@ function fs() {
 # See abs path
 function realpath() {
     [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
+# Nice LS using BAT
+function bls() {
+  ls . | bat
 }
