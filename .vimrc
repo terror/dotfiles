@@ -1,6 +1,7 @@
 " Vundle
 set nocompatible
 filetype off
+let mapleader="\<Space>"
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -40,6 +41,11 @@ Plugin 'w0rp/ale'
 " Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'euclio/vim-markdown-composer'
+
+" fzf
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()            " required
 filetype plugin on    " required
@@ -59,6 +65,8 @@ set belloff=all
 set splitbelow
 set termwinsize=10x0
 set nofoldenable    " disable folding
+set mouse=a
+set clipboard=exclude:.*
 :hi Error NONE
 highlight Comment ctermfg=green
 
@@ -67,12 +75,12 @@ set undodir=~/.vim/.vimdid
 set undofile
 
 " God Mode
-" nnoremap <up> <nop>
-" nnoremap <down> <nop>
-" inoremap <up> <nop>
-" inoremap <down> <nop>
-" inoremap <left> <nop>
-" inoremap <right> <nop>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 " Terminal to Ctrl+a
 map <C-a> :ter<CR>
@@ -95,13 +103,19 @@ autocmd GUIEnter * set visualbell t_vb=
 let g:AutoPairsFlyMode = 0
 let g:AutoPairsShortcutBackInsert = '<M-b>'
 
-" Vim Markdown
+" Vim Markdown/Composer
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_conceal_code_blocks = 0
 let g:markdown_folding = 0
+let g:markdown_composer_autostart = 0
+let g:markdown_composer_syntax_theme = 'monokai'
+map <C-M> :ComposerStart<CR>
 
 " Stop trailing whitespace
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+" Clear search highlighting 
+nnoremap <silent> <C-L> :noh<CR><C-L>
 
 " Omnisharp
 let g:OmniSharp_server_use_mono = 1
@@ -121,5 +135,8 @@ let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
-" Nerd Tree Ctrl+O
+" Nerd Tree Ctrl+O 
 map <C-o> :NERDTreeToggle<CR>
+
+" fzf
+set rtp+=/usr/local/opt/fzf

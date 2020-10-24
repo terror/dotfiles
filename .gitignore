@@ -1,7 +1,5 @@
 .vscode/extensions
-config/Microsoft\\VisualStudio\ Services/
 config/configstore
-config/gatsby
-config/stetic
 .vim/bundle/*
 !.vim/bundle/Vundle.vim
+venv

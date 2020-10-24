@@ -12,6 +12,6 @@ for file in ~/.{aliases,functions}; do
 done;
 
 # book note :)
-cd /Users/liam/Github/book-notes && py generate.py && cd ~ || exit
+cd /Users/liam/Github/bookshelf && py generate.py && cd ~ || exit
 
 unset file;

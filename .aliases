@@ -3,6 +3,7 @@
 # shortcuts
 alias c="cd ~/Github/CompetitiveProgramming"
 alias gh="cd ~/Github"
+alias jac="cd ~/'JAC CompSci'"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 # from https://github.com/mathiasbynens/dotfiles/blob/main/.aliases
