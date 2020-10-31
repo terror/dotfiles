@@ -1,5 +1,4 @@
 .vscode/extensions
 config/configstore
 .vim/bundle/*
-!.vim/bundle/Vundle.vim
 venv

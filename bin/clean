@@ -10,7 +10,6 @@ def main():
         for f in files:
             mod_date, curr_date = os.path.getmtime(
                 os.path.join(subdir, f)), time.time()
-            # delete if d days inactive
             if abs(mod_date - curr_date) / (60 * 60 * 24) > days:
                 send2trash(os.path.join(subdir, f))
 

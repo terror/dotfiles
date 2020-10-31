@@ -42,3 +42,5 @@ alias reload="exec ${SHELL} -l"
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 # cordless is sick 
 alias discord='cordless'
+# open last modified vim file
+alias lv='vim -c "normal '\''0"'

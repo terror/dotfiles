@@ -4,7 +4,7 @@ filetype off
 let mapleader="\<Space>"
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.submodules/vundle
 call vundle#begin()
 
 " let Vundle manage Vundle, required
@@ -15,37 +15,25 @@ Plugin 'VundleVim/Vundle.vim'
 " Status/tabline
 Plugin 'vim-airline/vim-airline'
 
-" File system explorer
+" Searching 
 Plugin 'scrooloose/nerdtree'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " Discord Rich Presence
 Plugin 'hugolgst/vimsence'
 
-" Code formatting
+" Code related plugins 
 Plugin 'tell-k/vim-autopep8'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'prettier/vim-prettier'
-
-" Syntax support for many languages
 Plugin 'sheerun/vim-polyglot'
-
-" ( -> ()
 Plugin 'jiangmiao/auto-pairs'
-
-" C# Development
 Plugin 'OmniSharp/omnisharp-vim'
-
-" Code linting
 Plugin 'w0rp/ale'
-
-" Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'euclio/vim-markdown-composer'
-
-" fzf
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
 
 call vundle#end()            " required
 filetype plugin on    " required
@@ -53,7 +41,8 @@ filetype plugin on    " required
 " Basic settings
 syntax on
 set tabstop=2
-set shiftwidth=2
+set sw=4
+set ts=4
 set expandtab
 set ai
 set hlsearch
@@ -81,6 +70,7 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+:map Q <Nop>
 
 " Terminal to Ctrl+a
 map <C-a> :ter<CR>
@@ -140,3 +130,4 @@ map <C-o> :NERDTreeToggle<CR>
 
 " fzf
 set rtp+=/usr/local/opt/fzf
+let g:fzf_command_prefix = 'Z'

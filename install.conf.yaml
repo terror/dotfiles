@@ -16,6 +16,8 @@
     ~/.aliases: .aliases
     ~/.vscode: .vscode
     ~/.hushlogin: .hushlogin
+    ~/.submodules: submodules
+    ~/.bin: bin
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

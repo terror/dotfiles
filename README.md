@@ -1,12 +1,13 @@
-# Dotfiles
-My personal dotfiles for Mac OSX
+## dotfiles
+My preferences for mac osx. I use [dotbot](https://github.com/anishathalye/dotbot) to manage everything.
 
-# Current Specs
+### ls /etc | less
 
-| Hardware   |      Terminal      |  Shell |  Text Editor   |      VCS      |  WM | Font |
-|----------|----------|----------|----------|----------|----------|----------|
-| MB Pro 15 Inch |  iTerm2 | Bash | Vim |  Git | Spectacle | Cascadia Code |
+- [`bin`](https://github.com/terror/dotfiles/tree/master/bin): scripts
+- [`config`](https://github.com/terror/dotfiles/tree/master/config): configs to various apps
+- [`.vimrc`](https://github.com/terror/dotfiles/blob/master/.vimrc): vim config
+- [`.functions`](https://github.com/terror/dotfiles/blob/master/.functions): cool snippets (mostly scavenged)
 
-# Screenshots
+### the setup 
 
-![](screenshots/terminal.png)
+![](pic/screen)

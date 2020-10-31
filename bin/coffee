@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+import requests
+import webbrowser
+from urllib.parse import urlparse
+
+
+new = "https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty"
+subdomains = input("subdomains: ").split(" ")
+chrome_path = "open -a /Applications/Google\ Chrome.App %s"
+
+
+def main():
+    print("[~] Fetching posts...\n")
+
+    new_posts = requests.get(new).json()
+    for i in new_posts:
+        post = requests.get(
+            "https://hacker-news.firebaseio.com/v0/item/{}.json?print=pretty".format(
+                i)
+        ).json()
+
+        if "url" in post:
+            subdomain = urlparse(post["url"]).hostname.split(".")[1]
+            if subdomain in subdomains:
+                print("{}\n{}".format(
+                    post["title"], post["url"]))
+                choice = input("Open in chrome? [y/n/e] ")
+                if choice == "y":
+                    webbrowser.get(chrome_path).open(post['url'])
+                if choice == "e":
+                    print("[~] Exiting...")
+                    exit()
+                print()
+
+
+if __name__ == "__main__":
+    main()

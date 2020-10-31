@@ -12,18 +12,12 @@ function rs() {
   cargo run "$@";
 }
 
-# Run dotnet core project
-function cs() {
-  local dir="$@"
-  dotnet "${dir}/bin/debug/netcoreapp3.1/${dir}.dll";
-}
-
-# Startup Redis
+# Startup redis
 function redis() {
  redis-server /usr/local/etc/redis.conf
 }
 
-# Open in chrome
+# Open file in chrome
 function oc() {
   open -a "Google Chrome" "$@"
 }
@@ -38,7 +32,7 @@ function loc() {
   git ls-files | xargs wc -l
 }
 
-# Number of commits
+# See total number of commits
 function noc() {
   git rev-list --count HEAD
 }
@@ -48,6 +42,7 @@ function sha() {
   echo -n "$@" | shasum -a 256
 }
 
+# Misc
 function sol() {
   touch solution."$@" && vi solution."$@"
 }
@@ -83,6 +78,7 @@ function journal() {
       ;;
   esac
 }
+# Misc/end
 
 # Determine size of a file or total size of a directory
 # from https://github.com/mathiasbynens/dotfiles/blob/main/.functions
@@ -99,12 +95,17 @@ function fs() {
 	fi;
 }
 
-# See abs path
+# See absolute path
 function realpath() {
     [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
 }
 
-# Nice LS using BAT
+# LS through bat 
 function bls() {
   ls . | bat
+}
+
+# Fetch bitcoin price information 
+function btc() {    
+  curl rate.sx/btc
 }
