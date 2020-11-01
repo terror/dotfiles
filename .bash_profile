@@ -1,18 +1,14 @@
-# Setting PATH
-export PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH"
-export PATH="/Library/Framework/Python.framework/Versions/3.7/bin/pip:$PATH"
-export PATH="/Users/liam/Desktop/kattis-cli:$PATH"
-export PATH="/Users/liam/Desktop/contest-cli:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH"     # python3.7
+export PATH="/Library/Framework/Python.framework/Versions/3.7/bin/pip:$PATH"  # pip3.7
 
-# Shhh
-export BASH_SILENCE_DEPRECATION_WARNING=1
+export PATH="$HOME/Desktop/kattis-cli:$PATH"   # cli for submitting solutions to kattis
+export PATH="$HOME/Desktop/contest-cli:$PATH"  # cli for viewing programming contest times
+export PATH="$HOME/.bin:$PATH"                 # various scripts
+export PATH="$HOME/.cargo/bin:$PATH"           # rust package registry
 
-# Set colors to match iTerm2 Terminal Colors
-export TERM=xterm-color
+export BASH_SILENCE_DEPRECATION_WARNING=1      # disable dep warning
+export TERM=xterm-color                        # set colors
 
-cd ~
-# Load dotfiles
-if [ -f $HOME/.bashrc ];then
-    source $HOME/.bashrc
+if [ -f "$HOME"/.bashrc ];then
+    source "$HOME"/.bashrc
 fi

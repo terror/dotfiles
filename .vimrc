@@ -1,133 +1,114 @@
-" Vundle
 set nocompatible
 filetype off
-let mapleader="\<Space>"
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.submodules/vundle
 call vundle#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" General purpose plugins
+Plugin 'VundleVim/Vundle.vim'         " plugin manager
+Plugin 'vim-airline/vim-airline'      " status bar
+Plugin 'scrooloose/nerdtree'          " file explorer
+Plugin 'junegunn/fzf'                 " command line fuzzy finder
+Plugin 'junegunn/fzf.vim'             " command line fuzzy finder
+Plugin 'hugolgst/vimsence'            " discord rich presence
 
-" Plugins
+" Code related plugins
+Plugin 'tell-k/vim-autopep8'          " python code formatting
+Plugin 'rhysd/vim-clang-format'       " c++ code formatting
+Plugin 'prettier/vim-prettier'        " javascript code formatting
+Plugin 'sheerun/vim-polyglot'         " syntax support for many languages
+Plugin 'jiangmiao/auto-pairs'         " pair completion
+Plugin 'w0rp/ale'                     " code linting
+Plugin 'godlygeek/tabular'            " text filtering and alignment
+Plugin 'plasticboy/vim-markdown'      " markdown support
+Plugin 'euclio/vim-markdown-composer' " render markdown in the browser
 
-" Status/tabline
-Plugin 'vim-airline/vim-airline'
+call vundle#end()
+filetype plugin on
 
-" Searching 
-Plugin 'scrooloose/nerdtree'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
+" settings
 
-" Discord Rich Presence
-Plugin 'hugolgst/vimsence'
+set expandtab                     " expand tabs to spaces by default
+set ai                            " auto indenting
+set hlsearch                      " highlight search terms
+set ruler                         " show the cursor position
+set number                        " show line numbers
+set splitbelow                    " splits happen below
+set nofoldenable                  " disable folding
+set undofile                      " save undo history
 
-" Code related plugins 
-Plugin 'tell-k/vim-autopep8'
-Plugin 'rhysd/vim-clang-format'
-Plugin 'prettier/vim-prettier'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'w0rp/ale'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'euclio/vim-markdown-composer'
+set background    =dark                " use a dark background
+set shiftwidth    =4                   " number of spaces to use for auto indenting
+set tabstop       =4                   " a tab is four spaces
+set numberwidth   =1                   " room used for line numbers
+set backspace     =indent,eol,start    " allow backspacing over everything in insert mode
+set belloff       =all                 " disable vim bell sounds
+set termwinsize   =10x0                " set size of terminal buffer
+set mouse         =a                   " allow mouse to set cursor position
+set undodir       =~/.vim/.vimdid      " backup directory location
+set rtp           +=/usr/local/opt/fzf " set fzf rtp
+set clipboard     =exclude:.*          " disable clipboard
+set noerrorbells visualbell t_vb=      " disable terminal bells
 
-call vundle#end()            " required
-filetype plugin on    " required
+"" lettings
 
-" Basic settings
-syntax on
-set tabstop=2
-set sw=4
-set ts=4
-set expandtab
-set ai
-set hlsearch
-set ruler
-set number
-set numberwidth=1
-set backspace=indent,eol,start
-set belloff=all
-set splitbelow
-set termwinsize=10x0
-set nofoldenable    " disable folding
-set mouse=a
-set clipboard=exclude:.*
-:hi Error NONE
-highlight Comment ctermfg=green
+let mapleader="\<space>" " set space as leader key
 
-" Permanent undo
-set undodir=~/.vim/.vimdid
-set undofile
+let g:autopep8_on_save               = 1       " format python file on save
+let g:autopep8_disable_show_diff     = 1       " disable show diff window
 
-" God Mode
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-:map Q <Nop>
+let g:AutoPairsFlyMode               = 0       " disable fly mode
+let g:AutoPairsShortcutBackInsert    = '<M-b>' " shortcut
 
-" Terminal to Ctrl+a
-map <C-a> :ter<CR>
+let g:fzf_command_prefix             = 'Z'     " set fzf command prefix to 'Z'
 
-" Enable clang format autoformat on save
+let g:vim_markdown_conceal             = 0          " do not conceal blocks
+let g:vim_markdown_conceal_code_blocks = 0          " do not conceal code blocks
+let g:markdown_folding                 = 0          " disable folding
+let g:markdown_composer_autostart      = 0          " disable autostart in browser
+let g:markdown_composer_syntax_theme   = 'monokai'  " set markdown codeblock theme
+
+let g:ale_fix_on_save                   = 1                             " allow for code fixing on save
+let g:ale_set_highlights                = 0                             " disable highlight setting
+let g:ale_echo_msg_error_str            = 'E'                           " set 'E' for error
+let g:ale_echo_msg_warning_str          = 'W'                           " set 'W' for warning
+let g:ale_echo_msg_format               = '[%linter%] %s [%severity%]'  " set error message format
+
+"" mappings
+
+map<C-a> :ter<CR>               " open terminal with ctrl a
+map <C-M> :ComposerStart<CR>    " open markdown in browser with ctrl M
+map <C-o> :NERDTreeToggle<CR>   " toggle nerdtree with ctrl o
+
+" we don't need arrow keys
+nnoremap <up> <nop>             " disable up in normal mode
+nnoremap <down> <nop>           " disable down in normal mode
+inoremap <up> <nop>             " disable up in ins mode
+inoremap <down> <nop>           " disable down in ins mode
+inoremap <left> <nop>           " disable left in ins mode
+inoremap <right> <nop>          " disable right in ins mode
+:map Q <Nop>                    " map Q to nothing
+
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> " stop traling whitespace
+nnoremap <silent> <C-L> :noh<CR><C-L>                             " clear search highlighting
+
+"" colors
+
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set t_Co=256
+  :hi Error NONE
+  highlight Comment ctermfg=green
+endif
+
+"" autocommands
+
+" enable clang format autoformat on save
 autocmd FileType c,cpp ClangFormatAutoEnable
 
-" Autopep8 code formatting for Python
-let g:autopep8_on_save = 1
-let g:autopep8_disable_show_diff=1
-
-" Disable Terminal bell
-set noerrorbells visualbell t_vb=
+" disable terminal bells
 autocmd GUIEnter * set visualbell t_vb=
 
-" C++ Template
+" load cpp template on file open 
 :autocmd BufNewFile *.cpp 0r ~/.vim/templates/standard.cpp
-
-" Auto Pairs
-let g:AutoPairsFlyMode = 0
-let g:AutoPairsShortcutBackInsert = '<M-b>'
-
-" Vim Markdown/Composer
-let g:vim_markdown_conceal = 0
-let g:vim_markdown_conceal_code_blocks = 0
-let g:markdown_folding = 0
-let g:markdown_composer_autostart = 0
-let g:markdown_composer_syntax_theme = 'monokai'
-map <C-M> :ComposerStart<CR>
-
-" Stop trailing whitespace
-nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
-
-" Clear search highlighting 
-nnoremap <silent> <C-L> :noh<CR><C-L>
-
-" Omnisharp
-let g:OmniSharp_server_use_mono = 1
-  autocmd FileType cs nmap <silent> <buffer> <Leader>os= <Plug>(omnisharp_code_format)
-inoremap <expr> <Tab> pumvisible() ? '<C-n>' :                                                                                                                    
-\ getline('.')[col('.')-2] =~# '[[:alnum:].-_#$]' ? '<C-x><C-o>' : '<Tab>'
-nnoremap <C-o><C-r> :!dotnet run
-let g:OmniSharp_want_snippet=1
-
-" Ale Config
-let g:ale_linters = {
-\ 'cs': ['OmniSharp']
-\}
-let g:ale_fix_on_save = 1
-let g:ale_set_highlights = 0
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-
-" Nerd Tree Ctrl+O 
-map <C-o> :NERDTreeToggle<CR>
-
-" fzf
-set rtp+=/usr/local/opt/fzf
-let g:fzf_command_prefix = 'Z'
