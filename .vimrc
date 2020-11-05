@@ -12,6 +12,7 @@ Plugin 'scrooloose/nerdtree'          " file explorer
 Plugin 'junegunn/fzf'                 " command line fuzzy finder
 Plugin 'junegunn/fzf.vim'             " command line fuzzy finder
 Plugin 'hugolgst/vimsence'            " discord rich presence
+Plugin 'junegunn/goyo.vim'            " distraction free writing
 
 " Code related plugins
 Plugin 'tell-k/vim-autopep8'          " python code formatting
@@ -29,14 +30,14 @@ filetype plugin on
 
 " settings
 
-set expandtab                     " expand tabs to spaces by default
-set ai                            " auto indenting
-set hlsearch                      " highlight search terms
-set ruler                         " show the cursor position
-set number                        " show line numbers
-set splitbelow                    " splits happen below
-set nofoldenable                  " disable folding
-set undofile                      " save undo history
+set expandtab                          " expand tabs to spaces by default
+set ai                                 " auto indenting
+set hlsearch                           " highlight search terms
+set ruler                              " show the cursor position
+set number                             " show line numbers
+set splitbelow                         " splits happen below
+set nofoldenable                       " disable folding
+set undofile                           " save undo history
 
 set background    =dark                " use a dark background
 set shiftwidth    =4                   " number of spaces to use for auto indenting
@@ -55,13 +56,15 @@ set noerrorbells visualbell t_vb=      " disable terminal bells
 
 let mapleader="\<space>" " set space as leader key
 
-let g:autopep8_on_save               = 1       " format python file on save
-let g:autopep8_disable_show_diff     = 1       " disable show diff window
+let g:autopep8_on_save                 = 1          " format python file on save
+let g:autopep8_disable_show_diff       = 1          " disable show diff window
 
-let g:AutoPairsFlyMode               = 0       " disable fly mode
-let g:AutoPairsShortcutBackInsert    = '<M-b>' " shortcut
+let g:AutoPairsFlyMode                 = 0          " disable fly mode
+let g:AutoPairsShortcutBackInsert      = '<M-b>'    " shortcut
 
-let g:fzf_command_prefix             = 'Z'     " set fzf command prefix to 'Z'
+let g:fzf_command_prefix               = 'Z'        " set fzf command prefix to 'Z'
+
+let g:NERDTreeWinPos                   = "right"    " always open nerdtree on right side
 
 let g:vim_markdown_conceal             = 0          " do not conceal blocks
 let g:vim_markdown_conceal_code_blocks = 0          " do not conceal code blocks
@@ -69,28 +72,30 @@ let g:markdown_folding                 = 0          " disable folding
 let g:markdown_composer_autostart      = 0          " disable autostart in browser
 let g:markdown_composer_syntax_theme   = 'monokai'  " set markdown codeblock theme
 
-let g:ale_fix_on_save                   = 1                             " allow for code fixing on save
-let g:ale_set_highlights                = 0                             " disable highlight setting
-let g:ale_echo_msg_error_str            = 'E'                           " set 'E' for error
-let g:ale_echo_msg_warning_str          = 'W'                           " set 'W' for warning
-let g:ale_echo_msg_format               = '[%linter%] %s [%severity%]'  " set error message format
+let g:ale_fix_on_save                  = 1                             " allow for code fixing on save
+let g:ale_set_highlights               = 0                             " disable highlight setting
+let g:ale_echo_msg_error_str           = 'E'                           " set 'E' for error
+let g:ale_echo_msg_warning_str         = 'W'                           " set 'W' for warning
+let g:ale_echo_msg_format              = '[%linter%] %s [%severity%]'  " set error message format
 
 "" mappings
 
-map<C-a> :ter<CR>               " open terminal with ctrl a
-map <C-M> :ComposerStart<CR>    " open markdown in browser with ctrl M
-map <C-o> :NERDTreeToggle<CR>   " toggle nerdtree with ctrl o
+map<C-a> :ter<CR>               
+map<leader>i gg=G<CR>               " fix indentation
+map<leader>p :Prettier<CR>          " format code with prettier
+map <leader>o :NERDTreeToggle<CR>   " toggle nerdtree with leader o
+
 
 " we don't need arrow keys
-nnoremap <up> <nop>             " disable up in normal mode
-nnoremap <down> <nop>           " disable down in normal mode
-inoremap <up> <nop>             " disable up in ins mode
-inoremap <down> <nop>           " disable down in ins mode
-inoremap <left> <nop>           " disable left in ins mode
-inoremap <right> <nop>          " disable right in ins mode
-:map Q <Nop>                    " map Q to nothing
+nnoremap <up> <nop>                 " disable up in normal mode
+nnoremap <down> <nop>               " disable down in normal mode
+inoremap <up> <nop>                 " disable up in ins mode
+inoremap <down> <nop>               " disable down in ins mode
+inoremap <left> <nop>               " disable left in ins mode
+inoremap <right> <nop>              " disable right in ins mode
+:map Q <Nop>                        " map Q to nothing
 
-nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> " stop traling whitespace
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> " stop trailing whitespace
 nnoremap <silent> <C-L> :noh<CR><C-L>                             " clear search highlighting
 
 "" colors
@@ -106,6 +111,12 @@ endif
 
 " enable clang format autoformat on save
 autocmd FileType c,cpp ClangFormatAutoEnable
+
+" play nice with markdown
+autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
+" map composer start to <leader>m on markdown files
+autocmd FileType markdown map<leader>m :ComposerStart<CR>
 
 " disable terminal bells
 autocmd GUIEnter * set visualbell t_vb=

@@ -35,6 +35,7 @@ alias la="ls -a"
 alias v="vim"
 alias e="exit"
 alias g="git"
+alias m="tmux"
 
 # reload the shell
 alias reload="exec ${SHELL} -l"

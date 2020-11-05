@@ -12,6 +12,10 @@ function rs() {
   cargo run "$@";
 }
 
+function hs() { 
+ ghc "$@".hs && ./"$@";
+}
+
 # Startup redis
 function redis() {
  redis-server /usr/local/etc/redis.conf
