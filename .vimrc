@@ -19,6 +19,7 @@ Plugin 'tell-k/vim-autopep8'          " python code formatting
 Plugin 'rhysd/vim-clang-format'       " c++ code formatting
 Plugin 'prettier/vim-prettier'        " javascript code formatting
 Plugin 'sheerun/vim-polyglot'         " syntax support for many languages
+Plugin 'rust-lang/rust.vim'           " rust support
 Plugin 'jiangmiao/auto-pairs'         " pair completion
 Plugin 'w0rp/ale'                     " code linting
 Plugin 'godlygeek/tabular'            " text filtering and alignment
@@ -65,6 +66,9 @@ let g:AutoPairsShortcutBackInsert      = '<M-b>'    " shortcut
 let g:fzf_command_prefix               = 'Z'        " set fzf command prefix to 'Z'
 
 let g:NERDTreeWinPos                   = "right"    " always open nerdtree on right side
+let NERDTreeMinimalUI                  = 1          " to remove the ? at the top
+
+let g:rustfmt_autosave                 = 1          " format rust code on save
 
 let g:vim_markdown_conceal             = 0          " do not conceal blocks
 let g:vim_markdown_conceal_code_blocks = 0          " do not conceal code blocks
@@ -80,20 +84,26 @@ let g:ale_echo_msg_format              = '[%linter%] %s [%severity%]'  " set err
 
 "" mappings
 
-map<C-a> :ter<CR>               
-map<leader>i gg=G<CR>               " fix indentation
-map<leader>p :Prettier<CR>          " format code with prettier
-map <leader>o :NERDTreeToggle<CR>   " toggle nerdtree with leader o
+nnoremap<C-a> :ter<CR>               
+nnoremap<C-R> :%s/[^[:print:]]//g<CR>        " remove non printable characters
+nnoremap - dd                                " remove line with '-'
 
+" leader 
+nnoremap<leader>i gg=G<CR>                   " fix indentation
+nnoremap<leader>p :Prettier<CR>              " format code with prettier
+nnoremap<leader>o :NERDTreeToggle<CR>        " toggle nerdtree with leader o
+nnoremap<leader>ev :split $MYVIMRC<CR>       " edit vimrc
+nnoremap<leader>sv :source $MYVIMRC<CR>      " source vimrc
+nnoremap<leader>" viw<esc>a"<esc>bi"<esc>lel " quote around word
 
 " we don't need arrow keys
-nnoremap <up> <nop>                 " disable up in normal mode
-nnoremap <down> <nop>               " disable down in normal mode
-inoremap <up> <nop>                 " disable up in ins mode
-inoremap <down> <nop>               " disable down in ins mode
-inoremap <left> <nop>               " disable left in ins mode
-inoremap <right> <nop>              " disable right in ins mode
-:map Q <Nop>                        " map Q to nothing
+nnoremap <up> <nop>                          " disable up in normal mode
+nnoremap <down> <nop>                        " disable down in normal mode
+inoremap <up> <nop>                          " disable up in ins mode
+inoremap <down> <nop>                        " disable down in ins mode
+inoremap <left> <nop>                        " disable left in ins mode
+inoremap <right> <nop>                       " disable right in ins mode
+:map Q <Nop>                                 " map Q to nothing
 
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> " stop trailing whitespace
 nnoremap <silent> <C-L> :noh<CR><C-L>                             " clear search highlighting

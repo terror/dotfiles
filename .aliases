@@ -39,9 +39,18 @@ alias m="tmux"
 
 # reload the shell
 alias reload="exec ${SHELL} -l"
+
 # open new chrome tab
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-# cordless is sick 
+
+# open cordless 
 alias discord='cordless'
+
 # open last modified vim file
 alias lv='vim -c "normal '\''0"'
+
+# upgrade pip
+alias upip='pip install --upgrade pip'
+
+# source ~/.bash_profile
+alias sb='source ~/.bash_profile'
