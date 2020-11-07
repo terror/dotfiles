@@ -1,0 +1,125 @@
+# Auto generated using `brew bundle dump --describe`.
+
+tap "bios-marcel/cordless"
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "mongodb/brew"
+
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+
+# Command-line interface for SQLite
+brew "sqlite"
+
+# Core application library for C
+brew "glib"
+
+# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
+brew "clang-format"
+
+# Calculator REPL, similar to bc(1)
+brew "eva"
+
+# Command-line fuzzy finder written in Go
+brew "fzf"
+
+# GNU awk utility
+brew "gawk"
+
+# GNU compiler collection
+brew "gcc"
+
+# Glorious Glasgow Haskell Compilation System
+brew "ghc"
+
+# Improved top (interactive process viewer)
+brew "htop"
+
+# Configurable static site generator
+brew "hugo"
+
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+
+# Next-gen compiler infrastructure
+brew "llvm"
+
+# Open source relational database management system
+brew "mysql", restart_service: true
+
+# Open source relational database management system
+brew "mysql@5.7"
+
+# Fast, highly customisable system info script
+brew "neofetch"
+
+# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
+brew "nginx"
+
+# Platform built on V8 to build network applications
+brew "node", link: false
+
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+
+# Object-relational database system
+brew "postgresql", restart_service: true
+
+# Persistent key-value database, with built-in net interface
+brew "redis"
+
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+
+# Cross-shell prompt for astronauts
+brew "starship"
+
+# Programatically correct mistyped console commands
+brew "thefuck"
+
+# Terminal multiplexer
+brew "tmux"
+
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+
+# Google's JavaScript engine
+brew "v8"
+
+# Vi 'workalike' with many additional features
+brew "vim"
+
+# Internet file retriever
+brew "wget"
+
+# JavaScript package manager
+brew "yarn"
+
+# Discord, but in 1984
+brew "bios-marcel/cordless/cordless"
+
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
+
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community"
+
+# An interactive JavaScript command-line interface to MongoDB
+brew "mongodb/brew/mongodb-community-shell", link: false
+
+cask "iterm2"
+cask "mysqlworkbench"
+cask "spectacle"
+cask "superproductivity"
