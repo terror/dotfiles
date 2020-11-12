@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd ~/Fun/rust || exit
+
+if [ ! -p ./playground ]; then
+    rm -rf ./playground
+fi
+
+cargo new playground
+
+cd playground || exit
+
+vim src/main.rs

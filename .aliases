@@ -30,6 +30,7 @@ alias gcb="git checkout -b"
 alias l="ls"
 alias ll="ls -lah"
 alias la="ls -a"
+alias sl="ls"
 
 # commands
 alias v="vim"
@@ -40,7 +41,7 @@ alias m="tmux"
 # reload the shell
 alias reload="exec ${SHELL} -l"
 
-# open new chrome tab
+# open new chrome window
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 
 # open cordless 
@@ -54,3 +55,6 @@ alias upip='pip install --upgrade pip'
 
 # source ~/.bash_profile
 alias sb='source ~/.bash_profile'
+
+# get wifi password
+alias wifi='wifi-password'

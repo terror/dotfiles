@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -euo pipefail
+
+x="$*"
+
+if [ -z "$x" ]; then
+    echo "oops!"
+    exit 1
+fi
+
+exec lsof -i tcp:"$x"

@@ -84,9 +84,12 @@ let g:ale_echo_msg_format              = '[%linter%] %s [%severity%]'  " set err
 
 "" mappings
 
-nnoremap<C-a> :ter<CR>               
-nnoremap<C-R> :%s/[^[:print:]]//g<CR>        " remove non printable characters
+" general
+nnoremap Q <nop>                             " map Q to nothing
+onoremap p i(                                " for easier parens deletion
 nnoremap - dd                                " remove line with '-'
+nnoremap<C-a> :ter<CR>
+nnoremap<C-R> :%s/[^[:print:]]//g<CR>        " remove non printable characters
 
 " leader 
 nnoremap<leader>i gg=G<CR>                   " fix indentation
@@ -94,7 +97,10 @@ nnoremap<leader>p :Prettier<CR>              " format code with prettier
 nnoremap<leader>o :NERDTreeToggle<CR>        " toggle nerdtree with leader o
 nnoremap<leader>ev :split $MYVIMRC<CR>       " edit vimrc
 nnoremap<leader>sv :source $MYVIMRC<CR>      " source vimrc
+nnoremap<leader>tp :Goyo<CR>                 " toggle prose mode
 nnoremap<leader>" viw<esc>a"<esc>bi"<esc>lel " quote around word
+nnoremap<leader>sf :ZFiles<CR>               " search files
+nnoremap<leader>sg :ZCommits<CR>             " search git
 
 " we don't need arrow keys
 nnoremap <up> <nop>                          " disable up in normal mode
@@ -103,10 +109,10 @@ inoremap <up> <nop>                          " disable up in ins mode
 inoremap <down> <nop>                        " disable down in ins mode
 inoremap <left> <nop>                        " disable left in ins mode
 inoremap <right> <nop>                       " disable right in ins mode
-:map Q <Nop>                                 " map Q to nothing
 
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> " stop trailing whitespace
 nnoremap <silent> <C-L> :noh<CR><C-L>                             " clear search highlighting
+
 
 "" colors
 
@@ -119,17 +125,21 @@ endif
 
 "" autocommands
 
-" enable clang format autoformat on save
-autocmd FileType c,cpp ClangFormatAutoEnable
+augroup vimrc
+    autocmd!
 
-" play nice with markdown
-autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+    " enable clang format autoformat on save
+    autocmd FileType c,cpp ClangFormatAutoEnable
 
-" map composer start to <leader>m on markdown files
-autocmd FileType markdown map<leader>m :ComposerStart<CR>
+    " play nice with markdown
+    autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
-" disable terminal bells
-autocmd GUIEnter * set visualbell t_vb=
+    " map composer start to <leader>m on markdown files
+    autocmd FileType markdown map<leader>m :ComposerStart<CR>
 
-" load cpp template on file open 
-:autocmd BufNewFile *.cpp 0r ~/.vim/templates/standard.cpp
+    " disable terminal bells
+    autocmd GUIEnter * set visualbell t_vb=
+
+    " load cpp template on file open 
+    :autocmd BufNewFile *.cpp 0r ~/.vim/templates/standard.cpp
+augroup end

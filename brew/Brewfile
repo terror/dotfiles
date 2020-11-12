@@ -119,6 +119,9 @@ brew "mongodb/brew/mongodb-community"
 # An interactive JavaScript command-line interface to MongoDB
 brew "mongodb/brew/mongodb-community-shell", link: false
 
+# Show the current WiFi network password
+brew "wifi-password"
+
 cask "iterm2"
 cask "mysqlworkbench"
 cask "spectacle"
