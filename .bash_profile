@@ -3,7 +3,7 @@ export PATH="/Library/Framework/Python.framework/Versions/3.7/bin/pip:$PATH"  # 
 
 export PATH="$HOME/Desktop/kattis-cli:$PATH"   # cli for submitting solutions to kattis
 export PATH="$HOME/Desktop/contest-cli:$PATH"  # cli for viewing programming contest times
-export PATH="$HOME/.bin:$PATH"                 # various scripts
+export PATH="$PATH:$HOME/.bin"                 # various scripts
 export PATH="$HOME/.cargo/bin:$PATH"           # rust package registry
 
 export BASH_SILENCE_DEPRECATION_WARNING=1      # disable dep warning

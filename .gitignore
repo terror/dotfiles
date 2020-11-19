@@ -1,5 +1,6 @@
-/.vscode/extensions
+/vscode/extensions
 /config/configstore
-/.vim/bundle/*
-/.vim/.netrwhist
-/.vim/view
+/vim/bundle/*
+/vim/.netrwhist
+/vim/view
+/.DS_Store

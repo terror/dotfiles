@@ -5,17 +5,17 @@
 - clean: ['~']
 
 - link:
-    ~/.vim: .vim
+    ~/.vim: vim
     ~/.vimrc: .vimrc
     ~/.config: config
-    ~/.gitconfig: git/.gitconfig
+    ~/.gitconfig: git/gitconfig
     ~/.hooks: hooks
     ~/.bash_profile: .bash_profile
     ~/.bashrc: .bashrc
     ~/.functions: .functions
     ~/.aliases: .aliases
-    ~/.vscode: .vscode
-    ~/.hushlogin: .hushlogin
+    ~/.vscode: vscode
+    ~/.hushlogin: config/hushlogin
     ~/.submodules: submodules
     ~/.bin: bin
     ~/Brewfile: brew/Brewfile

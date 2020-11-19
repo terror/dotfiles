@@ -1,2 +1,4 @@
+#!/bin/bash
+
 cd ~ || exit
 brew bundle install

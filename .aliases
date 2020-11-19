@@ -17,6 +17,7 @@ alias -- -="cd -"
 # git
 alias ga="git add"
 alias gc="git commit"
+alias gca="git commit --amend --no-edit"
 alias gp="git pull"
 alias gd="git diff"
 alias gch="git checkout"
@@ -31,6 +32,7 @@ alias l="ls"
 alias ll="ls -lah"
 alias la="ls -a"
 alias sl="ls"
+alias lt="tree -L 1"
 
 # commands
 alias v="vim"
