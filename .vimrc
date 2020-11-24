@@ -13,6 +13,7 @@ Plugin 'junegunn/fzf'                 " command line fuzzy finder
 Plugin 'junegunn/fzf.vim'             " command line fuzzy finder
 Plugin 'hugolgst/vimsence'            " discord rich presence
 Plugin 'junegunn/goyo.vim'            " distraction free writing
+Plugin 'vim-gitgutter'                " show git diff in the sign column 
 
 " Code related plugins
 Plugin 'tell-k/vim-autopep8'          " python code formatting
@@ -55,64 +56,85 @@ set noerrorbells visualbell t_vb=      " disable terminal bells
 
 "" lettings
 
-let mapleader="\<space>" " set space as leader key
+let mapleader                          = "\<space>"                   " set space as leader key
 
-let g:autopep8_on_save                 = 1          " format python file on save
-let g:autopep8_disable_show_diff       = 1          " disable show diff window
+let g:autopep8_on_save                 = 1                            " format python file on save
+let g:autopep8_disable_show_diff       = 1                            " disable show diff window
 
-let g:AutoPairsFlyMode                 = 0          " disable fly mode
-let g:AutoPairsShortcutBackInsert      = '<M-b>'    " shortcut
+let g:AutoPairsFlyMode                 = 0                            " disable fly mode
+let g:AutoPairsShortcutBackInsert      = '<M-b>'                      " shortcut
 
-let g:fzf_command_prefix               = 'Z'        " set fzf command prefix to 'Z'
+let g:fzf_command_prefix               = 'Z'                          " set fzf command prefix to 'Z'
 
-let g:NERDTreeWinPos                   = "right"    " always open nerdtree on right side
-let NERDTreeMinimalUI                  = 1          " to remove the ? at the top
+let g:NERDTreeWinPos                   = "right"                      " always open nerdtree on right side
+let NERDTreeMinimalUI                  = 1                            " to remove the ? at the top
 
-let g:rustfmt_autosave                 = 1          " format rust code on save
+let g:gitgutter_enabled                = 0                            " disable gitgutter by default
 
-let g:vim_markdown_conceal             = 0          " do not conceal blocks
-let g:vim_markdown_conceal_code_blocks = 0          " do not conceal code blocks
-let g:markdown_folding                 = 0          " disable folding
-let g:markdown_composer_autostart      = 0          " disable autostart in browser
-let g:markdown_composer_syntax_theme   = 'monokai'  " set markdown codeblock theme
+let g:rustfmt_autosave                 = 1                            " format rust code on save
 
-let g:ale_fix_on_save                  = 1                             " allow for code fixing on save
-let g:ale_set_highlights               = 0                             " disable highlight setting
-let g:ale_echo_msg_error_str           = 'E'                           " set 'E' for error
-let g:ale_echo_msg_warning_str         = 'W'                           " set 'W' for warning
-let g:ale_echo_msg_format              = '[%linter%] %s [%severity%]'  " set error message format
+let g:vim_markdown_conceal             = 0                            " do not conceal blocks
+let g:vim_markdown_conceal_code_blocks = 0                            " do not conceal code blocks
+let g:markdown_folding                 = 0                            " disable folding
+let g:markdown_composer_autostart      = 0                            " disable autostart in browser
+let g:markdown_composer_syntax_theme   = 'monokai'                    " set markdown codeblock theme
+
+let g:ale_fix_on_save                  = 1                            " allow for code fixing on save
+let g:ale_set_highlights               = 0                            " disable highlight setting
+let g:ale_echo_msg_error_str           = 'E'                          " set 'E' for error
+let g:ale_echo_msg_warning_str         = 'W'                          " set 'W' for warning
+let g:ale_echo_msg_format              = '[%linter%] %s [%severity%]' " set error message format
 
 "" mappings
 
 " general
-nnoremap Q <nop>                             " map Q to nothing
-onoremap p i(                                " for easier parens deletion
-nnoremap - dd                                " remove line with '-'
-nnoremap<C-a> :ter<CR>
-nnoremap<C-R> :%s/[^[:print:]]//g<CR>        " remove non printable characters
+nnoremap Q <nop>|                                                  " map Q to nothing
+onoremap p i(|                                                     " for easier parens deletion
+onoremap b i[|                                                     " for easier bracket deletion
+nnoremap - dd|                                                     " remove line with '-'
+nnoremap<C-a> :ter<CR>|                                            " open terminal with ctrl + a
+nnoremap<C-R> :%s/[^[:print:]]//g<CR>|                             " remove non printable characters
 
-" leader 
-nnoremap<leader>i gg=G<CR>                   " fix indentation
-nnoremap<leader>p :Prettier<CR>              " format code with prettier
-nnoremap<leader>o :NERDTreeToggle<CR>        " toggle nerdtree with leader o
-nnoremap<leader>ev :split $MYVIMRC<CR>       " edit vimrc
-nnoremap<leader>sv :source $MYVIMRC<CR>      " source vimrc
-nnoremap<leader>tp :Goyo<CR>                 " toggle prose mode
-nnoremap<leader>" viw<esc>a"<esc>bi"<esc>lel " quote around word
-nnoremap<leader>sf :ZFiles<CR>               " search files
-nnoremap<leader>sg :ZCommits<CR>             " search git
+" leader
+nnoremap<leader>i gg=G<CR>|                                        " fix indentation
+nnoremap<leader>p :Prettier<CR>|                                   " format code with prettier
+nnoremap<leader>sv :source $MYVIMRC<CR>|                           " source vimrc
+nnoremap<leader>tp :Goyo<CR>|                                      " toggle prose mode
+nnoremap<leader>" viw<esc>a"<esc>bi"<esc>lel|                      " quotes around word
+nnoremap<leader>rr :redo<CR>|                                      " redo last change
+nnoremap<leader>qq ^<esc>D|                                        " clear line
+nnoremap<leader>tg :GitGutterToggle<CR>|                           " toggle git gutter
+
+" alignment
+nnoremap <leader>a: :Tabularize /:<CR>|                            " align on :
+nnoremap <leader>a= :Tabularize /=<CR>|                            " align on =
+nnoremap <leader>a# :Tabularize /#<CR>|                            " align on #
+
+vnoremap <leader>a" :Tabularize /"<CR>|                            " align on "
+vnoremap <leader>a# :Tabularize /#<CR>|                            " align on #
+vnoremap <leader>a= :Tabularize /=<CR>|                            " align on =
+vnoremap <leader>a: :Tabularize /:<CR>|                            " align on :
+
+" searching
+nnoremap<leader>sf :ZFiles<CR>|                                    " search for files
+nnoremap<leader>sg :ZCommits<CR>|                                  " search through git commits
+nnoremap<leader>o :NERDTreeToggle<CR>|                             " toggle nerdtree with leader o
+
+" edit named files
+nnoremap<leader>ev :split $MYVIMRC<CR>|                            " edit vimrc
+nnoremap<leader>ea :split ~/.aliases<CR>|                          " edit bash aliases
+nnoremap<leader>en :e notes.md<CR>|                                " edit project notes
 
 " we don't need arrow keys
-nnoremap <up> <nop>                          " disable up in normal mode
-nnoremap <down> <nop>                        " disable down in normal mode
-inoremap <up> <nop>                          " disable up in ins mode
-inoremap <down> <nop>                        " disable down in ins mode
-inoremap <left> <nop>                        " disable left in ins mode
-inoremap <right> <nop>                       " disable right in ins mode
+nnoremap <up> <nop>|                                               " disable up in normal mode
+nnoremap <down> <nop>|                                             " disable down in normal mode
+inoremap <up> <nop>|                                               " disable up in ins mode
+inoremap <down> <nop>|                                             " disable down in ins mode
+inoremap <left> <nop>|                                             " disable left in ins mode
+inoremap <right> <nop>|                                            " disable right in ins mode
 
-nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> " stop trailing whitespace
-nnoremap <silent> <C-L> :noh<CR><C-L>                             " clear search highlighting
-
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " stop trailing whitespace
+nnoremap <silent> <C-L> :noh<CR><C-L>|                             " clear search highlighting
 
 "" colors
 
