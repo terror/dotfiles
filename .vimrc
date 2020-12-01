@@ -40,6 +40,8 @@ set number                             " show line numbers
 set splitbelow                         " splits happen below
 set nofoldenable                       " disable folding
 set undofile                           " save undo history
+set autochdir                          " have vim set file dir to cwd
+set autoread                           " auto read changes files
 
 set background    =dark                " use a dark background
 set shiftwidth    =4                   " number of spaces to use for auto indenting
@@ -89,11 +91,19 @@ let g:ale_echo_msg_format              = '[%linter%] %s [%severity%]' " set erro
 
 " general
 nnoremap Q <nop>|                                                  " map Q to nothing
+nnoremap Z :wq<CR>|                                                " save and quit file
 onoremap p i(|                                                     " for easier parens deletion
 onoremap b i[|                                                     " for easier bracket deletion
 nnoremap - dd|                                                     " remove line with '-'
 nnoremap<C-a> :ter<CR>|                                            " open terminal with ctrl + a
 nnoremap<C-R> :%s/[^[:print:]]//g<CR>|                             " remove non printable characters
+nnoremap ^ 0
+nnoremap 0 ^
+
+" tab switching
+nnoremap <C-j> :tabprevious<CR>|                                   " prev tab
+nnoremap <C-k> :tabnext<CR>|                                       " next tab
+nnoremap <C-n> :tabnew<CR>|                                        " new tab
 
 " leader
 nnoremap<leader>i gg=G<CR>|                                        " fix indentation
@@ -103,6 +113,8 @@ nnoremap<leader>tp :Goyo<CR>|                                      " toggle pros
 nnoremap<leader>" viw<esc>a"<esc>bi"<esc>lel|                      " quotes around word
 nnoremap<leader>rr :redo<CR>|                                      " redo last change
 nnoremap<leader>qq ^<esc>D|                                        " clear line
+nnoremap<leader>cl gg<esc>dG<CR>|                                  " clear file
+nnoremap<leader>c :%y+<CR>|                                        " yank all line to +
 nnoremap<leader>tg :GitGutterToggle<CR>|                           " toggle git gutter
 
 " alignment
@@ -164,4 +176,7 @@ augroup vimrc
 
     " load cpp template on file open 
     :autocmd BufNewFile *.cpp 0r ~/.vim/templates/standard.cpp
+
+    " load basic python template on file open
+    :autocmd BufNewFile *.py 0r ~/.vim/templates/standard.py
 augroup end
