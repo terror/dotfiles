@@ -68,6 +68,9 @@ let g:AutoPairsShortcutBackInsert      = '<M-b>'                      " shortcut
 
 let g:fzf_command_prefix               = 'Z'                          " set fzf command prefix to 'Z'
 
+let g:goyo_width                       = 150                          " set Goyo width
+let g:goyo_height                      = 90                           " set Goyo height
+
 let g:NERDTreeWinPos                   = "right"                      " always open nerdtree on right side
 let NERDTreeMinimalUI                  = 1                            " to remove the ? at the top
 
@@ -97,20 +100,22 @@ onoremap b i[|                                                     " for easier 
 nnoremap - dd|                                                     " remove line with '-'
 nnoremap<C-a> :ter<CR>|                                            " open terminal with ctrl + a
 nnoremap<C-R> :%s/[^[:print:]]//g<CR>|                             " remove non printable characters
-nnoremap ^ 0
-nnoremap 0 ^
+nnoremap ^ 0|
+nnoremap 0 ^|
 
 " tab switching
 nnoremap <C-j> :tabprevious<CR>|                                   " prev tab
 nnoremap <C-k> :tabnext<CR>|                                       " next tab
 nnoremap <C-n> :tabnew<CR>|                                        " new tab
+nnoremap <C-Q> :-tabmove<CR>|                                      " move tab left
+nnoremap <C-P> :+tabmove<CR>|                                      " move tab right
 
 " leader
 nnoremap<leader>i gg=G<CR>|                                        " fix indentation
 nnoremap<leader>p :Prettier<CR>|                                   " format code with prettier
 nnoremap<leader>sv :source $MYVIMRC<CR>|                           " source vimrc
 nnoremap<leader>tp :Goyo<CR>|                                      " toggle prose mode
-nnoremap<leader>" viw<esc>a"<esc>bi"<esc>lel|                      " quotes around word
+nnoremap<leader>" viw<esc>a"<esc>bi"<esc>lel<CR>|                  " quotes around word
 nnoremap<leader>rr :redo<CR>|                                      " redo last change
 nnoremap<leader>qq ^<esc>D|                                        " clear line
 nnoremap<leader>cl gg<esc>dG<CR>|                                  " clear file
@@ -148,6 +153,16 @@ inoremap <right> <nop>|                                            " disable rig
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " stop trailing whitespace
 nnoremap <silent> <C-L> :noh<CR><C-L>|                             " clear search highlighting
 
+"" functions
+
+function! JournalMode()
+    execute 'normal gg'
+    let filename = '#' . ' ' . expand('%:r')
+    call setline(1, filename)
+    execute 'normal o'
+    execute 'Goyo'
+endfunction
+
 "" colors
 
 if &t_Co > 2 || has("gui_running")
@@ -175,8 +190,14 @@ augroup vimrc
     autocmd GUIEnter * set visualbell t_vb=
 
     " load cpp template on file open 
-    :autocmd BufNewFile *.cpp 0r ~/.vim/templates/standard.cpp
+    :autocmd BufNewFile *.cpp 0r ~/.vim/templates/cpp.skeleton
 
     " load basic python template on file open
-    :autocmd BufNewFile *.py 0r ~/.vim/templates/standard.py
+    :autocmd BufNewFile *.py 0r ~/.vim/templates/python.skeleton
+
+    " populate journal template 
+    autocmd VimEnter */journal/** 0r ~/.vim/templates/journal.skeleton 
+
+    " set header for current journal entry
+    autocmd VimEnter */journal/** :call JournalMode() 
 augroup end

@@ -47,7 +47,7 @@ function sha() {
   echo -n "$@" | shasum -a 256
 }
 
-# Misc
+# --- Misc ---
 function sol() {
   touch solution."$*" && vi solution."$*"
 }
@@ -67,7 +67,7 @@ function note() {
 }
 
 function journal() {
-  local journal_dir="$HOME/Dropbox/Notes/daily/journals"
+  local journal_dir="$HOME/Dropbox/Notes/journal"
   case "$1" in
     new)
       cd "$journal_dir" || exit
@@ -75,7 +75,7 @@ function journal() {
       ;;
   esac
 }
-# Misc/end
+# ------------
 
 # Determine size of a file or total size of a directory
 # from https://github.com/mathiasbynens/dotfiles/blob/main/.functions
