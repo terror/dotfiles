@@ -36,7 +36,9 @@ alias sl="ls"
 alias lt="tree -L 1"
 
 # commands
-alias v="vim"
+alias v="nvim"
+alias vi="nvim"
+alias ov="vim"
 alias e="exit"
 alias g="git"
 alias m="tmux"

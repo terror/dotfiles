@@ -1,5 +1,6 @@
 /vscode/extensions
 /config/configstore
-/vim/bundle/*
+/vim/plugged/*
 /vim/.netrwhist
 /vim/view
+node_modules/

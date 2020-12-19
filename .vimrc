@@ -1,36 +1,44 @@
 set nocompatible
 filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.submodules/vundle
-call vundle#begin()
+"" plugins
 
-" General purpose plugins
-Plugin 'VundleVim/Vundle.vim'         " plugin manager
-Plugin 'vim-airline/vim-airline'      " status bar
-Plugin 'scrooloose/nerdtree'          " file explorer
-Plugin 'junegunn/fzf'                 " command line fuzzy finder
-Plugin 'junegunn/fzf.vim'             " command line fuzzy finder
-Plugin 'hugolgst/vimsence'            " discord rich presence
-Plugin 'junegunn/goyo.vim'            " distraction free writing
-Plugin 'vim-gitgutter'                " show git diff in the sign column 
+filetype plugin on
+call plug#begin('~/.vim/plugged')
 
-" Code related plugins
-Plugin 'tell-k/vim-autopep8'          " python code formatting
-Plugin 'rhysd/vim-clang-format'       " c++ code formatting
-Plugin 'prettier/vim-prettier'        " javascript code formatting
-Plugin 'sheerun/vim-polyglot'         " syntax support for many languages
-Plugin 'rust-lang/rust.vim'           " rust support
-Plugin 'jiangmiao/auto-pairs'         " pair completion
-Plugin 'w0rp/ale'                     " code linting
-Plugin 'godlygeek/tabular'            " text filtering and alignment
-Plugin 'plasticboy/vim-markdown'      " markdown support
-Plugin 'euclio/vim-markdown-composer' " render markdown in the browser
+" general purpose plugins
+Plug 'vim-airline/vim-airline'                      " status bar
+Plug 'hugolgst/vimsence'                            " discord rich presence
+Plug 'junegunn/goyo.vim'                            " distraction free writing
+Plug 'airblade/vim-gitgutter'                       " show git diff in the sign column
+Plug 'jiangmiao/auto-pairs'                         " pair completion
+Plug 'godlygeek/tabular'                            " text filtering and alignment
+Plug 'chriskempson/base16-vim'                      " base16 colors in vim
 
-call vundle#end()
+" searching
+Plug 'scrooloose/nerdtree'                          " file explorer
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " command line fuzzy finder
+Plug 'junegunn/fzf.vim'                             " command line fuzzy finder
+"
+" language specific plugins
+Plug 'rust-lang/rust.vim'                           " rust support
+Plug 'plasticboy/vim-markdown'                      " markdown support
+Plug 'euclio/vim-markdown-composer'                 " render markdown in the browser
+
+" code formatting and syntax
+Plug 'rhysd/vim-clang-format'                       " c++ code formatting
+Plug 'tell-k/vim-autopep8'                          " python code formatting
+Plug 'prettier/vim-prettier'                        " javascript code formatting
+Plug 'sheerun/vim-polyglot'                         " syntax support for many languages
+
+" linting and completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}     " code completion
+Plug 'w0rp/ale'                                     " code linting
+
+call plug#end()
 filetype plugin on
 
-" settings
+"" settings
 
 set expandtab                          " expand tabs to spaces by default
 set ai                                 " auto indenting
@@ -49,11 +57,10 @@ set tabstop       =4                   " a tab is four spaces
 set numberwidth   =1                   " room used for line numbers
 set backspace     =indent,eol,start    " allow backspacing over everything in insert mode
 set belloff       =all                 " disable vim bell sounds
-set termwinsize   =10x0                " set size of terminal buffer
 set mouse         =a                   " allow mouse to set cursor position
 set undodir       =~/.vim/.vimdid      " backup directory location
 set rtp           +=/usr/local/opt/fzf " set fzf rtp
-set clipboard     =exclude:.*          " disable clipboard
+set clipboard     =unnamed             " use the system clipboard
 set noerrorbells visualbell t_vb=      " disable terminal bells
 
 "" lettings
@@ -163,11 +170,18 @@ function! JournalMode()
     execute 'Goyo'
 endfunction
 
+source ~/.vim/functions/cp.vim    " competitive programming related functions
+source ~/.vim/functions/cocrc.vim " coc related functions
+
 "" colors
 
 if &t_Co > 2 || has("gui_running")
   syntax on
   set t_Co=256
+  if filereadable(expand("~/.vimrc_background"))
+      let base16colorspace=256
+      source ~/.vimrc_background
+  endif
   :hi Error NONE
   highlight Comment ctermfg=green
 endif
