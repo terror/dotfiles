@@ -4,6 +4,19 @@ function run() {
   g++ -std=c++17 "$@" && ./a.out;
 }
 
+# Run last modified file in directory (C++)
+function r() {
+    file="$(ls -t | head -n 1)"
+    case "$1" in 
+        p)
+           python3 "$file" 
+           ;;
+        *)
+            g++ -std=c++17 "$file" && ./a.out;
+            rm -rf a.out;
+    esac
+}
+
 function py() {
   python3 "$@";
 }
