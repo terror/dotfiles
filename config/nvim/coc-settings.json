@@ -1,0 +1,6 @@
+{
+    "diagnostic.format": "%message [%source]",
+    "eslint.autoFixOnSave": true,
+    "eslint.packageManager": "yarn",
+    "typescript.validate.enable": false
+}

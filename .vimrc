@@ -19,11 +19,12 @@ Plug 'chriskempson/base16-vim'                      " base16 colors in vim
 Plug 'scrooloose/nerdtree'                          " file explorer
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " command line fuzzy finder
 Plug 'junegunn/fzf.vim'                             " command line fuzzy finder
-"
+
 " language specific plugins
 Plug 'rust-lang/rust.vim'                           " rust support
 Plug 'plasticboy/vim-markdown'                      " markdown support
 Plug 'euclio/vim-markdown-composer'                 " render markdown in the browser
+Plug 'mattn/emmet-vim'                              " html completion
 
 " code formatting and syntax
 Plug 'rhysd/vim-clang-format'                       " c++ code formatting
@@ -40,28 +41,33 @@ filetype plugin on
 
 "" settings
 
-set expandtab                          " expand tabs to spaces by default
-set ai                                 " auto indenting
-set hlsearch                           " highlight search terms
-set ruler                              " show the cursor position
-set number                             " show line numbers
-set splitbelow                         " splits happen below
-set nofoldenable                       " disable folding
-set undofile                           " save undo history
-set autochdir                          " have vim set file dir to cwd
-set autoread                           " auto read changes files
+set hidden                                            " modified buffers in background
+set backup                                            " backup files
+set ignorecase                                        " ignore case in searches
+set smartindent                                       " newline smart indent
+set expandtab                                         " expand tabs to spaces by default
+set ai                                                " auto indenting
+set hlsearch                                          " highlight search terms
+set ruler                                             " show the cursor position
+set number                                            " show line numbers
+set splitbelow                                        " splits happen below
+set nofoldenable                                      " disable folding
+set undofile                                          " save undo history
+set autochdir                                         " have vim set file dir to cwd
+set autoread                                          " auto read changes files
 
-set background    =dark                " use a dark background
-set shiftwidth    =4                   " number of spaces to use for auto indenting
-set tabstop       =4                   " a tab is four spaces
-set numberwidth   =1                   " room used for line numbers
-set backspace     =indent,eol,start    " allow backspacing over everything in insert mode
-set belloff       =all                 " disable vim bell sounds
-set mouse         =a                   " allow mouse to set cursor position
-set undodir       =~/.vim/.vimdid      " backup directory location
-set rtp           +=/usr/local/opt/fzf " set fzf rtp
-set clipboard     =unnamed             " use the system clipboard
-set noerrorbells visualbell t_vb=      " disable terminal bells
+set background                   =dark                " use a dark background
+set shiftwidth                   =4                   " number of spaces to use for auto indenting
+set tabstop                      =4                   " a tab is four spaces
+set numberwidth                  =1                   " room used for line numbers
+set backspace                    =indent,eol,start    " allow backspacing over everything in insert mode
+set belloff                      =all                 " disable vim bell sounds
+set mouse                        =a                   " allow mouse to set cursor position
+set undodir                      =~/.vim/.vimdid      " backup directory location
+set rtp                         +=/usr/local/opt/fzf  " set fzf rtp
+set clipboard                    =unnamed             " use the system clipboard
+set backupdir                    =~/.vim/backup       " set backup directory
+set noerrorbells visualbell t_vb =                    " disable terminal bells
 
 "" lettings
 
@@ -69,28 +75,22 @@ let mapleader                          = "\<space>"                   " set spac
 
 let g:autopep8_on_save                 = 1                            " format python file on save
 let g:autopep8_disable_show_diff       = 1                            " disable show diff window
-
 let g:AutoPairsFlyMode                 = 0                            " disable fly mode
 let g:AutoPairsShortcutBackInsert      = '<M-b>'                      " shortcut
-
+let g:AutoPairsShortcutToggle          = '<C-u>'                      " toggle autopairs
 let g:fzf_command_prefix               = 'Z'                          " set fzf command prefix to 'Z'
-
 let g:goyo_width                       = 150                          " set Goyo width
 let g:goyo_height                      = 90                           " set Goyo height
-
 let g:NERDTreeWinPos                   = "right"                      " always open nerdtree on right side
 let NERDTreeMinimalUI                  = 1                            " to remove the ? at the top
-
 let g:gitgutter_enabled                = 0                            " disable gitgutter by default
-
+let g:user_emmet_leader_key            ='<C-E>'                       " emmet completion, <C-E> + ','
 let g:rustfmt_autosave                 = 1                            " format rust code on save
-
 let g:vim_markdown_conceal             = 0                            " do not conceal blocks
 let g:vim_markdown_conceal_code_blocks = 0                            " do not conceal code blocks
 let g:markdown_folding                 = 0                            " disable folding
 let g:markdown_composer_autostart      = 0                            " disable autostart in browser
 let g:markdown_composer_syntax_theme   = 'monokai'                    " set markdown codeblock theme
-
 let g:ale_fix_on_save                  = 1                            " allow for code fixing on save
 let g:ale_set_highlights               = 0                            " disable highlight setting
 let g:ale_echo_msg_error_str           = 'E'                          " set 'E' for error
@@ -133,7 +133,6 @@ nnoremap<leader>tg :GitGutterToggle<CR>|                           " toggle git 
 nnoremap <leader>a: :Tabularize /:<CR>|                            " align on :
 nnoremap <leader>a= :Tabularize /=<CR>|                            " align on =
 nnoremap <leader>a# :Tabularize /#<CR>|                            " align on #
-
 vnoremap <leader>a" :Tabularize /"<CR>|                            " align on "
 vnoremap <leader>a# :Tabularize /#<CR>|                            " align on #
 vnoremap <leader>a= :Tabularize /=<CR>|                            " align on =
@@ -145,7 +144,7 @@ nnoremap<leader>sg :ZCommits<CR>|                                  " search thro
 nnoremap<leader>o :NERDTreeToggle<CR>|                             " toggle nerdtree with leader o
 
 " edit named files
-nnoremap<leader>ev :split $MYVIMRC<CR>|                            " edit vimrc
+nnoremap<leader>ev :split ~/.vimrc<CR>|                            " edit vimrc
 nnoremap<leader>ea :split ~/.aliases<CR>|                          " edit bash aliases
 nnoremap<leader>en :e notes.md<CR>|                                " edit project notes
 
@@ -183,7 +182,11 @@ if &t_Co > 2 || has("gui_running")
       source ~/.vimrc_background
   endif
   :hi Error NONE
-  highlight Comment ctermfg=green
+  hi Pmenu ctermbg=black ctermfg=white
+  hi! CocErrorSign guifg=#d1666a
+  hi! CocInfoSign guibg=#353b45
+  hi! CocWarningSign guifg=#d1cd66
+  hi! Comment ctermfg=green
 endif
 
 "" autocommands

@@ -8,8 +8,6 @@ if !exists("g:os")
     endif
 endif
 
-set hidden
-
 function! TermWrapper(command) abort
 	if !exists('g:split_term_style') | let g:split_term_style = 'vertical' | endif
 	if g:split_term_style ==# 'vertical'

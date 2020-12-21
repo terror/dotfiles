@@ -55,7 +55,7 @@ alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias discord='cordless'
 
 # open last modified vim file
-alias lv='vim -c "normal '\''0"'
+alias lv='nvim -c "normal '\''0"'
 
 # upgrade pip
 alias upip='pip install --upgrade pip'

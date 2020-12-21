@@ -3,4 +3,5 @@
 /vim/plugged/*
 /vim/.netrwhist
 /vim/view
+/vim/backup
 node_modules/
