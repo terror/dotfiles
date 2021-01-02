@@ -51,12 +51,13 @@ set hlsearch                                          " highlight search terms
 set ruler                                             " show the cursor position
 set number                                            " show line numbers
 set splitbelow                                        " splits happen below
-set nofoldenable                                      " disable folding
+set nofoldenable                                      " disable folding on file open
 set undofile                                          " save undo history
 set autochdir                                         " have vim set file dir to cwd
 set autoread                                          " auto read changes files
 
 set background                   =dark                " use a dark background
+set foldmethod                   =marker              " allow for specification of folds
 set shiftwidth                   =4                   " number of spaces to use for auto indenting
 set tabstop                      =4                   " a tab is four spaces
 set numberwidth                  =1                   " room used for line numbers
@@ -109,6 +110,7 @@ nnoremap<C-a> :ter<CR>|                                            " open termin
 nnoremap<C-R> :%s/[^[:print:]]//g<CR>|                             " remove non printable characters
 nnoremap ^ 0|
 nnoremap 0 ^|
+onoremap in( :<C-U>normal! f(vi(<CR>|                              " hop into parens on same line
 
 " tab switching
 nnoremap <C-j> :tabprevious<CR>|                                   " prev tab
@@ -205,6 +207,9 @@ augroup vimrc
 
     " disable terminal bells
     autocmd GUIEnter * set visualbell t_vb=
+
+    " close template fold for cpp files
+    autocmd BufNewFile,BufEnter *.cpp normal zM
 
     " load cpp template on file open 
     :autocmd BufNewFile *.cpp 0r ~/.vim/templates/cpp.skeleton
