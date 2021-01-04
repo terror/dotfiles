@@ -1,12 +1,21 @@
-# Auto generated using `brew bundle dump --describe`.
-
 tap "bios-marcel/cordless"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
+tap "zegervdv/zathura"
+
+# Command-line interface for SQLite
+brew "sqlite"
+
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9", link: false
+
+# Core application library for C
+brew "glib"
 
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
@@ -14,14 +23,11 @@ brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 
-# Command-line interface for SQLite
-brew "sqlite"
-
-# Core application library for C
-brew "glib"
-
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
+
+# Cross-platform make
+brew "cmake"
 
 # Calculator REPL, similar to bc(1)
 brew "eva"
@@ -38,11 +44,17 @@ brew "gcc"
 # Glorious Glasgow Haskell Compilation System
 brew "ghc"
 
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+
 # Improved top (interactive process viewer)
 brew "htop"
 
 # Configurable static site generator
 brew "hugo"
+
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
 
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
@@ -58,6 +70,9 @@ brew "mysql@5.7"
 
 # Fast, highly customisable system info script
 brew "neofetch"
+
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
@@ -86,7 +101,7 @@ brew "shellcheck"
 # Cross-shell prompt for astronauts
 brew "starship"
 
-# Programatically correct mistyped console commands
+# Programmatically correct mistyped console commands
 brew "thefuck"
 
 # Terminal multiplexer
@@ -94,6 +109,9 @@ brew "tmux"
 
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 
 # Google's JavaScript engine
 brew "v8"
@@ -104,11 +122,11 @@ brew "vim"
 # Internet file retriever
 brew "wget"
 
+# Show the current WiFi network password
+brew "wifi-password"
+
 # JavaScript package manager
 brew "yarn"
-
-# Discord, but in 1984
-brew "bios-marcel/cordless/cordless"
 
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
@@ -119,10 +137,12 @@ brew "mongodb/brew/mongodb-community"
 # An interactive JavaScript command-line interface to MongoDB
 brew "mongodb/brew/mongodb-community-shell", link: false
 
-# Show the current WiFi network password
-brew "wifi-password"
+brew "zegervdv/zathura/zathura"
 
+brew "zegervdv/zathura/zathura-pdf-poppler"
+
+cask "calibre"
 cask "iterm2"
 cask "mysqlworkbench"
-cask "spectacle"
-cask "superproductivity"
+cask "rectangle"
+cask "visual-studio-code"
