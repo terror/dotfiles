@@ -26,7 +26,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "b68873105ae65a19f8c7fbe91f1bde35069248f3b44e98a3872544dce21713527d73eb97026b84b21482d309baf27f33357d75294651c6d005f5308b610bc394"
       },
-      "expiry": 1609384136715
+      "expiry": 1610498322025
     },
     "/usr/local/bin/python3.v3": {
       "data": {
@@ -51,7 +51,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "9848e00efde90c813eea1e94816640c40769775e2c635a1646a7d8c42e086fc16585f6ce402e23a5ff437b026bef8326f25391cb19f32fc47f9f7b6171699e19"
       },
-      "expiry": 1609384136685
+      "expiry": 1610498322032
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7.v3": {
       "data": {
@@ -76,7 +76,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "893de335bbb859b20a9f508c3ba0e5f4c40b9fac8ff715b5946af2db297f2fda0ff6238c7c61837e416499b32e61718b8575cf846733d0c73747fc98c8032b6b"
       },
-      "expiry": 1609384136659
+      "expiry": 1610498322027
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.v3": {
       "data": {
@@ -101,7 +101,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64"
       },
-      "expiry": 1609384136660
+      "expiry": 1610498322019
     },
     "/usr/bin/python.v3": {
       "data": {
@@ -126,7 +126,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1609384136689
+      "expiry": 1610498322028
     },
     "/usr/bin/python2.7.v3": {
       "data": {
@@ -151,7 +151,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1609384136713
+      "expiry": 1610498322057
     },
     "/usr/bin/python2.v3": {
       "data": {
@@ -176,7 +176,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1609384136714
+      "expiry": 1610498322042
     },
     "/usr/bin/python3.v3": {
       "data": {
@@ -201,9 +201,78 @@
         "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1609384136728
+      "expiry": 1610498322174
     },
     "INTERPRETERS_CACHE_v3_KnownPathsService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+        "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+        "fileHash": "65a45847d7a0dc1f0f66a4bc8b957ec9d2bbce969b51b3c3ab9ce1dba79a411ecaf1c621deefe0f5d7c275742eb68f885cf3159dbd33ff211edb8aeb7941ddd5",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+        "fileHash": "cb15f798c03f2eefdf944d2811d3886e36eae8d31db087a13097b73ce57dc32656fa95dfc784f7051c1706a40d8f11a792b36da3717455b57bf0339df4c80533",
+        "type": "Unknown"
+      },
       {
         "architecture": 3,
         "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
@@ -550,7 +619,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1609384136744
+      "expiry": 1610498322180
     },
     "INTERPRETERS_CACHE_v3_CurrentPathService": [
       {
@@ -578,25 +647,25 @@
       },
       {
         "architecture": 3,
-        "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
+        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python3",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.2-final",
+          "raw": "3.8.2-final",
           "major": 3,
-          "minor": 7,
+          "minor": 8,
           "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.2-final"
+          "version": "3.8.2-final"
         },
-        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
-        "fileHash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64",
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+        "fileHash": "65a45847d7a0dc1f0f66a4bc8b957ec9d2bbce969b51b3c3ab9ce1dba79a411ecaf1c621deefe0f5d7c275742eb68f885cf3159dbd33ff211edb8aeb7941ddd5",
         "type": "Unknown"
       },
       {
@@ -624,74 +693,73 @@
       },
       {
         "architecture": 3,
-        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
+        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "2.7.16-final",
-          "major": 2,
-          "minor": 7,
-          "patch": 16,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "2.7.16-final"
+          "version": "3.8.2-final"
         },
-        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+        "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
         "type": "Unknown"
       },
       {
         "architecture": 3,
-        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
+        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "2.7.16-final",
-          "major": 2,
-          "minor": 7,
-          "patch": 16,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "2.7.16-final"
+          "version": "3.8.2-final"
         },
-        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+        "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
         "type": "Unknown"
       }
     ],
     "InterpreterAutoSeletionRule-currentPath": {
       "architecture": 3,
-      "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
+      "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
       "version": {
         "options": {
           "loose": false,
           "includePrerelease": false
         },
         "loose": false,
-        "raw": "3.7.2-final",
+        "raw": "3.8.2-final",
         "major": 3,
-        "minor": 7,
+        "minor": 8,
         "patch": 2,
         "prerelease": [
           "final"
         ],
         "build": [],
-        "version": "3.7.2-final"
+        "version": "3.8.2-final"
       },
-      "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
-      "fileHash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64",
-      "type": "Unknown",
-      "cachedEntry": true
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+      "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
+      "type": "Unknown"
     },
     "PipEnvInformation": [
       {
@@ -718,6 +786,21 @@
         "pythonPath": "/Users/liam/.local/share/virtualenvs/notice-yg2-fIH4/bin/python",
         "workspaceFolder": "/Users/liam/Github/notice",
         "envName": "notice"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python",
+        "workspaceFolder": "/Users/liam/Fun/python/docker_redis",
+        "envName": "docker_redis"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python",
+        "workspaceFolder": "/Users/liam/Github/kattis-api",
+        "envName": "kattis-api"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
+        "workspaceFolder": "/Users/liam/Github/Fun/tsort",
+        "envName": "tsort"
       }
     ],
     "preferredGlobalPyInterpreter": {
@@ -749,35 +832,35 @@
         "displayName": "Python 2.7.16 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-f5b651b9c4b75532b11ae83303c43d14"
       },
-      "expiry": 1609384172266
+      "expiry": 1610498322316
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.7.2 64-bit",
         "hash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64-d0e05da260ad5e636f9cff7c94792360"
       },
-      "expiry": 1609384172262
+      "expiry": 1610498322312
     },
     "/usr/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.2 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-4bc3c9f5346452a4fe404c621ebcd443"
       },
-      "expiry": 1609384136733
+      "expiry": 1610498322230
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 2.7.16 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-a9fb100b1ab04c53a774363838d4885e"
       },
-      "expiry": 1609270368395
+      "expiry": 1610498322318
     },
     "/usr/local/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.7.2 64-bit",
         "hash": "9848e00efde90c813eea1e94816640c40769775e2c635a1646a7d8c42e086fc16585f6ce402e23a5ff437b026bef8326f25391cb19f32fc47f9f7b6171699e19-caa57d907c06dba4892d0ad5d6819fad"
       },
-      "expiry": 1609384172264
+      "expiry": 1610498322314
     },
     "InterpreterAutoSeletionRule-system": {
       "architecture": 3,
@@ -831,7 +914,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1609384172291
+      "expiry": 1610498322357
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -861,7 +944,7 @@
           "displayName": "Python 3.7.2 64-bit"
         }
       },
-      "expiry": 1609384172283
+      "expiry": 1610498322345
     },
     "/usr/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -891,7 +974,7 @@
           "displayName": "Python 3.8.2 64-bit"
         }
       },
-      "expiry": 1609384172295
+      "expiry": 1610498322326
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.Details.v7": {
       "data": {
@@ -921,7 +1004,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1609270368417
+      "expiry": 1610498322363
     },
     "/usr/local/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -951,7 +1034,7 @@
           "displayName": "Python 3.7.2 64-bit"
         }
       },
-      "expiry": 1609384172287
+      "expiry": 1610498322351
     },
     "InterpreterAutoSeletionRule-cachedInterpreters": {
       "architecture": 3,
@@ -1005,7 +1088,7 @@
     },
     "InterpreterAutoSeletionRule-workspaceEnvs": {
       "architecture": 3,
-      "path": "/Users/liam/.local/share/virtualenvs/notice-yg2-fIH4/bin/python",
+      "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
       "version": {
         "options": {
           "loose": false,
@@ -1022,10 +1105,10 @@
         "build": [],
         "version": "3.8.2-final"
       },
-      "sysPrefix": "/Users/liam/.local/share/virtualenvs/notice-yg2-fIH4",
-      "fileHash": "7b4e85c1985675ef83901f3f29a321ac149eec32b0da419312e7e88d166edc7f289a29831c0c2d16cb661e6b55fe06fef2b8639908609b35ab9d33bbfcffc690",
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+      "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
       "type": "PipEnv",
-      "pipEnvWorkspaceFolder": "/Users/liam/Github/notice"
+      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/tsort"
     },
     "/Users/liam/.local/share/virtualenvs/dbserver-ZwdY_JQB/bin/python.interpreter.displayName.v7": {
       "data": {
@@ -1860,6 +1943,348 @@
         }
       },
       "expiry": 1609344578416
+    },
+    "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8",
+        "fileHash": "b148ea4a7f32c39dc2333b39c06cf58c1e2010fd6b40d870d2075ad0964ef25227622784cb58b39d7622134224c7b3eb9a906743a3bd79ba8d4e24c4914e3a76"
+      },
+      "expiry": 1609815543192
+    },
+    "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit ('docker_redis': pipenv)",
+        "hash": "b148ea4a7f32c39dc2333b39c06cf58c1e2010fd6b40d870d2075ad0964ef25227622784cb58b39d7622134224c7b3eb9a906743a3bd79ba8d4e24c4914e3a76-8092bb7c229a506e184b5d257f11b16b"
+      },
+      "expiry": 1609815543208
+    },
+    "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "b148ea4a7f32c39dc2333b39c06cf58c1e2010fd6b40d870d2075ad0964ef25227622784cb58b39d7622134224c7b3eb9a906743a3bd79ba8d4e24c4914e3a76",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8",
+          "fileHash": "b148ea4a7f32c39dc2333b39c06cf58c1e2010fd6b40d870d2075ad0964ef25227622784cb58b39d7622134224c7b3eb9a906743a3bd79ba8d4e24c4914e3a76",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/liam/Fun/python/docker_redis",
+          "envName": "docker_redis",
+          "displayName": "Python 3.8.2 64-bit ('docker_redis': pipenv)"
+        }
+      },
+      "expiry": 1609815543217
+    },
+    "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8",
+        "fileHash": "3f7e46546b6a987c569d8a9c9baa2c511101c26f1c4303bb1773e3fa4d0a5352398433803e4437ecb19cac4e876cfad4a8ca50996df6342d2b0f268592428a27"
+      },
+      "expiry": 1609815676697
+    },
+    "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8",
+        "fileHash": "f833173f652f6eaeb117ef43397b20fd957fcd9ca15a23490682c3d4ecf5c18c1230927931b69bc4b443543cd6690a4381af493502b80d358a09e255c6453e27"
+      },
+      "expiry": 1609815676698
+    },
+    "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60",
+        "fileHash": "20676fdced1a289cc00b718e0bde81bcddb43d255f9cc130394eaa4b8373d0d490026b805c7549c80a561054559d61ef7b92c1ecb4314770ded6a07768e347da"
+      },
+      "expiry": 1610123320857
+    },
+    "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit ('kattis-api': pipenv)",
+        "hash": "20676fdced1a289cc00b718e0bde81bcddb43d255f9cc130394eaa4b8373d0d490026b805c7549c80a561054559d61ef7b92c1ecb4314770ded6a07768e347da-6c38334b6426a0d59603c8360332ae83"
+      },
+      "expiry": 1610123780311
+    },
+    "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "20676fdced1a289cc00b718e0bde81bcddb43d255f9cc130394eaa4b8373d0d490026b805c7549c80a561054559d61ef7b92c1ecb4314770ded6a07768e347da",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60",
+          "fileHash": "20676fdced1a289cc00b718e0bde81bcddb43d255f9cc130394eaa4b8373d0d490026b805c7549c80a561054559d61ef7b92c1ecb4314770ded6a07768e347da",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/liam/Github/kattis-api",
+          "envName": "kattis-api",
+          "displayName": "Python 3.8.2 64-bit ('kattis-api': pipenv)"
+        }
+      },
+      "expiry": 1610123780350
+    },
+    "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60",
+        "fileHash": "132db01c435752b48b59f09e5e98869dff1cb42cde0b5611676270af4e8256a6ee03609f958a4d7ef6ad4dad6ac47866ace06289606657f3e47543dc4a00387f"
+      },
+      "expiry": 1610118363467
+    },
+    "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60",
+        "fileHash": "089c9611b3703ac88dc59131d5bc0d723dc28153edd52329d1a2c291f0662d36a8cff3aba67e0ad87efa85610ad48dfa87704c82be5ded56fd30fedbc7f640fd"
+      },
+      "expiry": 1610118363468
+    },
+    "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+        "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2"
+      },
+      "expiry": 1610505960640
+    },
+    "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit ('tsort': pipenv)",
+        "hash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2-86cc733f86d6e4929e495750e9f95dfb"
+      },
+      "expiry": 1610505960727
+    },
+    "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+          "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/tsort",
+          "envName": "tsort",
+          "displayName": "Python 3.8.2 64-bit ('tsort': pipenv)"
+        }
+      },
+      "expiry": 1610505960756
+    },
+    "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+        "fileHash": "cb15f798c03f2eefdf944d2811d3886e36eae8d31db087a13097b73ce57dc32656fa95dfc784f7051c1706a40d8f11a792b36da3717455b57bf0339df4c80533"
+      },
+      "expiry": 1610506186787
+    },
+    "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+        "fileHash": "65a45847d7a0dc1f0f66a4bc8b957ec9d2bbce969b51b3c3ab9ce1dba79a411ecaf1c621deefe0f5d7c275742eb68f885cf3159dbd33ff211edb8aeb7941ddd5"
+      },
+      "expiry": 1610506186789
     }
   },
   "coc-python|/Users/liam/dotfiles": {
@@ -2626,5 +3051,338 @@
   "coc-python|/Users/liam": {
     "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
     "INTERPRETERS_CACHE_v3_PipEnvService": []
+  },
+  "coc-python|/Users/liam/Fun/python/docker_redis": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:62658e2caddb1a14b04b0bdccc22cb11": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService:62658e2caddb1a14b04b0bdccc22cb11": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8",
+        "fileHash": "b148ea4a7f32c39dc2333b39c06cf58c1e2010fd6b40d870d2075ad0964ef25227622784cb58b39d7622134224c7b3eb9a906743a3bd79ba8d4e24c4914e3a76",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Fun/python/docker_redis"
+      }
+    ],
+    "SelectedPythonPath": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python",
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Fun/python/docker_redis": {
+      "architecture": 3,
+      "path": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8",
+      "fileHash": "b148ea4a7f32c39dc2333b39c06cf58c1e2010fd6b40d870d2075ad0964ef25227622784cb58b39d7622134224c7b3eb9a906743a3bd79ba8d4e24c4914e3a76",
+      "type": "PipEnv",
+      "pipEnvWorkspaceFolder": "/Users/liam/Fun/python/docker_redis"
+    },
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/docker_redis-XHoUm-E8",
+        "fileHash": "b148ea4a7f32c39dc2333b39c06cf58c1e2010fd6b40d870d2075ad0964ef25227622784cb58b39d7622134224c7b3eb9a906743a3bd79ba8d4e24c4914e3a76",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Fun/python/docker_redis"
+      }
+    ]
+  },
+  "coc-python|/Users/liam/Github/CP4": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:9c9ebb21a5e71c2d7dab7e12f0134ed9": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:9c9ebb21a5e71c2d7dab7e12f0134ed9": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/CP4": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github/kattis-api": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:f95e56e3ac50983e6bf3b84d0e20024e": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService:f95e56e3ac50983e6bf3b84d0e20024e": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60",
+        "fileHash": "20676fdced1a289cc00b718e0bde81bcddb43d255f9cc130394eaa4b8373d0d490026b805c7549c80a561054559d61ef7b92c1ecb4314770ded6a07768e347da",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/kattis-api"
+      }
+    ],
+    "SelectedPythonPath": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python",
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/kattis-api": {
+      "architecture": 3,
+      "path": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60",
+      "fileHash": "20676fdced1a289cc00b718e0bde81bcddb43d255f9cc130394eaa4b8373d0d490026b805c7549c80a561054559d61ef7b92c1ecb4314770ded6a07768e347da",
+      "type": "PipEnv",
+      "pipEnvWorkspaceFolder": "/Users/liam/Github/kattis-api"
+    },
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/kattis-api-Ei0-nY60",
+        "fileHash": "20676fdced1a289cc00b718e0bde81bcddb43d255f9cc130394eaa4b8373d0d490026b805c7549c80a561054559d61ef7b92c1ecb4314770ded6a07768e347da",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/kattis-api"
+      }
+    ]
+  },
+  "coc-python|/Users/liam/Github/leetcode": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:f23fdf16cc17d2967c7c6dd1c43b7168": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:f23fdf16cc17d2967c7c6dd1c43b7168": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/leetcode": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github/EPIJudge": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:497c10bd8398eaa5948c90c049f0d93d": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:497c10bd8398eaa5948c90c049f0d93d": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/EPIJudge": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github/Fun/tsort": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:fa6674bd519a8c79dd9367a864a3fbdf": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService:fa6674bd519a8c79dd9367a864a3fbdf": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+        "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/tsort"
+      }
+    ],
+    "SelectedPythonPath": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun/tsort": {
+      "architecture": 3,
+      "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+      "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
+      "type": "PipEnv",
+      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/tsort"
+    },
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
+        "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/tsort"
+      }
+    ]
   }
 }

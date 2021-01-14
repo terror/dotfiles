@@ -1,17 +1,21 @@
-add_newline   = false
-prompt_order  = ["username","directory","git_branch","character"]
+add_newline          = false
+format               = """
+$username\
+$directory\
+$git_branch\
+"""
 
 [username]
-style_user    = "bold cyan"
-show_always   = true
+style_user           = "bold cyan"
+show_always          = true
 
 [directory]
-style         = "bold yellow"
+style                = "bold yellow"
 
 [character]
-symbol        = "$"
-style_failure = "bold green"
+symbol               = "$"
+style_failure        = "bold green"
 
 [git_branch]
-symbol        = ""
-style         = "bold green"
+symbol               = ""
+style                = "bold green"

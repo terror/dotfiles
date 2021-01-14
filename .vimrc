@@ -97,6 +97,7 @@ let g:ale_set_highlights               = 0                            " disable 
 let g:ale_echo_msg_error_str           = 'E'                          " set 'E' for error
 let g:ale_echo_msg_warning_str         = 'W'                          " set 'W' for warning
 let g:ale_echo_msg_format              = '[%linter%] %s [%severity%]' " set error message format
+let g:fzf_layout                       = { 'down': '~40%' }           " set fzf split to bottom
 
 "" mappings
 
@@ -123,6 +124,7 @@ nnoremap <C-P> :+tabmove<CR>|                                      " move tab ri
 nnoremap<leader>i gg=G<CR>|                                        " fix indentation
 nnoremap<leader>p :Prettier<CR>|                                   " format code with prettier
 nnoremap<leader>sv :source $MYVIMRC<CR>|                           " source vimrc
+nnoremap<leader>ss :source %<CR>|                                  " source %
 nnoremap<leader>tp :Goyo<CR>|                                      " toggle prose mode
 nnoremap<leader>" viw<esc>a"<esc>bi"<esc>lel<CR>|                  " quotes around word
 nnoremap<leader>rr :redo<CR>|                                      " redo last change
