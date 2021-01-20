@@ -8,33 +8,25 @@ call plug#begin('~/.vim/plugged')
 
 " general purpose plugins
 Plug 'vim-airline/vim-airline'                      " status bar
-Plug 'hugolgst/vimsence'                            " discord rich presence
 Plug 'junegunn/goyo.vim'                            " distraction free writing
 Plug 'airblade/vim-gitgutter'                       " show git diff in the sign column
 Plug 'jiangmiao/auto-pairs'                         " pair completion
 Plug 'godlygeek/tabular'                            " text filtering and alignment
 Plug 'chriskempson/base16-vim'                      " base16 colors in vim
-
-" searching
 Plug 'scrooloose/nerdtree'                          " file explorer
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " command line fuzzy finder
 Plug 'junegunn/fzf.vim'                             " command line fuzzy finder
-
-" language specific plugins
 Plug 'rust-lang/rust.vim'                           " rust support
 Plug 'plasticboy/vim-markdown'                      " markdown support
 Plug 'euclio/vim-markdown-composer'                 " render markdown in the browser
 Plug 'mattn/emmet-vim'                              " html completion
-
-" code formatting and syntax
 Plug 'rhysd/vim-clang-format'                       " c++ code formatting
 Plug 'tell-k/vim-autopep8'                          " python code formatting
 Plug 'prettier/vim-prettier'                        " javascript code formatting
 Plug 'sheerun/vim-polyglot'                         " syntax support for many languages
-
-" linting and completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " code completion
 Plug 'w0rp/ale'                                     " code linting
+Plug 'SirVer/ultisnips'                             " code snippets
 
 call plug#end()
 filetype plugin on
@@ -72,32 +64,37 @@ set noerrorbells visualbell t_vb =                    " disable terminal bells
 
 "" lettings
 
-let mapleader                          = "\<space>"                   " set space as leader key
+let mapleader                                          = "\<space>"                   " set space as leader key
 
-let g:autopep8_on_save                 = 1                            " format python file on save
-let g:autopep8_disable_show_diff       = 1                            " disable show diff window
-let g:AutoPairsFlyMode                 = 0                            " disable fly mode
-let g:AutoPairsShortcutBackInsert      = '<M-b>'                      " shortcut
-let g:AutoPairsShortcutToggle          = '<C-u>'                      " toggle autopairs
-let g:fzf_command_prefix               = 'Z'                          " set fzf command prefix to 'Z'
-let g:goyo_width                       = 150                          " set Goyo width
-let g:goyo_height                      = 90                           " set Goyo height
-let g:NERDTreeWinPos                   = "right"                      " always open nerdtree on right side
-let NERDTreeMinimalUI                  = 1                            " to remove the ? at the top
-let g:gitgutter_enabled                = 0                            " disable gitgutter by default
-let g:user_emmet_leader_key            ='<C-E>'                       " emmet completion, <C-E> + ','
-let g:rustfmt_autosave                 = 1                            " format rust code on save
-let g:vim_markdown_conceal             = 0                            " do not conceal blocks
-let g:vim_markdown_conceal_code_blocks = 0                            " do not conceal code blocks
-let g:markdown_folding                 = 0                            " disable folding
-let g:markdown_composer_autostart      = 0                            " disable autostart in browser
-let g:markdown_composer_syntax_theme   = 'monokai'                    " set markdown codeblock theme
-let g:ale_fix_on_save                  = 1                            " allow for code fixing on save
-let g:ale_set_highlights               = 0                            " disable highlight setting
-let g:ale_echo_msg_error_str           = 'E'                          " set 'E' for error
-let g:ale_echo_msg_warning_str         = 'W'                          " set 'W' for warning
-let g:ale_echo_msg_format              = '[%linter%] %s [%severity%]' " set error message format
-let g:fzf_layout                       = { 'down': '~40%' }           " set fzf split to bottom
+let g:autopep8_on_save                                 = 1                            " format python file on save
+let g:autopep8_disable_show_diff                       = 1                            " disable show diff window
+let g:AutoPairsFlyMode                                 = 0                            " disable fly mode
+let g:AutoPairsShortcutBackInsert                      = '<M-b>'                      " shortcut
+let g:AutoPairsShortcutToggle                          = '<C-u>'                      " toggle autopairs
+let g:fzf_command_prefix                               = 'Z'                          " set fzf command prefix to 'Z'
+let g:goyo_width                                       = 150                          " set Goyo width
+let g:goyo_height                                      = 90                           " set Goyo height
+let g:NERDTreeWinPos                                   = "right"                      " always open nerdtree on right side
+let NERDTreeMinimalUI                                  = 1                            " to remove the ? at the top
+let g:gitgutter_enabled                                = 0                            " disable gitgutter by default
+let g:user_emmet_leader_key                            = '<C-E>'                      " emmet completion, <C-E> + ','
+let g:rustfmt_autosave                                 = 1                            " format rust code on save
+let g:vim_markdown_conceal                             = 0                            " do not conceal blocks
+let g:vim_markdown_conceal_code_blocks                 = 0                            " do not conceal code blocks
+let g:markdown_folding                                 = 0                            " disable folding
+let g:markdown_composer_autostart                      = 0                            " disable autostart in browser
+let g:markdown_composer_syntax_theme                   = 'monokai'                    " set markdown codeblock theme
+let g:ale_fix_on_save                                  = 1                            " allow for code fixing on save
+let g:ale_set_highlights                               = 0                            " disable highlight setting
+let g:ale_echo_msg_error_str                           = 'E'                          " set 'E' for error
+let g:ale_echo_msg_warning_str                         = 'W'                          " set 'W' for warning
+let g:ale_echo_msg_format                              = '[%linter%] %s [%severity%]' " set error message format
+let g:fzf_layout                                       = { 'down': '~40%' }           " set fzf split to bottom
+let g:UltiSnipsExpandTrigger                           = "<tab>"                      " expand snippet
+let g:UltiSnipsJumpForwardTrigger                      = "<tab>"                      " jump forward in snippet
+let g:UltiSnipsJumpBackwardTrigger                     = "<s-tab>"                    " jump backward in snippet
+let g:UltiSnipsEditSplit                               = "horizontal"                 " split snippet edit horizontally
+let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = "vim/ultisnips"              " default directory for ultisnips
 
 "" mappings
 
@@ -106,12 +103,11 @@ nnoremap Q <nop>|                                                  " map Q to no
 nnoremap Z :wq<CR>|                                                " save and quit file
 onoremap p i(|                                                     " for easier parens deletion
 onoremap b i[|                                                     " for easier bracket deletion
-nnoremap - dd|                                                     " remove line with '-'
+onoremap in( :<C-U>normal! f(vi(<CR>|                              " hop into parens on same line
 nnoremap<C-a> :ter<CR>|                                            " open terminal with ctrl + a
 nnoremap<C-R> :%s/[^[:print:]]//g<CR>|                             " remove non printable characters
 nnoremap ^ 0|
 nnoremap 0 ^|
-onoremap in( :<C-U>normal! f(vi(<CR>|                              " hop into parens on same line
 
 " tab switching
 nnoremap <C-j> :tabprevious<CR>|                                   " prev tab
@@ -151,6 +147,7 @@ nnoremap<leader>o :NERDTreeToggle<CR>|                             " toggle nerd
 nnoremap<leader>ev :split ~/.vimrc<CR>|                            " edit vimrc
 nnoremap<leader>ea :split ~/.aliases<CR>|                          " edit bash aliases
 nnoremap<leader>en :e notes.md<CR>|                                " edit project notes
+nnoremap<leader>es :UltiSnipsEdit<CR>|                             " edit ultisnips for current filetype
 
 " we don't need arrow keys
 nnoremap <up> <nop>|                                               " disable up in normal mode
