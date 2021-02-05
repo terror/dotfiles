@@ -6,7 +6,6 @@ filetype off
 filetype plugin on
 call plug#begin('~/.vim/plugged')
 
-" general purpose plugins
 Plug 'vim-airline/vim-airline'                      " status bar
 Plug 'junegunn/goyo.vim'                            " distraction free writing
 Plug 'airblade/vim-gitgutter'                       " show git diff in the sign column
@@ -27,6 +26,7 @@ Plug 'sheerun/vim-polyglot'                         " syntax support for many la
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " code completion
 Plug 'w0rp/ale'                                     " code linting
 Plug 'SirVer/ultisnips'                             " code snippets
+Plug 'airblade/vim-rooter'                          " look in root for file search
 
 call plug#end()
 filetype plugin on
@@ -140,8 +140,9 @@ vnoremap <leader>a: :Tabularize /:<CR>|                            " align on :
 
 " searching
 nnoremap<leader>sf :ZFiles<CR>|                                    " search for files
+nnoremap<leader>sa :AllLines<CR>|                                  " search through all lines in all files
 nnoremap<leader>sg :ZCommits<CR>|                                  " search through git commits
-nnoremap<leader>o :NERDTreeToggle<CR>|                             " toggle nerdtree with leader o
+nnoremap<leader>o :NERDTreeToggle<CR>|                             " toggle nerdtree
 
 " edit named files
 nnoremap<leader>ev :split ~/.vimrc<CR>|                            " edit vimrc
@@ -189,6 +190,14 @@ if &t_Co > 2 || has("gui_running")
   hi! CocWarningSign guifg=#d1cd66
   hi! Comment ctermfg=green
 endif
+
+"" commands
+
+command! -bang -nargs=* AllLines
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>),
+  \   1,
+  \   fzf#vim#with_preview({'options': ['--delimiter=:', '--nth=4..']}), <bang>0)
 
 "" autocommands
 
