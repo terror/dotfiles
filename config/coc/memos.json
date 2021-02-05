@@ -26,7 +26,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "b68873105ae65a19f8c7fbe91f1bde35069248f3b44e98a3872544dce21713527d73eb97026b84b21482d309baf27f33357d75294651c6d005f5308b610bc394"
       },
-      "expiry": 1610498322025
+      "expiry": 1612291223456
     },
     "/usr/local/bin/python3.v3": {
       "data": {
@@ -51,7 +51,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "9848e00efde90c813eea1e94816640c40769775e2c635a1646a7d8c42e086fc16585f6ce402e23a5ff437b026bef8326f25391cb19f32fc47f9f7b6171699e19"
       },
-      "expiry": 1610498322032
+      "expiry": 1612291223463
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7.v3": {
       "data": {
@@ -76,7 +76,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "893de335bbb859b20a9f508c3ba0e5f4c40b9fac8ff715b5946af2db297f2fda0ff6238c7c61837e416499b32e61718b8575cf846733d0c73747fc98c8032b6b"
       },
-      "expiry": 1610498322027
+      "expiry": 1612291223535
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.v3": {
       "data": {
@@ -101,7 +101,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64"
       },
-      "expiry": 1610498322019
+      "expiry": 1612291223361
     },
     "/usr/bin/python.v3": {
       "data": {
@@ -126,7 +126,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1610498322028
+      "expiry": 1612291223467
     },
     "/usr/bin/python2.7.v3": {
       "data": {
@@ -151,7 +151,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1610498322057
+      "expiry": 1612291223461
     },
     "/usr/bin/python2.v3": {
       "data": {
@@ -176,7 +176,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1610498322042
+      "expiry": 1612291223459
     },
     "/usr/bin/python3.v3": {
       "data": {
@@ -201,78 +201,9 @@
         "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1610498322174
+      "expiry": 1612291223707
     },
     "INTERPRETERS_CACHE_v3_KnownPathsService": [
-      {
-        "architecture": 3,
-        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.2-final"
-        },
-        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
-        "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python3",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.2-final"
-        },
-        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
-        "fileHash": "65a45847d7a0dc1f0f66a4bc8b957ec9d2bbce969b51b3c3ab9ce1dba79a411ecaf1c621deefe0f5d7c275742eb68f885cf3159dbd33ff211edb8aeb7941ddd5",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python3.8",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.2-final"
-        },
-        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
-        "fileHash": "cb15f798c03f2eefdf944d2811d3886e36eae8d31db087a13097b73ce57dc32656fa95dfc784f7051c1706a40d8f11a792b36da3717455b57bf0339df4c80533",
-        "type": "Unknown"
-      },
       {
         "architecture": 3,
         "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
@@ -619,7 +550,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1610498322180
+      "expiry": 1612291223510
     },
     "INTERPRETERS_CACHE_v3_CurrentPathService": [
       {
@@ -647,25 +578,25 @@
       },
       {
         "architecture": 3,
-        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python3",
+        "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.8.2-final",
+          "raw": "3.7.2-final",
           "major": 3,
-          "minor": 8,
+          "minor": 7,
           "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.8.2-final"
+          "version": "3.7.2-final"
         },
-        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
-        "fileHash": "65a45847d7a0dc1f0f66a4bc8b957ec9d2bbce969b51b3c3ab9ce1dba79a411ecaf1c621deefe0f5d7c275742eb68f885cf3159dbd33ff211edb8aeb7941ddd5",
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
+        "fileHash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64",
         "type": "Unknown"
       },
       {
@@ -693,72 +624,72 @@
       },
       {
         "architecture": 3,
-        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
+        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.8.2-final"
+          "version": "2.7.16-final"
         },
-        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
-        "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "type": "Unknown"
       },
       {
         "architecture": 3,
-        "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
+        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.8.2-final"
+          "version": "2.7.16-final"
         },
-        "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
-        "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "type": "Unknown"
       }
     ],
     "InterpreterAutoSeletionRule-currentPath": {
       "architecture": 3,
-      "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
+      "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
       "version": {
         "options": {
           "loose": false,
           "includePrerelease": false
         },
         "loose": false,
-        "raw": "3.8.2-final",
+        "raw": "3.7.2-final",
         "major": 3,
-        "minor": 8,
+        "minor": 7,
         "patch": 2,
         "prerelease": [
           "final"
         ],
         "build": [],
-        "version": "3.8.2-final"
+        "version": "3.7.2-final"
       },
-      "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
-      "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
+      "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
+      "fileHash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64",
       "type": "Unknown"
     },
     "PipEnvInformation": [
@@ -801,6 +732,26 @@
         "pythonPath": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
         "workspaceFolder": "/Users/liam/Github/Fun/tsort",
         "envName": "tsort"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi/bin/python",
+        "workspaceFolder": "/Users/liam/Github/Fun/goodreads-book-scrape",
+        "envName": "goodreads-book-scrape"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python",
+        "workspaceFolder": "/Users/liam/Github/Fun/jac-cli",
+        "envName": "jac-cli"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_/bin/python",
+        "workspaceFolder": "/Users/liam/Github/Fun/ig-autoclaimer",
+        "envName": "ig-autoclaimer"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs/bin/python",
+        "workspaceFolder": "/Users/liam/Github/Fun/medium-to-instapaper",
+        "envName": "medium-to-instapaper"
       }
     ],
     "preferredGlobalPyInterpreter": {
@@ -832,35 +783,35 @@
         "displayName": "Python 2.7.16 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-f5b651b9c4b75532b11ae83303c43d14"
       },
-      "expiry": 1610498322316
+      "expiry": 1612291223897
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.7.2 64-bit",
         "hash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64-d0e05da260ad5e636f9cff7c94792360"
       },
-      "expiry": 1610498322312
+      "expiry": 1612291223893
     },
     "/usr/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.2 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-4bc3c9f5346452a4fe404c621ebcd443"
       },
-      "expiry": 1610498322230
+      "expiry": 1612291223780
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 2.7.16 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-a9fb100b1ab04c53a774363838d4885e"
       },
-      "expiry": 1610498322318
+      "expiry": 1612291223654
     },
     "/usr/local/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.7.2 64-bit",
         "hash": "9848e00efde90c813eea1e94816640c40769775e2c635a1646a7d8c42e086fc16585f6ce402e23a5ff437b026bef8326f25391cb19f32fc47f9f7b6171699e19-caa57d907c06dba4892d0ad5d6819fad"
       },
-      "expiry": 1610498322314
+      "expiry": 1612291223901
     },
     "InterpreterAutoSeletionRule-system": {
       "architecture": 3,
@@ -914,7 +865,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1610498322357
+      "expiry": 1612291223954
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -944,7 +895,7 @@
           "displayName": "Python 3.7.2 64-bit"
         }
       },
-      "expiry": 1610498322345
+      "expiry": 1612291223946
     },
     "/usr/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -974,7 +925,7 @@
           "displayName": "Python 3.8.2 64-bit"
         }
       },
-      "expiry": 1610498322326
+      "expiry": 1612291223908
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.Details.v7": {
       "data": {
@@ -1004,7 +955,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1610498322363
+      "expiry": 1612291223720
     },
     "/usr/local/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -1034,7 +985,7 @@
           "displayName": "Python 3.7.2 64-bit"
         }
       },
-      "expiry": 1610498322351
+      "expiry": 1612291223962
     },
     "InterpreterAutoSeletionRule-cachedInterpreters": {
       "architecture": 3,
@@ -1088,7 +1039,7 @@
     },
     "InterpreterAutoSeletionRule-workspaceEnvs": {
       "architecture": 3,
-      "path": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL/bin/python",
+      "path": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs/bin/python",
       "version": {
         "options": {
           "loose": false,
@@ -1105,10 +1056,10 @@
         "build": [],
         "version": "3.8.2-final"
       },
-      "sysPrefix": "/Users/liam/.local/share/virtualenvs/tsort-7BmKwJlL",
-      "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs",
+      "fileHash": "99678f7c6515dbfe383addd8834374056527607c8da854e71cca749591806bc6005d5bc7a932a54bacfdbb83c9ea6fb28064ff7be4b17806c81fe47f8c04fc82",
       "type": "PipEnv",
-      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/tsort"
+      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/medium-to-instapaper"
     },
     "/Users/liam/.local/share/virtualenvs/dbserver-ZwdY_JQB/bin/python.interpreter.displayName.v7": {
       "data": {
@@ -2285,6 +2236,388 @@
         "fileHash": "65a45847d7a0dc1f0f66a4bc8b957ec9d2bbce969b51b3c3ab9ce1dba79a411ecaf1c621deefe0f5d7c275742eb68f885cf3159dbd33ff211edb8aeb7941ddd5"
       },
       "expiry": 1610506186789
+    },
+    "/Users/liam/Github/Web/bookshelf/venv/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Web/bookshelf/venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Web/bookshelf/venv",
+        "fileHash": "e75270c8ded2b60c4de56fd0a1840d6ec50d96514d15e2c832676be24854720309008aaf8c8e262380e0f140f15040f57eb1d51cb8e63dadf0c36bbcf4b49c88"
+      },
+      "expiry": 1611112057822
+    },
+    "/Users/liam/Github/Web/bookshelf/venv/bin/python3.7.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Web/bookshelf/venv/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Web/bookshelf/venv",
+        "fileHash": "8fea733df94fcd8ff43531cbffb2cef3c1444770e8c95bfc0323ea2d2e81b0736c64bc8772eaee4d95d3b94136a0003a0b5000a373d6df149f26b677a89c194b"
+      },
+      "expiry": 1611112057835
+    },
+    "/Users/liam/Github/Web/bookshelf/venv/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Web/bookshelf/venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Web/bookshelf/venv",
+        "fileHash": "f79a9dec630b0c36121ff11390057d8719fbe9d605a8f5049305f0e6454e262db3767d6b41d76aba7576d7b15807ee6fd728f9092dcb598889ff0754e4c9e389"
+      },
+      "expiry": 1611112057836
+    },
+    "/Users/liam/Github/Web/bookshelf/venv/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.7.2 64-bit ('venv': venv)",
+        "hash": "e75270c8ded2b60c4de56fd0a1840d6ec50d96514d15e2c832676be24854720309008aaf8c8e262380e0f140f15040f57eb1d51cb8e63dadf0c36bbcf4b49c88-d9e10f3337181f7eaaa7c38910873434"
+      },
+      "expiry": 1611112057806
+    },
+    "/Users/liam/Github/Web/bookshelf/venv/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "e75270c8ded2b60c4de56fd0a1840d6ec50d96514d15e2c832676be24854720309008aaf8c8e262380e0f140f15040f57eb1d51cb8e63dadf0c36bbcf4b49c88",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/Github/Web/bookshelf/venv/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.7.2-final",
+            "major": 3,
+            "minor": 7,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.7.2-final"
+          },
+          "sysPrefix": "/Users/liam/Github/Web/bookshelf/venv",
+          "fileHash": "e75270c8ded2b60c4de56fd0a1840d6ec50d96514d15e2c832676be24854720309008aaf8c8e262380e0f140f15040f57eb1d51cb8e63dadf0c36bbcf4b49c88",
+          "envName": "venv",
+          "type": "Venv",
+          "displayName": "Python 3.7.2 64-bit ('venv': venv)"
+        }
+      },
+      "expiry": 1611112057828
+    },
+    "/Users/liam/Github/Web/bookshelf/venv/bin/python3.7.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "8fea733df94fcd8ff43531cbffb2cef3c1444770e8c95bfc0323ea2d2e81b0736c64bc8772eaee4d95d3b94136a0003a0b5000a373d6df149f26b677a89c194b"
+      },
+      "expiry": 1611112057935
+    },
+    "/Users/liam/Github/Web/bookshelf/venv/bin/python3.7.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.7.2 64-bit ('venv': venv)",
+        "hash": "8fea733df94fcd8ff43531cbffb2cef3c1444770e8c95bfc0323ea2d2e81b0736c64bc8772eaee4d95d3b94136a0003a0b5000a373d6df149f26b677a89c194b-c1eb46beed1b421e69b8c01dfc349779"
+      },
+      "expiry": 1611112057986
+    },
+    "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi",
+        "fileHash": "1e8dedf9487922809295cf20410365087838110c34e24d69937dd7f9b5816e005420ab99e6abeec5272f5fcc167117e666cebcfad782f5874905f36267a6c268"
+      },
+      "expiry": 1611112559170
+    },
+    "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit ('goodreads-book-scrape': pipenv)",
+        "hash": "1e8dedf9487922809295cf20410365087838110c34e24d69937dd7f9b5816e005420ab99e6abeec5272f5fcc167117e666cebcfad782f5874905f36267a6c268-7cbb1699bfa99401084272070d57d066"
+      },
+      "expiry": 1611112559251
+    },
+    "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "1e8dedf9487922809295cf20410365087838110c34e24d69937dd7f9b5816e005420ab99e6abeec5272f5fcc167117e666cebcfad782f5874905f36267a6c268",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi",
+          "fileHash": "1e8dedf9487922809295cf20410365087838110c34e24d69937dd7f9b5816e005420ab99e6abeec5272f5fcc167117e666cebcfad782f5874905f36267a6c268",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/goodreads-book-scrape",
+          "envName": "goodreads-book-scrape",
+          "displayName": "Python 3.8.2 64-bit ('goodreads-book-scrape': pipenv)"
+        }
+      },
+      "expiry": 1611112559289
+    },
+    "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7",
+        "fileHash": "e6ec4845f6aa695f08c049be39df2e7c98db83aea5843c492500134a92a438363fc1a2e23f62f023ba4b934e337c657c25a91828185287651ea1052c351e73f2"
+      },
+      "expiry": 1611344241229
+    },
+    "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit ('jac-cli': pipenv)",
+        "hash": "e6ec4845f6aa695f08c049be39df2e7c98db83aea5843c492500134a92a438363fc1a2e23f62f023ba4b934e337c657c25a91828185287651ea1052c351e73f2-7780290c2fe92983405f68261429da51"
+      },
+      "expiry": 1611344349120
+    },
+    "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "e6ec4845f6aa695f08c049be39df2e7c98db83aea5843c492500134a92a438363fc1a2e23f62f023ba4b934e337c657c25a91828185287651ea1052c351e73f2",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7",
+          "fileHash": "e6ec4845f6aa695f08c049be39df2e7c98db83aea5843c492500134a92a438363fc1a2e23f62f023ba4b934e337c657c25a91828185287651ea1052c351e73f2",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/jac-cli",
+          "envName": "jac-cli",
+          "displayName": "Python 3.8.2 64-bit ('jac-cli': pipenv)"
+        }
+      },
+      "expiry": 1611344349175
+    },
+    "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_",
+        "fileHash": "d615271b8ed1deef01ff94bde3e31feb32ea3c1335a1e42b0b614c43b778f4326e4f7a7512447ddc33d5becaa4b954dde182adbd6ff0c4840cd19031d4ba68c0"
+      },
+      "expiry": 1611511809260
+    },
+    "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit ('ig-autoclaimer': pipenv)",
+        "hash": "d615271b8ed1deef01ff94bde3e31feb32ea3c1335a1e42b0b614c43b778f4326e4f7a7512447ddc33d5becaa4b954dde182adbd6ff0c4840cd19031d4ba68c0-62e26070497e48bf18a853a2457c8fc5"
+      },
+      "expiry": 1611511809286
+    },
+    "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "d615271b8ed1deef01ff94bde3e31feb32ea3c1335a1e42b0b614c43b778f4326e4f7a7512447ddc33d5becaa4b954dde182adbd6ff0c4840cd19031d4ba68c0",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_",
+          "fileHash": "d615271b8ed1deef01ff94bde3e31feb32ea3c1335a1e42b0b614c43b778f4326e4f7a7512447ddc33d5becaa4b954dde182adbd6ff0c4840cd19031d4ba68c0",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/ig-autoclaimer",
+          "envName": "ig-autoclaimer",
+          "displayName": "Python 3.8.2 64-bit ('ig-autoclaimer': pipenv)"
+        }
+      },
+      "expiry": 1611511809304
+    },
+    "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs",
+        "fileHash": "99678f7c6515dbfe383addd8834374056527607c8da854e71cca749591806bc6005d5bc7a932a54bacfdbb83c9ea6fb28064ff7be4b17806c81fe47f8c04fc82"
+      },
+      "expiry": 1611598586071
+    },
+    "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit ('medium-to-instapaper': pipenv)",
+        "hash": "99678f7c6515dbfe383addd8834374056527607c8da854e71cca749591806bc6005d5bc7a932a54bacfdbb83c9ea6fb28064ff7be4b17806c81fe47f8c04fc82-231aad9e2496b21373e2afe59bc6a091"
+      },
+      "expiry": 1611598586180
+    },
+    "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "99678f7c6515dbfe383addd8834374056527607c8da854e71cca749591806bc6005d5bc7a932a54bacfdbb83c9ea6fb28064ff7be4b17806c81fe47f8c04fc82",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs",
+          "fileHash": "99678f7c6515dbfe383addd8834374056527607c8da854e71cca749591806bc6005d5bc7a932a54bacfdbb83c9ea6fb28064ff7be4b17806c81fe47f8c04fc82",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/medium-to-instapaper",
+          "envName": "medium-to-instapaper",
+          "displayName": "Python 3.8.2 64-bit ('medium-to-instapaper': pipenv)"
+        }
+      },
+      "expiry": 1611598586245
     }
   },
   "coc-python|/Users/liam/dotfiles": {
@@ -3382,6 +3715,597 @@
         "fileHash": "b643973ca8e1b858193c8a375ec018d5671d3549c539832827cd7364b9c18104f36f2a030ff6515f87d12cf466d5c00ba432e3c690f0e233323a56da77f965d2",
         "type": "PipEnv",
         "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/tsort"
+      }
+    ]
+  },
+  "coc-python|/Users/liam/Github/Web": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:680a1149f623b238605ae3f48cc02a0a": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:680a1149f623b238605ae3f48cc02a0a": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Web": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github/Web/bookshelf": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:7b91089f1d216b39b0b5aef96323b1ab": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:7b91089f1d216b39b0b5aef96323b1ab": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Web/bookshelf/venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Web/bookshelf/venv",
+        "fileHash": "e75270c8ded2b60c4de56fd0a1840d6ec50d96514d15e2c832676be24854720309008aaf8c8e262380e0f140f15040f57eb1d51cb8e63dadf0c36bbcf4b49c88",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Web/bookshelf/venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Web/bookshelf/venv",
+        "fileHash": "f79a9dec630b0c36121ff11390057d8719fbe9d605a8f5049305f0e6454e262db3767d6b41d76aba7576d7b15807ee6fd728f9092dcb598889ff0754e4c9e389",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Web/bookshelf/venv/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Web/bookshelf/venv",
+        "fileHash": "8fea733df94fcd8ff43531cbffb2cef3c1444770e8c95bfc0323ea2d2e81b0736c64bc8772eaee4d95d3b94136a0003a0b5000a373d6df149f26b677a89c194b",
+        "envName": "venv",
+        "type": "Venv"
+      }
+    ],
+    "SelectedPythonPath": "/Users/liam/Github/Web/bookshelf/venv/bin/python3.7",
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Web/bookshelf": {
+      "architecture": 3,
+      "path": "/Users/liam/Github/Web/bookshelf/venv/bin/python3.7",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.7.2-final",
+        "major": 3,
+        "minor": 7,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.7.2-final"
+      },
+      "sysPrefix": "/Users/liam/Github/Web/bookshelf/venv",
+      "fileHash": "8fea733df94fcd8ff43531cbffb2cef3c1444770e8c95bfc0323ea2d2e81b0736c64bc8772eaee4d95d3b94136a0003a0b5000a373d6df149f26b677a89c194b",
+      "envName": "venv",
+      "type": "Venv"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Web/bookshelf/venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Web/bookshelf/venv",
+        "fileHash": "e75270c8ded2b60c4de56fd0a1840d6ec50d96514d15e2c832676be24854720309008aaf8c8e262380e0f140f15040f57eb1d51cb8e63dadf0c36bbcf4b49c88",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Web/bookshelf/venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Web/bookshelf/venv",
+        "fileHash": "f79a9dec630b0c36121ff11390057d8719fbe9d605a8f5049305f0e6454e262db3767d6b41d76aba7576d7b15807ee6fd728f9092dcb598889ff0754e4c9e389",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Web/bookshelf/venv/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Web/bookshelf/venv",
+        "fileHash": "8fea733df94fcd8ff43531cbffb2cef3c1444770e8c95bfc0323ea2d2e81b0736c64bc8772eaee4d95d3b94136a0003a0b5000a373d6df149f26b677a89c194b",
+        "envName": "venv",
+        "type": "Venv"
+      }
+    ]
+  },
+  "coc-python|/Users/liam/Github/Fun/goodreads-book-scrape": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:b530af462d8a7e9dc89cf4169bb8a601": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService:b530af462d8a7e9dc89cf4169bb8a601": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi",
+        "fileHash": "1e8dedf9487922809295cf20410365087838110c34e24d69937dd7f9b5816e005420ab99e6abeec5272f5fcc167117e666cebcfad782f5874905f36267a6c268",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/goodreads-book-scrape"
+      }
+    ],
+    "SelectedPythonPath": "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi/bin/python",
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun/goodreads-book-scrape": {
+      "architecture": 3,
+      "path": "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi",
+      "fileHash": "1e8dedf9487922809295cf20410365087838110c34e24d69937dd7f9b5816e005420ab99e6abeec5272f5fcc167117e666cebcfad782f5874905f36267a6c268",
+      "type": "PipEnv",
+      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/goodreads-book-scrape"
+    },
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/goodreads-book-scrape-V0vqOlzi",
+        "fileHash": "1e8dedf9487922809295cf20410365087838110c34e24d69937dd7f9b5816e005420ab99e6abeec5272f5fcc167117e666cebcfad782f5874905f36267a6c268",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/goodreads-book-scrape"
+      }
+    ]
+  },
+  "coc-python|/Users/liam/Github/Algorithms/CompetitiveProgramming": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:a542e8fccfb88832b143ca0b0046db5c": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:a542e8fccfb88832b143ca0b0046db5c": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Algorithms/CompetitiveProgramming": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github/Fun/jac-cli": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:450ea95809d299914870342c8ed39075": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7",
+        "fileHash": "e6ec4845f6aa695f08c049be39df2e7c98db83aea5843c492500134a92a438363fc1a2e23f62f023ba4b934e337c657c25a91828185287651ea1052c351e73f2",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/jac-cli"
+      }
+    ],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:450ea95809d299914870342c8ed39075": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun/jac-cli": {
+      "architecture": 3,
+      "path": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7",
+      "fileHash": "e6ec4845f6aa695f08c049be39df2e7c98db83aea5843c492500134a92a438363fc1a2e23f62f023ba4b934e337c657c25a91828185287651ea1052c351e73f2",
+      "type": "PipEnv",
+      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/jac-cli"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7",
+        "fileHash": "e6ec4845f6aa695f08c049be39df2e7c98db83aea5843c492500134a92a438363fc1a2e23f62f023ba4b934e337c657c25a91828185287651ea1052c351e73f2",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/jac-cli"
+      }
+    ],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "SelectedPythonPath": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python"
+  },
+  "coc-python|/Users/liam/Github/Fun/ig-autoclaimer": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:1b0cd6e7ca0867e54a04ab14aad343ba": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService:1b0cd6e7ca0867e54a04ab14aad343ba": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_",
+        "fileHash": "d615271b8ed1deef01ff94bde3e31feb32ea3c1335a1e42b0b614c43b778f4326e4f7a7512447ddc33d5becaa4b954dde182adbd6ff0c4840cd19031d4ba68c0",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/ig-autoclaimer"
+      }
+    ],
+    "SelectedPythonPath": "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_/bin/python",
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun/ig-autoclaimer": {
+      "architecture": 3,
+      "path": "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_",
+      "fileHash": "d615271b8ed1deef01ff94bde3e31feb32ea3c1335a1e42b0b614c43b778f4326e4f7a7512447ddc33d5becaa4b954dde182adbd6ff0c4840cd19031d4ba68c0",
+      "type": "PipEnv",
+      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/ig-autoclaimer"
+    },
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_",
+        "fileHash": "d615271b8ed1deef01ff94bde3e31feb32ea3c1335a1e42b0b614c43b778f4326e4f7a7512447ddc33d5becaa4b954dde182adbd6ff0c4840cd19031d4ba68c0",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/ig-autoclaimer"
+      }
+    ]
+  },
+  "coc-python|/Users/liam/Github/Algorithms/cryptopals": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:be7e631aaa768df66c55a5fcab902c23": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:be7e631aaa768df66c55a5fcab902c23": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Algorithms/cryptopals": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github/Fun/medium-to-instapaper": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:3e2210ba5e51b8c8b707282abe9c78a8": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService:3e2210ba5e51b8c8b707282abe9c78a8": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs",
+        "fileHash": "99678f7c6515dbfe383addd8834374056527607c8da854e71cca749591806bc6005d5bc7a932a54bacfdbb83c9ea6fb28064ff7be4b17806c81fe47f8c04fc82",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/medium-to-instapaper"
+      }
+    ],
+    "SelectedPythonPath": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs/bin/python",
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun/medium-to-instapaper": {
+      "architecture": 3,
+      "path": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs",
+      "fileHash": "99678f7c6515dbfe383addd8834374056527607c8da854e71cca749591806bc6005d5bc7a932a54bacfdbb83c9ea6fb28064ff7be4b17806c81fe47f8c04fc82",
+      "type": "PipEnv",
+      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/medium-to-instapaper"
+    },
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs",
+        "fileHash": "99678f7c6515dbfe383addd8834374056527607c8da854e71cca749591806bc6005d5bc7a932a54bacfdbb83c9ea6fb28064ff7be4b17806c81fe47f8c04fc82",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/medium-to-instapaper"
       }
     ]
   }
