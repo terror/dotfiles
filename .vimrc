@@ -6,27 +6,29 @@ filetype off
 filetype plugin on
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'                      " status bar
-Plug 'junegunn/goyo.vim'                            " distraction free writing
-Plug 'airblade/vim-gitgutter'                       " show git diff in the sign column
-Plug 'jiangmiao/auto-pairs'                         " pair completion
-Plug 'godlygeek/tabular'                            " text filtering and alignment
-Plug 'chriskempson/base16-vim'                      " base16 colors in vim
-Plug 'scrooloose/nerdtree'                          " file explorer
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " command line fuzzy finder
-Plug 'junegunn/fzf.vim'                             " command line fuzzy finder
-Plug 'rust-lang/rust.vim'                           " rust support
-Plug 'plasticboy/vim-markdown'                      " markdown support
-Plug 'euclio/vim-markdown-composer'                 " render markdown in the browser
-Plug 'mattn/emmet-vim'                              " html completion
-Plug 'rhysd/vim-clang-format'                       " c++ code formatting
-Plug 'tell-k/vim-autopep8'                          " python code formatting
-Plug 'prettier/vim-prettier'                        " javascript code formatting
-Plug 'sheerun/vim-polyglot'                         " syntax support for many languages
-Plug 'neoclide/coc.nvim', {'branch': 'release'}     " code completion
-Plug 'w0rp/ale'                                     " code linting
-Plug 'SirVer/ultisnips'                             " code snippets
-Plug 'airblade/vim-rooter'                          " look in root for file search
+Plug 'vim-airline/vim-airline'                              " status bar
+Plug 'junegunn/goyo.vim'                                    " distraction free writing
+Plug 'airblade/vim-gitgutter'                               " show git diff in the sign column
+Plug 'jiangmiao/auto-pairs'                                 " pair completion
+Plug 'godlygeek/tabular'                                    " text filtering and alignment
+Plug 'chriskempson/base16-vim'                              " base16 colors in vim
+Plug 'scrooloose/nerdtree'                                  " file explorer
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }         " command line fuzzy finder
+Plug 'junegunn/fzf.vim'                                     " command line fuzzy finder
+Plug 'rust-lang/rust.vim'                                   " rust support
+Plug 'plasticboy/vim-markdown'                              " markdown support
+Plug 'euclio/vim-markdown-composer'                         " render markdown in the browser
+Plug 'mattn/emmet-vim'                                      " html completion
+Plug 'rhysd/vim-clang-format'                               " c++ code formatting
+Plug 'tell-k/vim-autopep8'                                  " python code formatting
+Plug 'prettier/vim-prettier'                                " javascript code formatting
+Plug 'sheerun/vim-polyglot'                                 " syntax support for many languages
+Plug 'neoclide/coc.nvim', {'branch': 'release'}             " code completion
+Plug 'w0rp/ale'                                             " code linting
+Plug 'SirVer/ultisnips'                                     " code snippets
+Plug 'airblade/vim-rooter'                                  " look in root for file search
+Plug 'terror/vim-crypto', { 'do': 'cargo build --release' } " view live cryptocurrency prices
+
 
 call plug#end()
 filetype plugin on
@@ -84,6 +86,10 @@ let g:vim_markdown_conceal_code_blocks                 = 0                      
 let g:markdown_folding                                 = 0                            " disable folding
 let g:markdown_composer_autostart                      = 0                            " disable autostart in browser
 let g:markdown_composer_syntax_theme                   = 'monokai'                    " set markdown codeblock theme
+let g:ale_fixers = {
+\ '*':    ['remove_trailing_lines', 'trim_whitespace'],
+\ 'rust': ['rustfmt'],
+\}
 let g:ale_fix_on_save                                  = 1                            " allow for code fixing on save
 let g:ale_set_highlights                               = 0                            " disable highlight setting
 let g:ale_echo_msg_error_str                           = 'E'                          " set 'E' for error
@@ -95,6 +101,10 @@ let g:UltiSnipsJumpForwardTrigger                      = "<tab>"                
 let g:UltiSnipsJumpBackwardTrigger                     = "<s-tab>"                    " jump backward in snippet
 let g:UltiSnipsEditSplit                               = "horizontal"                 " split snippet edit horizontally
 let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = "vim/ultisnips"              " default directory for ultisnips
+let g:ale_rust_rustfmt_options = "+nightly"                                           " rust nightly formatting
+let g:rustfmt_autosave         = 0                                                    " run rustfmt on save
+
+
 
 "" mappings
 
@@ -219,15 +229,15 @@ augroup vimrc
     " close template fold for cpp files
     autocmd BufNewFile,BufEnter *.cpp normal zM
 
-    " load cpp template on file open 
+    " load cpp template on file open
     :autocmd BufNewFile *.cpp 0r ~/.vim/templates/cpp.skeleton
 
     " load basic python template on file open
     :autocmd BufNewFile *.py 0r ~/.vim/templates/python.skeleton
 
-    " populate journal template 
-    autocmd VimEnter */journal/** 0r ~/.vim/templates/journal.skeleton 
+    " populate journal template
+    autocmd VimEnter */journal/** 0r ~/.vim/templates/journal.skeleton
 
     " set header for current journal entry
-    autocmd VimEnter */journal/** :call JournalMode() 
+    autocmd VimEnter */journal/** :call JournalMode()
 augroup end
