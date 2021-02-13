@@ -4,13 +4,16 @@ function run() {
   g++ -std=c++17 "$@" && ./a.out;
 }
 
-# Run last modified file in directory (C++)
+# Run last modified file in directory (C++, Python, Java)
 function r() {
     file="$(ls -t | head -n 1)"
-    case "$1" in 
+    case "$1" in
         p)
-           python3 "$file" 
+           python3 "$file"
            ;;
+        j)
+            javac "$file" && java "${file%.*}"
+            ;;
         *)
             g++ -std=c++17 "$file" && ./a.out;
             rm -rf a.out;
@@ -25,7 +28,7 @@ function rs() {
   cargo run "$@";
 }
 
-function hs() { 
+function hs() {
  file="$*"
  ghc "$file" && ./"${file%%.*}";
 }
@@ -110,13 +113,13 @@ function realpath() {
     [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
 }
 
-# LS through bat 
+# LS through bat
 function bls() {
     if [ $# -eq 0 ]; then ls . | bat; else ls "$@" | bat; fi;
 }
 
-# Fetch bitcoin price information 
-function btc() {    
+# Fetch bitcoin price information
+function btc() {
   curl rate.sx/btc
 }
 

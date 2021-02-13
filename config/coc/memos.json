@@ -26,7 +26,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "b68873105ae65a19f8c7fbe91f1bde35069248f3b44e98a3872544dce21713527d73eb97026b84b21482d309baf27f33357d75294651c6d005f5308b610bc394"
       },
-      "expiry": 1612291223456
+      "expiry": 1613246472084
     },
     "/usr/local/bin/python3.v3": {
       "data": {
@@ -51,7 +51,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "9848e00efde90c813eea1e94816640c40769775e2c635a1646a7d8c42e086fc16585f6ce402e23a5ff437b026bef8326f25391cb19f32fc47f9f7b6171699e19"
       },
-      "expiry": 1612291223463
+      "expiry": 1613246472098
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7.v3": {
       "data": {
@@ -76,7 +76,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "893de335bbb859b20a9f508c3ba0e5f4c40b9fac8ff715b5946af2db297f2fda0ff6238c7c61837e416499b32e61718b8575cf846733d0c73747fc98c8032b6b"
       },
-      "expiry": 1612291223535
+      "expiry": 1613246472087
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.v3": {
       "data": {
@@ -101,7 +101,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64"
       },
-      "expiry": 1612291223361
+      "expiry": 1613246472045
     },
     "/usr/bin/python.v3": {
       "data": {
@@ -126,7 +126,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1612291223467
+      "expiry": 1613246472103
     },
     "/usr/bin/python2.7.v3": {
       "data": {
@@ -151,7 +151,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1612291223461
+      "expiry": 1613246472107
     },
     "/usr/bin/python2.v3": {
       "data": {
@@ -176,7 +176,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1612291223459
+      "expiry": 1613246472112
     },
     "/usr/bin/python3.v3": {
       "data": {
@@ -201,9 +201,78 @@
         "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1612291223707
+      "expiry": 1613246472109
     },
     "INTERPRETERS_CACHE_v3_KnownPathsService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+        "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+        "fileHash": "dd4cdae43a68646467cabd45e28197d735a1b51515126b243b4628f4d965eb208e86befad5d95f1b52951bcd34c672b6ef8253b1a339dd829f517a99cc650880",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+        "fileHash": "5fd40cec396738336862be88d2bbf19ba06263303fb00e01ca2e8f1914a21194174336b321d3b55525a214b317b26b56635fdebd2100bfe874bc19ab6ee00c43",
+        "type": "Unknown"
+      },
       {
         "architecture": 3,
         "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
@@ -386,6 +455,52 @@
         },
         "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
+        "fileHash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
+        "fileHash": "893de335bbb859b20a9f508c3ba0e5f4c40b9fac8ff715b5946af2db297f2fda0ff6238c7c61837e416499b32e61718b8575cf846733d0c73747fc98c8032b6b",
         "type": "Unknown"
       },
       {
@@ -550,7 +665,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1612291223510
+      "expiry": 1613246472121
     },
     "INTERPRETERS_CACHE_v3_CurrentPathService": [
       {
@@ -578,25 +693,25 @@
       },
       {
         "architecture": 3,
-        "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
+        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python3",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.2-final",
+          "raw": "3.8.2-final",
           "major": 3,
-          "minor": 7,
+          "minor": 8,
           "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.2-final"
+          "version": "3.8.2-final"
         },
-        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
-        "fileHash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64",
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+        "fileHash": "dd4cdae43a68646467cabd45e28197d735a1b51515126b243b4628f4d965eb208e86befad5d95f1b52951bcd34c672b6ef8253b1a339dd829f517a99cc650880",
         "type": "Unknown"
       },
       {
@@ -624,72 +739,72 @@
       },
       {
         "architecture": 3,
-        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
+        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "2.7.16-final",
-          "major": 2,
-          "minor": 7,
-          "patch": 16,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "2.7.16-final"
+          "version": "3.8.2-final"
         },
-        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+        "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
         "type": "Unknown"
       },
       {
         "architecture": 3,
-        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
+        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "2.7.16-final",
-          "major": 2,
-          "minor": 7,
-          "patch": 16,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "2.7.16-final"
+          "version": "3.8.2-final"
         },
-        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+        "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
         "type": "Unknown"
       }
     ],
     "InterpreterAutoSeletionRule-currentPath": {
       "architecture": 3,
-      "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
+      "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
       "version": {
         "options": {
           "loose": false,
           "includePrerelease": false
         },
         "loose": false,
-        "raw": "3.7.2-final",
+        "raw": "3.8.2-final",
         "major": 3,
-        "minor": 7,
+        "minor": 8,
         "patch": 2,
         "prerelease": [
           "final"
         ],
         "build": [],
-        "version": "3.7.2-final"
+        "version": "3.8.2-final"
       },
-      "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
-      "fileHash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64",
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+      "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
       "type": "Unknown"
     },
     "PipEnvInformation": [
@@ -739,11 +854,6 @@
         "envName": "goodreads-book-scrape"
       },
       {
-        "pythonPath": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python",
-        "workspaceFolder": "/Users/liam/Github/Fun/jac-cli",
-        "envName": "jac-cli"
-      },
-      {
         "pythonPath": "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_/bin/python",
         "workspaceFolder": "/Users/liam/Github/Fun/ig-autoclaimer",
         "envName": "ig-autoclaimer"
@@ -752,6 +862,31 @@
         "pythonPath": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs/bin/python",
         "workspaceFolder": "/Users/liam/Github/Fun/medium-to-instapaper",
         "envName": "medium-to-instapaper"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python",
+        "workspaceFolder": "/Users/liam/Github/Fun/vim-crypto",
+        "envName": "vim-crypto"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python",
+        "workspaceFolder": "/Users/liam/Github/Fun/jac-cli",
+        "envName": "jac-cli"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python",
+        "workspaceFolder": "/Users/liam/Instagram-Swapper",
+        "envName": "Instagram-Swapper"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python",
+        "workspaceFolder": "/Users/liam/Github/Fun/partage",
+        "envName": "partage"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
+        "workspaceFolder": "/Users/liam/Github/Fun/deft",
+        "envName": "deft"
       }
     ],
     "preferredGlobalPyInterpreter": {
@@ -783,35 +918,35 @@
         "displayName": "Python 2.7.16 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-f5b651b9c4b75532b11ae83303c43d14"
       },
-      "expiry": 1612291223897
+      "expiry": 1613246473433
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.7.2 64-bit",
         "hash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64-d0e05da260ad5e636f9cff7c94792360"
       },
-      "expiry": 1612291223893
+      "expiry": 1613246473427
     },
     "/usr/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.2 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-4bc3c9f5346452a4fe404c621ebcd443"
       },
-      "expiry": 1612291223780
+      "expiry": 1613246473430
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 2.7.16 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-a9fb100b1ab04c53a774363838d4885e"
       },
-      "expiry": 1612291223654
+      "expiry": 1613246473436
     },
     "/usr/local/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.7.2 64-bit",
         "hash": "9848e00efde90c813eea1e94816640c40769775e2c635a1646a7d8c42e086fc16585f6ce402e23a5ff437b026bef8326f25391cb19f32fc47f9f7b6171699e19-caa57d907c06dba4892d0ad5d6819fad"
       },
-      "expiry": 1612291223901
+      "expiry": 1613246473439
     },
     "InterpreterAutoSeletionRule-system": {
       "architecture": 3,
@@ -865,7 +1000,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1612291223954
+      "expiry": 1613246473488
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -895,7 +1030,7 @@
           "displayName": "Python 3.7.2 64-bit"
         }
       },
-      "expiry": 1612291223946
+      "expiry": 1613246473473
     },
     "/usr/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -925,7 +1060,7 @@
           "displayName": "Python 3.8.2 64-bit"
         }
       },
-      "expiry": 1612291223908
+      "expiry": 1613246473481
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.Details.v7": {
       "data": {
@@ -955,7 +1090,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1612291223720
+      "expiry": 1613246473496
     },
     "/usr/local/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -985,7 +1120,7 @@
           "displayName": "Python 3.7.2 64-bit"
         }
       },
-      "expiry": 1612291223962
+      "expiry": 1613246473504
     },
     "InterpreterAutoSeletionRule-cachedInterpreters": {
       "architecture": 3,
@@ -1039,7 +1174,7 @@
     },
     "InterpreterAutoSeletionRule-workspaceEnvs": {
       "architecture": 3,
-      "path": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs/bin/python",
+      "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
       "version": {
         "options": {
           "loose": false,
@@ -1056,10 +1191,10 @@
         "build": [],
         "version": "3.8.2-final"
       },
-      "sysPrefix": "/Users/liam/.local/share/virtualenvs/medium-to-instapaper-cFVPsdbs",
-      "fileHash": "99678f7c6515dbfe383addd8834374056527607c8da854e71cca749591806bc6005d5bc7a932a54bacfdbb83c9ea6fb28064ff7be4b17806c81fe47f8c04fc82",
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+      "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
       "type": "PipEnv",
-      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/medium-to-instapaper"
+      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/deft"
     },
     "/Users/liam/.local/share/virtualenvs/dbserver-ZwdY_JQB/bin/python.interpreter.displayName.v7": {
       "data": {
@@ -2450,46 +2585,20 @@
         "sysPrefix": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7",
         "fileHash": "e6ec4845f6aa695f08c049be39df2e7c98db83aea5843c492500134a92a438363fc1a2e23f62f023ba4b934e337c657c25a91828185287651ea1052c351e73f2"
       },
-      "expiry": 1611344241229
+      "expiry": 1612818825788
     },
     "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.2 64-bit ('jac-cli': pipenv)",
         "hash": "e6ec4845f6aa695f08c049be39df2e7c98db83aea5843c492500134a92a438363fc1a2e23f62f023ba4b934e337c657c25a91828185287651ea1052c351e73f2-7780290c2fe92983405f68261429da51"
       },
-      "expiry": 1611344349120
+      "expiry": 1612818827350
     },
     "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python.interpreter.Details.v7": {
       "data": {
-        "fileHash": "e6ec4845f6aa695f08c049be39df2e7c98db83aea5843c492500134a92a438363fc1a2e23f62f023ba4b934e337c657c25a91828185287651ea1052c351e73f2",
-        "info": {
-          "architecture": 3,
-          "path": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7/bin/python",
-          "version": {
-            "options": {
-              "loose": false,
-              "includePrerelease": false
-            },
-            "loose": false,
-            "raw": "3.8.2-final",
-            "major": 3,
-            "minor": 8,
-            "patch": 2,
-            "prerelease": [
-              "final"
-            ],
-            "build": [],
-            "version": "3.8.2-final"
-          },
-          "sysPrefix": "/Users/liam/.local/share/virtualenvs/jac-cli-tvSq6pP7",
-          "fileHash": "e6ec4845f6aa695f08c049be39df2e7c98db83aea5843c492500134a92a438363fc1a2e23f62f023ba4b934e337c657c25a91828185287651ea1052c351e73f2",
-          "type": "PipEnv",
-          "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/jac-cli",
-          "envName": "jac-cli",
-          "displayName": "Python 3.8.2 64-bit ('jac-cli': pipenv)"
-        }
+        "fileHash": "e6ec4845f6aa695f08c049be39df2e7c98db83aea5843c492500134a92a438363fc1a2e23f62f023ba4b934e337c657c25a91828185287651ea1052c351e73f2"
       },
-      "expiry": 1611344349175
+      "expiry": 1612818827384
     },
     "/Users/liam/.local/share/virtualenvs/ig-autoclaimer-2nMZOIJ_/bin/python.v3": {
       "data": {
@@ -2618,6 +2727,462 @@
         }
       },
       "expiry": 1611598586245
+    },
+    "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R",
+        "fileHash": "515d325eee8420dc03c7ddf463485adc39bf7ea45933ef489f552ad6b0a9131e505e73edc25428e168c1295fe3ea087acf7ae30b9ad5e4cc8d090ab2e1447e6c"
+      },
+      "expiry": 1612732611283
+    },
+    "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R",
+        "fileHash": "bbd1d2d84b838dabff9ebf917cfbf70735eb25aa150b3e195c7e6afcd3ef34ff4dbfc0d859a6cb7fa1f77b02e168fb799c293f3905fbc5ff9d8006ee25bc6eea"
+      },
+      "expiry": 1612732611295
+    },
+    "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R",
+        "fileHash": "564956af86ae257c7e5ebb2d17a8dc3b5942f3cbac70fe4f4fef2788f06b1dbb64aba4789ed227beeba205619856237cfd269230b8146ae1443468db2856b899"
+      },
+      "expiry": 1612732611299
+    },
+    "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit ('vim-crypto': pipenv)",
+        "hash": "564956af86ae257c7e5ebb2d17a8dc3b5942f3cbac70fe4f4fef2788f06b1dbb64aba4789ed227beeba205619856237cfd269230b8146ae1443468db2856b899-afe343b1aea628294d96a670a574e2d6"
+      },
+      "expiry": 1612732633950
+    },
+    "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "564956af86ae257c7e5ebb2d17a8dc3b5942f3cbac70fe4f4fef2788f06b1dbb64aba4789ed227beeba205619856237cfd269230b8146ae1443468db2856b899",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R",
+          "fileHash": "564956af86ae257c7e5ebb2d17a8dc3b5942f3cbac70fe4f4fef2788f06b1dbb64aba4789ed227beeba205619856237cfd269230b8146ae1443468db2856b899",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/vim-crypto",
+          "envName": "vim-crypto",
+          "displayName": "Python 3.8.2 64-bit ('vim-crypto': pipenv)"
+        }
+      },
+      "expiry": 1612732633986
+    },
+    "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC",
+        "fileHash": "4bfe04eedc5b7d956f5f1a9cbee2d82d1c473b34f4d4ee850110e689d682778545650890ddce8bd8892deec276abefea92888e368540c65242fa4c66b8a8d769"
+      },
+      "expiry": 1612930250694
+    },
+    "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC",
+        "fileHash": "3f973882e34aafe6ff1cac4b32516cc5c4097e2399041e4c8a134c148ea701954c0f4c2933f09b9387d78754ede6dc1ebe33d719b2225209281c8df27c6c044c"
+      },
+      "expiry": 1612931026159
+    },
+    "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC",
+        "fileHash": "59410640ddd764f4157300724c44ebffd2b95ae5b32d5b82b67fb84d6b674bab387a95f487b835645cc973a77ed230da9bb3e90422c8f9cb7e274532a4ab31e9"
+      },
+      "expiry": 1612931026157
+    },
+    "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit ('partage': pipenv)",
+        "hash": "4bfe04eedc5b7d956f5f1a9cbee2d82d1c473b34f4d4ee850110e689d682778545650890ddce8bd8892deec276abefea92888e368540c65242fa4c66b8a8d769-55570b7e8e32e959c27aeebed3248365"
+      },
+      "expiry": 1612931027375
+    },
+    "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "4bfe04eedc5b7d956f5f1a9cbee2d82d1c473b34f4d4ee850110e689d682778545650890ddce8bd8892deec276abefea92888e368540c65242fa4c66b8a8d769",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC",
+          "fileHash": "4bfe04eedc5b7d956f5f1a9cbee2d82d1c473b34f4d4ee850110e689d682778545650890ddce8bd8892deec276abefea92888e368540c65242fa4c66b8a8d769",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/partage",
+          "envName": "partage",
+          "displayName": "Python 3.8.2 64-bit ('partage': pipenv)"
+        }
+      },
+      "expiry": 1612931027442
+    },
+    "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk",
+        "fileHash": "647576ae02c0d54d92d57e1597f1ac7cd6164db0b8eb0a27d2e1ba34673c63be4d175e241c086cd478d229dd9857e88dcc9d72beadf028adbb4a1fe774654b5d"
+      },
+      "expiry": 1612896760885
+    },
+    "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk",
+        "fileHash": "71db0153480f33947e4cca1c6b18357a08e38c100d35f2d16c310bf69e48c4729287f3bbce959e11c61679f13ecfa631e538cd8d4cc3fe005ebf6cf6692ffdd0"
+      },
+      "expiry": 1612896760890
+    },
+    "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk",
+        "fileHash": "08513870134b0903702d639613c123753812c60b14a123d11c49ecdaac694d1800e30c218a89f96291d6e69acbb4dda07af19978dffe86cbe4f09766c99a3a87"
+      },
+      "expiry": 1612896760896
+    },
+    "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit ('Instagram-Swapper': pipenv)",
+        "hash": "08513870134b0903702d639613c123753812c60b14a123d11c49ecdaac694d1800e30c218a89f96291d6e69acbb4dda07af19978dffe86cbe4f09766c99a3a87-9773fa1c933f82d6b2e551b38e87cda2"
+      },
+      "expiry": 1612897011980
+    },
+    "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "08513870134b0903702d639613c123753812c60b14a123d11c49ecdaac694d1800e30c218a89f96291d6e69acbb4dda07af19978dffe86cbe4f09766c99a3a87",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk",
+          "fileHash": "08513870134b0903702d639613c123753812c60b14a123d11c49ecdaac694d1800e30c218a89f96291d6e69acbb4dda07af19978dffe86cbe4f09766c99a3a87",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/liam/Instagram-Swapper",
+          "envName": "Instagram-Swapper",
+          "displayName": "Python 3.8.2 64-bit ('Instagram-Swapper': pipenv)"
+        }
+      },
+      "expiry": 1612897012085
+    },
+    "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+        "fileHash": "dd4cdae43a68646467cabd45e28197d735a1b51515126b243b4628f4d965eb208e86befad5d95f1b52951bcd34c672b6ef8253b1a339dd829f517a99cc650880"
+      },
+      "expiry": 1613258939603
+    },
+    "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+        "fileHash": "5fd40cec396738336862be88d2bbf19ba06263303fb00e01ca2e8f1914a21194174336b321d3b55525a214b317b26b56635fdebd2100bfe874bc19ab6ee00c43"
+      },
+      "expiry": 1613258939587
+    },
+    "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+        "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e"
+      },
+      "expiry": 1613258939610
+    },
+    "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit ('deft': pipenv)",
+        "hash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e-7ed168c857ccf2255e3b79aa9906980f"
+      },
+      "expiry": 1613258952163
+    },
+    "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+          "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/deft",
+          "envName": "deft",
+          "displayName": "Python 3.8.2 64-bit ('deft': pipenv)"
+        }
+      },
+      "expiry": 1613258952226
     }
   },
   "coc-python|/Users/liam/dotfiles": {
@@ -4306,6 +4871,480 @@
         "fileHash": "99678f7c6515dbfe383addd8834374056527607c8da854e71cca749591806bc6005d5bc7a932a54bacfdbb83c9ea6fb28064ff7be4b17806c81fe47f8c04fc82",
         "type": "PipEnv",
         "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/medium-to-instapaper"
+      }
+    ]
+  },
+  "coc-python|/Users/liam/Github/Fun/vim-crypto/rplugin": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:c75e8eac15a4bbccf9f4e271b030fc55": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:c75e8eac15a4bbccf9f4e271b030fc55": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun/vim-crypto/rplugin": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github/Fun/vim-crypto/python": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:c9c6fd28dcd73e9e4d010b741b911966": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:c9c6fd28dcd73e9e4d010b741b911966": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun/vim-crypto/python": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github/Fun/vim-crypto": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:9943776eb7f76cbbd2ffb051c3008a45": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService:9943776eb7f76cbbd2ffb051c3008a45": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R",
+        "fileHash": "564956af86ae257c7e5ebb2d17a8dc3b5942f3cbac70fe4f4fef2788f06b1dbb64aba4789ed227beeba205619856237cfd269230b8146ae1443468db2856b899",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/vim-crypto"
+      }
+    ],
+    "SelectedPythonPath": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python",
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun/vim-crypto": {
+      "architecture": 3,
+      "path": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R",
+      "fileHash": "564956af86ae257c7e5ebb2d17a8dc3b5942f3cbac70fe4f4fef2788f06b1dbb64aba4789ed227beeba205619856237cfd269230b8146ae1443468db2856b899",
+      "type": "PipEnv",
+      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/vim-crypto"
+    },
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/vim-crypto-s0sSvm_R",
+        "fileHash": "564956af86ae257c7e5ebb2d17a8dc3b5942f3cbac70fe4f4fef2788f06b1dbb64aba4789ed227beeba205619856237cfd269230b8146ae1443468db2856b899",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/vim-crypto"
+      }
+    ]
+  },
+  "coc-python|/Users/liam/Github/Fun/vim-crypto/rplugin/python3": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:8db969a1e7e47ac25fb4cdeab6a0759d": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:8db969a1e7e47ac25fb4cdeab6a0759d": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun/vim-crypto/rplugin/python3": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github/Fun/partage": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:858dbd086a44b945f1885bc190aa7730": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService:858dbd086a44b945f1885bc190aa7730": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC",
+        "fileHash": "4bfe04eedc5b7d956f5f1a9cbee2d82d1c473b34f4d4ee850110e689d682778545650890ddce8bd8892deec276abefea92888e368540c65242fa4c66b8a8d769",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/partage"
+      }
+    ],
+    "SelectedPythonPath": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python",
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun/partage": {
+      "architecture": 3,
+      "path": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC",
+      "fileHash": "4bfe04eedc5b7d956f5f1a9cbee2d82d1c473b34f4d4ee850110e689d682778545650890ddce8bd8892deec276abefea92888e368540c65242fa4c66b8a8d769",
+      "type": "PipEnv",
+      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/partage"
+    },
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC",
+        "fileHash": "4bfe04eedc5b7d956f5f1a9cbee2d82d1c473b34f4d4ee850110e689d682778545650890ddce8bd8892deec276abefea92888e368540c65242fa4c66b8a8d769",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/partage"
+      }
+    ]
+  },
+  "coc-python|/Users/liam/Instagram-Swapper": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:6e83d582686a5b7f743ebf5baed2f27b": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk",
+        "fileHash": "08513870134b0903702d639613c123753812c60b14a123d11c49ecdaac694d1800e30c218a89f96291d6e69acbb4dda07af19978dffe86cbe4f09766c99a3a87",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Instagram-Swapper"
+      }
+    ],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:6e83d582686a5b7f743ebf5baed2f27b": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Instagram-Swapper": {
+      "architecture": 3,
+      "path": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk",
+      "fileHash": "08513870134b0903702d639613c123753812c60b14a123d11c49ecdaac694d1800e30c218a89f96291d6e69acbb4dda07af19978dffe86cbe4f09766c99a3a87",
+      "type": "PipEnv",
+      "pipEnvWorkspaceFolder": "/Users/liam/Instagram-Swapper"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk",
+        "fileHash": "08513870134b0903702d639613c123753812c60b14a123d11c49ecdaac694d1800e30c218a89f96291d6e69acbb4dda07af19978dffe86cbe4f09766c99a3a87",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Instagram-Swapper"
+      }
+    ],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "SelectedPythonPath": "/Users/liam/.local/share/virtualenvs/Instagram-Swapper-eFxHD1Wk/bin/python"
+  },
+  "coc-python|/Users/liam/Github/Fun": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:0677aa2afb558c22f3e63c94e2729c5b": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:0677aa2afb558c22f3e63c94e2729c5b": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github/Algorithms/Kattis": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:2d93329d0e594699d755059670b6a2ba": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:2d93329d0e594699d755059670b6a2ba": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Algorithms/Kattis": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github/Fun/deft": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:2ab85285c9bd67c7b462ab5a42e9e022": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService:2ab85285c9bd67c7b462ab5a42e9e022": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+        "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/deft"
+      }
+    ],
+    "SelectedPythonPath": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun/deft": {
+      "architecture": 3,
+      "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+      "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
+      "type": "PipEnv",
+      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/deft"
+    },
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
+        "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/deft"
       }
     ]
   }
