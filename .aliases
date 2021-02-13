@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # shortcuts
-alias c="cd ~/Github/CompetitiveProgramming"
+alias c="cd ~/Github/Algorithms/CompetitiveProgramming"
 alias gh="cd ~/Github"
 alias jac="cd ~/'JAC CompSci'"
-alias z="cd ~/Github/kasten"
+alias z="cd ~/Github/Misc/kasten"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 # from https://github.com/mathiasbynens/dotfiles/blob/main/.aliases
@@ -44,6 +44,8 @@ alias g="git"
 alias m="tmux"
 alias j="just"
 alias pv="pipenv"
+alias mysql="docker container exec -it mysql /bin/bash"
+alias dc="docker-compose up -d"
 
 # reload the shell
 alias reload="exec ${SHELL} -l"
@@ -51,7 +53,7 @@ alias reload="exec ${SHELL} -l"
 # open new chrome window
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 
-# open cordless 
+# open cordless
 alias discord='cordless'
 
 # open last modified vim file
