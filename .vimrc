@@ -86,10 +86,6 @@ let g:vim_markdown_conceal_code_blocks                 = 0                      
 let g:markdown_folding                                 = 0                            " disable folding
 let g:markdown_composer_autostart                      = 0                            " disable autostart in browser
 let g:markdown_composer_syntax_theme                   = 'monokai'                    " set markdown codeblock theme
-let g:ale_fixers = {
-\ '*':    ['remove_trailing_lines', 'trim_whitespace'],
-\ 'rust': ['rustfmt'],
-\}
 let g:ale_fix_on_save                                  = 1                            " allow for code fixing on save
 let g:ale_set_highlights                               = 0                            " disable highlight setting
 let g:ale_echo_msg_error_str                           = 'E'                          " set 'E' for error
@@ -101,10 +97,13 @@ let g:UltiSnipsJumpForwardTrigger                      = "<tab>"                
 let g:UltiSnipsJumpBackwardTrigger                     = "<s-tab>"                    " jump backward in snippet
 let g:UltiSnipsEditSplit                               = "horizontal"                 " split snippet edit horizontally
 let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = "vim/ultisnips"              " default directory for ultisnips
-let g:ale_rust_rustfmt_options = "+nightly"                                           " rust nightly formatting
-let g:rustfmt_autosave         = 0                                                    " run rustfmt on save
-
-
+let g:ale_rust_rustfmt_options                         = "+nightly"                   " rust nightly formatting
+let g:rustfmt_autosave                                 = 0                            " run rustfmt on save
+let g:airline#extensions#tabline#enabled               = 1                            " SEE BUFFERS!
+let g:ale_fixers                                       = {
+    \ '*':    ['remove_trailing_lines', 'trim_whitespace'],
+    \ 'rust': ['rustfmt'],
+\}
 
 "" mappings
 
