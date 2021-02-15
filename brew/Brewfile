@@ -6,7 +6,11 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
+tap "yudai/gotty"
 tap "zegervdv/zathura"
+
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 
 # Command-line interface for SQLite
 brew "sqlite"
@@ -62,8 +66,11 @@ brew "imagemagick"
 # Next-gen compiler infrastructure
 brew "llvm"
 
+# MIT/GNU Scheme development tools and runtime library
+brew "mit-scheme"
+
 # Open source relational database management system
-brew "mysql", restart_service: true
+brew "mysql"
 
 # Open source relational database management system
 brew "mysql@5.7"
@@ -84,7 +91,10 @@ brew "node", link: false
 brew "pandoc"
 
 # Object-relational database system
-brew "postgresql", restart_service: true
+brew "postgresql"
+
+# Object-relational database system
+brew "postgresql@12"
 
 # Persistent key-value database, with built-in net interface
 brew "redis"
@@ -137,12 +147,46 @@ brew "mongodb/brew/mongodb-community"
 # An interactive JavaScript command-line interface to MongoDB
 brew "mongodb/brew/mongodb-community-shell", link: false
 
+brew "yudai/gotty/gotty"
+
 brew "zegervdv/zathura/zathura"
 
 brew "zegervdv/zathura/zathura-pdf-poppler"
 
+# Prebuilt OpenJDK binaries
+cask "adoptopenjdk8"
+
+# Application launcher and productivity software
+cask "alfred"
+
+# E-books management software
 cask "calibre"
+
+# App to build and share containerized applications and microservices
+cask "docker"
+
+cask "intellij-idea"
+
+# Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+
+# Interface for reading and syncing eBooks
+cask "kindle"
+
+# Visual tool to design, develop and administer MySQL servers
 cask "mysqlworkbench"
+
+# App to write, plan, collaborate, and get organized
+cask "notion"
+
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+
+# Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+
+# Open-source code editor
 cask "visual-studio-code"
+
+# Collect, organize, cite, and share research sources
+cask "zotero"
