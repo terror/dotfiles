@@ -1,24 +1,29 @@
 [filter "lfs"]
-	clean      = git-lfs clean -- %f
-	smudge     = git-lfs smudge -- %f
-	process    = git-lfs filter-process
-	required   = true
+	clean        = git-lfs clean -- %f
+	smudge       = git-lfs smudge -- %f
+	process      = git-lfs filter-process
+	required     = true
+
 [user]
-	name       = Liam
-	email      = terroridk@gmail.com
+	name         = Liam
+	email        = liam@scalzulli.com
+
 [pull]
-	rebase     = true
+	rebase       = true
+
 [rebase]
-	autoStash  = true
+	autoStash    = true
+
 [alias]
-  f            = fetch
-  p            = pull
-  rmc          = rm -r --cached .
-  fu           = fetch upstream master
-  track        = branch --set-upstream-to upstream/master master
-  parent       = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
-  lg           = log --oneline
-  last         = log -1 HEAD
+    f            = fetch
+    p            = pull
+    rmc          = rm -r --cached .
+    fu           = fetch upstream master
+    track        = branch --set-upstream-to upstream/master master
+    parent       = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
+    lg           = log --oneline
+    last         = log -1 HEAD
+
 [core]
-  hooksPath    = "/Users/liam/.hooks"
-  excludesfile = /Users/liam/.gitignore_global
+    hooksPath    = "/Users/liam/.hooks"
+    excludesfile = /Users/liam/.gitignore_global
