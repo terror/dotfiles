@@ -28,7 +28,8 @@ Plug 'w0rp/ale'                                             " code linting
 Plug 'SirVer/ultisnips'                                     " code snippets
 Plug 'airblade/vim-rooter'                                  " look in root for file search
 Plug 'terror/vim-crypto', { 'do': 'cargo build --release' } " view live cryptocurrency prices
-
+Plug 'tpope/vim-commentary'                                 " comment stuff out
+Plug 'editorconfig/editorconfig-vim'                        " respect .editorconfig
 
 call plug#end()
 filetype plugin on
