@@ -30,6 +30,7 @@ Plug 'airblade/vim-rooter'                                  " look in root for f
 Plug 'terror/vim-crypto', { 'do': 'cargo build --release' } " view live cryptocurrency prices
 Plug 'tpope/vim-commentary'                                 " comment stuff out
 Plug 'editorconfig/editorconfig-vim'                        " respect .editorconfig
+Plug 'wakatime/vim-wakatime'                                " productivity metrics
 
 call plug#end()
 filetype plugin on
@@ -120,8 +121,8 @@ nnoremap ^ 0|
 nnoremap 0 ^|
 
 " tab switching
-nnoremap <C-j> :tabprevious<CR>|                                   " prev tab
-nnoremap <C-k> :tabnext<CR>|                                       " next tab
+nnoremap <C-j> :bp<CR>|                                            " prev buffer
+nnoremap <C-k> :bn<CR>|                                            " next buffer
 nnoremap <C-n> :tabnew<CR>|                                        " new tab
 nnoremap <C-Q> :-tabmove<CR>|                                      " move tab left
 nnoremap <C-P> :+tabmove<CR>|                                      " move tab right
