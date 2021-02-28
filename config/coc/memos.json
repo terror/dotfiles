@@ -26,7 +26,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "b68873105ae65a19f8c7fbe91f1bde35069248f3b44e98a3872544dce21713527d73eb97026b84b21482d309baf27f33357d75294651c6d005f5308b610bc394"
       },
-      "expiry": 1613246472084
+      "expiry": 1614528511570
     },
     "/usr/local/bin/python3.v3": {
       "data": {
@@ -51,7 +51,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "9848e00efde90c813eea1e94816640c40769775e2c635a1646a7d8c42e086fc16585f6ce402e23a5ff437b026bef8326f25391cb19f32fc47f9f7b6171699e19"
       },
-      "expiry": 1613246472098
+      "expiry": 1614528511545
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7.v3": {
       "data": {
@@ -76,7 +76,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "893de335bbb859b20a9f508c3ba0e5f4c40b9fac8ff715b5946af2db297f2fda0ff6238c7c61837e416499b32e61718b8575cf846733d0c73747fc98c8032b6b"
       },
-      "expiry": 1613246472087
+      "expiry": 1614528511578
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.v3": {
       "data": {
@@ -101,7 +101,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
         "fileHash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64"
       },
-      "expiry": 1613246472045
+      "expiry": 1614528511553
     },
     "/usr/bin/python.v3": {
       "data": {
@@ -126,7 +126,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1613246472103
+      "expiry": 1614528511582
     },
     "/usr/bin/python2.7.v3": {
       "data": {
@@ -151,7 +151,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1613246472107
+      "expiry": 1614528511566
     },
     "/usr/bin/python2.v3": {
       "data": {
@@ -176,7 +176,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1613246472112
+      "expiry": 1614528511574
     },
     "/usr/bin/python3.v3": {
       "data": {
@@ -201,147 +201,9 @@
         "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1613246472109
+      "expiry": 1614528511561
     },
     "INTERPRETERS_CACHE_v3_KnownPathsService": [
-      {
-        "architecture": 3,
-        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.2-final"
-        },
-        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
-        "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python3",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.2-final"
-        },
-        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
-        "fileHash": "dd4cdae43a68646467cabd45e28197d735a1b51515126b243b4628f4d965eb208e86befad5d95f1b52951bcd34c672b6ef8253b1a339dd829f517a99cc650880",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python3.8",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.2-final"
-        },
-        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
-        "fileHash": "5fd40cec396738336862be88d2bbf19ba06263303fb00e01ca2e8f1914a21194174336b321d3b55525a214b317b26b56635fdebd2100bfe874bc19ab6ee00c43",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.7.2-final",
-          "major": 3,
-          "minor": 7,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.7.2-final"
-        },
-        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
-        "fileHash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.7.2-final",
-          "major": 3,
-          "minor": 7,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.7.2-final"
-        },
-        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
-        "fileHash": "893de335bbb859b20a9f508c3ba0e5f4c40b9fac8ff715b5946af2db297f2fda0ff6238c7c61837e416499b32e61718b8575cf846733d0c73747fc98c8032b6b",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/usr/local/bin/python3",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.7.2-final",
-          "major": 3,
-          "minor": 7,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.7.2-final"
-        },
-        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
-        "fileHash": "9848e00efde90c813eea1e94816640c40769775e2c635a1646a7d8c42e086fc16585f6ce402e23a5ff437b026bef8326f25391cb19f32fc47f9f7b6171699e19",
-        "type": "Unknown"
-      },
       {
         "architecture": 3,
         "path": "/usr/local/bin/python3.7",
@@ -455,75 +317,6 @@
         },
         "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.7.2-final",
-          "major": 3,
-          "minor": 7,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.7.2-final"
-        },
-        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
-        "fileHash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.7.2-final",
-          "major": 3,
-          "minor": 7,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.7.2-final"
-        },
-        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
-        "fileHash": "893de335bbb859b20a9f508c3ba0e5f4c40b9fac8ff715b5946af2db297f2fda0ff6238c7c61837e416499b32e61718b8575cf846733d0c73747fc98c8032b6b",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/usr/local/bin/python3",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.7.2-final",
-          "major": 3,
-          "minor": 7,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.7.2-final"
-        },
-        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
-        "fileHash": "9848e00efde90c813eea1e94816640c40769775e2c635a1646a7d8c42e086fc16585f6ce402e23a5ff437b026bef8326f25391cb19f32fc47f9f7b6171699e19",
         "type": "Unknown"
       },
       {
@@ -665,12 +458,12 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1613246472121
+      "expiry": 1614528511601
     },
     "INTERPRETERS_CACHE_v3_CurrentPathService": [
       {
         "architecture": 3,
-        "path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7",
+        "path": "/usr/local/bin/python3.7",
         "version": {
           "options": {
             "loose": false,
@@ -688,12 +481,12 @@
           "version": "3.7.2-final"
         },
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
-        "fileHash": "893de335bbb859b20a9f508c3ba0e5f4c40b9fac8ff715b5946af2db297f2fda0ff6238c7c61837e416499b32e61718b8575cf846733d0c73747fc98c8032b6b",
+        "fileHash": "b68873105ae65a19f8c7fbe91f1bde35069248f3b44e98a3872544dce21713527d73eb97026b84b21482d309baf27f33357d75294651c6d005f5308b610bc394",
         "type": "Unknown"
       },
       {
         "architecture": 3,
-        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python3",
+        "path": "/Library/Developer/CommandLineTools/usr/bin/python3",
         "version": {
           "options": {
             "loose": false,
@@ -710,8 +503,8 @@
           "build": [],
           "version": "3.8.2-final"
         },
-        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
-        "fileHash": "dd4cdae43a68646467cabd45e28197d735a1b51515126b243b4628f4d965eb208e86befad5d95f1b52951bcd34c672b6ef8253b1a339dd829f517a99cc650880",
+        "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+        "fileHash": "aece028fcf0ec43c92f5f02fe002e5b2374d3d6cee27bcede6c688062e421152681d9b46b269ee5aa634529966929cc7e90c1e28ab859df25c3cc9f35303c5e3",
         "type": "Unknown"
       },
       {
@@ -739,74 +532,51 @@
       },
       {
         "architecture": 3,
-        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
+        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.8.2-final"
+          "version": "2.7.16-final"
         },
-        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
-        "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "type": "Unknown"
       },
       {
         "architecture": 3,
-        "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
+        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.8.2-final"
+          "version": "2.7.16-final"
         },
-        "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
-        "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "type": "Unknown"
       }
     ],
-    "InterpreterAutoSeletionRule-currentPath": {
-      "architecture": 3,
-      "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
-      "version": {
-        "options": {
-          "loose": false,
-          "includePrerelease": false
-        },
-        "loose": false,
-        "raw": "3.8.2-final",
-        "major": 3,
-        "minor": 8,
-        "patch": 2,
-        "prerelease": [
-          "final"
-        ],
-        "build": [],
-        "version": "3.8.2-final"
-      },
-      "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
-      "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
-      "type": "Unknown"
-    },
     "PipEnvInformation": [
       {
         "pythonPath": "/Users/liam/.local/share/virtualenvs/dbserver-ZwdY_JQB/bin/python",
@@ -887,6 +657,16 @@
         "pythonPath": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
         "workspaceFolder": "/Users/liam/Github/Fun/deft",
         "envName": "deft"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python",
+        "workspaceFolder": "/Users/liam/Github/Fun/mindspace",
+        "envName": "mindspace"
+      },
+      {
+        "pythonPath": "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg/bin/python",
+        "workspaceFolder": "/Users/liam/Github/Games/Pathfinder",
+        "envName": "Pathfinder"
       }
     ],
     "preferredGlobalPyInterpreter": {
@@ -918,39 +698,39 @@
         "displayName": "Python 2.7.16 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-f5b651b9c4b75532b11ae83303c43d14"
       },
-      "expiry": 1613246473433
+      "expiry": 1614533564854
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.7.2 64-bit",
         "hash": "259f0fe804d0dcd62d459444b45ba22891287b3c404d0d6dee85fe189270fa3ede065ae75a3bdd3d23c9dc0eeba11954d722e03b79c51eba4f092e7305ba7d64-d0e05da260ad5e636f9cff7c94792360"
       },
-      "expiry": 1613246473427
+      "expiry": 1614533564844
     },
     "/usr/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.2 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-4bc3c9f5346452a4fe404c621ebcd443"
       },
-      "expiry": 1613246473430
+      "expiry": 1614533565023
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 2.7.16 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-a9fb100b1ab04c53a774363838d4885e"
       },
-      "expiry": 1613246473436
+      "expiry": 1614533564863
     },
     "/usr/local/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.7.2 64-bit",
         "hash": "9848e00efde90c813eea1e94816640c40769775e2c635a1646a7d8c42e086fc16585f6ce402e23a5ff437b026bef8326f25391cb19f32fc47f9f7b6171699e19-caa57d907c06dba4892d0ad5d6819fad"
       },
-      "expiry": 1613246473439
+      "expiry": 1614533564849
     },
     "InterpreterAutoSeletionRule-system": {
       "architecture": 3,
-      "path": "/usr/bin/python3",
+      "path": "/Library/Developer/CommandLineTools/usr/bin/python3",
       "version": {
         "options": {
           "loose": false,
@@ -968,7 +748,7 @@
         "version": "3.8.2-final"
       },
       "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
-      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "fileHash": "aece028fcf0ec43c92f5f02fe002e5b2374d3d6cee27bcede6c688062e421152681d9b46b269ee5aa634529966929cc7e90c1e28ab859df25c3cc9f35303c5e3",
       "type": "Unknown",
       "displayName": "Python 3.8.2 64-bit"
     },
@@ -1000,7 +780,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1613246473488
+      "expiry": 1614533564943
     },
     "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -1030,7 +810,7 @@
           "displayName": "Python 3.7.2 64-bit"
         }
       },
-      "expiry": 1613246473473
+      "expiry": 1614533564921
     },
     "/usr/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -1060,7 +840,7 @@
           "displayName": "Python 3.8.2 64-bit"
         }
       },
-      "expiry": 1613246473481
+      "expiry": 1614534158520
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.Details.v7": {
       "data": {
@@ -1090,7 +870,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1613246473496
+      "expiry": 1614533564962
     },
     "/usr/local/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -1120,11 +900,11 @@
           "displayName": "Python 3.7.2 64-bit"
         }
       },
-      "expiry": 1613246473504
+      "expiry": 1614533564932
     },
     "InterpreterAutoSeletionRule-cachedInterpreters": {
       "architecture": 3,
-      "path": "/usr/bin/python3",
+      "path": "/Library/Developer/CommandLineTools/usr/bin/python3",
       "version": {
         "options": {
           "loose": false,
@@ -1142,7 +922,7 @@
         "version": "3.8.2-final"
       },
       "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
-      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "fileHash": "aece028fcf0ec43c92f5f02fe002e5b2374d3d6cee27bcede6c688062e421152681d9b46b269ee5aa634529966929cc7e90c1e28ab859df25c3cc9f35303c5e3",
       "type": "Unknown",
       "displayName": "Python 3.8.2 64-bit"
     },
@@ -1171,30 +951,6 @@
         "fileHash": "2d8f4ee2d9d617437738d89bb911886d53951a19706da445a8df7ddfdb8f9a5b6dbde29ed834bce4d573ba17563e28180f85191aeddd149913504cbbefebf83b"
       },
       "expiry": 1608511026122
-    },
-    "InterpreterAutoSeletionRule-workspaceEnvs": {
-      "architecture": 3,
-      "path": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y/bin/python",
-      "version": {
-        "options": {
-          "loose": false,
-          "includePrerelease": false
-        },
-        "loose": false,
-        "raw": "3.8.2-final",
-        "major": 3,
-        "minor": 8,
-        "patch": 2,
-        "prerelease": [
-          "final"
-        ],
-        "build": [],
-        "version": "3.8.2-final"
-      },
-      "sysPrefix": "/Users/liam/.local/share/virtualenvs/deft-yt41vd2Y",
-      "fileHash": "fc2975cecb457b6f05d2c1310f4f5b8ce55f824a08f5d2bc19c68a9dbd95043329e5ee5b592cc45226fc3d069f1260699cfb55622a006e579fa0d1c548c3804e",
-      "type": "PipEnv",
-      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/deft"
     },
     "/Users/liam/.local/share/virtualenvs/dbserver-ZwdY_JQB/bin/python.interpreter.displayName.v7": {
       "data": {
@@ -2865,7 +2621,7 @@
         "sysPrefix": "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC",
         "fileHash": "4bfe04eedc5b7d956f5f1a9cbee2d82d1c473b34f4d4ee850110e689d682778545650890ddce8bd8892deec276abefea92888e368540c65242fa4c66b8a8d769"
       },
-      "expiry": 1612930250694
+      "expiry": 1614528511594
     },
     "/Users/liam/.local/share/virtualenvs/partage-cZM4rCAC/bin/python3.8.v3": {
       "data": {
@@ -3183,6 +2939,528 @@
         }
       },
       "expiry": 1613258952226
+    },
+    "/Users/liam/Github/Games/Pathfinder/venv/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Games/Pathfinder/venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Games/Pathfinder/venv",
+        "fileHash": "c8178d05c949a8d3f26119321d90b2061c96638d165905c258ed6d43f83dcf85d4a592e78da22325131ba1c232444a2517d2d96cf39470cd374164d9eae3ab07"
+      },
+      "expiry": 1614293713195
+    },
+    "/Users/liam/Github/Games/Pathfinder/venv/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Games/Pathfinder/venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Games/Pathfinder/venv",
+        "fileHash": "674f14e104a6a72de417de4bb23034d6954968ed8152250ab048fc77424b7abada122b2efe54d968f80d4998f4a38408a34f835157c985e2e7e05048df03618c"
+      },
+      "expiry": 1614293713199
+    },
+    "/Users/liam/Github/Games/Pathfinder/venv/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.7.2 64-bit",
+        "hash": "c8178d05c949a8d3f26119321d90b2061c96638d165905c258ed6d43f83dcf85d4a592e78da22325131ba1c232444a2517d2d96cf39470cd374164d9eae3ab07-8dcbaa627e0adedb9c03e4a79c031168"
+      },
+      "expiry": 1614307170700
+    },
+    "/Users/liam/Github/Games/Pathfinder/venv/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "c8178d05c949a8d3f26119321d90b2061c96638d165905c258ed6d43f83dcf85d4a592e78da22325131ba1c232444a2517d2d96cf39470cd374164d9eae3ab07",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/Github/Games/Pathfinder/venv/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.7.2-final",
+            "major": 3,
+            "minor": 7,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.7.2-final"
+          },
+          "sysPrefix": "/Users/liam/Github/Games/Pathfinder/venv",
+          "fileHash": "c8178d05c949a8d3f26119321d90b2061c96638d165905c258ed6d43f83dcf85d4a592e78da22325131ba1c232444a2517d2d96cf39470cd374164d9eae3ab07",
+          "type": "Unknown",
+          "displayName": "Python 3.7.2 64-bit"
+        }
+      },
+      "expiry": 1614307170765
+    },
+    "/Users/liam/Github/Games/Pathfinder/venv/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "a782dc68314aefbb43b4c29f8fe82336eb978b3baadb6984c59f20b1f0070c99037b23204cdf2c9c2482c26d9277bb8a95e5360ab5a2930b72cfff249a228799"
+      },
+      "expiry": 1614292925405
+    },
+    "/Users/liam/Github/Games/Pathfinder/venv/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.7.2 64-bit ('venv': venv)",
+        "hash": "a782dc68314aefbb43b4c29f8fe82336eb978b3baadb6984c59f20b1f0070c99037b23204cdf2c9c2482c26d9277bb8a95e5360ab5a2930b72cfff249a228799-fc41e3bfa22b7e6d0cb4063ff3953731"
+      },
+      "expiry": 1614292925511
+    },
+    "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60",
+        "fileHash": "3ed03b9cc43a21c5e5465ae1f0173e437c0a0333078dbf8e153745dd2e2deab46b1f07565c5866bc3b44662e5c7f9075a38b45018b055035c680d2fabae12600"
+      },
+      "expiry": 1614276707015
+    },
+    "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60",
+        "fileHash": "288ece848e06e10af1b369e5130278569512c70afc3f01ee9a0f7a6021c320c7d29054ef419da6f77a32b3e1ea136525838d2fd69435b6cbc29007aea7c28fe5"
+      },
+      "expiry": 1614276707018
+    },
+    "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60",
+        "fileHash": "bc02c1374896865f6e8a94dedc762081024cde872250ecec513ea68a856f21a953ce013574ad4f45c37285871576963d7b62398eeb955b9a9ebeb6e9e9d0c5cf"
+      },
+      "expiry": 1614276707022
+    },
+    "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit ('mindspace': pipenv)",
+        "hash": "bc02c1374896865f6e8a94dedc762081024cde872250ecec513ea68a856f21a953ce013574ad4f45c37285871576963d7b62398eeb955b9a9ebeb6e9e9d0c5cf-5ad122cd007f410c2f29c18a34e92940"
+      },
+      "expiry": 1614276713569
+    },
+    "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "bc02c1374896865f6e8a94dedc762081024cde872250ecec513ea68a856f21a953ce013574ad4f45c37285871576963d7b62398eeb955b9a9ebeb6e9e9d0c5cf",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60",
+          "fileHash": "bc02c1374896865f6e8a94dedc762081024cde872250ecec513ea68a856f21a953ce013574ad4f45c37285871576963d7b62398eeb955b9a9ebeb6e9e9d0c5cf",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/mindspace",
+          "envName": "mindspace",
+          "displayName": "Python 3.8.2 64-bit ('mindspace': pipenv)"
+        }
+      },
+      "expiry": 1614276713592
+    },
+    "InterpreterAutoSeletionRule-currentPath": {
+      "architecture": 3,
+      "path": "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "aece028fcf0ec43c92f5f02fe002e5b2374d3d6cee27bcede6c688062e421152681d9b46b269ee5aa634529966929cc7e90c1e28ab859df25c3cc9f35303c5e3",
+      "type": "Unknown"
+    },
+    "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg",
+        "fileHash": "3bc366f409d30387f01c6a3c73481a98edc4ccc466afe0391e5572c05347b5d733da1fc498d077f69eba134fdcd3f976e04a67e50d26d5641aad6a3de43b4a59"
+      },
+      "expiry": 1614293328238
+    },
+    "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg",
+        "fileHash": "1a51ad34838b9c5fddc3fc31014d2c98667363376397264b2fa15fda816ae6c2e461788dcad48fbbe16fc7895fb425358b9a91e2810139acc6e9b04128c34fb6"
+      },
+      "expiry": 1614293328220
+    },
+    "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg",
+        "fileHash": "8cf3459807e2ccef22abd628086b2411c60bc675c7474059be608b453fe15779324db54bf05d9da41b7fb75822e26468c05176606370342798a929e74fc2c7ac"
+      },
+      "expiry": 1614293328247
+    },
+    "InterpreterAutoSeletionRule-workspaceEnvs": {
+      "architecture": 3,
+      "path": "/Users/liam/Github/Games/Pathfinder/venv/bin/python3.7",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.7.2-final",
+        "major": 3,
+        "minor": 7,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.7.2-final"
+      },
+      "sysPrefix": "/Users/liam/Github/Games/Pathfinder/venv",
+      "fileHash": "29c1c277460d81df47ed42768b1c40189be2b81b4d7fd46f0e049cb7262a77ba27d7c4c5d041878abb5791cdc65cf20b13867aea60bc8cec740a578682a5be46",
+      "envName": "venv",
+      "type": "Venv"
+    },
+    "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit ('Pathfinder': pipenv)",
+        "hash": "8cf3459807e2ccef22abd628086b2411c60bc675c7474059be608b453fe15779324db54bf05d9da41b7fb75822e26468c05176606370342798a929e74fc2c7ac-b6b3fd90adc96611ea2ac6f4e70b32a0"
+      },
+      "expiry": 1614293329350
+    },
+    "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "8cf3459807e2ccef22abd628086b2411c60bc675c7474059be608b453fe15779324db54bf05d9da41b7fb75822e26468c05176606370342798a929e74fc2c7ac",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/liam/.local/share/virtualenvs/Pathfinder-T5Eqh2bg",
+          "fileHash": "8cf3459807e2ccef22abd628086b2411c60bc675c7474059be608b453fe15779324db54bf05d9da41b7fb75822e26468c05176606370342798a929e74fc2c7ac",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/liam/Github/Games/Pathfinder",
+          "envName": "Pathfinder",
+          "displayName": "Python 3.8.2 64-bit ('Pathfinder': pipenv)"
+        }
+      },
+      "expiry": 1614293329404
+    },
+    "/Users/liam/Github/Games/Pathfinder/venv/bin/python3.7.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Games/Pathfinder/venv/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Games/Pathfinder/venv",
+        "fileHash": "29c1c277460d81df47ed42768b1c40189be2b81b4d7fd46f0e049cb7262a77ba27d7c4c5d041878abb5791cdc65cf20b13867aea60bc8cec740a578682a5be46"
+      },
+      "expiry": 1614293713203
+    },
+    "InterpreterAutoSeletionRule-environment": {
+      "architecture": 3,
+      "path": "/Users/liam/Github/Games/Pathfinder/venv/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.7.2-final",
+        "major": 3,
+        "minor": 7,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.7.2-final"
+      },
+      "sysPrefix": "/Users/liam/Github/Games/Pathfinder/venv",
+      "fileHash": "674f14e104a6a72de417de4bb23034d6954968ed8152250ab048fc77424b7abada122b2efe54d968f80d4998f4a38408a34f835157c985e2e7e05048df03618c",
+      "type": "VirtualEnv"
+    },
+    "/usr/local/bin/python3.7.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.7.2 64-bit",
+        "hash": "b68873105ae65a19f8c7fbe91f1bde35069248f3b44e98a3872544dce21713527d73eb97026b84b21482d309baf27f33357d75294651c6d005f5308b610bc394-f99011179261440d3a3fe3653651b4a1"
+      },
+      "expiry": 1614567186869
+    },
+    "/usr/local/bin/python3.7.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "b68873105ae65a19f8c7fbe91f1bde35069248f3b44e98a3872544dce21713527d73eb97026b84b21482d309baf27f33357d75294651c6d005f5308b610bc394",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/local/bin/python3.7",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.7.2-final",
+            "major": 3,
+            "minor": 7,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.7.2-final"
+          },
+          "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.7",
+          "fileHash": "b68873105ae65a19f8c7fbe91f1bde35069248f3b44e98a3872544dce21713527d73eb97026b84b21482d309baf27f33357d75294651c6d005f5308b610bc394",
+          "type": "Unknown",
+          "displayName": "Python 3.7.2 64-bit"
+        }
+      },
+      "expiry": 1614567186954
+    },
+    "/Library/Developer/CommandLineTools/usr/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+        "fileHash": "aece028fcf0ec43c92f5f02fe002e5b2374d3d6cee27bcede6c688062e421152681d9b46b269ee5aa634529966929cc7e90c1e28ab859df25c3cc9f35303c5e3"
+      },
+      "expiry": 1614567186977
+    },
+    "/Library/Developer/CommandLineTools/usr/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit",
+        "hash": "aece028fcf0ec43c92f5f02fe002e5b2374d3d6cee27bcede6c688062e421152681d9b46b269ee5aa634529966929cc7e90c1e28ab859df25c3cc9f35303c5e3-4388a8f060354e738f6523e078294c8d"
+      },
+      "expiry": 1614567284349
+    },
+    "/Library/Developer/CommandLineTools/usr/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "aece028fcf0ec43c92f5f02fe002e5b2374d3d6cee27bcede6c688062e421152681d9b46b269ee5aa634529966929cc7e90c1e28ab859df25c3cc9f35303c5e3",
+        "info": {
+          "architecture": 3,
+          "path": "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+          "fileHash": "aece028fcf0ec43c92f5f02fe002e5b2374d3d6cee27bcede6c688062e421152681d9b46b269ee5aa634529966929cc7e90c1e28ab859df25c3cc9f35303c5e3",
+          "type": "Unknown",
+          "displayName": "Python 3.8.2 64-bit"
+        }
+      },
+      "expiry": 1614567284409
     }
   },
   "coc-python|/Users/liam/dotfiles": {
@@ -5347,5 +5625,394 @@
         "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/deft"
       }
     ]
+  },
+  "coc-python|/Users/liam/Github/Algorithms/l": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:a57074798e1025b132b3c4b975f9f154": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:a57074798e1025b132b3c4b975f9f154": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Algorithms/l": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github/Games/Pathfinder": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:4331b7ba8ab2d8d5f62463837f9e5cc3": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:4331b7ba8ab2d8d5f62463837f9e5cc3": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Games/Pathfinder/venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Games/Pathfinder/venv",
+        "fileHash": "c8178d05c949a8d3f26119321d90b2061c96638d165905c258ed6d43f83dcf85d4a592e78da22325131ba1c232444a2517d2d96cf39470cd374164d9eae3ab07",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Games/Pathfinder/venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Games/Pathfinder/venv",
+        "fileHash": "674f14e104a6a72de417de4bb23034d6954968ed8152250ab048fc77424b7abada122b2efe54d968f80d4998f4a38408a34f835157c985e2e7e05048df03618c",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Games/Pathfinder/venv/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Games/Pathfinder/venv",
+        "fileHash": "29c1c277460d81df47ed42768b1c40189be2b81b4d7fd46f0e049cb7262a77ba27d7c4c5d041878abb5791cdc65cf20b13867aea60bc8cec740a578682a5be46",
+        "envName": "venv",
+        "type": "Venv"
+      }
+    ],
+    "SelectedPythonPath": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Games/Pathfinder/venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Games/Pathfinder/venv",
+        "fileHash": "c8178d05c949a8d3f26119321d90b2061c96638d165905c258ed6d43f83dcf85d4a592e78da22325131ba1c232444a2517d2d96cf39470cd374164d9eae3ab07",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Games/Pathfinder/venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Games/Pathfinder/venv",
+        "fileHash": "674f14e104a6a72de417de4bb23034d6954968ed8152250ab048fc77424b7abada122b2efe54d968f80d4998f4a38408a34f835157c985e2e7e05048df03618c",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/liam/Github/Games/Pathfinder/venv/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.2-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.2-final"
+        },
+        "sysPrefix": "/Users/liam/Github/Games/Pathfinder/venv",
+        "fileHash": "29c1c277460d81df47ed42768b1c40189be2b81b4d7fd46f0e049cb7262a77ba27d7c4c5d041878abb5791cdc65cf20b13867aea60bc8cec740a578682a5be46",
+        "envName": "venv",
+        "type": "Venv"
+      }
+    ],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Games/Pathfinder": {
+      "architecture": 3,
+      "path": "/Users/liam/Github/Games/Pathfinder/venv/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.7.2-final",
+        "major": 3,
+        "minor": 7,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.7.2-final"
+      },
+      "sysPrefix": "/Users/liam/Github/Games/Pathfinder/venv",
+      "fileHash": "674f14e104a6a72de417de4bb23034d6954968ed8152250ab048fc77424b7abada122b2efe54d968f80d4998f4a38408a34f835157c985e2e7e05048df03618c",
+      "type": "VirtualEnv"
+    }
+  },
+  "coc-python|/Users/liam/Github/Algorithms/CLRS/Sorting": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:8287ceb6efa142fec1f206d9733015f2": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:8287ceb6efa142fec1f206d9733015f2": []
+  },
+  "coc-python|/Users/liam/Github/Fun/mindspace": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:c9dd15e2feab08e92d6bb923f3f0f826": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService:c9dd15e2feab08e92d6bb923f3f0f826": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60",
+        "fileHash": "bc02c1374896865f6e8a94dedc762081024cde872250ecec513ea68a856f21a953ce013574ad4f45c37285871576963d7b62398eeb955b9a9ebeb6e9e9d0c5cf",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/mindspace"
+      }
+    ],
+    "SelectedPythonPath": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python",
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun/mindspace": {
+      "architecture": 3,
+      "path": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60",
+      "fileHash": "bc02c1374896865f6e8a94dedc762081024cde872250ecec513ea68a856f21a953ce013574ad4f45c37285871576963d7b62398eeb955b9a9ebeb6e9e9d0c5cf",
+      "type": "PipEnv",
+      "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/mindspace"
+    },
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/liam/.local/share/virtualenvs/mindspace-mvk7re60",
+        "fileHash": "bc02c1374896865f6e8a94dedc762081024cde872250ecec513ea68a856f21a953ce013574ad4f45c37285871576963d7b62398eeb955b9a9ebeb6e9e9d0c5cf",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/liam/Github/Fun/mindspace"
+      }
+    ]
+  },
+  "coc-python|/Users/liam/Github/Fun/experiments": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:4d282fe44a795f69c4cf6dd08e0d9ce8": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:4d282fe44a795f69c4cf6dd08e0d9ce8": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Fun/experiments": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github/Games/Pathfinder/classes": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:0f3f6f9847488404aa62b2079dfcd74e": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:0f3f6f9847488404aa62b2079dfcd74e": []
+  },
+  "coc-python|/Users/liam/Github/Games/Pathfinder/utils": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:96cf4398485d53b740459c637703db29": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:96cf4398485d53b740459c637703db29": []
+  },
+  "coc-python|/Users/liam/Github/Algorithms/SICP": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:620cffb790ec55f6b5bcb9269cc5c05f": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:620cffb790ec55f6b5bcb9269cc5c05f": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github/Algorithms/SICP": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/liam/Github": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:4a89a21c6fb75aab63d1ace2e03b57e5": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:4a89a21c6fb75aab63d1ace2e03b57e5": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/liam/Github": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
   }
 }
