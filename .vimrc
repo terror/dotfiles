@@ -66,6 +66,7 @@ set shiftwidth                   =4                   " number of spaces to use 
 set tabstop                      =4                   " a tab is four spaces
 set numberwidth                  =1                   " room used for line numbers
 set backspace                    =indent,eol,start    " allow backspacing over everything in insert mode
+set guicursor=                                        " disable cursor change
 set belloff                      =all                 " disable vim bell sounds
 set mouse                        =a                   " allow mouse to set cursor position
 set undodir                      =~/.vim/.vimdid      " backup directory location
