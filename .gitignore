@@ -4,5 +4,6 @@
 /vim/.netrwhist
 /vim/view
 /vim/backup
+/vim/black
 node_modules/
 __pycache__/
