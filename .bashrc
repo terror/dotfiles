@@ -1,4 +1,4 @@
-export EDITOR='vim'                                                               # text editor
+export EDITOR='nvim'                                                               # text editor
 export NVM_DIR="$HOME/.nvm"                                                       # node version manager
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/*' --glob '!*.pyc'" # use FZF with ripgrep
 
