@@ -17,7 +17,7 @@ Plug 'sheerun/vim-polyglot'                                 " syntax support for
 Plug 'tpope/vim-commentary'                                 " comment stuff out
 Plug 'editorconfig/editorconfig-vim'                        " respect .editorconfig
 Plug 'wakatime/vim-wakatime'                                " productivity metrics
-Plug 'machakann/vim-highlightedyank'                        " make the highlighted region apparent!
+Plug 'machakann/vim-highlightedyank'                        " make the highlighted region apparent
 Plug 'terror/vim-crypto', { 'do': 'cargo build --release' } " view live cryptocurrency prices
 Plug 'airblade/vim-rooter'                                  " look in root for file search
 Plug 'SirVer/ultisnips'                                     " code snippets
@@ -27,6 +27,7 @@ Plug 'vimwiki/vimwiki'                                      " a personal wiki
 Plug 'scrooloose/nerdtree'                                  " file explorer
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }         " command line fuzzy finder
 Plug 'junegunn/fzf.vim'                                     " command line fuzzy finder
+Plug 'https://github.com/alok/notational-fzf-vim'           " create and search for new notes
 
 " language specific plugins
 Plug 'rust-lang/rust.vim'                                   " rust support
@@ -78,49 +79,54 @@ set noerrorbells visualbell t_vb =                    " disable terminal bells
 
 "" lettings
 
-let mapleader                                               = "\<space>"                   " set space as leader key
+let mapleader                                                = "\<space>"                   " set space as leader key
 
-let g:AutoPairsFlyMode                                      = 0                            " disable fly mode
-let g:AutoPairsShortcutBackInsert                           = '<M-b>'                      " shortcut
-let g:AutoPairsShortcutToggle                               = '<C-u>'                      " toggle autopairs
-let g:fzf_command_prefix                                    = 'Z'                          " set fzf command prefix to 'Z'
-let g:goyo_width                                            = 150                          " set Goyo width
-let g:goyo_height                                           = 90                           " set Goyo height
-let g:NERDTreeWinPos                                        = "right"                      " always open nerdtree on right side
-let NERDTreeMinimalUI                                       = 1                            " to remove the ? at the top
-let g:gitgutter_enabled                                     = 0                            " disable gitgutter by default
-let g:user_emmet_leader_key                                 = '<C-E>'                      " emmet completion, <C-E> + ','
-let g:rustfmt_autosave                                      = 1                            " format rust code on save
-let g:vim_markdown_conceal                                  = 0                            " do not conceal blocks
-let g:vim_markdown_conceal_code_blocks                      = 0                            " do not conceal code blocks
-let g:markdown_folding                                      = 0                            " disable folding
-let g:markdown_composer_autostart                           = 0                            " disable autostart in browser
-let g:markdown_composer_syntax_theme                        = 'monokai'                    " set markdown codeblock theme
-let g:ale_fix_on_save                                       = 1                            " allow for code fixing on save
-let g:ale_set_highlights                                    = 0                            " disable highlight setting
-let g:ale_echo_msg_error_str                                = 'E'                          " set 'E' for error
-let g:ale_echo_msg_warning_str                              = 'W'                          " set 'W' for warning
-let g:ale_echo_msg_format                                   = '[%linter%] %s [%severity%]' " set error message format
-let g:fzf_layout                                            = { 'down': '~40%' }           " set fzf split to bottom
-let g:UltiSnipsExpandTrigger                                = "<tab>"                      " expand snippet
-let g:UltiSnipsJumpForwardTrigger                           = "<tab>"                      " jump forward in snippet
-let g:UltiSnipsJumpBackwardTrigger                          = "<s-tab>"                    " jump backward in snippet
-let g:UltiSnipsEditSplit                                    = "horizontal"                 " split snippet edit horizontally
-let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit      = "vim/ultisnips"              " default directory for ultisnips
-let g:ale_rust_rustfmt_options                              = "+nightly"                   " rust nightly formatting
-let g:rustfmt_autosave                                      = 0                            " run rustfmt on save
-let g:airline#extensions#tabline#enabled                    = 1                            " SEE BUFFERS!
-let g:highlightedyank_highlight_duration                    = 1000                         " set yank highlighting to 1 second
-let g:ale_fixers                                            = {
+let g:AutoPairsFlyMode                                       = 0                            " disable fly mode
+let g:AutoPairsShortcutBackInsert                            = '<M-b>'                      " shortcut
+let g:AutoPairsShortcutToggle                                = '<C-u>'                      " toggle autopairs
+let g:fzf_command_prefix                                     = 'Z'                          " set fzf command prefix to 'Z'
+let g:goyo_width                                             = 150                          " set Goyo width
+let g:goyo_height                                            = 90                           " set Goyo height
+let g:NERDTreeWinPos                                         = "right"                      " always open nerdtree on right side
+let NERDTreeMinimalUI                                        = 1                            " to remove the ? at the top
+let g:gitgutter_enabled                                      = 0                            " disable gitgutter by default
+let g:user_emmet_leader_key                                  = '<C-E>'                      " emmet completion, <C-E> + ','
+let g:rustfmt_autosave                                       = 1                            " format rust code on save
+let g:vim_markdown_conceal                                   = 0                            " do not conceal blocks
+let g:vim_markdown_conceal_code_blocks                       = 0                            " do not conceal code blocks
+let g:markdown_folding                                       = 0                            " disable folding
+let g:markdown_composer_autostart                            = 0                            " disable autostart in browser
+let g:markdown_composer_syntax_theme                         = 'monokai'                    " set markdown codeblock theme
+let g:ale_fix_on_save                                        = 1                            " allow for code fixing on save
+let g:ale_set_highlights                                     = 0                            " disable highlight setting
+let g:ale_echo_msg_error_str                                 = 'E'                          " set 'E' for error
+let g:ale_echo_msg_warning_str                               = 'W'                          " set 'W' for warning
+let g:ale_echo_msg_format                                    = '[%linter%] %s [%severity%]' " set error message format
+let g:fzf_layout                                             = { 'down': '~40%' }           " set fzf split to bottom
+let g:UltiSnipsExpandTrigger                                 = "<tab>"                      " expand snippet
+let g:UltiSnipsJumpForwardTrigger                            = "<tab>"                      " jump forward in snippet
+let g:UltiSnipsJumpBackwardTrigger                           = "<s-tab>"                    " jump backward in snippet
+let g:UltiSnipsEditSplit                                     = "horizontal"                 " split snippet edit horizontally
+let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit       = "vim/ultisnips"              " default directory for ultisnips
+let g:ale_rust_rustfmt_options                               = "+nightly"                   " rust nightly formatting
+let g:rustfmt_autosave                                       = 0                            " run rustfmt on save
+let g:airline#extensions#tabline#enabled                     = 1                            " SEE BUFFERS!
+let g:highlightedyank_highlight_duration                     = 1000                         " set yank highlighting to 1 second
+let g:nv_search_paths                                        = ['~/Github/notes']           " set NV search path
+let g:nv_default_extension                                   = '.md'                        " set default NV file extension
+let g:nv_create_note_key                                     = 'ctrl-x'                     " specify note create key for NV
+let g:nv_create_note_window                                  = 'vertical split'             " split new notes vertically
+let g:ale_fixers                                             = {
     \ '*':    ['remove_trailing_lines', 'trim_whitespace'],
     \ 'rust': ['rustfmt'],
 \}
-let g:vimwiki_list = [{'path': '~/Github/notes/',
+let g:vimwiki_list                                           = [{'path': '~/Github/notes/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
+
 
 "" mappings
 
-" general
+" general remappings
 nnoremap Q <nop>|                                                  " map Q to nothing
 nnoremap Z :wq<CR>|                                                " save and quit file
 onoremap p i(|                                                     " for easier parens deletion
@@ -128,19 +134,18 @@ onoremap b i[|                                                     " for easier 
 onoremap in( :<C-U>normal! f(vi(<CR>|                              " hop into parens on same line
 nnoremap<C-a> :ter<CR>|                                            " open terminal with ctrl + a
 nnoremap<C-R> :%s/[^[:print:]]//g<CR>|                             " remove non printable characters
-nnoremap ^ 0|
-nnoremap 0 ^|
+nnoremap ^ 0|                                                      " hope to beginning using 0
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " remove trailing whitespace
+nnoremap <silent> <C-L> :noh<CR><C-L>|                             " clear search highlighting
 
-" tab switching
+" tabs and buffers
 nnoremap <C-j> :bp<CR>|                                            " prev buffer
 nnoremap <C-k> :bn<CR>|                                            " next buffer
 nnoremap <C-n> :tabnew<CR>|                                        " new tab
 nnoremap <C-Q> :-tabmove<CR>|                                      " move tab left
 nnoremap <C-P> :+tabmove<CR>|                                      " move tab right
 
-" leader
-nnoremap<leader>i gg=G<CR>|                                        " fix indentation
-nnoremap<leader>p :Prettier<CR>|                                   " format code with prettier
+" general leader mappings
 nnoremap<leader>sv :source $MYVIMRC<CR>|                           " source vimrc
 nnoremap<leader>ss :source %<CR>|                                  " source %
 nnoremap<leader>tp :Goyo<CR>|                                      " toggle prose mode
@@ -152,7 +157,9 @@ nnoremap<leader>c :%y+<CR>|                                        " yank all li
 nnoremap<leader>tg :GitGutterToggle<CR>|                           " toggle git gutter
 nnoremap<leader>ad :ALEDetail<CR>|                                 " see ale error message details
 
-" alignment
+" formatting and alignment
+nnoremap <leader>i gg=G<CR>|                                       " fix indentation
+nnoremap <leader>p :Prettier<CR>|                                  " format code with prettier
 nnoremap <leader>a: :Tabularize /:<CR>|                            " align on :
 nnoremap <leader>a= :Tabularize /=<CR>|                            " align on =
 nnoremap <leader>a# :Tabularize /#<CR>|                            " align on #
@@ -162,7 +169,8 @@ vnoremap <leader>a= :Tabularize /=<CR>|                            " align on =
 vnoremap <leader>a: :Tabularize /:<CR>|                            " align on :
 
 " searching
-nnoremap<leader>sf :ZFiles<CR>|                                    " search for files
+nnoremap <C-s> :ZFiles<CR>|                                        " search for files
+nnoremap<leader>sn :NV<CR>|                                        " search for notes
 nnoremap<leader>sa :AllLines<CR>|                                  " search through all lines in all files
 nnoremap<leader>sg :ZCommits<CR>|                                  " search through git commits
 nnoremap<leader>o :NERDTreeToggle<CR>|                             " toggle nerdtree
@@ -180,9 +188,6 @@ inoremap <up> <nop>|                                               " disable up 
 inoremap <down> <nop>|                                             " disable down in ins mode
 inoremap <left> <nop>|                                             " disable left in ins mode
 inoremap <right> <nop>|                                            " disable right in ins mode
-
-nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " remove trailing whitespace
-nnoremap <silent> <C-L> :noh<CR><C-L>|                             " clear search highlighting
 
 "" functions
 
