@@ -66,7 +66,7 @@ set shiftwidth                   =4                   " number of spaces to use 
 set tabstop                      =4                   " a tab is four spaces
 set numberwidth                  =1                   " room used for line numbers
 set backspace                    =indent,eol,start    " allow backspacing over everything in insert mode
-set guicursor=                                        " disable cursor change
+set guicursor                    =                    " disable cursor change
 set belloff                      =all                 " disable vim bell sounds
 set mouse                        =a                   " allow mouse to set cursor position
 set undodir                      =~/.vim/.vimdid      " backup directory location
@@ -77,7 +77,7 @@ set noerrorbells visualbell t_vb =                    " disable terminal bells
 
 "" lettings
 
-let mapleader                                          = "\<space>"                   " set space as leader key
+let mapleader                                               = "\<space>"                   " set space as leader key
 
 let g:AutoPairsFlyMode                                      = 0                            " disable fly mode
 let g:AutoPairsShortcutBackInsert                           = '<M-b>'                      " shortcut
@@ -147,6 +147,7 @@ nnoremap<leader>qq ^<esc>D|                                        " clear line
 nnoremap<leader>cl gg<esc>dG<CR>|                                  " clear file
 nnoremap<leader>c :%y+<CR>|                                        " yank all line to +
 nnoremap<leader>tg :GitGutterToggle<CR>|                           " toggle git gutter
+nnoremap<leader>ad :ALEDetail<CR>|                                 " see ale error message details
 
 " alignment
 nnoremap <leader>a: :Tabularize /:<CR>|                            " align on :
