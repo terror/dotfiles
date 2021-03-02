@@ -21,6 +21,7 @@ Plug 'machakann/vim-highlightedyank'                        " make the highlight
 Plug 'terror/vim-crypto', { 'do': 'cargo build --release' } " view live cryptocurrency prices
 Plug 'airblade/vim-rooter'                                  " look in root for file search
 Plug 'SirVer/ultisnips'                                     " code snippets
+Plug 'vimwiki/vimwiki'                                      " a personal wiki
 
 " search related plugins
 Plug 'scrooloose/nerdtree'                                  " file explorer
@@ -114,6 +115,8 @@ let g:ale_fixers                                            = {
     \ '*':    ['remove_trailing_lines', 'trim_whitespace'],
     \ 'rust': ['rustfmt'],
 \}
+let g:vimwiki_list = [{'path': '~/Github/notes/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 "" mappings
 
