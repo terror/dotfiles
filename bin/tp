@@ -1,10 +1,6 @@
 #!/bin/bash
 
 # typing test !
-
-pushd ~/Github/Misc/10ff || exit
-
+pushd ~/Github/10ff || exit
 python3 -m 10ff
-
 popd || exit
-
