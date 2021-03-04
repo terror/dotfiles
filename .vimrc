@@ -21,14 +21,16 @@ Plug 'machakann/vim-highlightedyank'                        " make the highlight
 Plug 'sheerun/vim-polyglot'                                 " syntax support for many languages
 Plug 'terror/vim-crypto', { 'do': 'cargo build --release' } " view live cryptocurrency prices
 Plug 'tpope/vim-commentary'                                 " comment stuff out
+Plug 'tpope/vim-surround'                                   " all about surroundings
 Plug 'vim-airline/vim-airline'                              " status bar
+Plug 'vim-airline/vim-airline-themes'                       " themes for airline
 Plug 'vimwiki/vimwiki'                                      " a personal wiki
 Plug 'wakatime/vim-wakatime'                                " productivity metrics
 
 " search related plugins
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }         " command line fuzzy finder
 Plug 'junegunn/fzf.vim'                                     " command line fuzzy finder
-Plug 'scrooloose/nerdtree'                                  " file explorer
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }      " file explorer
 
 " language specific plugins
 Plug 'euclio/vim-markdown-composer'                         " render markdown in the browser
@@ -55,12 +57,18 @@ set backup                                            " backup files
 set expandtab                                         " expand tabs to spaces by default
 set hidden                                            " modified buffers in background
 set hlsearch                                          " highlight search terms
+set hlsearch                                          " hilight previous search matches
 set ignorecase                                        " ignore case in searches
+set incsearch                                         " hilight search matches while typing
 set nofoldenable                                      " disable folding on file open
 set number                                            " show line numbers
 set ruler                                             " show the cursor position
+set showcmd                                           " show partial command and other useful stuff at bottom of screen
 set smartindent                                       " newline smart indent
+set splitbelow                                        " open horizontal splits below current buffer
 set splitbelow                                        " splits happen below
+set splitright                                        " open vertical splits to the right of current buffer
+set ttyfast                                           " make updates smoother
 set undofile                                          " save undo history
 
 set background                   =dark                " use a dark background
@@ -92,7 +100,8 @@ let g:UltiSnipsExpandTrigger                           = "<tab>"                
 let g:UltiSnipsJumpBackwardTrigger                     = "<s-tab>"                    " jump backward in snippet
 let g:UltiSnipsJumpForwardTrigger                      = "<tab>"                      " jump forward in snippet
 let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = "vim/ultisnips"              " default directory for ultisnips
-let g:airline#extensions#tabline#enabled               = 1                            " SEE BUFFERS!
+let g:airline#extensions#tabline#enabled               = 1                            " enable tabline in airline
+let g:airline_theme                                    = 'simple'                     " set airline theme
 let g:ale_echo_msg_error_str                           = 'E'                          " set 'E' for error
 let g:ale_echo_msg_format                              = '[%linter%] %s [%severity%]' " set error message format
 let g:ale_echo_msg_warning_str                         = 'W'                          " set 'W' for warning
@@ -127,59 +136,64 @@ let g:vimwiki_list = [{
 \ 'ext': '.md'
 \}]
 
-
 "" mappings
 
 " general remappings
-nnoremap Q <nop>|                                                  " map Q to nothing
-nnoremap Z :wq<CR>|                                                " save and quit file
-onoremap p i(|                                                     " for easier parens deletion
-onoremap b i[|                                                     " for easier bracket deletion
-onoremap in( :<C-U>normal! f(vi(<CR>|                              " hop into parens on same line
-nnoremap<C-a> :ter<CR>|                                            " open terminal with ctrl + a
-nnoremap<C-R> :%s/[^[:print:]]//g<CR>|                             " remove non printable characters
-nnoremap ^ 0|                                                      " hope to beginning using 0
 nnoremap 0 ^|                                                      " hope to beginning using 0
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " remove trailing whitespace
 nnoremap <silent> <C-L> :noh<CR><C-L>|                             " clear search highlighting
+nnoremap Q <nop>|                                                  " map Q to nothing
+nnoremap Z :wq<CR>|                                                " save and quit file
+nnoremap ^ 0|                                                      " hope to beginning using 0
+nnoremap<C-R> :%s/[^[:print:]]//g<CR>|                             " remove non printable characters
+nnoremap<C-a> :ter<CR>|                                            " open terminal with ctrl + a
+onoremap b i[|                                                     " for easier bracket deletion
+onoremap in( :<C-U>normal! f(vi(<CR>|                              " hop into parens on same line
+onoremap p i(|                                                     " for easier parens deletion
 
 " tabs and buffers
+nnoremap <C-P> :+tabmove<CR>|                                      " move tab right
+nnoremap <C-Q> :-tabmove<CR>|                                      " move tab left
 nnoremap <C-j> :bp<CR>|                                            " prev buffer
 nnoremap <C-k> :bn<CR>|                                            " next buffer
 nnoremap <C-n> :tabnew<CR>|                                        " new tab
-nnoremap <C-Q> :-tabmove<CR>|                                      " move tab left
-nnoremap <C-P> :+tabmove<CR>|                                      " move tab right
 
 " general leader mappings
-nnoremap<leader>sv :source $MYVIMRC<CR>|                           " source vimrc
-nnoremap<leader>ss :source %<CR>|                                  " source %
-nnoremap<leader>tp :Goyo<CR>|                                      " toggle prose mode
-nnoremap<leader>" viw<esc>a"<esc>bi"<esc>lel<CR>|                  " quotes around word
-nnoremap<leader>rr :redo<CR>|                                      " redo last change
-nnoremap<leader>qq ^<esc>D|                                        " clear line
-nnoremap<leader>cl gg<esc>dG<CR>|                                  " clear file
-nnoremap<leader>c :%y+<CR>|                                        " yank all line to +
-nnoremap<leader>tg :GitGutterToggle<CR>|                           " toggle git gutter
 nnoremap<leader>ad :ALEDetail<CR>|                                 " see ale error message details
+nnoremap<leader>bu :.,$-bd<CR>|                                    " delete buffers from curr to last
+nnoremap<leader>c :%y+<CR>|                                        " yank all line to +
+nnoremap<leader>cl gg<esc>dG<CR>|                                  " clear file
+nnoremap<leader>qq ^<esc>D|                                        " clear line
+nnoremap<leader>rr :redo<CR>|                                      " redo last change
+nnoremap<leader>ss :source %<CR>|                                  " source %
+nnoremap<leader>sv :source $MYVIMRC<CR>|                           " source vimrc
+nnoremap<leader>tg :GitGutterToggle<CR>|                           " toggle git gutter
+nnoremap<leader>tp :Goyo<CR>|                                      " toggle prose mode
+
+" surround
+map<leader>" ysiw"|                                                " quotes around word
+map<leader>{ ysiw{|                                                " braces around word
+map<leader>[ ysiw[|                                                " brackets around word
+map<leader>( ysiw(|                                                " parens around word
 
 " formatting and alignment
-nnoremap <leader>i gg=G<CR>|                                       " fix indentation
-nnoremap <leader>p :Prettier<CR>|                                  " format code with prettier
+map <leader>os <plug>(operator-sort)|                              " sort operator
+nnoremap <leader>a# :Tabularize /#<CR>|                            " align on #
 nnoremap <leader>a: :Tabularize /:<CR>|                            " align on :
 nnoremap <leader>a= :Tabularize /=<CR>|                            " align on =
-nnoremap <leader>a# :Tabularize /#<CR>|                            " align on #
+nnoremap <leader>i gg=G<CR>|                                       " fix indentation
+nnoremap <leader>p :Prettier<CR>|                                  " format code with prettier
 vnoremap <leader>a" :Tabularize /"<CR>|                            " align on "
 vnoremap <leader>a# :Tabularize /#<CR>|                            " align on #
-vnoremap <leader>a= :Tabularize /=<CR>|                            " align on =
 vnoremap <leader>a: :Tabularize /:<CR>|                            " align on :
+vnoremap <leader>a= :Tabularize /=<CR>|                            " align on =
 vnoremap <leader>s  :sort<cr>|                                     " sort lines
-nnoremap <leader>os <plug>(operator-sort)|                         " sort operator
 
 " searching
 nnoremap <C-s> :ZFiles<CR>|                                        " search for files
+nnoremap<leader>o :NERDTreeToggle<CR>|                             " toggle nerdtree
 nnoremap<leader>sa :AllLines<CR>|                                  " search through all lines in all files
 nnoremap<leader>sg :ZCommits<CR>|                                  " search through git commits
-nnoremap<leader>o :NERDTreeToggle<CR>|                             " toggle nerdtree
 
 " edit named files
 nnoremap<leader>ev :split ~/.vimrc<CR>|                            " edit vimrc
@@ -188,12 +202,12 @@ nnoremap<leader>en :e notes.md<CR>|                                " edit projec
 nnoremap<leader>es :UltiSnipsEdit<CR>|                             " edit ultisnips for current filetype
 
 " we don't need arrow keys
-nnoremap <up> <nop>|                                               " disable up in normal mode
-nnoremap <down> <nop>|                                             " disable down in normal mode
-inoremap <up> <nop>|                                               " disable up in ins mode
 inoremap <down> <nop>|                                             " disable down in ins mode
 inoremap <left> <nop>|                                             " disable left in ins mode
 inoremap <right> <nop>|                                            " disable right in ins mode
+inoremap <up> <nop>|                                               " disable up in ins mode
+nnoremap <down> <nop>|                                             " disable down in normal mode
+nnoremap <up> <nop>|                                               " disable up in normal mode
 
 "" functions
 
@@ -205,30 +219,37 @@ function! JournalMode()
     execute 'Goyo'
 endfunction
 
+function! OnMdCreate()
+    execute 'normal gg'
+    let filename = '#' . ' ' . expand('%:t:r')
+    call setline(1, filename)
+    execute 'normal o'
+endfunction
+
 source ~/.vim/functions/cp.vim    " competitive programming related functions
 source ~/.vim/functions/cocrc.vim " coc related functions
 
 "" colors
 
 if &t_Co > 2 || has("gui_running")
-  syntax on
-  set t_Co=256
-  if filereadable(expand("~/.vimrc_background"))
-      let base16colorspace=256
-      source ~/.vimrc_background
-  endif
-  :hi Error NONE
-  hi Pmenu ctermbg=black ctermfg=white
-  hi! CocErrorSign guifg=#d1666a
-  hi! CocInfoSign guibg=#353b45
-  hi! CocWarningSign guifg=#d1cd66
-  hi! Comment ctermfg=green
+    syntax on
+    set t_Co=256
+    if filereadable(expand("~/.vimrc_background"))
+        let base16colorspace=256
+        source ~/.vimrc_background
+    endif
+    :hi Error NONE
+    hi Pmenu ctermbg=black ctermfg=white
+    hi! CocErrorSign guifg=#d1666a
+    hi! CocInfoSign guibg=#353b45
+    hi! CocWarningSign guifg=#d1cd66
+    hi! Comment ctermfg=green
 endif
 
 "" commands
 
 command! -bang -nargs=* AllLines
-  \ call fzf#vim#grep(
+\ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>),
   \   1,
   \   fzf#vim#with_preview({'options': ['--delimiter=:', '--nth=4..']}), <bang>0)
@@ -267,4 +288,7 @@ augroup vimrc
 
     " set header for current journal entry
     autocmd VimEnter */journal/** :call JournalMode()
+
+    " set title as filename for new markdown files
+    autocmd BufNewFile *.md :call OnMdCreate()
 augroup end
