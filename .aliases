@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # shortcuts
-alias c="cd ~/Github/Algorithms/CompetitiveProgramming"
+alias c="cd ~/Github/CompetitiveProgramming"
 alias gh="cd ~/Github"
 alias jac="cd ~/'JAC CompSci'"
-alias z="cd ~/Github/Misc/kasten"
+alias z="cd ~/Github/notes"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 # from https://github.com/mathiasbynens/dotfiles/blob/main/.aliases
@@ -57,7 +57,7 @@ alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias discord='cordless'
 
 # open last modified vim file
-alias lv='nvim -c "normal '\''0"'
+alias lv='nvim -c "normal '\''0" -c bd1'
 
 # upgrade pip
 alias upip='pip install --upgrade pip'
