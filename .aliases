@@ -59,6 +59,9 @@ alias discord='cordless'
 # open last modified vim file
 alias lv='nvim -c "normal '\''0" -c bd1'
 
+# open .vimrc
+alias evrc='nvim ~/dotfiles/.vimrc'
+
 # upgrade pip
 alias upip='pip install --upgrade pip'
 
