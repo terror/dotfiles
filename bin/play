@@ -7,7 +7,5 @@ if [ ! -p ./playground ]; then
 fi
 
 cargo new playground
-
 cd playground || exit
-
-vim src/main.rs
+nvim src/main.rs
