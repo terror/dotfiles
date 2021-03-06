@@ -1,29 +1,32 @@
 [filter "lfs"]
-	clean        = git-lfs clean -- %f
-	smudge       = git-lfs smudge -- %f
-	process      = git-lfs filter-process
-	required     = true
+    clean        = git-lfs clean -- %f
+    process      = git-lfs filter-process
+    required     = true
+    smudge       = git-lfs smudge -- %f
 
 [user]
-	name         = Liam
-	email        = liam@scalzulli.com
+    name         = Liam
+    email        = liam@scalzulli.com
 
 [pull]
-	rebase       = true
+    rebase       = true
 
 [rebase]
-	autoStash    = true
+    autoStash    = true
 
 [alias]
     f            = fetch
+    fu           = fetch upstream master
+    last         = log -1 HEAD
+    lg           = log --oneline
     p            = pull
     rmc          = rm -r --cached .
-    fu           = fetch upstream master
     track        = branch --set-upstream-to upstream/master master
-    parent       = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
-    lg           = log --oneline
-    last         = log -1 HEAD
 
 [core]
-    hooksPath    = "/Users/liam/.hooks"
+    pager        = diff-so-fancy | less --tabs=4 -RFX
     excludesfile = /Users/liam/.gitignore_global
+    hooksPath    = "/Users/liam/.hooks"
+
+[interactive]
+    diffFilter   = diff-so-fancy --patch
