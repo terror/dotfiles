@@ -1,7 +1,9 @@
 set nocompatible
 filetype off
 
-"" plugins
+" ─────────────────────────────────────────────────────────────────────────────│─╗
+" │ Plugins                                                                  ─╬─│┼
+" ╚────────────────────────────────────────────────────────────────────────────│──
 
 filetype plugin on
 call plug#begin('~/.vim/plugged')
@@ -18,6 +20,9 @@ Plug 'jiangmiao/auto-pairs'                                 " pair completion
 Plug 'junegunn/goyo.vim'                                    " distraction free writing
 Plug 'kana/vim-operator-user'                               " allow user defined operators
 Plug 'machakann/vim-highlightedyank'                        " make the highlighted region apparent
+Plug 'mattn/vim-gist'                                       " create gists
+Plug 'mattn/webapi-vim'                                     " vim gist dependency
+Plug 'mhinz/vim-startify'                                   " a fancy start screen
 Plug 'sheerun/vim-polyglot'                                 " syntax support for many languages
 Plug 'terror/vim-crypto', { 'do': 'cargo build --release' } " view live cryptocurrency prices
 Plug 'tpope/vim-commentary'                                 " comment stuff out
@@ -48,45 +53,50 @@ Plug 'w0rp/ale'                                             " code linting
 call plug#end()
 filetype plugin on
 
-"" settings
+" ─────────────────────────────────────────────────────────────────────────────│─╗
+" │ Settings                                                                 ─╬─│┼
+" ╚────────────────────────────────────────────────────────────────────────────│──
 
-set ai                                                " auto indenting
-set autochdir                                         " have vim set file dir to cwd
-set autoread                                          " auto read changes files
-set backup                                            " backup files
-set expandtab                                         " expand tabs to spaces by default
-set hidden                                            " modified buffers in background
-set hlsearch                                          " highlight search terms
-set hlsearch                                          " hilight previous search matches
-set ignorecase                                        " ignore case in searches
-set incsearch                                         " hilight search matches while typing
-set nofoldenable                                      " disable folding on file open
-set number                                            " show line numbers
-set ruler                                             " show the cursor position
-set showcmd                                           " show partial command and other useful stuff at bottom of screen
-set smartindent                                       " newline smart indent
-set splitbelow                                        " open horizontal splits below current buffer
-set splitbelow                                        " splits happen below
-set splitright                                        " open vertical splits to the right of current buffer
-set ttyfast                                           " make updates smoother
-set undofile                                          " save undo history
+set ai                                               " auto indenting
+set autochdir                                        " have vim set file dir to cwd
+set autoread                                         " auto read changes files
+set backup                                           " backup files
+set expandtab                                        " expand tabs to spaces by default
+set hidden                                           " modified buffers in background
+set hlsearch                                         " highlight search terms
+set hlsearch                                         " hilight previous search matches
+set ignorecase                                       " ignore case in searches
+set incsearch                                        " hilight search matches while typing
+set nofoldenable                                     " disable folding on file open
+set number                                           " show line numbers
+set ruler                                            " show the cursor position
+set showcmd                                          " show partial command and other useful stuff at bottom of screen
+set smartindent                                      " newline smart indent
+set splitbelow                                       " open horizontal splits below current buffer
+set splitbelow                                       " splits happen below
+set splitright                                       " open vertical splits to the right of current buffer
+set ttyfast                                          " make updates smoother
+set undofile                                         " save undo history
 
-set background                   =dark                " use a dark background
-set backspace                    =indent,eol,start    " allow backspacing over everything in insert mode
-set backupdir                    =~/.vim/backup       " set backup directory
-set belloff                      =all                 " disable vim bell sounds
-set clipboard                    =unnamed             " use the system clipboard
-set foldmethod                   =marker              " allow for specification of folds
-set guicursor                    =                    " disable cursor change
-set mouse                        =a                   " allow mouse to set cursor position
-set noerrorbells visualbell t_vb =                    " disable terminal bells
-set numberwidth                  =1                   " room used for line numbers
-set rtp                         +=/usr/local/opt/fzf  " set fzf rtp
-set shiftwidth                   =4                   " number of spaces to use for auto indenting
-set tabstop                      =4                   " a tab is four spaces
-set undodir                      =~/.vim/.vimdid      " backup directory location
+set background                   =dark               " use a dark background
+set backspace                    =indent,eol,start   " allow backspacing over everything in insert mode
+set backupdir                    =~/.vim/backup      " set backup directory
+set belloff                      =all                " disable vim bell sounds
+set clipboard                    =unnamed            " use the system clipboard
+set foldmethod                   =marker             " allow for specification of folds
+set guicursor                    =                   " disable cursor change
+set mouse                        =a                  " allow mouse to set cursor position
+set noerrorbells visualbell t_vb =                   " disable terminal bells
+set numberwidth                  =1                  " room used for line numbers
+set rtp                         +=/usr/local/opt/fzf " set fzf rtp
+set shiftwidth                   =2                  " number of spaces to use for auto indenting
+set tabpagemax                   =30                 " cap vim -p to 30 tabs
+set tabstop                      =2                  " a tab is two spaces
+set undodir                      =~/.vim/.vimdid     " backup directory location
 
-"" lettings
+" ─────────────────────────────────────────────────────────────────────────────│─╗
+" │ Lettings                                                                 ─╬─│┼
+" ╚────────────────────────────────────────────────────────────────────────────│──
 
 let mapleader                                          = "\<space>"                   " set space as leader key
 
@@ -110,6 +120,11 @@ let g:ale_rust_rustfmt_options                         = "+nightly"             
 let g:ale_set_highlights                               = 0                            " disable highlight setting
 let g:fzf_command_prefix                               = 'Z'                          " set fzf command prefix to 'Z'
 let g:fzf_layout                                       = { 'down': '~40%' }           " set fzf split to bottom
+let g:gist_clip_command                                = 'pbcopy'                     " copy gist code
+let g:gist_detect_filetype                             = 1                            " detect gist filetype from filename
+let g:gist_open_browser_after_post                     = 1                            " open browser after gist post
+let g:gist_post_private                                = 1                            " default to private gists
+let g:gist_show_privates                               = 1                            " show private gists with Gist -l
 let g:gitgutter_enabled                                = 0                            " disable gitgutter by default
 let g:goyo_height                                      = 90                           " set Goyo height
 let g:goyo_width                                       = 150                          " set Goyo width
@@ -122,6 +137,7 @@ let g:rustfmt_autosave                                 = 1                      
 let g:user_emmet_leader_key                            = '<C-E>'                      " emmet completion, <C-E> + ','
 let g:vim_markdown_conceal                             = 0                            " do not conceal blocks
 let g:vim_markdown_conceal_code_blocks                 = 0                            " do not conceal code blocks
+let g:vimwiki_markdown_link_ext                        = 1                            " set external md links
 
 " ale fixers
 let g:ale_fixers = {
@@ -136,7 +152,9 @@ let g:vimwiki_list = [{
 \ 'ext': '.md'
 \}]
 
-"" mappings
+" ─────────────────────────────────────────────────────────────────────────────│─╗
+" │ Mappings                                                                 ─╬─│┼
+" ╚────────────────────────────────────────────────────────────────────────────│──
 
 " general remappings
 nnoremap 0 ^|                                                      " hope to beginning using 0
@@ -209,7 +227,9 @@ inoremap <up> <nop>|                                               " disable up 
 nnoremap <down> <nop>|                                             " disable down in normal mode
 nnoremap <up> <nop>|                                               " disable up in normal mode
 
-"" functions
+" ─────────────────────────────────────────────────────────────────────────────│─╗
+" │ Functions                                                                ─╬─│┼
+" ╚────────────────────────────────────────────────────────────────────────────│──
 
 function! JournalMode()
     execute 'normal gg'
@@ -229,7 +249,9 @@ endfunction
 source ~/.vim/functions/cp.vim    " competitive programming related functions
 source ~/.vim/functions/cocrc.vim " coc related functions
 
-"" colors
+" ─────────────────────────────────────────────────────────────────────────────│─╗
+" │ Colors                                                                   ─╬─│┼
+" ╚────────────────────────────────────────────────────────────────────────────│──
 
 if &t_Co > 2 || has("gui_running")
     syntax on
@@ -246,7 +268,9 @@ if &t_Co > 2 || has("gui_running")
     hi! Comment ctermfg=green
 endif
 
-"" commands
+" ─────────────────────────────────────────────────────────────────────────────│─╗
+" │ Commands                                                                 ─╬─│┼
+" ╚────────────────────────────────────────────────────────────────────────────│──
 
 command! -bang -nargs=* AllLines
 \ call fzf#vim#grep(
@@ -254,7 +278,9 @@ command! -bang -nargs=* AllLines
   \   1,
   \   fzf#vim#with_preview({'options': ['--delimiter=:', '--nth=4..']}), <bang>0)
 
-"" autocommands
+" ─────────────────────────────────────────────────────────────────────────────│─╗
+" │ Autocommands                                                             ─╬─│┼
+" ╚────────────────────────────────────────────────────────────────────────────│──
 
 augroup vimrc
     autocmd!
