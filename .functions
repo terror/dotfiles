@@ -1,8 +1,8 @@
 #!/bin/bash
 
-function run() {
-  g++ -std=c++17 "$@" && ./a.out;
-}
+# ───────────────────────────────────────────────────────────────────────────│─╗
+# │ Code execution                                                         ─╬─│┼
+# ╚────────────────────────────────────────────────────────────────────────────│
 
 # Run last modified file in directory (C++, Python, Java)
 function r() {
@@ -20,6 +20,10 @@ function r() {
     esac
 }
 
+function run() {
+  g++ -std=c++17 "$@" && ./a.out;
+}
+
 function py() {
   python3 "$@";
 }
@@ -33,9 +37,13 @@ function hs() {
  ghc "$file" && ./"${file%%.*}";
 }
 
-# Startup redis
-function redis() {
- redis-server /usr/local/etc/redis.conf
+# ───────────────────────────────────────────────────────────────────────────│─╗
+# │ File system                                                            ─╬─│┼
+# ╚────────────────────────────────────────────────────────────────────────────│
+
+# Create and CD into directory
+function mkcd() {
+  mkdir -p "$@" && cd "$@" || exit
 }
 
 # Open file in chrome
@@ -43,10 +51,48 @@ function oc() {
   open -a "Google Chrome" "$@"
 }
 
-# Create and CD into directory
-function mkcd() {
-  mkdir -p "$@" && cd "$@" || exit
+# Open directory
+function o() {
+	if [ $# -eq 0 ]; then open .; else open "$@"; fi;
 }
+
+# See absolute path
+function realpath() {
+    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
+# Determine size of a file or total size of a directory
+# from https://github.com/mathiasbynens/dotfiles/blob/main/.functions
+function fs() {
+	if du -b /dev/null > /dev/null 2>&1; then
+		local arg=-sbh;
+	else
+		local arg=-sh;
+	fi
+	if [[ -n "$*" ]]; then
+		du $arg -- "$@";
+	else
+		du $arg .[^.]* ./*;
+	fi;
+}
+
+# LS through bat
+function bls() {
+    if [ $# -eq 0 ]; then ls . | bat; else ls "$@" | bat; fi;
+}
+
+# ───────────────────────────────────────────────────────────────────────────│─╗
+# │ Application startup                                                    ─╬─│┼
+# ╚────────────────────────────────────────────────────────────────────────────│
+
+# Startup redis
+function redis() {
+ redis-server /usr/local/etc/redis.conf
+}
+
+# ───────────────────────────────────────────────────────────────────────────│─╗
+# │ Git utilities                                                          ─╬─│┼
+# ╚────────────────────────────────────────────────────────────────────────────│
 
 # See total lines of code in a git repo
 function loc() {
@@ -58,12 +104,25 @@ function noc() {
   git rev-list --count HEAD
 }
 
+# Open all modified git files in vim
+function vmo {
+    nvim $(git status --porcelain | awk '{print $2}')
+}
+
+# ───────────────────────────────────────────────────────────────────────────│─╗
+# │ Misc                                                                   ─╬─│┼
+# ╚────────────────────────────────────────────────────────────────────────────│
+
+# Fetch bitcoin price information
+function btc() {
+  curl rate.sx/btc
+}
+
 # Generate a SHA-256 hash
 function sha() {
   echo -n "$@" | shasum -a 256
 }
 
-# --- Misc ---
 function sol() {
   touch solution."$*" && vi solution."$*"
 }
@@ -90,45 +149,4 @@ function journal() {
       vi "$(date -u '+%Y-%m-%d')".md
       ;;
   esac
-}
-# ------------
-
-# Determine size of a file or total size of a directory
-# from https://github.com/mathiasbynens/dotfiles/blob/main/.functions
-function fs() {
-	if du -b /dev/null > /dev/null 2>&1; then
-		local arg=-sbh;
-	else
-		local arg=-sh;
-	fi
-	if [[ -n "$*" ]]; then
-		du $arg -- "$@";
-	else
-		du $arg .[^.]* ./*;
-	fi;
-}
-
-# See absolute path
-function realpath() {
-    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
-}
-
-# LS through bat
-function bls() {
-    if [ $# -eq 0 ]; then ls . | bat; else ls "$@" | bat; fi;
-}
-
-# Fetch bitcoin price information
-function btc() {
-  curl rate.sx/btc
-}
-
-# Open directory
-function o() {
-	if [ $# -eq 0 ]; then open .; else open "$@"; fi;
-}
-
-# Open all modified git files in vim
-function vmo {
-    nvim $(git status --porcelain | awk '{print $2}')
 }
