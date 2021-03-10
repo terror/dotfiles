@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/Github/notes || exit
+nvim
