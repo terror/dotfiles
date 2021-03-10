@@ -25,8 +25,11 @@
 
 [core]
     pager        = diff-so-fancy | less --tabs=4 -RFX
-    excludesfile = /Users/liam/.gitignore_global
+    excludesfile = /Users/liam/.gitignore.global
     hooksPath    = "/Users/liam/.hooks"
 
 [interactive]
     diffFilter   = diff-so-fancy --patch
+
+[github]
+	  user = terror
