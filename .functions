@@ -118,6 +118,11 @@ function btc() {
   curl rate.sx/btc
 }
 
+# Fetch weather information
+function weather() {
+  curl -s "wttr.in/?format=%l:+%c+%t\n"
+}
+
 # Generate a SHA-256 hash
 function sha() {
   echo -n "$@" | shasum -a 256
