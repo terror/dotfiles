@@ -132,7 +132,6 @@ let g:highlightedyank_highlight_duration               = 1000                   
 let g:markdown_composer_autostart                      = 0                            " disable autostart in browser
 let g:markdown_composer_syntax_theme                   = 'monokai'                    " set markdown codeblock theme
 let g:markdown_folding                                 = 0                            " disable folding
-let g:rustfmt_autosave                                 = 0                            " run rustfmt on save
 let g:rustfmt_autosave                                 = 1                            " format rust code on save
 let g:user_emmet_leader_key                            = '<C-E>'                      " emmet completion, <C-E> + ','
 let g:vim_markdown_conceal                             = 0                            " do not conceal blocks
