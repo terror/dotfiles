@@ -138,6 +138,9 @@ let g:vim_markdown_conceal                             = 0                      
 let g:vim_markdown_conceal_code_blocks                 = 0                            " do not conceal code blocks
 let g:vimwiki_markdown_link_ext                        = 1                            " set external md links
 
+" set custom wiki2html script
+let g:vimwiki_custom_wiki2html = $HOME.'/.vim/autoload/vimwiki/customwiki2html.sh'
+
 " ale fixers
 let g:ale_fixers = {
 \ '*':    ['remove_trailing_lines', 'trim_whitespace'],
