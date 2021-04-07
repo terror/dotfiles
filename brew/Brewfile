@@ -5,6 +5,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "koekeishiya/formulae"
 tap "mongodb/brew"
 tap "yudai/gotty"
 tap "zegervdv/zathura"
@@ -14,9 +15,6 @@ brew "openssl@1.1"
 
 # Command-line interface for SQLite
 brew "sqlite"
-
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9", link: false
 
 # Core application library for C
 brew "glib"
@@ -33,6 +31,12 @@ brew "clang-format"
 # Cross-platform make
 brew "cmake"
 
+# Good-lookin' diffs with diff-highlight and more
+brew "diff-so-fancy"
+
+# C implementation of Markdown
+brew "discount"
+
 # Calculator REPL, similar to bc(1)
 brew "eva"
 
@@ -47,6 +51,9 @@ brew "gcc"
 
 # Glorious Glasgow Haskell Compilation System
 brew "ghc"
+
+# Command-driven, interactive function plotting
+brew "gnuplot"
 
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
@@ -73,7 +80,10 @@ brew "mit-scheme"
 brew "mysql"
 
 # Open source relational database management system
-brew "mysql@5.7"
+brew "mysql@5.7", restart_service: true
+
+# Netwide Assembler (NASM) is an 80x86 assembler
+brew "nasm"
 
 # Fast, highly customisable system info script
 brew "neofetch"
@@ -82,7 +92,7 @@ brew "neofetch"
 brew "neovim"
 
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
-brew "nginx"
+brew "nginx", restart_service: true
 
 # Platform built on V8 to build network applications
 brew "node", link: false
@@ -94,10 +104,10 @@ brew "pandoc"
 brew "postgresql"
 
 # Object-relational database system
-brew "postgresql@12"
+brew "postgresql@12", restart_service: true
 
 # Persistent key-value database, with built-in net interface
-brew "redis"
+brew "redis", restart_service: true
 
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
@@ -107,6 +117,9 @@ brew "ruby"
 
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+
+# Autoformat shell script source code
+brew "shfmt"
 
 # Cross-shell prompt for astronauts
 brew "starship"
@@ -121,7 +134,7 @@ brew "tmux"
 brew "tree"
 
 # Validating, recursive, caching DNS resolver
-brew "unbound"
+brew "unbound", restart_service: true
 
 # Google's JavaScript engine
 brew "v8"
