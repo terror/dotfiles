@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "create-next-app": "^10.0.5",
-    "create-react-app": "^4.0.1",
+    "create-next-app": "^10.1.3",
+    "create-react-app": "^4.0.3",
     "firebase-tools": "^9.2.0",
     "serve": "^11.3.2",
     "terminalizer": "^0.7.2",

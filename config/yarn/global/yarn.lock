@@ -1184,12 +1184,12 @@ crc32-stream@^4.0.1:
     crc-32 "^1.2.0"
     readable-stream "^3.4.0"
 
-create-next-app@^10.0.5:
-  version "10.0.7"
-  resolved "https://registry.yarnpkg.com/create-next-app/-/create-next-app-10.0.7.tgz#c92ef1a535178fb7fe67b39cf2c6155be8e06b8c"
-  integrity sha512-Ahzkx5lB5ARUw/fVk81LtsL+hxHKieKEHj73GMnI1ogNvrLCX2ByPvIwF3FC3IcykdosUXBM997M0SxraXskfg==
+create-next-app@^10.1.3:
+  version "10.1.3"
+  resolved "https://registry.yarnpkg.com/create-next-app/-/create-next-app-10.1.3.tgz#ff6db4c8ae32ea6310df8cf312a4c48ab449f72f"
+  integrity sha512-PmWrLlVrIcKXSb6KgNyQibqNh0/xU44/k5tXiZR9eWO1mz8NFOWkhNS6ZDUc6gr6U1Y82qURXXrlncr8M0+ZEQ==
 
-create-react-app@^4.0.1:
+create-react-app@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/create-react-app/-/create-react-app-4.0.3.tgz#7220aa0837308f63fe0e56e65867f0bb2b6786de"
   integrity sha512-Gz/ilrPq0ehiZ+K3L4jAZXGVep6NDkAytIdiHXsE4cWJav9uHe8xzEN84i3SjMYox6yNrBaULXHAkWdn4ZBF9Q==
