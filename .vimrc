@@ -26,6 +26,7 @@ Plug 'mhinz/vim-startify'                                   " a fancy start scre
 Plug 'sheerun/vim-polyglot'                                 " syntax support for many languages
 Plug 'terror/vim-crypto', { 'do': 'cargo build --release' } " view live cryptocurrency prices
 Plug 'tpope/vim-commentary'                                 " comment stuff out
+Plug 'tpope/vim-eunuch'                                     " unix helpers
 Plug 'tpope/vim-surround'                                   " all about surroundings
 Plug 'vim-airline/vim-airline'                              " status bar
 Plug 'vim-airline/vim-airline-themes'                       " themes for airline
@@ -44,7 +45,7 @@ Plug 'plasticboy/vim-markdown'                              " markdown support
 Plug 'rust-lang/rust.vim'                                   " rust support
 
 " code linting and formatting plugins
-Plug 'ambv/black'                                           " python code formatting
+" Plug 'ambv/black'                                         " python code formatting
 Plug 'neoclide/coc.nvim', {'branch': 'release'}             " code completion
 Plug 'prettier/vim-prettier'                                " javascript code formatting
 Plug 'rhysd/vim-clang-format'                               " c++ code formatting
@@ -149,7 +150,7 @@ let g:ale_fixers = {
 
 " vim wiki config
 let g:vimwiki_list = [{
-\ 'path': '~/Github/notes/',
+\ 'path': '~/Github/wiki',
 \ 'syntax': 'markdown',
 \ 'ext': '.md'
 \}]
@@ -309,7 +310,7 @@ augroup vimrc
     :autocmd BufNewFile *.py 0r ~/.vim/templates/python.skeleton
 
     " format python with black on save
-    autocmd BufWritePost *.py silent! execute ':Black'
+    " autocmd BufWritePost *.py silent! execute ':Black'
 
     " populate journal template
     autocmd VimEnter */journal/** 0r ~/.vim/templates/journal.skeleton
