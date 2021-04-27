@@ -19,6 +19,7 @@ Plug 'godlygeek/tabular'                                    " text filtering and
 Plug 'jiangmiao/auto-pairs'                                 " pair completion
 Plug 'junegunn/goyo.vim'                                    " distraction free writing
 Plug 'kana/vim-operator-user'                               " allow user defined operators
+Plug 'luochen1990/rainbow'                                  " rainbow delimiters
 Plug 'machakann/vim-highlightedyank'                        " make the highlighted region apparent
 Plug 'mattn/vim-gist'                                       " create gists
 Plug 'mattn/webapi-vim'                                     " vim gist dependency
@@ -45,7 +46,6 @@ Plug 'plasticboy/vim-markdown'                              " markdown support
 Plug 'rust-lang/rust.vim'                                   " rust support
 
 " code linting and formatting plugins
-" Plug 'ambv/black'                                         " python code formatting
 Plug 'neoclide/coc.nvim', {'branch': 'release'}             " code completion
 Plug 'prettier/vim-prettier'                                " javascript code formatting
 Plug 'rhysd/vim-clang-format'                               " c++ code formatting
@@ -138,6 +138,7 @@ let g:user_emmet_leader_key                            = '<C-E>'                
 let g:vim_markdown_conceal                             = 0                            " do not conceal blocks
 let g:vim_markdown_conceal_code_blocks                 = 0                            " do not conceal code blocks
 let g:vimwiki_markdown_link_ext                        = 1                            " set external md links
+let g:rainbow_active                                   = 1                            " enable rainbow delimiters
 
 " set custom wiki2html script
 let g:vimwiki_custom_wiki2html = $HOME.'/.vim/autoload/vimwiki/customwiki2html.sh'
@@ -308,9 +309,6 @@ augroup vimrc
 
     " load basic python template on file open
     :autocmd BufNewFile *.py 0r ~/.vim/templates/python.skeleton
-
-    " format python with black on save
-    " autocmd BufWritePost *.py silent! execute ':Black'
 
     " populate journal template
     autocmd VimEnter */journal/** 0r ~/.vim/templates/journal.skeleton
