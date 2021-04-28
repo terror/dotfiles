@@ -18,6 +18,7 @@ Plug 'emonkak/vim-operator-sort'                            " sort operator
 Plug 'godlygeek/tabular'                                    " text filtering and alignment
 Plug 'jiangmiao/auto-pairs'                                 " pair completion
 Plug 'junegunn/goyo.vim'                                    " distraction free writing
+Plug 'junegunn/vim-easy-align'                              " easy alignment
 Plug 'kana/vim-operator-user'                               " allow user defined operators
 Plug 'luochen1990/rainbow'                                  " rainbow delimiters
 Plug 'machakann/vim-highlightedyank'                        " make the highlighted region apparent
@@ -133,12 +134,12 @@ let g:highlightedyank_highlight_duration               = 1000                   
 let g:markdown_composer_autostart                      = 0                            " disable autostart in browser
 let g:markdown_composer_syntax_theme                   = 'monokai'                    " set markdown codeblock theme
 let g:markdown_folding                                 = 0                            " disable folding
+let g:rainbow_active                                   = 1                            " enable rainbow delimiters
 let g:rustfmt_autosave                                 = 1                            " format rust code on save
 let g:user_emmet_leader_key                            = '<C-E>'                      " emmet completion, <C-E> + ','
 let g:vim_markdown_conceal                             = 0                            " do not conceal blocks
 let g:vim_markdown_conceal_code_blocks                 = 0                            " do not conceal code blocks
 let g:vimwiki_markdown_link_ext                        = 1                            " set external md links
-let g:rainbow_active                                   = 1                            " enable rainbow delimiters
 
 " set custom wiki2html script
 let g:vimwiki_custom_wiki2html = $HOME.'/.vim/autoload/vimwiki/customwiki2html.sh'
@@ -191,6 +192,8 @@ nnoremap<leader>ss :source %<CR>|                                  " source %
 nnoremap<leader>sv :source $MYVIMRC<CR>|                           " source vimrc
 nnoremap<leader>tg :GitGutterToggle<CR>|                           " toggle git gutter
 nnoremap<leader>tp :Goyo<CR>|                                      " toggle prose mode
+nmap ga <Plug>(EasyAlign)|                                         " start interactive EasyAlign in visual mode
+xmap ga <Plug>(EasyAlign)|                                         " start interactive EasyAlign for a motion/text object
 
 " surround
 map<leader>" ysiw"|                                                " quotes around word
