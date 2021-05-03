@@ -32,4 +32,7 @@
     diffFilter   = diff-so-fancy --patch
 
 [github]
-	  user = terror
+	  user         = terror
+
+[init]
+    defaultBranch = master
