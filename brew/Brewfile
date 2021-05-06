@@ -5,19 +5,17 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "jason0x43/neovim-nightly"
 tap "koekeishiya/formulae"
 tap "mongodb/brew"
 tap "yudai/gotty"
 tap "zegervdv/zathura"
 
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
-
-# Command-line interface for SQLite
-brew "sqlite"
-
 # Core application library for C
 brew "glib"
+
+# Record and share terminal sessions
+brew "asciinema"
 
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
@@ -30,9 +28,6 @@ brew "clang-format"
 
 # Cross-platform make
 brew "cmake"
-
-# Good-lookin' diffs with diff-highlight and more
-brew "diff-so-fancy"
 
 # C implementation of Markdown
 brew "discount"
@@ -51,6 +46,9 @@ brew "gcc"
 
 # Glorious Glasgow Haskell Compilation System
 brew "ghc"
+
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 
 # Command-driven, interactive function plotting
 brew "gnuplot"
@@ -92,7 +90,7 @@ brew "neofetch"
 brew "neovim"
 
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
-brew "nginx", restart_service: true
+brew "nginx"
 
 # Platform built on V8 to build network applications
 brew "node", link: false
@@ -134,7 +132,7 @@ brew "tmux"
 brew "tree"
 
 # Validating, recursive, caching DNS resolver
-brew "unbound", restart_service: true
+brew "unbound"
 
 # Google's JavaScript engine
 brew "v8"
@@ -153,6 +151,12 @@ brew "yarn"
 
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
+
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd"
+
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai"
 
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
@@ -178,6 +182,7 @@ cask "calibre"
 # App to build and share containerized applications and microservices
 cask "docker"
 
+# Java IDE by JetBrains
 cask "intellij-idea"
 
 # Terminal emulator as alternative to Apple's Terminal app
