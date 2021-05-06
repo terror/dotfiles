@@ -1,38 +1,44 @@
 [filter "lfs"]
-    clean        = git-lfs clean -- %f
-    process      = git-lfs filter-process
-    required     = true
-    smudge       = git-lfs smudge -- %f
+    clean         = git-lfs clean -- %f
+    process       = git-lfs filter-process
+    required      = true
+    smudge        = git-lfs smudge -- %f
 
 [user]
-    name         = Liam
-    email        = liam@scalzulli.com
+    name          = Liam
+    email         = liam@scalzulli.com
 
 [pull]
-    rebase       = true
+    rebase        = true
 
 [rebase]
-    autoStash    = true
+    autoStash     = true
 
 [alias]
-    f            = fetch
-    fu           = fetch upstream master
-    last         = log -1 HEAD
-    lg           = log --oneline
-    p            = pull
-    rmc          = rm -r --cached .
-    track        = branch --set-upstream-to upstream/master master
+    f             = fetch
+    fu            = fetch upstream master
+    last          = log -1 HEAD
+    lg            = log --oneline
+    p             = pull
+    rmc           = rm -r --cached .
+    track         = branch --set-upstream-to upstream/master master
 
 [core]
-    pager        = diff-so-fancy | less --tabs=4 -RFX
-    excludesfile = /Users/liam/.gitignore.global
-    hooksPath    = "/Users/liam/.hooks"
+    pager         = delta
+    excludesfile  = /Users/liam/.gitignore.global
+    hooksPath     = "/Users/liam/.hooks"
+
+[delta]
+    plus-style    = "syntax #012800"
+    minus-style   = "syntax #340001"
+    syntax-theme  = Monokai Extended
+    navigate      = true
 
 [interactive]
-    diffFilter   = diff-so-fancy --patch
+    diffFilter    = delta --color-only
 
 [github]
-	  user         = terror
+    user          = terror
 
 [init]
     defaultBranch = master
