@@ -94,11 +94,6 @@ function redis() {
 # │ Git utilities                                                          ─╬─│┼
 # ╚────────────────────────────────────────────────────────────────────────────│
 
-# See total lines of code in a git repo
-function loc() {
-  git ls-files | xargs wc -l
-}
-
 # See total number of commits
 function noc() {
   git rev-list --count HEAD
@@ -106,7 +101,7 @@ function noc() {
 
 # Open all modified git files in vim
 function vmo {
-    nvim $(git status --porcelain | awk '{print $2}')
+  nvim "$(git status --porcelain | awk '{print $2}')"
 }
 
 # ───────────────────────────────────────────────────────────────────────────│─╗
