@@ -146,16 +146,32 @@ let g:vimwiki_custom_wiki2html = $HOME.'/.vim/autoload/vimwiki/customwiki2html.s
 
 " ale fixers
 let g:ale_fixers = {
-\ '*':    ['remove_trailing_lines', 'trim_whitespace'],
-\ 'rust': ['rustfmt'],
+    \ '*':    ['remove_trailing_lines', 'trim_whitespace'],
+    \ 'rust': ['rustfmt'],
 \}
 
 " vim wiki config
 let g:vimwiki_list = [{
-\ 'path': '~/Github/wiki',
-\ 'syntax': 'markdown',
-\ 'ext': '.md'
+    \ 'path': '~/Github/wiki',
+    \ 'syntax': 'markdown',
+    \ 'ext': '.md'
 \}]
+
+" startify bookmarks
+let  g:startify_bookmarks =  [
+    \ {'v': '~/dotfiles/.vimrc'},
+    \ {'a': '~/dotfiles/.aliases'},
+    \ {'f': '~/dotfiles/.functions'},
+\ ]
+
+" startify custom commands
+let g:startify_commands = [
+    \ {'ch': ['Health Check', ':checkhealth']},
+    \ {'ps': ['Plugins status', ':PlugStatus']},
+    \ {'pu': ['Update vim plugins',':PlugUpdate | PlugUpgrade']},
+    \ {'uc': ['Update coc Plugins', ':CocUpdate']},
+    \ {'h':  ['Help', ':help']},
+\ ]
 
 " ─────────────────────────────────────────────────────────────────────────────│─╗
 " │ Mappings                                                                 ─╬─│┼
