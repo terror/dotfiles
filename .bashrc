@@ -5,6 +5,8 @@ export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 export NVM_DIR="$HOME/.nvm"
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/*' --glob '!*.pyc'"
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export TERM=xterm-color
 
 # config files
 
