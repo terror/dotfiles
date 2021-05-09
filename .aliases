@@ -27,6 +27,8 @@ alias gpf="git push -f origin master"
 alias gpo="git push origin"
 alias gb="git branch"
 alias gcb="git checkout -b"
+alias gap="git add -p"
+alias gbd="git branch --delete"
 
 # ls
 alias l="ls"
