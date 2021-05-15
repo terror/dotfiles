@@ -37,16 +37,27 @@ alias la="ls -a"
 alias sl="ls"
 alias lt="tree -L 1"
 
-# commands
+# vim
 alias v="nvim"
 alias vi="nvim"
 alias ov="vim"
+
+# one letter
 alias e="exit"
 alias g="git"
-alias m="tmux"
 alias j="just"
+alias m="tmux"
+
+# pipenv shortcut
 alias pv="pipenv"
+
+# clean out all ongoing tmux sessions
+alias trm="tmux kill-server"
+
+# launch mysql in docker
 alias mysql="docker container exec -it mysql /bin/bash"
+
+# docker compose up shortcut
 alias dc="docker-compose up -d"
 
 # reload the shell
