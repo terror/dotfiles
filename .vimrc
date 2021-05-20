@@ -34,6 +34,7 @@ Plug 'vim-airline/vim-airline'                              " status bar
 Plug 'vim-airline/vim-airline-themes'                       " themes for airline
 Plug 'vimwiki/vimwiki'                                      " a personal wiki
 Plug 'wakatime/vim-wakatime'                                " productivity metrics
+Plug 'NoahTheDuke/vim-just'                                 " justfile syntax highlighting
 
 " search related plugins
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }         " command line fuzzy finder
@@ -66,7 +67,6 @@ set backup                                           " backup files
 set expandtab                                        " expand tabs to spaces by default
 set hidden                                           " modified buffers in background
 set hlsearch                                         " highlight search terms
-set hlsearch                                         " hilight previous search matches
 set ignorecase                                       " ignore case in searches
 set incsearch                                        " hilight search matches while typing
 set nofoldenable                                     " disable folding on file open
@@ -75,7 +75,6 @@ set ruler                                            " show the cursor position
 set showcmd                                          " show partial command and other useful stuff at bottom of screen
 set smartindent                                      " newline smart indent
 set splitbelow                                       " open horizontal splits below current buffer
-set splitbelow                                       " splits happen below
 set splitright                                       " open vertical splits to the right of current buffer
 set ttyfast                                          " make updates smoother
 set undofile                                         " save undo history
@@ -86,14 +85,13 @@ set backupdir                    =~/.vim/backup      " set backup directory
 set belloff                      =all                " disable vim bell sounds
 set clipboard                    =unnamed            " use the system clipboard
 set foldmethod                   =marker             " allow for specification of folds
-set guicursor                    =                   " disable cursor change
 set mouse                        =a                  " allow mouse to set cursor position
 set noerrorbells visualbell t_vb =                   " disable terminal bells
 set numberwidth                  =1                  " room used for line numbers
 set rtp                         +=/usr/local/opt/fzf " set fzf rtp
 set shiftwidth                   =2                  " number of spaces to use for auto indenting
-set tabpagemax                   =30                 " cap vim -p to 30 tabs
 set tabstop                      =2                  " a tab is two spaces
+set tabpagemax                   =30                 " cap vim -p to 30 tabs
 set undodir                      =~/.vim/.vimdid     " backup directory location
 
 " ─────────────────────────────────────────────────────────────────────────────│─╗
@@ -337,4 +335,7 @@ augroup vimrc
 
     " set title as filename for new markdown files
     autocmd BufNewFile *.md :call OnMdCreate()
+
+    " prettier hack for .tsx files
+    autocmd BufNewFile,BufRead *.tsx setf typescript.tsx
 augroup end
