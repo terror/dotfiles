@@ -86,3 +86,6 @@ alias wifi='wifi-password'
 
 # spinning globe
 alias gl='globe -s'
+
+# search aliases with fzf
+alias sra='alias | fzf'
