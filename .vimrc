@@ -5,53 +5,51 @@ filetype off
 " │ Plugins                                                                  ─╬─│┼
 " ╚────────────────────────────────────────────────────────────────────────────│──
 
-filetype plugin on
+filetype plugin indent on
 call plug#begin('~/.vim/plugged')
 
 " general purpose plugins
-Plug 'SirVer/ultisnips'                                     " code snippets
-Plug 'airblade/vim-gitgutter'                               " show git diff in the sign column
-Plug 'airblade/vim-rooter'                                  " look in root for file search
-Plug 'chriskempson/base16-vim'                              " base16 colors in vim
-Plug 'editorconfig/editorconfig-vim'                        " respect .editorconfig
-Plug 'emonkak/vim-operator-sort'                            " sort operator
-Plug 'godlygeek/tabular'                                    " text filtering and alignment
-Plug 'jiangmiao/auto-pairs'                                 " pair completion
-Plug 'junegunn/goyo.vim'                                    " distraction free writing
-Plug 'junegunn/vim-easy-align'                              " easy alignment
-Plug 'kana/vim-operator-user'                               " allow user defined operators
-Plug 'luochen1990/rainbow'                                  " rainbow delimiters
-Plug 'machakann/vim-highlightedyank'                        " make the highlighted region apparent
-Plug 'mattn/vim-gist'                                       " create gists
-Plug 'mattn/webapi-vim'                                     " vim gist dependency
-Plug 'mhinz/vim-startify'                                   " a fancy start screen
-Plug 'sheerun/vim-polyglot'                                 " syntax support for many languages
-Plug 'terror/vim-crypto', { 'do': 'cargo build --release' } " view live cryptocurrency prices
-Plug 'tpope/vim-commentary'                                 " comment stuff out
-Plug 'tpope/vim-eunuch'                                     " unix helpers
-Plug 'tpope/vim-surround'                                   " all about surroundings
-Plug 'vim-airline/vim-airline'                              " status bar
-Plug 'vim-airline/vim-airline-themes'                       " themes for airline
-Plug 'vimwiki/vimwiki'                                      " a personal wiki
-Plug 'wakatime/vim-wakatime'                                " productivity metrics
-Plug 'NoahTheDuke/vim-just'                                 " justfile syntax highlighting
+Plug 'NoahTheDuke/vim-just'                               " justfile syntax highlighting
+Plug 'SirVer/ultisnips'                                   " code snippets
+Plug 'airblade/vim-gitgutter'                             " show git diff in the sign column
+Plug 'airblade/vim-rooter'                                " look in root for file search
+Plug 'chriskempson/base16-vim'                            " base16 colors in vim
+Plug 'editorconfig/editorconfig-vim'                      " respect .editorconfig
+Plug 'emonkak/vim-operator-sort'                          " sort operator
+Plug 'godlygeek/tabular'                                  " text filtering and alignment
+Plug 'jiangmiao/auto-pairs'                               " pair completion
+Plug 'junegunn/goyo.vim'                                  " distraction free writing
+Plug 'junegunn/vim-easy-align'                            " easy alignment
+Plug 'kana/vim-operator-user'                             " allow user defined operators
+Plug 'luochen1990/rainbow'                                " rainbow delimiters
+Plug 'machakann/vim-highlightedyank'                      " make the highlighted region apparent
+Plug 'mattn/vim-gist', {'on': 'Gist'}                     " create gists
+Plug 'mattn/webapi-vim'                                   " vim gist dependency
+Plug 'mhinz/vim-startify'                                 " a fancy start screen
+Plug 'neoclide/coc.nvim', {'branch': 'release'}           " code completion
+Plug 'prettier/vim-prettier'                              " javascript code formatting
+Plug 'rhysd/vim-clang-format'                             " c++ code formatting
+Plug 'sheerun/vim-polyglot'                               " syntax support for many languages
+Plug 'terror/vim-crypto', {'do': 'cargo build --release'} " view live cryptocurrency prices
+Plug 'tpope/vim-commentary'                               " comment stuff out
+Plug 'tpope/vim-eunuch'                                   " unix helpers
+Plug 'tpope/vim-surround'                                 " all about surroundings
+Plug 'vim-airline/vim-airline'                            " status bar
+Plug 'vim-airline/vim-airline-themes'                     " themes for airline
+Plug 'vimwiki/vimwiki'                                    " a personal wiki
+Plug 'w0rp/ale'                                           " code linting
+Plug 'wakatime/vim-wakatime'                              " productivity metrics
 
 " search related plugins
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }         " command line fuzzy finder
-Plug 'junegunn/fzf.vim'                                     " command line fuzzy finder
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }      " file explorer
+Plug 'junegunn/fzf', {'do': { -> fzf#install() }}         " command line fuzzy finder
+Plug 'junegunn/fzf.vim'                                   " command line fuzzy finder
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}      " file explorer
 
 " language specific plugins
-Plug 'euclio/vim-markdown-composer'                         " render markdown in the browser
-Plug 'mattn/emmet-vim'                                      " html completion
-Plug 'plasticboy/vim-markdown'                              " markdown support
-Plug 'rust-lang/rust.vim'                                   " rust support
-
-" code linting and formatting plugins
-Plug 'neoclide/coc.nvim', {'branch': 'release'}             " code completion
-Plug 'prettier/vim-prettier'                                " javascript code formatting
-Plug 'rhysd/vim-clang-format'                               " c++ code formatting
-Plug 'w0rp/ale'                                             " code linting
+Plug 'euclio/vim-markdown-composer'                       " render markdown in the browser
+Plug 'mattn/emmet-vim'                                    " html completion
+Plug 'plasticboy/vim-markdown'                            " markdown support
+Plug 'rust-lang/rust.vim'                                 " rust support
 
 call plug#end()
 filetype plugin on
@@ -69,15 +67,19 @@ set hidden                                           " modified buffers in backg
 set hlsearch                                         " highlight search terms
 set ignorecase                                       " ignore case in searches
 set incsearch                                        " hilight search matches while typing
+set linebreak                                        " avoid wrapping mid word
 set nofoldenable                                     " disable folding on file open
 set number                                           " show line numbers
 set ruler                                            " show the cursor position
 set showcmd                                          " show partial command and other useful stuff at bottom of screen
+set smartcase                                        " case insensitive searches unless contains uppercase
 set smartindent                                      " newline smart indent
 set splitbelow                                       " open horizontal splits below current buffer
 set splitright                                       " open vertical splits to the right of current buffer
+set title                                            " set title
 set ttyfast                                          " make updates smoother
 set undofile                                         " save undo history
+set wrap                                             " enable line wrapping
 
 set background                   =dark               " use a dark background
 set backspace                    =indent,eol,start   " allow backspacing over everything in insert mode
@@ -90,9 +92,11 @@ set noerrorbells visualbell t_vb =                   " disable terminal bells
 set numberwidth                  =1                  " room used for line numbers
 set rtp                         +=/usr/local/opt/fzf " set fzf rtp
 set shiftwidth                   =2                  " number of spaces to use for auto indenting
-set tabstop                      =2                  " a tab is two spaces
 set tabpagemax                   =30                 " cap vim -p to 30 tabs
+set tabstop                      =2                  " a tab is two spaces
+set textwidth                    =120                " set text width
 set undodir                      =~/.vim/.vimdid     " backup directory location
+set wildignore                   +=.pyc,.swp         " ignore when opening based on a glob pattern
 
 " ─────────────────────────────────────────────────────────────────────────────│─╗
 " │ Lettings                                                                 ─╬─│┼
@@ -144,7 +148,7 @@ let g:vimwiki_custom_wiki2html = $HOME.'/.vim/autoload/vimwiki/customwiki2html.s
 
 " ale fixers
 let g:ale_fixers = {
-    \ '*':    ['remove_trailing_lines', 'trim_whitespace'],
+    \ '*': ['remove_trailing_lines', 'trim_whitespace'],
     \ 'rust': ['rustfmt'],
 \}
 
@@ -168,7 +172,7 @@ let g:startify_commands = [
     \ {'ps': ['Plugins status', ':PlugStatus']},
     \ {'pu': ['Update vim plugins',':PlugUpdate | PlugUpgrade']},
     \ {'uc': ['Update coc Plugins', ':CocUpdate']},
-    \ {'h':  ['Help', ':help']},
+    \ {'h': ['Help', ':help']},
 \ ]
 
 " ─────────────────────────────────────────────────────────────────────────────│─╗
@@ -177,13 +181,13 @@ let g:startify_commands = [
 
 " general remappings
 nnoremap 0 ^|                                                      " hope to beginning using 0
-nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " remove trailing whitespace
-nnoremap <silent> <C-L> :noh<CR><C-L>|                             " clear search highlighting
 nnoremap Q <nop>|                                                  " map Q to nothing
 nnoremap Z :wq<CR>|                                                " save and quit file
 nnoremap ^ 0|                                                      " hope to beginning using 0
-nnoremap<C-R> :%s/[^[:print:]]//g<CR>|                             " remove non printable characters
-nnoremap<C-a> :ter<CR>|                                            " open terminal with ctrl + a
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " remove trailing whitespace
+nnoremap <silent> <C-L> :noh<CR><C-L>|                             " clear search highlighting
+nnoremap <C-R> :%s/[^[:print:]]//g<CR>|                            " remove non printable characters
+nnoremap <C-a> :ter<CR>|                                           " open terminal with ctrl + a
 onoremap b i[|                                                     " for easier bracket deletion
 onoremap in( :<C-U>normal! f(vi(<CR>|                              " hop into parens on same line
 onoremap p i(|                                                     " for easier parens deletion
@@ -196,16 +200,19 @@ nnoremap <C-k> :bn<CR>|                                            " next buffer
 nnoremap <C-n> :tabnew<CR>|                                        " new tab
 
 " general leader mappings
-nnoremap<leader>ad :ALEDetail<CR>|                                 " see ale error message details
-nnoremap<leader>bu :.,$-bd<CR>|                                    " delete buffers from curr to last
-nnoremap<leader>c :%y+<CR>|                                        " yank all line to +
-nnoremap<leader>cl gg<esc>dG<CR>|                                  " clear file
-nnoremap<leader>qq ^<esc>D|                                        " clear line
-nnoremap<leader>rr :redo<CR>|                                      " redo last change
-nnoremap<leader>ss :source %<CR>|                                  " source %
-nnoremap<leader>sv :source $MYVIMRC<CR>|                           " source vimrc
-nnoremap<leader>tg :GitGutterToggle<CR>|                           " toggle git gutter
-nnoremap<leader>tp :Goyo<CR>|                                      " toggle prose mode
+nnoremap <leader>ad :ALEDetail<CR>|                                 " see ale error message details
+nnoremap <leader>bu :.,$-bd<CR>|                                    " delete buffers from curr to last
+nnoremap <leader>c :%y+<CR>|                                        " yank all line to +
+nnoremap <leader>cl gg<esc>dG<CR>|                                  " clear file
+nnoremap <leader>qq ^<esc>D|                                        " clear line
+nnoremap <leader>r :redo<CR>|                                       " redo last change
+nnoremap <leader>ss :source %<CR>|                                  " source %
+nnoremap <leader>sv :source $MYVIMRC<CR>|                           " source vimrc
+nnoremap <leader>tg :GitGutterToggle<CR>|                           " toggle git gutter
+nnoremap <leader>tp :Goyo<CR>|                                      " toggle prose mode
+nnoremap <leader><leader> <c-^>|                                    " toggle between buffers
+
+" easy align
 nmap ga <Plug>(EasyAlign)|                                         " start interactive EasyAlign in visual mode
 xmap ga <Plug>(EasyAlign)|                                         " start interactive EasyAlign for a motion/text object
 
@@ -233,6 +240,7 @@ nnoremap <C-s> :ZFiles<CR>|                                        " search for 
 nnoremap<leader>o :NERDTreeToggle<CR>|                             " toggle nerdtree
 nnoremap<leader>sa :AllLines<CR>|                                  " search through all lines in all files
 nnoremap<leader>sg :ZCommits<CR>|                                  " search through git commits
+nnoremap<leader>sb :ZBuffers<CR>|                                  " search through open buffers
 
 " edit named files
 nnoremap<leader>ev :split ~/.vimrc<CR>|                            " edit vimrc
@@ -326,6 +334,9 @@ augroup vimrc
 
     " load basic python template on file open
     :autocmd BufNewFile *.py 0r ~/.vim/templates/python.skeleton
+
+    " set python code style
+    autocmd FileType python setlocal shiftwidth=2 softtabstop=2 expandtab
 
     " populate journal template
     autocmd VimEnter */journal/** 0r ~/.vim/templates/journal.skeleton
