@@ -6,18 +6,18 @@
 
 # Run last modified file in directory (C++, Python, Java)
 function r() {
-    file="$(ls -t | head -n 1)"
-    case "$1" in
-        p)
-           python3 "$file"
-           ;;
-        j)
-            javac "$file" && java "${file%.*}"
-            ;;
-        *)
-            g++ -std=c++17 "$file" && ./a.out;
-            rm -rf a.out;
-    esac
+  file="$(ls -t | head -n 1)"
+  case "$1" in
+    p)
+      python3 "$file"
+      ;;
+    j)
+      javac "$file" && java "${file%.*}"
+      ;;
+    *)
+      g++ -std=c++17 "$file" && ./a.out;
+      rm -rf a.out;
+  esac
 }
 
 function run() {
@@ -58,27 +58,27 @@ function o() {
 
 # See absolute path
 function realpath() {
-    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+  [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
 }
 
 # Determine size of a file or total size of a directory
 # from https://github.com/mathiasbynens/dotfiles/blob/main/.functions
 function fs() {
-	if du -b /dev/null > /dev/null 2>&1; then
-		local arg=-sbh;
-	else
-		local arg=-sh;
-	fi
-	if [[ -n "$*" ]]; then
-		du $arg -- "$@";
-	else
-		du $arg .[^.]* ./*;
-	fi;
+  if du -b /dev/null > /dev/null 2>&1; then
+    local arg=-sbh;
+  else
+    local arg=-sh;
+  fi
+  if [[ -n "$*" ]]; then
+    du $arg -- "$@";
+  else
+    du $arg .[^.]* ./*;
+  fi;
 }
 
 # LS through bat
 function bls() {
-    if [ $# -eq 0 ]; then ls . | bat; else ls "$@" | bat; fi;
+  if [ $# -eq 0 ]; then ls . | bat; else ls "$@" | bat; fi;
 }
 
 # ───────────────────────────────────────────────────────────────────────────│─╗
