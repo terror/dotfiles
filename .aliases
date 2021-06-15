@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # shortcuts
-alias c="cd ~/Github/CompetitiveProgramming"
-alias gh="cd ~/Github"
+alias c="cd ~/src/CompetitiveProgramming"
+alias gh="cd ~/src"
 alias jac="cd ~/'JAC CompSci'"
-alias z="cd ~/Github/notes"
+alias z="cd ~/src/notes"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 # from https://github.com/mathiasbynens/dotfiles/blob/main/.aliases
