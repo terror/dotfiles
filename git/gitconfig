@@ -21,6 +21,7 @@
     lg            = log --oneline
     p             = pull
     rmc           = rm -r --cached .
+    hash          = rev-parse HEAD
     track         = branch --set-upstream-to upstream/master master
 
 [core]
