@@ -275,6 +275,12 @@ function! OnMdCreate()
     execute 'normal o'
 endfunction
 
+function! AdjustTextWidth()
+    let syn_element = synIDattr(synID(line("."), col(".") - 1, 1), "name")
+    let &textwidth = syn_element =~? 'comment' ? 72 : 79
+    echo "tw = " . &textwidth
+endfunction
+
 source ~/.vim/functions/cp.vim    " competitive programming related functions
 source ~/.vim/functions/cocrc.vim " coc related functions
 
@@ -349,4 +355,7 @@ augroup vimrc
 
     " prettier hack for .tsx files
     autocmd BufNewFile,BufRead *.tsx setf typescript.tsx
+
+    " adjust comment text width
+    autocmd TextChanged,TextChangedI * :call AdjustTextWidth()
 augroup end
