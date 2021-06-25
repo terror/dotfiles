@@ -2,6 +2,7 @@ tap "bios-marcel/cordless"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
@@ -44,17 +45,26 @@ brew "gawk"
 # GNU compiler collection
 brew "gcc"
 
+# GitHub command-line tool
+brew "gh"
+
 # Glorious Glasgow Haskell Compilation System
 brew "ghc"
 
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
 
+# Powerful, lightweight programming language
+brew "lua"
+
 # Command-driven, interactive function plotting
 brew "gnuplot"
 
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+
+# Command-line hex viewer
+brew "hexyl"
 
 # Improved top (interactive process viewer)
 brew "htop"
@@ -146,6 +156,9 @@ brew "wget"
 # Show the current WiFi network password
 brew "wifi-password"
 
+# Allow GNU Readline to be used with arbitrary programs
+brew "with-readline"
+
 # JavaScript package manager
 brew "yarn"
 
@@ -199,6 +212,9 @@ cask "notion"
 
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+
+# Modern programming language in the Lisp/Scheme family
+cask "racket"
 
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
