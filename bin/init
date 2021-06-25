@@ -3,7 +3,7 @@
 
 name="$*"
 
-cd "$HOME"/Github || exit
+cd "$HOME"/src || exit
 
 mkdir "$name" && cd "$name" || exit
 
