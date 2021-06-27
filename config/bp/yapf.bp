@@ -1,0 +1,9 @@
+---
+filename: .style.yapf
+indent_width: 2
+blank_lines: 1
+---
+[style]
+INDENT_WIDTH                            = {%indent_width%}
+COLUMN_LIMIT                            = 120
+BLANK_LINES_AROUND_TOP_LEVEL_DEFINITION = {%blank_lines%}
