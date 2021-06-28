@@ -9,6 +9,7 @@ crates:
   cargo install bat
   cargo install cargo-check
   cargo install cargo-watch
+  cargo install cargo-edit
   cargo install just
   cargo install ripgrep
   cargo install loc
