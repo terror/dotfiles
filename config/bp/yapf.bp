@@ -1,9 +1,11 @@
 ---
 filename: .style.yapf
 indent_width: 2
+spaces_before_comment: 1
 blank_lines: 1
 ---
 [style]
-INDENT_WIDTH                            = {%indent_width%}
-COLUMN_LIMIT                            = 120
+INDENT_WIDTH = {%indent_width%}
+COLUMN_LIMIT = 120
+SPACES_BEFORE_COMMENT = {%spaces_before_comment%}
 BLANK_LINES_AROUND_TOP_LEVEL_DEFINITION = {%blank_lines%}
