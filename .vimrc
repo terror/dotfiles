@@ -148,31 +148,31 @@ let g:vimwiki_custom_wiki2html = $HOME.'/.vim/autoload/vimwiki/customwiki2html.s
 
 " ale fixers
 let g:ale_fixers = {
-    \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-    \ 'rust': ['rustfmt'],
+  \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \ 'rust': ['rustfmt'],
 \}
 
 " vim wiki config
 let g:vimwiki_list = [{
-    \ 'path': '~/Github/wiki',
-    \ 'syntax': 'markdown',
-    \ 'ext': '.md'
+  \ 'path': '~/Github/wiki',
+  \ 'syntax': 'markdown',
+  \ 'ext': '.md'
 \}]
 
 " startify bookmarks
 let  g:startify_bookmarks =  [
-    \ {'v': '~/dotfiles/.vimrc'},
-    \ {'a': '~/dotfiles/.aliases'},
-    \ {'f': '~/dotfiles/.functions'},
+  \ {'v': '~/dotfiles/.vimrc'},
+  \ {'a': '~/dotfiles/.aliases'},
+  \ {'f': '~/dotfiles/.functions'},
 \ ]
 
 " startify custom commands
 let g:startify_commands = [
-    \ {'ch': ['Health Check', ':checkhealth']},
-    \ {'ps': ['Plugins status', ':PlugStatus']},
-    \ {'pu': ['Update vim plugins',':PlugUpdate | PlugUpgrade']},
-    \ {'uc': ['Update coc Plugins', ':CocUpdate']},
-    \ {'h': ['Help', ':help']},
+  \ {'ch': ['Health Check', ':checkhealth']},
+  \ {'ps': ['Plugins status', ':PlugStatus']},
+  \ {'pu': ['Update vim plugins',':PlugUpdate | PlugUpgrade']},
+  \ {'uc': ['Update coc Plugins', ':CocUpdate']},
+  \ {'h': ['Help', ':help']},
 \ ]
 
 " ─────────────────────────────────────────────────────────────────────────────│─╗
@@ -261,24 +261,24 @@ nnoremap <up> <nop>|                                               " disable up 
 " ╚────────────────────────────────────────────────────────────────────────────│──
 
 function! JournalMode()
-    execute 'normal gg'
-    let filename = '#' . ' ' . expand('%:r')
-    call setline(1, filename)
-    execute 'normal o'
-    execute 'Goyo'
+  execute 'normal gg'
+  let filename = '#' . ' ' . expand('%:r')
+  call setline(1, filename)
+  execute 'normal o'
+  execute 'Goyo'
 endfunction
 
 function! OnMdCreate()
-    execute 'normal gg'
-    let filename = '#' . ' ' . expand('%:t:r')
-    call setline(1, filename)
-    execute 'normal o'
+  execute 'normal gg'
+  let filename = '#' . ' ' . expand('%:t:r')
+  call setline(1, filename)
+  execute 'normal o'
 endfunction
 
 function! AdjustTextWidth()
-    let syn_element = synIDattr(synID(line("."), col(".") - 1, 1), "name")
-    let &textwidth = syn_element =~? 'comment' ? 72 : 79
-    echo "tw = " . &textwidth
+  let syn_element = synIDattr(synID(line("."), col(".") - 1, 1), "name")
+  let &textwidth = syn_element =~? 'comment' ? 72 : 79
+  echo "tw = " . &textwidth
 endfunction
 
 source ~/.vim/functions/cp.vim    " competitive programming related functions
@@ -289,18 +289,18 @@ source ~/.vim/functions/cocrc.vim " coc related functions
 " ╚────────────────────────────────────────────────────────────────────────────│──
 
 if &t_Co > 2 || has("gui_running")
-    syntax on
-    set t_Co=256
-    if filereadable(expand("~/.vimrc_background"))
-        let base16colorspace=256
-        source ~/.vimrc_background
-    endif
-    :hi Error NONE
-    hi Pmenu ctermbg=black ctermfg=white
-    hi! CocErrorSign guifg=#d1666a
-    hi! CocInfoSign guibg=#353b45
-    hi! CocWarningSign guifg=#d1cd66
-    hi! Comment ctermfg=green
+  syntax on
+  set t_Co=256
+  if filereadable(expand("~/.vimrc_background"))
+      let base16colorspace=256
+      source ~/.vimrc_background
+  endif
+  :hi Error NONE
+  hi Pmenu ctermbg=black ctermfg=white
+  hi! CocErrorSign guifg=#d1666a
+  hi! CocInfoSign guibg=#353b45
+  hi! CocWarningSign guifg=#d1cd66
+  hi! Comment ctermfg=green
 endif
 
 " ─────────────────────────────────────────────────────────────────────────────│─╗
@@ -318,44 +318,44 @@ command! -bang -nargs=* AllLines
 " ╚────────────────────────────────────────────────────────────────────────────│──
 
 augroup vimrc
-    autocmd!
+  autocmd!
 
-    " enable clang format autoformat on save
-    autocmd FileType c,cpp ClangFormatAutoEnable
+  " enable clang format autoformat on save
+  autocmd FileType c,cpp ClangFormatAutoEnable
 
-    " play nice with markdown
-    autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+  " play nice with markdown
+  autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
-    " map composer start to <leader>m on markdown files
-    autocmd FileType markdown map<leader>m :ComposerStart<CR>
+  " map composer start to <leader>m on markdown files
+  autocmd FileType markdown map<leader>m :ComposerStart<CR>
 
-    " disable terminal bells
-    autocmd GUIEnter * set visualbell t_vb=
+  " disable terminal bells
+  autocmd GUIEnter * set visualbell t_vb=
 
-    " close template fold for cpp files
-    autocmd BufNewFile,BufEnter *.cpp normal zM
+  " close template fold for cpp files
+  autocmd BufNewFile,BufEnter *.cpp normal zM
 
-    " load cpp template on file open
-    :autocmd BufNewFile *.cpp 0r ~/.vim/templates/cpp.skeleton
+  " load cpp template on file open
+  :autocmd BufNewFile *.cpp 0r ~/.vim/templates/cpp.skeleton
 
-    " load basic python template on file open
-    :autocmd BufNewFile *.py 0r ~/.vim/templates/python.skeleton
+  " load basic python template on file open
+  :autocmd BufNewFile *.py 0r ~/.vim/templates/python.skeleton
 
-    " set python code style
-    autocmd FileType python setlocal shiftwidth=2 softtabstop=2 expandtab
+  " set python code style
+  autocmd FileType python setlocal shiftwidth=2 softtabstop=2 expandtab
 
-    " populate journal template
-    autocmd VimEnter */journal/** 0r ~/.vim/templates/journal.skeleton
+  " populate journal template
+  autocmd VimEnter */journal/** 0r ~/.vim/templates/journal.skeleton
 
-    " set header for current journal entry
-    autocmd VimEnter */journal/** :call JournalMode()
+  " set header for current journal entry
+  autocmd VimEnter */journal/** :call JournalMode()
 
-    " set title as filename for new markdown files
-    autocmd BufNewFile *.md :call OnMdCreate()
+  " set title as filename for new markdown files
+  autocmd BufNewFile *.md :call OnMdCreate()
 
-    " prettier hack for .tsx files
-    autocmd BufNewFile,BufRead *.tsx setf typescript.tsx
+  " prettier hack for .tsx files
+  autocmd BufNewFile,BufRead *.tsx setf typescript.tsx
 
-    " adjust comment text width
-    autocmd TextChanged,TextChangedI * :call AdjustTextWidth()
+  " adjust comment text width
+  autocmd TextChanged,TextChangedI * :call AdjustTextWidth()
 augroup end
