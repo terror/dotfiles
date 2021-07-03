@@ -1,11 +1,21 @@
 #!/bin/bash
 
-cd ~/Fun/rust || exit
+function main() {
+  cd "$1" || exit
 
-if [ ! -p ./playground ]; then
+  if [ ! -p ./playground ]; then
     rm -rf ./playground
-fi
+  fi
 
-cargo new playground
-cd playground || exit
-nvim src/main.rs
+  cargo new playground
+
+  cd playground || exit
+
+  bp --use rustfmt
+  bp --use rust-just
+  bp --use editorconfig
+
+  "$EDITOR" src/main.rs
+}
+
+main "$HOME/fun/rust"
