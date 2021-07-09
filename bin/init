@@ -1,14 +1,12 @@
 #!/bin/bash
 
+function main() {
+  name="$*"
+  cd "$1" || exit
+  mkdir "$name" && cd "$name" || exit
+  git init && git remote add origin https://github.com/terror/"$name".git
+  touch .gitignore && touch README.md
+  echo "## $name" > README.md
+}
 
-name="$*"
-
-cd "$HOME"/src || exit
-
-mkdir "$name" && cd "$name" || exit
-
-git init
-git remote add origin https://github.com/terror/"$name".git
-touch .gitignore
-touch README.md
-echo "## $name" > README.md
+main "$HOME/src"

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# typing test !
-pushd ~/src/10ff || exit
+pushd ~/fun/10ff || exit
 python3 -m 10ff
 popd || exit
