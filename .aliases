@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # shortcuts
-alias c="cd ~/src/CompetitiveProgramming"
+alias c="cd ~/src/solutions"
 alias gh="cd ~/src"
+alias fun="cd ~/fun"
 alias jac="cd ~/'JAC CompSci'"
 alias z="cd ~/src/notes"
 
