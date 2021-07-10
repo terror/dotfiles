@@ -9,6 +9,7 @@ tap "homebrew/services"
 tap "jason0x43/neovim-nightly"
 tap "koekeishiya/formulae"
 tap "mongodb/brew"
+tap "tlk/imagemagick-x11"
 tap "yudai/gotty"
 tap "zegervdv/zathura"
 
@@ -74,9 +75,6 @@ brew "hugo"
 
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8"
-
-# Tools and libraries to manipulate images in many formats
-brew "imagemagick"
 
 # Next-gen compiler infrastructure
 brew "llvm"
@@ -177,10 +175,11 @@ brew "mongodb/brew/mongodb-community"
 # An interactive JavaScript command-line interface to MongoDB
 brew "mongodb/brew/mongodb-community-shell", link: false
 
+# Tools and libraries to manipulate images in many formats (X11 support)
+brew "tlk/imagemagick-x11/imagemagick"
+
 brew "yudai/gotty/gotty"
-
 brew "zegervdv/zathura/zathura"
-
 brew "zegervdv/zathura/zathura-pdf-poppler"
 
 # Prebuilt OpenJDK binaries
@@ -195,17 +194,11 @@ cask "calibre"
 # App to build and share containerized applications and microservices
 cask "docker"
 
-# Java IDE by JetBrains
-cask "intellij-idea"
-
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 
 # Interface for reading and syncing eBooks
 cask "kindle"
-
-# Visual tool to design, develop and administer MySQL servers
-cask "mysqlworkbench"
 
 # App to write, plan, collaborate, and get organized
 cask "notion"
@@ -221,6 +214,9 @@ cask "rectangle"
 
 # Open-source code editor
 cask "visual-studio-code"
+
+# Open-source version of the X.Org X Window System
+cask "xquartz"
 
 # Collect, organize, cite, and share research sources
 cask "zotero"
