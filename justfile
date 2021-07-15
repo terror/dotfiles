@@ -8,13 +8,15 @@ rustup:
 crates:
   cargo install bat
   cargo install cargo-check
-  cargo install cargo-watch
   cargo install cargo-edit
+  cargo install cargo-sort
+  cargo install cargo-watch
+  cargo install fd
   cargo install just
-  cargo install ripgrep
   cargo install loc
-  cargo install zkt
+  cargo install ripgrep
   cargo install vim-profiler
+  cargo install zkt
 
 homebrew:
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
