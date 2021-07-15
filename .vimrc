@@ -38,7 +38,6 @@ Plug 'vim-airline/vim-airline'                            " status bar
 Plug 'vim-airline/vim-airline-themes'                     " themes for airline
 Plug 'vimwiki/vimwiki'                                    " a personal wiki
 Plug 'w0rp/ale'                                           " code linting
-Plug 'wakatime/vim-wakatime'                              " productivity metrics
 
 " search related plugins
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}         " command line fuzzy finder
@@ -137,6 +136,7 @@ let g:markdown_composer_autostart                      = 0                      
 let g:markdown_composer_syntax_theme                   = 'monokai'                    " set markdown codeblock theme
 let g:markdown_folding                                 = 0                            " disable folding
 let g:rainbow_active                                   = 1                            " enable rainbow delimiters
+let g:rust_clip_command                                = 'pbcopy'                     " used when copying rust playpen url
 let g:rustfmt_autosave                                 = 1                            " format rust code on save
 let g:user_emmet_leader_key                            = '<C-E>'                      " emmet completion, <C-E> + ','
 let g:vim_markdown_conceal                             = 0                            " do not conceal blocks
@@ -181,13 +181,13 @@ let g:startify_commands = [
 
 " general remappings
 nnoremap 0 ^|                                                      " hope to beginning using 0
+nnoremap <C-R> :%s/[^[:print:]]//g<CR>|                            " remove non printable characters
+nnoremap <C-a> :ter<CR>|                                           " open terminal with ctrl + a
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " remove trailing whitespace
+nnoremap <silent> <C-L> :noh<CR><C-L>|                             " clear search highlighting
 nnoremap Q <nop>|                                                  " map Q to nothing
 nnoremap Z :wq<CR>|                                                " save and quit file
 nnoremap ^ 0|                                                      " hope to beginning using 0
-nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " remove trailing whitespace
-nnoremap <silent> <C-L> :noh<CR><C-L>|                             " clear search highlighting
-nnoremap <C-R> :%s/[^[:print:]]//g<CR>|                            " remove non printable characters
-nnoremap <C-a> :ter<CR>|                                           " open terminal with ctrl + a
 onoremap b i[|                                                     " for easier bracket deletion
 onoremap in( :<C-U>normal! f(vi(<CR>|                              " hop into parens on same line
 onoremap p i(|                                                     " for easier parens deletion
@@ -200,6 +200,7 @@ nnoremap <C-k> :bn<CR>|                                            " next buffer
 nnoremap <C-n> :tabnew<CR>|                                        " new tab
 
 " general leader mappings
+nnoremap <leader><leader> <c-^>|                                    " toggle between buffers
 nnoremap <leader>ad :ALEDetail<CR>|                                 " see ale error message details
 nnoremap <leader>bu :.,$-bd<CR>|                                    " delete buffers from curr to last
 nnoremap <leader>c :%y+<CR>|                                        " yank all line to +
@@ -210,7 +211,6 @@ nnoremap <leader>ss :source %<CR>|                                  " source %
 nnoremap <leader>sv :source $MYVIMRC<CR>|                           " source vimrc
 nnoremap <leader>tg :GitGutterToggle<CR>|                           " toggle git gutter
 nnoremap <leader>tp :Goyo<CR>|                                      " toggle prose mode
-nnoremap <leader><leader> <c-^>|                                    " toggle between buffers
 
 " easy align
 nmap ga <Plug>(EasyAlign)|                                         " start interactive EasyAlign in visual mode
@@ -218,9 +218,9 @@ xmap ga <Plug>(EasyAlign)|                                         " start inter
 
 " surround
 map<leader>" ysiw"|                                                " quotes around word
-map<leader>{ ysiw{|                                                " braces around word
-map<leader>[ ysiw[|                                                " brackets around word
 map<leader>( ysiw(|                                                " parens around word
+map<leader>[ ysiw[|                                                " brackets around word
+map<leader>{ ysiw{|                                                " braces around word
 
 " formatting and alignment
 map <leader>os <plug>(operator-sort)|                              " sort operator
@@ -239,22 +239,22 @@ vnoremap <leader>s  :sort<cr>|                                     " sort lines
 nnoremap <C-s> :ZFiles<CR>|                                        " search for files
 nnoremap<leader>o :NERDTreeToggle<CR>|                             " toggle nerdtree
 nnoremap<leader>sa :AllLines<CR>|                                  " search through all lines in all files
-nnoremap<leader>sg :ZCommits<CR>|                                  " search through git commits
 nnoremap<leader>sb :ZBuffers<CR>|                                  " search through open buffers
+nnoremap<leader>sg :ZCommits<CR>|                                  " search through git commits
 
 " edit named files
-nnoremap<leader>ev :split ~/.vimrc<CR>|                            " edit vimrc
 nnoremap<leader>ea :split ~/.aliases<CR>|                          " edit bash aliases
 nnoremap<leader>en :e notes.md<CR>|                                " edit project notes
 nnoremap<leader>es :UltiSnipsEdit<CR>|                             " edit ultisnips for current filetype
+nnoremap<leader>ev :split ~/.vimrc<CR>|                            " edit vimrc
 
 " we don't need arrow keys
-inoremap <down> <nop>|                                             " disable down in ins mode
-inoremap <left> <nop>|                                             " disable left in ins mode
+inoremap <down>  <nop>|                                            " disable down in ins mode
+inoremap <left>  <nop>|                                            " disable left in ins mode
 inoremap <right> <nop>|                                            " disable right in ins mode
-inoremap <up> <nop>|                                               " disable up in ins mode
-nnoremap <down> <nop>|                                             " disable down in normal mode
-nnoremap <up> <nop>|                                               " disable up in normal mode
+inoremap <up>    <nop>|                                            " disable up in ins mode
+nnoremap <down>  <nop>|                                            " disable down in normal mode
+nnoremap <up>    <nop>|                                            " disable up in normal mode
 
 " ─────────────────────────────────────────────────────────────────────────────│─╗
 " │ Functions                                                                ─╬─│┼
@@ -281,6 +281,39 @@ function! AdjustTextWidth()
   echo "tw = " . &textwidth
 endfunction
 
+" `CargoCommand` allows for the running of a cargo `C*` command
+" in rust projects located within subdirectories by passing in the path
+" to the closest `Cargo.toml` file outside of the current buffers directory
+" but within bounds of the projects root directory.
+"
+" Note: commands in the `Commands` section should be added if
+" any other `C*` commands are wished to be ran in subdirectories.
+
+function! CargoCommand(cmd)
+py3 << EOF
+import os, vim
+
+def main():
+  # Grab the projects root
+  # Note:
+  #  `vim-rooter` must be installed for `os.getcwd()` to return the projects root.
+  root      = os.path.join(os.getcwd(), 'Cargo.toml')
+  curr      = os.path.abspath(os.path.join(vim.eval('expand("%:p")'), '..'))
+  candidate = os.path.join(curr, 'Cargo.toml')
+
+  # Walk backwards looking for a `Cargo.toml` file.
+  while candidate != root:
+    candidate = os.path.join(curr, 'Cargo.toml')
+    if os.path.exists(candidate):
+      vim.command(f'{vim.eval("a:cmd")} --manifest-path={candidate}')
+      return
+    curr = os.path.abspath(os.path.join(curr, '..'))
+
+  print('`Cargo.toml` was not found.')
+main()
+EOF
+endfunction
+
 source ~/.vim/functions/cp.vim    " competitive programming related functions
 source ~/.vim/functions/cocrc.vim " coc related functions
 
@@ -292,8 +325,8 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set t_Co=256
   if filereadable(expand("~/.vimrc_background"))
-      let base16colorspace=256
-      source ~/.vimrc_background
+    let base16colorspace=256
+    source ~/.vimrc_background
   endif
   :hi Error NONE
   hi Pmenu ctermbg=black ctermfg=white
@@ -312,6 +345,15 @@ command! -bang -nargs=* AllLines
   \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>),
   \   1,
   \   fzf#vim#with_preview({'options': ['--delimiter=:', '--nth=4..']}), <bang>0)
+
+command! -bang -nargs=0 Cr
+\ call CargoCommand('Crun')
+
+command! -bang -nargs=0 Ct
+\ call CargoCommand('Ctest')
+
+command! -bang -nargs=0 Cb
+\ call CargoCommand('Cbuild')
 
 " ─────────────────────────────────────────────────────────────────────────────│─╗
 " │ Autocommands                                                             ─╬─│┼
@@ -336,10 +378,10 @@ augroup vimrc
   autocmd BufNewFile,BufEnter *.cpp normal zM
 
   " load cpp template on file open
-  :autocmd BufNewFile *.cpp 0r ~/.vim/templates/cpp.skeleton
+  autocmd BufNewFile *.cpp 0r ~/.vim/templates/cpp.skeleton
 
   " load basic python template on file open
-  :autocmd BufNewFile *.py 0r ~/.vim/templates/python.skeleton
+  autocmd BufNewFile *.py 0r ~/.vim/templates/python.skeleton
 
   " set python code style
   autocmd FileType python setlocal shiftwidth=2 softtabstop=2 expandtab
