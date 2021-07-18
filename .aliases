@@ -90,3 +90,6 @@ alias gl='globe -s'
 
 # search aliases with fzf
 alias sra='alias | fzf'
+
+# fzf through directories and cd into the selected item
+alias fcd='cd $(fd --type directory | fzf)'
