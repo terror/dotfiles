@@ -1,9 +1,10 @@
-/vscode/extensions
 /config/configstore
-/vim/plugged/*
+/notes
 /vim/.netrwhist
-/vim/view
 /vim/backup
 /vim/black
-node_modules/
+/vim/plugged/*
+/vim/view
+/vscode/extensions
 __pycache__/
+node_modules/
