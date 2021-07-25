@@ -15,6 +15,7 @@ crates:
   cargo install just
   cargo install loc
   cargo install ripgrep
+  cargo install typos-cli
   cargo install vim-profiler
   cargo install zkt
 
