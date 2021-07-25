@@ -93,3 +93,6 @@ alias sra='alias | fzf'
 
 # fzf through directories and cd into the selected item
 alias fcd='cd $(fd --type directory | fzf)'
+
+# shortcut for `docker-machine`
+alias dm='docker-machine'
