@@ -9,6 +9,7 @@ tap "homebrew/services"
 tap "jason0x43/neovim-nightly"
 tap "koekeishiya/formulae"
 tap "mongodb/brew"
+tap "rhysd/actionlint", "https://github.com/rhysd/actionlint"
 tap "tlk/imagemagick-x11"
 tap "yudai/gotty"
 tap "zegervdv/zathura"
@@ -34,8 +35,14 @@ brew "cmake"
 # C implementation of Markdown
 brew "discount"
 
+# Create Docker hosts locally and on cloud providers
+brew "docker-machine"
+
 # Calculator REPL, similar to bc(1)
 brew "eva"
+
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 
 # Command-line fuzzy finder written in Go
 brew "fzf"
@@ -72,6 +79,9 @@ brew "htop"
 
 # Configurable static site generator
 brew "hugo"
+
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8"
@@ -175,6 +185,9 @@ brew "mongodb/brew/mongodb-community"
 # An interactive JavaScript command-line interface to MongoDB
 brew "mongodb/brew/mongodb-community-shell", link: false
 
+# Static checker for GitHub Actions workflow files
+brew "rhysd/actionlint/actionlint"
+
 # Tools and libraries to manipulate images in many formats (X11 support)
 brew "tlk/imagemagick-x11/imagemagick"
 
@@ -200,6 +213,9 @@ cask "iterm2"
 # Interface for reading and syncing eBooks
 cask "kindle"
 
+# Full TeX Live distribution with GUI applications
+cask "mactex"
+
 # App to write, plan, collaborate, and get organized
 cask "notion"
 
@@ -211,6 +227,9 @@ cask "racket"
 
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+
+# Free and open-source hosted hypervisor for x86 virtualization
+cask "virtualbox"
 
 # Open-source code editor
 cask "visual-studio-code"
