@@ -1,0 +1,16 @@
+#!/bin/bash
+
+start=$SECONDS
+count=0
+
+dirs="$(ls "$HOME"/src)"
+
+for d in $dirs; do
+  if [ -f "$HOME/src/$d/Cargo.toml" ]; then
+    echo "[~] Cleaning $d"
+    cd "$HOME/src/$d" && cargo clean
+    ((count += 1))
+  fi
+done
+
+echo "Cleaned $count projects in $((SECONDS - start))s."
