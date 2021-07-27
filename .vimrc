@@ -11,12 +11,12 @@ call plug#begin('~/.vim/plugged')
 " general purpose plugins
 Plug 'NoahTheDuke/vim-just'                               " justfile syntax highlighting
 Plug 'SirVer/ultisnips'                                   " code snippets
-Plug 'airblade/vim-gitgutter'                             " show git diff in the sign column
+Plug 'airblade/vim-gitgutter', {'on': 'GitGutterToggle'}  " show git diff in the sign column
 Plug 'airblade/vim-rooter'                                " look in root for file search
 Plug 'chriskempson/base16-vim'                            " base16 colors in vim
 Plug 'editorconfig/editorconfig-vim'                      " respect .editorconfig
 Plug 'emonkak/vim-operator-sort'                          " sort operator
-Plug 'godlygeek/tabular'                                  " text filtering and alignment
+Plug 'godlygeek/tabular', {'on': 'Tabularize'}            " text filtering and alignment
 Plug 'jiangmiao/auto-pairs'                               " pair completion
 Plug 'junegunn/goyo.vim'                                  " distraction free writing
 Plug 'junegunn/vim-easy-align'                            " easy alignment
@@ -45,9 +45,9 @@ Plug 'junegunn/fzf.vim'                                   " command line fuzzy f
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}      " file explorer
 
 " language specific plugins
-Plug 'euclio/vim-markdown-composer'                       " render markdown in the browser
-Plug 'mattn/emmet-vim'                                    " html completion
-Plug 'plasticboy/vim-markdown'                            " markdown support
+Plug 'euclio/vim-markdown-composer', {'for': 'markdown'}  " render markdown in the browser
+Plug 'mattn/emmet-vim', {'for': 'html'}                   " html completion
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}       " markdown support
 Plug 'rust-lang/rust.vim'                                 " rust support
 
 call plug#end()
@@ -57,45 +57,46 @@ filetype plugin on
 " │ Settings                                                                 ─╬─│┼
 " ╚────────────────────────────────────────────────────────────────────────────│──
 
-set ai                                               " auto indenting
-set autochdir                                        " have vim set file dir to cwd
-set autoread                                         " auto read changes files
-set backup                                           " backup files
-set expandtab                                        " expand tabs to spaces by default
-set hidden                                           " modified buffers in background
-set hlsearch                                         " highlight search terms
-set ignorecase                                       " ignore case in searches
-set incsearch                                        " hilight search matches while typing
-set linebreak                                        " avoid wrapping mid word
-set nofoldenable                                     " disable folding on file open
-set number                                           " show line numbers
-set ruler                                            " show the cursor position
-set showcmd                                          " show partial command and other useful stuff at bottom of screen
-set smartcase                                        " case insensitive searches unless contains uppercase
-set smartindent                                      " newline smart indent
-set splitbelow                                       " open horizontal splits below current buffer
-set splitright                                       " open vertical splits to the right of current buffer
-set title                                            " set title
-set ttyfast                                          " make updates smoother
-set undofile                                         " save undo history
-set wrap                                             " enable line wrapping
+set ai                                  " auto indenting
+set autochdir                           " have vim set file dir to cwd
+set autoread                            " auto read changes files
+set backup                              " backup files
+set expandtab                           " expand tabs to spaces by default
+set hidden                              " modified buffers in background
+set hlsearch                            " highlight search terms
+set ignorecase                          " ignore case in searches
+set incsearch                           " hilight search matches while typing
+set linebreak                           " avoid wrapping mid word
+set noerrorbells                        " disable terminal bells
+set nofoldenable                        " disable folding on file open
+set number                              " show line numbers
+set ruler                               " show the cursor position
+set showcmd                             " show partial command and other useful stuff at bottom of screen
+set smartcase                           " case insensitive searches unless contains uppercase
+set smartindent                         " newline smart indent
+set splitbelow                          " open horizontal splits below current buffer
+set splitright                          " open vertical splits to the right of current buffer
+set title                               " set title
+set ttyfast                             " make updates smoother
+set undofile                            " save undo history
+set wrap                                " enable line wrapping
 
-set background                   =dark               " use a dark background
-set backspace                    =indent,eol,start   " allow backspacing over everything in insert mode
-set backupdir                    =~/.vim/backup      " set backup directory
-set belloff                      =all                " disable vim bell sounds
-set clipboard                    =unnamed            " use the system clipboard
-set foldmethod                   =marker             " allow for specification of folds
-set mouse                        =a                  " allow mouse to set cursor position
-set noerrorbells visualbell t_vb =                   " disable terminal bells
-set numberwidth                  =1                  " room used for line numbers
-set rtp                         +=/usr/local/opt/fzf " set fzf rtp
-set shiftwidth                   =2                  " number of spaces to use for auto indenting
-set tabpagemax                   =30                 " cap vim -p to 30 tabs
-set tabstop                      =2                  " a tab is two spaces
-set textwidth                    =120                " set text width
-set undodir                      =~/.vim/.vimdid     " backup directory location
-set wildignore                   +=.pyc,.swp         " ignore when opening based on a glob pattern
+set background      =dark               " use a dark background
+set backspace       =indent,eol,start   " allow backspacing over everything in insert mode
+set backupdir       =~/.vim/backup      " set backup directory
+set belloff         =all                " disable vim bell sounds
+set clipboard       =unnamed            " use the system clipboard
+set foldmethod      =marker             " allow for specification of folds
+set mouse           =a                  " allow mouse to set cursor position
+set numberwidth     =1                  " room used for line numbers
+set rtp            +=/usr/local/opt/fzf " set fzf rtp
+set shiftwidth      =2                  " number of spaces to use for auto indenting
+set tabpagemax      =30                 " cap vim -p to 30 tabs
+set tabstop         =2                  " a tab is two spaces
+set textwidth       =120                " set text width
+set undodir         =~/.vim/.vimdid     " backup directory location
+set visualbell t_vb =                   " disable beeping
+set wildignore      =.pyc,.swp          " ignore when opening based on a glob pattern
 
 " ─────────────────────────────────────────────────────────────────────────────│─╗
 " │ Lettings                                                                 ─╬─│┼
@@ -103,23 +104,38 @@ set wildignore                   +=.pyc,.swp         " ignore when opening based
 
 let mapleader                                          = "\<space>"                   " set space as leader key
 
+let g:airline#extensions#tabline#buffers_label         = ''                           " rename label for buffers
+let g:airline#extensions#tabline#enabled               = 1                            " enable enhanced tabline
+let g:airline#extensions#tabline#fnamemod              = ':t'                         " disable file paths in a tab
+let g:airline#extensions#tabline#show_buffers          = 1                            " show buffers in the tabline
+let g:airline#extensions#tabline#show_close_button     = 0                            " remove close button
+let g:airline#extensions#tabline#show_splits           = 0                            " disables the buffer name that displays on the right of the tabline
+let g:airline#extensions#tabline#show_tab_count        = 0                            " dont show tab numbers on the right
+let g:airline#extensions#tabline#show_tab_nr           = 0                            " disable tab numbers
+let g:airline#extensions#tabline#show_tab_type         = 0                            " disable displaying the tab type
+let g:airline#extensions#tabline#tabs_label            = ''                           " remove tabs label
+let g:airline_detect_modified                          = 1                            " enable modified detection
+let g:airline_left_sep                                 = ''                           " turn off left separator
+let g:airline_powerline_fonts                          = 1                            " fixes missing whitespace in tabline
+let g:airline_right_sep                                = ''                           " turn off right separator
+let g:airline_skip_empty_sections                      = 1                            " hide empty sections
+let g:airline_theme                                    = 'simple'                     " set airline theme
+
 let g:AutoPairsFlyMode                                 = 0                            " disable fly mode
 let g:AutoPairsShortcutBackInsert                      = '<M-b>'                      " shortcut
 let g:AutoPairsShortcutToggle                          = '<C-u>'                      " toggle autopairs
 let g:NERDTreeMinimalUI                                = 1                            " to remove the ? at the top
-let g:NERDTreeWinPos                                   = "right"                      " always open nerdtree on right side
-let g:UltiSnipsEditSplit                               = "horizontal"                 " split snippet edit horizontally
-let g:UltiSnipsExpandTrigger                           = "<tab>"                      " expand snippet
-let g:UltiSnipsJumpBackwardTrigger                     = "<s-tab>"                    " jump backward in snippet
-let g:UltiSnipsJumpForwardTrigger                      = "<tab>"                      " jump forward in snippet
-let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = "vim/ultisnips"              " default directory for ultisnips
-let g:airline#extensions#tabline#enabled               = 1                            " enable tabline in airline
-let g:airline_theme                                    = 'simple'                     " set airline theme
+let g:NERDTreeWinPos                                   = 'right'                      " always open nerdtree on right side
+let g:UltiSnipsEditSplit                               = 'horizontal'                 " split snippet edit horizontally
+let g:UltiSnipsExpandTrigger                           = '<tab>'                      " expand snippet
+let g:UltiSnipsJumpBackwardTrigger                     = '<s-tab>'                    " jump backward in snippet
+let g:UltiSnipsJumpForwardTrigger                      = '<tab>'                      " jump forward in snippet
+let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit = 'vim/ultisnips'              " default directory for ultisnips
 let g:ale_echo_msg_error_str                           = 'E'                          " set 'E' for error
 let g:ale_echo_msg_format                              = '[%linter%] %s [%severity%]' " set error message format
 let g:ale_echo_msg_warning_str                         = 'W'                          " set 'W' for warning
 let g:ale_fix_on_save                                  = 1                            " allow for code fixing on save
-let g:ale_rust_rustfmt_options                         = "+nightly"                   " rust nightly formatting
+let g:ale_rust_rustfmt_options                         = '+nightly'                   " rust nightly formatting
 let g:ale_set_highlights                               = 0                            " disable highlight setting
 let g:fzf_command_prefix                               = 'Z'                          " set fzf command prefix to 'Z'
 let g:fzf_layout                                       = { 'down': '~40%' }           " set fzf split to bottom
@@ -142,6 +158,13 @@ let g:user_emmet_leader_key                            = '<C-E>'                
 let g:vim_markdown_conceal                             = 0                            " do not conceal blocks
 let g:vim_markdown_conceal_code_blocks                 = 0                            " do not conceal code blocks
 let g:vimwiki_markdown_link_ext                        = 1                            " set external md links
+
+" check for airline symbols
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_symbols.dirty = '…'
 
 " set custom wiki2html script
 let g:vimwiki_custom_wiki2html = $HOME.'/.vim/autoload/vimwiki/customwiki2html.sh'
