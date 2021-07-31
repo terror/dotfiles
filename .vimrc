@@ -279,6 +279,17 @@ inoremap <up>    <nop>|                                            " disable up 
 nnoremap <down>  <nop>|                                            " disable down in normal mode
 nnoremap <up>    <nop>|                                            " disable up in normal mode
 
+nnoremap Y y$
+
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
 " ─────────────────────────────────────────────────────────────────────────────│─╗
 " │ Functions                                                                ─╬─│┼
 " ╚────────────────────────────────────────────────────────────────────────────│──
@@ -293,9 +304,14 @@ endfunction
 
 function! OnMdCreate()
   execute 'normal gg'
-  let filename = '#' . ' ' . expand('%:t:r')
+  let filename = '##' . ' ' . expand('%:t:r')
   call setline(1, filename)
   execute 'normal o'
+endfunction
+
+function! SetupMd()
+  setlocal colorcolumn=81
+  :hi ColorColumn ctermbg=darkgrey guibg=darkgrey
 endfunction
 
 function! AdjustTextWidth()
@@ -423,4 +439,7 @@ augroup vimrc
 
   " adjust comment text width
   autocmd TextChanged,TextChangedI * :call AdjustTextWidth()
+
+  " set color column in `.md` files
+  autocmd VimEnter,BufEnter *.md call SetupMd()
 augroup end
