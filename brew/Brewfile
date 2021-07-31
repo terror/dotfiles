@@ -83,6 +83,9 @@ brew "hugo"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 
+# Handy way to save and run project-specific commands
+brew "just"
+
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8"
 
@@ -206,6 +209,9 @@ cask "calibre"
 
 # App to build and share containerized applications and microservices
 cask "docker"
+
+# Matrix collaboration client
+cask "element"
 
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
