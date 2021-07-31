@@ -69,21 +69,9 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["completion-nvim"] = {
+  ["editorconfig-vim"] = {
     loaded = true,
-    path = "/Users/liam/.local/share/nvim/site/pack/packer/start/completion-nvim"
-  },
-  ["nvim-lspconfig"] = {
-    loaded = true,
-    path = "/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
-  },
-  ["nvim-treesitter"] = {
-    loaded = true,
-    path = "/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
-  },
-  ["nvim-treesitter-textobjects"] = {
-    loaded = true,
-    path = "/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
+    path = "/Users/liam/.local/share/nvim/site/pack/packer/start/editorconfig-vim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -92,14 +80,6 @@ _G.packer_plugins = {
   tabular = {
     loaded = true,
     path = "/Users/liam/.local/share/nvim/site/pack/packer/start/tabular"
-  },
-  ["vim-commentary"] = {
-    loaded = true,
-    path = "/Users/liam/.local/share/nvim/site/pack/packer/start/vim-commentary"
-  },
-  ["vim-easy-align"] = {
-    loaded = true,
-    path = "/Users/liam/.local/share/nvim/site/pack/packer/start/vim-easy-align"
   },
   ["vim-rooter"] = {
     loaded = true,

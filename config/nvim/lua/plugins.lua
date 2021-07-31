@@ -11,20 +11,21 @@ local use = require('packer').use
 
 return require('packer').startup(
   function()
-    use 'airblade/vim-rooter'
-    use 'editorconfig/editorconfig-vim'
-    use 'godlygeek/tabular'
-    use 'junegunn/vim-easy-align'
-    use 'mhinz/vim-startify'
-    use 'neovim/nvim-lspconfig'
-    use 'nvim-lua/completion-nvim'
-    use 'nvim-treesitter/nvim-treesitter'
-    use 'nvim-treesitter/nvim-treesitter-textobjects'
-    use 'rust-lang/rust.vim'
-    use 'tpope/vim-commentary'
-    use 'wbthomason/packer.nvim'
-    use { 'hoob3rt/lualine.nvim', setup = require('config.lualine'), requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
-    use { 'nvim-telescope/telescope.nvim', setup = require('config.telescope'), requires = { {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'} } }
-    use { 'windwp/nvim-autopairs', setup = require('nvim-autopairs').setup() }
+    use { 'airblade/vim-rooter' }
+    use { 'editorconfig/editorconfig-vim' }
+    use { 'godlygeek/tabular' }
+    use { 'hoob3rt/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+    use { 'junegunn/vim-easy-align' }
+    use { 'mhinz/vim-startify' }
+    use { 'neovim/nvim-lspconfig' }
+    use { 'nvim-lua/completion-nvim' }
+    use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'} } }
+    use { 'nvim-treesitter/nvim-treesitter' }
+    use { 'nvim-treesitter/nvim-treesitter-textobjects' }
+    use { 'nvim-treesitter/playground' }
+    use { 'rust-lang/rust.vim' }
+    use { 'tpope/vim-commentary' }
+    use { 'wbthomason/packer.nvim' }
+    use { 'windwp/nvim-autopairs' }
   end
 )

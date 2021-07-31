@@ -1,3 +1,3 @@
-require 'plugins'
+require 'config'
 require 'settings'
 require 'mappings'
