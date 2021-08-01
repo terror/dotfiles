@@ -16,39 +16,37 @@ Plug 'airblade/vim-rooter'                                " look in root for fil
 Plug 'chriskempson/base16-vim'                            " base16 colors in vim
 Plug 'editorconfig/editorconfig-vim'                      " respect .editorconfig
 Plug 'emonkak/vim-operator-sort'                          " sort operator
+Plug 'euclio/vim-markdown-composer', {'for': 'markdown'}  " render markdown in the browser
 Plug 'godlygeek/tabular', {'on': 'Tabularize'}            " text filtering and alignment
 Plug 'jiangmiao/auto-pairs'                               " pair completion
+Plug 'junegunn/fzf', {'do': { -> fzf#install() }}         " command line fuzzy finder
+Plug 'junegunn/fzf.vim'                                   " command line fuzzy finder
 Plug 'junegunn/goyo.vim'                                  " distraction free writing
 Plug 'junegunn/vim-easy-align'                            " easy alignment
 Plug 'kana/vim-operator-user'                             " allow user defined operators
 Plug 'luochen1990/rainbow'                                " rainbow delimiters
 Plug 'machakann/vim-highlightedyank'                      " make the highlighted region apparent
+Plug 'mattn/emmet-vim', {'for': 'html'}                   " html completion
 Plug 'mattn/vim-gist', {'on': 'Gist'}                     " create gists
 Plug 'mattn/webapi-vim'                                   " vim gist dependency
 Plug 'mhinz/vim-startify'                                 " a fancy start screen
-Plug 'neoclide/coc.nvim', {'branch': 'release'}           " code completion
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}       " markdown support
 Plug 'prettier/vim-prettier'                              " javascript code formatting
 Plug 'rhysd/vim-clang-format'                             " c++ code formatting
-Plug 'sheerun/vim-polyglot'                               " syntax support for many languages
-Plug 'terror/vim-crypto', {'do': 'cargo build --release'} " view live cryptocurrency prices
+Plug 'rust-lang/rust.vim'                                 " rust support
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}      " file explorer
 Plug 'tpope/vim-commentary'                               " comment stuff out
 Plug 'tpope/vim-eunuch'                                   " unix helpers
 Plug 'tpope/vim-surround'                                 " all about surroundings
-Plug 'vim-airline/vim-airline'                            " status bar
 Plug 'vim-airline/vim-airline-themes'                     " themes for airline
-Plug 'vimwiki/vimwiki'                                    " a personal wiki
 Plug 'w0rp/ale'                                           " code linting
 
-" search related plugins
-Plug 'junegunn/fzf', {'do': { -> fzf#install() }}         " command line fuzzy finder
-Plug 'junegunn/fzf.vim'                                   " command line fuzzy finder
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}      " file explorer
-
-" language specific plugins
-Plug 'euclio/vim-markdown-composer', {'for': 'markdown'}  " render markdown in the browser
-Plug 'mattn/emmet-vim', {'for': 'html'}                   " html completion
-Plug 'plasticboy/vim-markdown', {'for': 'markdown'}       " markdown support
-Plug 'rust-lang/rust.vim'                                 " rust support
+" (may revive these later)
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'sheerun/vim-polyglot'
+" Plug 'terror/vim-crypto', {'do': 'cargo build --release'}
+" Plug 'vim-airline/vim-airline'
+" Plug 'vimwiki/vimwiki'
 
 call plug#end()
 filetype plugin on
