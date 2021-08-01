@@ -92,7 +92,7 @@ set shiftwidth      =2                  " number of spaces to use for auto inden
 set tabpagemax      =30                 " cap vim -p to 30 tabs
 set tabstop         =2                  " a tab is two spaces
 set textwidth       =120                " set text width
-set undodir         =~/.vim/.vimdid     " backup directory location
+set undodir         =~/.vim/undo        " undo directory location
 set visualbell t_vb =                   " disable beeping
 set wildignore      =.pyc,.swp          " ignore when opening based on a glob pattern
 
