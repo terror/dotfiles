@@ -21,7 +21,7 @@ Plug 'godlygeek/tabular', {'on': 'Tabularize'}            " text filtering and a
 Plug 'jiangmiao/auto-pairs'                               " pair completion
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}         " command line fuzzy finder
 Plug 'junegunn/fzf.vim'                                   " command line fuzzy finder
-Plug 'junegunn/goyo.vim'                                  " distraction free writing
+Plug 'junegunn/goyo.vim', {'on': 'Goyo'}                  " distraction free writing
 Plug 'junegunn/vim-easy-align'                            " easy alignment
 Plug 'kana/vim-operator-user'                             " allow user defined operators
 Plug 'luochen1990/rainbow'                                " rainbow delimiters
@@ -33,12 +33,11 @@ Plug 'mhinz/vim-startify'                                 " a fancy start screen
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}       " markdown support
 Plug 'prettier/vim-prettier'                              " javascript code formatting
 Plug 'rhysd/vim-clang-format'                             " c++ code formatting
-Plug 'rust-lang/rust.vim'                                 " rust support
+Plug 'rust-lang/rust.vim', {'for': 'rust'}                " rust support
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}      " file explorer
 Plug 'tpope/vim-commentary'                               " comment stuff out
 Plug 'tpope/vim-eunuch'                                   " unix helpers
 Plug 'tpope/vim-surround'                                 " all about surroundings
-Plug 'vim-airline/vim-airline-themes'                     " themes for airline
 Plug 'w0rp/ale'                                           " code linting
 
 " (may revive these later)
@@ -46,6 +45,7 @@ Plug 'w0rp/ale'                                           " code linting
 " Plug 'sheerun/vim-polyglot'
 " Plug 'terror/vim-crypto', {'do': 'cargo build --release'}
 " Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 " Plug 'vimwiki/vimwiki'
 
 call plug#end()
