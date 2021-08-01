@@ -18,6 +18,7 @@ Plug 'editorconfig/editorconfig-vim'                      " respect .editorconfi
 Plug 'emonkak/vim-operator-sort'                          " sort operator
 Plug 'euclio/vim-markdown-composer', {'for': 'markdown'}  " render markdown in the browser
 Plug 'godlygeek/tabular', {'on': 'Tabularize'}            " text filtering and alignment
+Plug 'itchyny/lightline.vim'                              " statusline
 Plug 'jiangmiao/auto-pairs'                               " pair completion
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}         " command line fuzzy finder
 Plug 'junegunn/fzf.vim'                                   " command line fuzzy finder
@@ -195,6 +196,17 @@ let g:startify_commands = [
   \ {'uc': ['Update coc Plugins', ':CocUpdate']},
   \ {'h': ['Help', ':help']},
 \ ]
+
+" lightline config
+let g:lightline = {
+  \ 'colorscheme': 'wombat',
+  \ 'active': {
+  \   'right': [ [ 'lineinfo' ], [ 'percent' ], [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
+  \ },
+  \ 'component': {
+  \   'charvaluehex': '0x%B'
+  \ },
+\ }
 
 " ─────────────────────────────────────────────────────────────────────────────│─╗
 " │ Mappings                                                                 ─╬─│┼
