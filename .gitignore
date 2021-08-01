@@ -1,10 +1,12 @@
 /config/configstore
 /notes
-/vim/.netrwhist
-/vim/backup
 /vim/black
 /vim/plugged/*
-/vim/view
 /vscode/extensions
+
 __pycache__/
 node_modules/
+
+*~
+*.swp
+*.swo
