@@ -13,16 +13,15 @@ return require('packer').startup(
   function()
     use { 'airblade/vim-rooter' }
     use { 'editorconfig/editorconfig-vim' }
-    use { 'godlygeek/tabular' }
+    use { 'euclio/vim-markdown-composer', run = 'cargo build --release --locked', cmd = 'ComposerStart'}
+    use { 'godlygeek/tabular', cmd = 'Tabularize' }
     use { 'hoob3rt/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
     use { 'junegunn/vim-easy-align' }
     use { 'mhinz/vim-startify' }
-    use { 'neovim/nvim-lspconfig' }
-    use { 'nvim-lua/completion-nvim' }
     use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'} } }
     use { 'nvim-treesitter/nvim-treesitter' }
     use { 'nvim-treesitter/nvim-treesitter-textobjects' }
-    use { 'nvim-treesitter/playground' }
+    use { 'nvim-treesitter/playground', cmd = 'TSPlaygroundToggle' }
     use { 'rust-lang/rust.vim' }
     use { 'tpope/vim-commentary' }
     use { 'wbthomason/packer.nvim' }
