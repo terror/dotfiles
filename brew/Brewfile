@@ -6,7 +6,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "jason0x43/neovim-nightly"
 tap "koekeishiya/formulae"
 tap "mongodb/brew"
 tap "rhysd/actionlint", "https://github.com/rhysd/actionlint"
@@ -212,6 +211,9 @@ cask "docker"
 
 # Matrix collaboration client
 cask "element"
+
+# Nerd font
+cask "font-caskaydia-cove-nerd-font"
 
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
