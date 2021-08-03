@@ -11,28 +11,33 @@ local use = require('packer').use
 
 return require('packer').startup(
   function()
+    use 'NoahTheDuke/vim-just'
     use 'airblade/vim-rooter'
     use 'dense-analysis/ale'
     use 'editorconfig/editorconfig-vim'
     use 'junegunn/vim-easy-align'
     use 'mhinz/vim-startify'
     use 'nvim-treesitter/nvim-treesitter'
-    use 'nvim-treesitter/nvim-treesitter-textobjects'
     use 'romgrk/barbar.nvim'
-    use 'rust-lang/rust.vim'
     use 'tpope/vim-commentary'
     use 'wbthomason/packer.nvim'
     use 'windwp/nvim-autopairs'
 
     use {
       'euclio/vim-markdown-composer',
-      run = 'cargo build --release --locked',
-      cmd = 'ComposerStart'
+      cmd = 'ComposerStart',
+      ft  = 'markdown',
+      run = 'cargo build --release --locked'
     }
 
     use {
       'godlygeek/tabular',
       cmd = 'Tabularize'
+    }
+
+    use {
+      'plasticboy/vim-markdown',
+      ft = 'markdown'
     }
 
     use {
@@ -54,6 +59,11 @@ return require('packer').startup(
     use {
       'nvim-treesitter/playground',
       cmd = 'TSPlaygroundToggle'
+    }
+
+    use {
+      'rust-lang/rust.vim',
+      ft = 'rust'
     }
 
   end
