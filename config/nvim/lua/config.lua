@@ -1,4 +1,7 @@
 require 'plugins'
+require 'util'
+
+local g = vim.g
 
 -- ─────────────────────────────────────────────────────────────────────────────│─╗
 -- │ Lualine                                                                   ─╬─│┼
@@ -7,7 +10,7 @@ require 'plugins'
 require('lualine').setup {
   options = {
     lower         = true,
-    theme         = 'dracula',
+    theme         = 'ayu_mirage',
     icons_enabled = false
   },
   section = {
@@ -98,7 +101,7 @@ require("nvim-treesitter.configs").setup {
 -- │ Barbar                                                                    ─╬─│┼
 -- ╚────────────────────────────────────────────────────────────────────────────│──
 
-vim.g.bufferline = {
+g.bufferline = {
   animation               = false,
   auto_hide               = false,
   tabpages                = true,
@@ -115,6 +118,38 @@ vim.g.bufferline = {
   semantic_letters        = true,
   letters                 = 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP',
   no_name_title           = nil,
+}
+
+-- ─────────────────────────────────────────────────────────────────────────────│─╗
+-- │ Startify                                                                  ─╬─│┼
+-- ╚────────────────────────────────────────────────────────────────────────────│──
+
+g.startify_bookmarks = {
+  { v = '~/dotfiles/config/nvim/init.lua' },
+  { a = '~/dotfiles/.aliases'             },
+  { f = '~/dotfiles/.functions'           }
+}
+
+g.startify_commands = {
+  { ch = { 'Health Check', ':checkhealth' }          },
+  { ps = { 'Plugin sync', ':PackerSync' }            },
+  { pu = { 'Update neovim plugins',':PackerUpdate' } },
+  { h  = { 'Help', ':help' }                         }
+}
+
+-- ─────────────────────────────────────────────────────────────────────────────│─╗
+-- │ ALE                                                                       ─╬─│┼
+-- ╚────────────────────────────────────────────────────────────────────────────│──
+
+g.ale_echo_msg_error_str   = 'E'
+g.ale_echo_msg_format      = '[%linter%] %s [%severity%]'
+g.ale_echo_msg_warning_str = 'W'
+g.ale_fix_on_save          = 1
+g.ale_rust_rustfmt_options = '+nightly'
+g.ale_set_highlights       = 0
+
+g.ale_fixers = {
+  { rust = { 'rustfmt' } }
 }
 
 -- ─────────────────────────────────────────────────────────────────────────────│─╗

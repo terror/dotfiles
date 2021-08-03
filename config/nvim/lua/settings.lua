@@ -1,7 +1,11 @@
 require 'util'
 
-local home    = vim.env.HOME
-local config  = home .. '/.config/nvim'
+local home   = vim.env.HOME
+local config = home .. '/.config/nvim'
+local cmd    = vim.cmd
+
+cmd 'syntax on'
+cmd 'colorscheme base16-seti'
 
 opt('g', 'mapleader',                   ' ')
 opt('o', 'autochdir',                  true)
@@ -32,6 +36,7 @@ opt('o', 'smartindent',                true)
 opt('o', 'splitbelow',                 true)
 opt('o', 'tabpagemax',                   30)
 opt('o', 'tabstop',                       2)
+opt('o', 'termguicolors',              true)
 opt('o', 'textwidth',                   120)
 opt('o', 'title',                      true)
 opt('o', 'ttyfast',                    true)
