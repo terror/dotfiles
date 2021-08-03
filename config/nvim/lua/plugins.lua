@@ -11,18 +11,40 @@ local use = require('packer').use
 
 return require('packer').startup(
   function()
+    -- justfile syntax highlighting
     use 'NoahTheDuke/vim-just'
+
+    --  changes Vim working directory to project root
     use 'airblade/vim-rooter'
+
+    --  check syntax asynchronously
     use 'dense-analysis/ale'
+
+    -- support .editorconfig
     use 'editorconfig/editorconfig-vim'
+
+    -- a vim alignment plugin
     use 'junegunn/vim-easy-align'
+
+    -- cool start screen
     use 'mhinz/vim-startify'
+
+    -- support for treesitter
     use 'nvim-treesitter/nvim-treesitter'
+
+    -- tabline
     use 'romgrk/barbar.nvim'
+
+    -- comment stuff out
     use 'tpope/vim-commentary'
+
+    -- package manager
     use 'wbthomason/packer.nvim'
+
+    -- pair completing
     use 'windwp/nvim-autopairs'
 
+    -- preview markdown files in the browser
     use {
       'euclio/vim-markdown-composer',
       cmd = 'ComposerStart',
@@ -30,16 +52,19 @@ return require('packer').startup(
       run = 'cargo build --release --locked'
     }
 
+    -- text filtering and alignment
     use {
       'godlygeek/tabular',
       cmd = 'Tabularize'
     }
 
+    -- markdown syntax support
     use {
       'plasticboy/vim-markdown',
       ft = 'markdown'
     }
 
+    -- statusline
     use {
       'hoob3rt/lualine.nvim',
       requires = {
@@ -48,6 +73,7 @@ return require('packer').startup(
       }
     }
 
+    -- fuzzy file finder
     use {
       'nvim-telescope/telescope.nvim',
       requires = {
@@ -56,11 +82,13 @@ return require('packer').startup(
       }
     }
 
+    -- treesitter playground
     use {
       'nvim-treesitter/playground',
       cmd = 'TSPlaygroundToggle'
     }
 
+    -- rust support
     use {
       'rust-lang/rust.vim',
       ft = 'rust'
