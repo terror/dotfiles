@@ -3,7 +3,7 @@ format      = "$username$directory$git_branch"
 
 [username]
 format      = "[$user]($style) :: "
-style_user  = "bold cyan"
+style_user  = "bold blue"
 show_always = true
 
 [directory]
