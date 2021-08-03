@@ -18,10 +18,11 @@ return require('packer').startup(
     use { 'hoob3rt/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
     use { 'junegunn/vim-easy-align' }
     use { 'mhinz/vim-startify' }
-    use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'} } }
+    use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim' } }
     use { 'nvim-treesitter/nvim-treesitter' }
     use { 'nvim-treesitter/nvim-treesitter-textobjects' }
     use { 'nvim-treesitter/playground', cmd = 'TSPlaygroundToggle' }
+    use { 'romgrk/barbar.nvim' }
     use { 'rust-lang/rust.vim' }
     use { 'tpope/vim-commentary' }
     use { 'wbthomason/packer.nvim' }

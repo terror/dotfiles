@@ -1,6 +1,8 @@
 require 'plugins'
 
--- lualine
+-- ─────────────────────────────────────────────────────────────────────────────│─╗
+-- │ Lualine                                                                   ─╬─│┼
+-- ╚────────────────────────────────────────────────────────────────────────────│──
 
 require('lualine').setup {
   options = {
@@ -14,7 +16,9 @@ require('lualine').setup {
   }
 }
 
--- telescope
+-- ─────────────────────────────────────────────────────────────────────────────│─╗
+-- │ Telescope                                                                 ─╬─│┼
+-- ╚────────────────────────────────────────────────────────────────────────────│──
 
 require('telescope').setup {
   defaults = {
@@ -43,7 +47,7 @@ require('telescope').setup {
 
     borderchars            = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
     brder                  = {},
-    color_devicons         = false,
+    color_devicons         = true,
     file_ignore_patterns   = {},
     path_display           = {},
     set_env                = { ['COLORTERM'] = 'truecolor' },
@@ -59,7 +63,9 @@ require('telescope').setup {
   }
 }
 
--- treesitter
+-- ─────────────────────────────────────────────────────────────────────────────│─╗
+-- │ Treesitter                                                                ─╬─│┼
+-- ╚────────────────────────────────────────────────────────────────────────────│──
 
 require("nvim-treesitter.configs").setup {
   ensure_installed = {
@@ -88,6 +94,31 @@ require("nvim-treesitter.configs").setup {
   }
 }
 
--- autopairs
+-- ─────────────────────────────────────────────────────────────────────────────│─╗
+-- │ Barbar                                                                    ─╬─│┼
+-- ╚────────────────────────────────────────────────────────────────────────────│──
+
+vim.g.bufferline = {
+  animation               = false,
+  auto_hide               = false,
+  tabpages                = true,
+  closable                = true,
+  clickable               = true,
+  icons                   = true,
+  icon_separator_active   = '',
+  icon_separator_inactive = '',
+  icon_close_tab          = '',
+  icon_close_tab_modified = '●',
+  icon_pinned             = '車',
+  maximum_padding         = 1,
+  maximum_length          = 30,
+  semantic_letters        = true,
+  letters                 = 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP',
+  no_name_title           = nil,
+}
+
+-- ─────────────────────────────────────────────────────────────────────────────│─╗
+-- │ Autopairs                                                                 ─╬─│┼
+-- ╚────────────────────────────────────────────────────────────────────────────│──
 
 require('nvim-autopairs').setup()
