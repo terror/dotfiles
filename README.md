@@ -1,6 +1,8 @@
 ## dotfiles
 My preferences for mac osx. I use [dotbot](https://github.com/anishathalye/dotbot) to manage everything.
 
+![](./assets/neovim)
+
 ### ls /etc | less
 
 - [`bin`](https://github.com/terror/dotfiles/tree/master/bin): scripts
