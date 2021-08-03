@@ -14,7 +14,7 @@ export TERM=xterm-color
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 for file in ~/.{aliases,functions}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
 eval "$(starship init bash)"

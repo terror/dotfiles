@@ -8,5 +8,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.bin"
 
 if [ -f "$HOME"/.bashrc ]; then
-    source "$HOME"/.bashrc
+  source "$HOME"/.bashrc
 fi
