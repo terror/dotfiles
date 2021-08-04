@@ -53,7 +53,7 @@ function oc() {
 
 # Open directory
 function o() {
-	if [ $# -eq 0 ]; then open .; else open "$@"; fi;
+  if [ $# -eq 0 ]; then open .; else open "$@"; fi;
 }
 
 # See absolute path
