@@ -127,14 +127,14 @@ g.bufferline = {
 g.startify_custom_header = {
   '',
   '',
-  '                                       ██            ',
-  '                                      ░░             ',
-  '    ███████   █████   ██████  ██    ██ ██ ██████████ ',
-  '   ░░██░░░██ ██░░░██ ██░░░░██░██   ░██░██░░██░░██░░██',
-  '    ░██  ░██░███████░██   ░██░░██ ░██ ░██ ░██ ░██ ░██',
-  '    ░██  ░██░██░░░░ ░██   ░██ ░░████  ░██ ░██ ░██ ░██',
-  '    ███  ░██░░██████░░██████   ░░██   ░██ ███ ░██ ░██',
-  '   ░░░   ░░  ░░░░░░  ░░░░░░     ░░    ░░ ░░░  ░░  ░░ ',
+  '                                                         ██            ',
+  '                                                        ░░             ',
+  '                      ███████   █████   ██████  ██    ██ ██ ██████████ ',
+  '                     ░░██░░░██ ██░░░██ ██░░░░██░██   ░██░██░░██░░██░░██',
+  '                      ░██  ░██░███████░██   ░██░░██ ░██ ░██ ░██ ░██ ░██',
+  '                      ░██  ░██░██░░░░ ░██   ░██ ░░████  ░██ ░██ ░██ ░██',
+  '                      ███  ░██░░██████░░██████   ░░██   ░██ ███ ░██ ░██',
+  '                     ░░░   ░░  ░░░░░░  ░░░░░░     ░░    ░░ ░░░  ░░  ░░ ',
   '',
   '',
 }
@@ -173,11 +173,13 @@ g.rustfmt_autosave         = 1
 -- │ Markdown                                                                  ─╬─│┼
 -- ╚────────────────────────────────────────────────────────────────────────────│──
 
-g.markdown_composer_autostart      = 0
-g.markdown_composer_syntax_theme   = 'monokai'
-g.markdown_folding                 = 0
-g.vim_markdown_conceal             = 0
-g.vim_markdown_conceal_code_blocks = 0
+g.markdown_composer_autostart       = 0
+g.markdown_composer_syntax_theme    = 'monokai'
+g.markdown_folding                  = 0
+g.vim_markdown_auto_insert_bullets  = 0
+g.vim_markdown_conceal              = 0
+g.vim_markdown_conceal_code_blocks  = 0
+g.vim_markdown_new_list_item_indent = 0
 
 -- ─────────────────────────────────────────────────────────────────────────────│─╗
 -- │ Autopairs                                                                 ─╬─│┼
