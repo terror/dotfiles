@@ -1,19 +1,16 @@
 add_newline = false
-format      = "$username$directory$git_branch"
-
-[username]
-format      = "[$user]($style) :: "
-style_user  = "bold blue"
-show_always = true
+format      = ': $directory$git_branch'
 
 [directory]
-style = "bold yellow"
+style             = "bold blue"
+truncate_to_repo  = false
+truncation_length = 100
 
 [character]
-symbol        = "$"
-style_failure = "bold green"
+style_failure    = "bold green"
+symbol           = "$"
 
 [git_branch]
-format = "-> [$symbol$branch]($style) "
-symbol = ""
+format = '[\[$branch$symbol\]]($style) '
 style  = "bold green"
+symbol = " "
