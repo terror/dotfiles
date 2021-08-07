@@ -3,14 +3,22 @@
 start=$SECONDS
 count=0
 
-dirs="$(ls "$HOME"/src)"
+function clean() {
+  for d in $1; do
+    if [ -f "$d/Cargo.toml" ]; then
+      echo "[~] Cleaning $(basename "$d")"
+      cd "$d" && cargo clean
+      ((count += 1))
+    fi
+  done
+}
 
-for d in $dirs; do
-  if [ -f "$HOME/src/$d/Cargo.toml" ]; then
-    echo "[~] Cleaning $d"
-    cd "$HOME/src/$d" && cargo clean
-    ((count += 1))
-  fi
-done
+function main() {
+  clean "$(fd -a . "$HOME"/src -d 1)"
+  clean "$(fd -a . "$HOME"/fun -d 1)"
+  echo "Cleaned $count projects in $((SECONDS - start))s."
+}
 
-echo "Cleaned $count projects in $((SECONDS - start))s."
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+  main
+fi
