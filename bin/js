@@ -1,0 +1,39 @@
+#!/usr/bin/python3
+
+import re
+import subprocess as s
+import sys
+
+def e(*args, **kwargs):
+  print(*args, **kwargs, file=sys.stderr)
+
+def die(*args, **kwargs):
+  e(*args, **kwargs)
+  sys.exit(-1)
+
+def to_str(bytes):
+  return bytes.decode('utf-8').strip()
+
+def run():
+  try:
+    return s.check_output(['just', '--list'], stderr=s.PIPE)
+  except s.CalledProcessError as err:
+    die(to_str(err.stderr))
+
+def search(recipes):
+  try:
+    s.run([
+      'just',
+      to_str(s.check_output(['fzf'], input=str.encode(recipes))),
+      *list(input('arguments: ').split())
+    ])
+  except s.CalledProcessError as err:
+    die(f'Error running `{"".join(err.cmd)}`.')
+
+if __name__ == '__main__':
+  search("\n".join
+      (list(
+        filter(lambda x: x != 'default', map(lambda x: next(iter(to_str(x).split()), ""), run().split(b'\n')[1:]))
+      )
+    )
+  )
