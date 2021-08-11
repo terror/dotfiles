@@ -200,3 +200,13 @@ MUtils.completion_confirm = function()
 end
 
 map('i', '<CR>', 'v:lua.MUtils.completion_confirm()', { expr = true , noremap = true })
+
+-- ─────────────────────────────────────────────────────────────────────────────│─╗
+-- │ Netrw                                                                     ─╬─│┼
+-- ╚────────────────────────────────────────────────────────────────────────────│──
+
+g.netrw_altv         = 1
+g.netrw_banner       = 0
+g.netrw_browse_split = 4
+g.netrw_liststyle    = 3
+g.netrw_winsize      = 20
