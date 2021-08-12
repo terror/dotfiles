@@ -44,6 +44,9 @@ return require('packer').startup(
     -- pair completing
     use 'windwp/nvim-autopairs'
 
+    -- toml syntax
+    use 'cespare/vim-toml'
+
     -- preview markdown files in the browser
     use {
       'euclio/vim-markdown-composer',
