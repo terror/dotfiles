@@ -24,11 +24,12 @@ def search(recipes):
   try:
     s.run([
       'just',
-      to_str(s.check_output(['fzf'], input=str.encode(recipes))),
-      *list(input('arguments: ').split())
+      to_str(s.check_output(['fzf', '--height', '50%', '--min-height', '20', '--border', '--bind',
+        'ctrl-/:toggle-preview', '--ansi', '--preview', 'just --show {}'], input=str.encode(recipes))),
+      *list(input('arguments (enter to skip): ').split())
     ])
   except s.CalledProcessError as err:
-    die(f'Error running `{"".join(err.cmd)}`.')
+    die(f'Error running `{" ".join(err.cmd)}`.')
 
 if __name__ == '__main__':
   search("\n".join
