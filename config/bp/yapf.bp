@@ -5,7 +5,11 @@ spaces_before_comment: 1
 blank_lines: 1
 ---
 [style]
-INDENT_WIDTH = {%indent_width%}
-COLUMN_LIMIT = 120
-SPACES_BEFORE_COMMENT = {%spaces_before_comment%}
-BLANK_LINES_AROUND_TOP_LEVEL_DEFINITION = {%blank_lines%}
+BLANK_LINES_AROUND_TOP_LEVEL_DEFINITION = 1
+COALESCE_BRACKETS                       = True
+COLUMN_LIMIT                            = 120
+CONTINUATION_INDENT_WIDTH               = 2
+DEDENT_CLOSING_BRACKETS                 = True
+INDENT_WIDTH                            = {%indent_width%}
+SPACES_BEFORE_COMMENT                   = {%spaces_before_comment%}
+SPLIT_COMPLEX_COMPREHENSION             = True

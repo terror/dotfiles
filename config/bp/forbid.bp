@@ -1,6 +1,8 @@
 ---
 filename: forbid
 ---
+#!/bin/bash
+
 set -euo pipefail
 
 which rg

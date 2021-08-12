@@ -3,7 +3,6 @@ filename: build
 extension: yaml
 name: Build
 ---
-
 name: {%name%}
 
 on:

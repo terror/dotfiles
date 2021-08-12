@@ -1,21 +1,21 @@
 #!/usr/bin/python3
 
 import argparse
-import shutil
-import os
-import re
-import sys
 import enum
 import functools
+import os
+import re
+import shutil
+import sys
 
 # **** config.py ****
 
-CONFIG = '~/.bp.toml'
+CONFIG  = '~/.bp.toml'
 DEFAULT = {'store': '~/.bp'}
 
 class Config:
   def __init__(self, store):
-    self.store = os.path.expanduser(store)
+    self.store = os.path.expanduser(store.strip("'"))
 
   @staticmethod
   def load():
@@ -40,10 +40,9 @@ class Config:
 
 class Handler:
   def __init__(self, args, config):
-    self.args = args
+    self.args   = args
     self.config = config
 
-  # yapf: disable
   def run(self):
     arg, data = self.args
     {
@@ -52,7 +51,6 @@ class Handler:
       Arg.SAVE: self.__save,
       Arg.LIST: self.__list
     }[arg](*data)
-  # yapf: enable
 
   def __use(self, *data):
     names, path = Utils.split(data)
@@ -137,7 +135,6 @@ class Utils:
       return (l[:-1], l[-1])
     return (l, None)
 
-  # yapf: disable
   @staticmethod
   def convert(args):
     for pred, res in [
@@ -149,13 +146,12 @@ class Utils:
       if pred(args):
         return res
     raise InvalidOption("You must pass in a valid option.")
-  # yapf: enable
 
 # **** arg.py ****
 
 class Arg(enum.Enum):
-  USE = 1
-  INT = 2
+  USE  = 1
+  INT  = 2
   SAVE = 3
   LIST = 4
 
@@ -216,10 +212,35 @@ class File(Path):
 
 def cli():
   parser = argparse.ArgumentParser()
-  parser.add_argument('--use', '-u', nargs='+', help='Use a file template.')
-  parser.add_argument('--list', '-l', action='store_true', help='List all available templates.')
-  parser.add_argument('--interactive', '-i', action="store_true", help='Be prompted for variable in frontmatter.')
-  parser.add_argument('--save', '-s', nargs='+', help='Save a template in `store`.')
+
+  parser.add_argument(
+    '--use',
+    '-u',
+    nargs='+',
+    help='Use a file template.'
+  )
+
+  parser.add_argument(
+    '--list',
+    '-l',
+    action='store_true',
+    help='List all available templates.'
+  )
+
+  parser.add_argument(
+    '--interactive',
+    '-i',
+    action="store_true",
+    help='Be prompted for each variable in files frontmatter.'
+  )
+
+  parser.add_argument(
+    '--save',
+    '-s',
+    nargs='+',
+    help='Save a template in `store`.'
+  )
+
   return parser.parse_args()
 
 def main(args, config):
