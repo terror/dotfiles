@@ -167,7 +167,7 @@ g.ale_fixers = {
   { rust = { 'rustfmt' } }
 }
 
-g.rustfmt_autosave         = 1
+g.rustfmt_autosave         = 0
 
 -- ─────────────────────────────────────────────────────────────────────────────│─╗
 -- │ Markdown                                                                  ─╬─│┼

@@ -1,4 +1,4 @@
-require 'util'
+require 'functions'
 
 local home    = vim.env.HOME
 local config  = home .. '/.config/nvim'
@@ -17,11 +17,11 @@ map('n', '<bs>',                                        '<c-^>')
 map('n', '<c-j>',                                     ':bp<cr>')
 map('n', '<c-k>',                                     ':bn<cr>')
 map('n', '<c-l>',                 ':noh<cr>', { silent = true })
-map('n', '<c-s>',               '<cmd>Telescope find_files<cr>')
 map('n', '<down>',                                      '<nop>')
 map('n', '<leader>ad',                         ':ALEDetail<cr>')
 map('n', '<leader>ea',                  ':split ~/.aliases<cr>')
 map('n', '<leader>en',                        ':e notes.md<cr>')
+map('n', '<leader>s',                            ':RustFmt<cr>')
 map('n', '<leader>sa',           '<cmd>Telescope live_grep<cr>')
 map('n', '<leader>sb',             '<cmd>Telescope buffers<cr>')
 map('n', '<leader>ss',                          ':source %<cr>')
@@ -42,3 +42,18 @@ map('v', '<leader>a#',                     ':Tabularize /#<cr>')
 map('v', '<leader>a:',                     ':Tabularize /:<cr>')
 map('v', '<leader>a=',                     ':Tabularize /=<cr>')
 map('v', '<leader>s',                               ':sort<cr>')
+
+-- add custom find command to telescope `find_files`
+-- in order to find dotfiles + ignore git files
+map('n', '<c-s>', remove_newlines([[
+<cmd>
+lua require("telescope.builtin").find_files({
+  find_command = {
+    "rg",
+    "--files",
+    "--hidden",
+    "-g",
+    "!.git"
+  }})
+<cr>
+]]), { noremap = true, silent = true })

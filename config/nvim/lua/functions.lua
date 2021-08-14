@@ -7,3 +7,7 @@ function setup_markdown()
   opt('o', 'textwidth', 80)
   execute(':hi ColorColumn ctermbg=grey guibg=grey')
 end
+
+function remove_newlines(s)
+  return string.gsub(s, '\n', '')
+end
