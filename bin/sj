@@ -25,7 +25,7 @@ def search(recipes):
     s.run([
       'just',
       to_str(s.check_output(['fzf', '--height', '50%', '--min-height', '20', '--border', '--bind',
-        'ctrl-/:toggle-preview', '--ansi', '--preview', 'just --show {}'], input=str.encode(recipes))),
+        'ctrl-/:toggle-preview', '--ansi', '--preview', 'just --show {}', '--preview-window', '75%'], input=str.encode(recipes))),
       *list(input('arguments (enter to skip): ').split())
     ])
   except s.CalledProcessError as err:
