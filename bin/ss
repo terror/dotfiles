@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function main() {
+  cd "$1" || exit
+  "$(fd | fzf                                                                  \
+    --height         90%                                                       \
+    --min-height     20                                                        \
+    --bind           'ctrl-\:toggle-preview'                                   \
+    --bind           'ctrl-k:preview-up,ctrl-j:preview-down'                   \
+    --preview        'bat --style=numbers --color=always --line-range :500 {}' \
+    --preview-window 75%                                                       \
+    --border                                                                   \
+    --ansi
+  )"
+}
+
+main "$HOME"/dotfiles/bin
