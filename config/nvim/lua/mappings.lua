@@ -57,3 +57,13 @@ lua require("telescope.builtin").find_files({
   }})
 <cr>
 ]]), { noremap = true, silent = true })
+
+-- map `<c-p>` to file browser
+-- can create files with <c-e>
+map('n', '<c-p>', remove_newlines([[
+<cmd>
+lua require(
+  "telescope.builtin"
+).file_browser()
+<cr>
+]]), { noremap = true, silent = true })
