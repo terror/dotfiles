@@ -1,12 +1,39 @@
 #!/bin/bash
 
+function justfile() {
+  cat << EOF
+set dotenv-load
+
+export EDITOR := 'vim'
+
+default:
+  just --list
+EOF
+}
+
 function main() {
   name="$2"
+
   cd "$1" || exit
-  mkdir "$name" && cd "$name" || exit
-  git init && git remote add origin https://github.com/terror/"$name".git
-  touch .gitignore && touch README.md
-  echo "## $name" > README.md
+
+  mkdir "$name" && \
+    cd "$name" || exit
+
+  git init && \
+    git remote add origin https://github.com/terror/"$name".git
+
+  files=(
+    ".gitignore"
+    "README.md"
+    "justfile"
+  )
+  for f in "${files[@]}"; do
+    touch "$f"
+  done
+
+  echo "## $name"    >> README.md
+  echo "$(justfile)" >> justfile
+  echo "/.DS_Store"  >> .gitignore
 }
 
 main "$HOME/src" "$@"
