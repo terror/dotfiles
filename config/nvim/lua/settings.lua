@@ -34,6 +34,7 @@ opt('o', 'ruler',                      true)
 opt('o', 'shiftwidth',                    2)
 opt('o', 'showcmd',                    true)
 opt('o', 'smartindent',                true)
+opt('o', 'spelllang',                  'en')
 opt('o', 'splitbelow',                 true)
 opt('o', 'tabpagemax',                   30)
 opt('o', 'tabstop',                       2)
@@ -46,3 +47,10 @@ opt('o', 'undofile',                   true)
 opt('o', 'visualbell',                 true)
 opt('o', 'wildignore',          '.pyc,.swp')
 opt('o', 'wrap',                       true)
+
+-- specify spellfile location
+opt(
+  'o',
+  'spellfile',
+  config .. '/spell/en.utf-8.add'
+)
