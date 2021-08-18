@@ -1,34 +1,30 @@
 #!/usr/bin/python3
 
-import os
-import shutil
+import os, shutil
 
 path = os.path.expanduser("~/Dropbox/Notes/journal")
 
+def mv(src, dest):
+  shutil.move(src, dest)
 
 def main():
-    moved = 0
-    print("[~] Grouping Files...")
-    for file in os.listdir(path):
-        if os.path.isdir(os.path.join(path, file)):
-            continue
-        d = os.path.join(path, file[:7])
-        if not os.path.exists(d):
-            os.mkdir(d)
-            print("Created directory: {}".format(d))
-        try:
-            mv(os.path.join(path, file), d)
-        except Exception as err:
-            print(err)
-            exit()
-        print("{} -> {}".format(file, d))
-        moved += 1
-    print("Moved {} file(s)".format(moved) if moved else "Nothing to move!")
-
-
-def mv(src, dest):
-    shutil.move(src, dest)
-
+  moved = 0
+  print("[~] Grouping Files...")
+  for file in os.listdir(path):
+    if os.path.isdir(os.path.join(path, file)):
+      continue
+    d = os.path.join(path, file[:7])
+    if not os.path.exists(d):
+      os.mkdir(d)
+      print("Created directory: {}".format(d))
+    try:
+      mv(os.path.join(path, file), d)
+    except Exception as err:
+      print(err)
+      exit()
+    print("{} -> {}".format(file, d))
+    moved += 1
+  print("Moved {} file(s)".format(moved) if moved else "Nothing to move!")
 
 if __name__ == "__main__":
-    main()
+  main()
