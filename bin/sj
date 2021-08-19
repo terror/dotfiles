@@ -14,9 +14,9 @@ def die(*args, **kwargs):
 def to_str(bytes):
   return bytes.decode('utf-8').strip()
 
-def run():
+def summary():
   try:
-    return s.check_output(['just', '--list'], stderr=s.PIPE)
+    return s.check_output(['just', '--summary'], stderr=s.PIPE)
   except s.CalledProcessError as err:
     die(to_str(err.stderr))
 
@@ -24,17 +24,19 @@ def search(recipes):
   try:
     s.run([
       'just',
-      to_str(s.check_output(['fzf', '--height', '50%', '--min-height', '20', '--border', '--bind',
-        'ctrl-/:toggle-preview', '--ansi', '--preview', 'just --show {}', '--preview-window', '75%'], input=str.encode(recipes))),
+      to_str(
+        s.check_output(
+          ['fzf', '--height', '50%', '--min-height', '20', '--border', '--bind', 'ctrl-/:toggle-preview', '--ansi', '--preview', 'just --show {}', '--preview-window', '75%'],
+          input=str.encode(recipes)
+      )),
       *list(input('arguments (enter to skip): ').split())
     ])
   except s.CalledProcessError as err:
     die(f'Error running `{" ".join(err.cmd)}`.')
 
 if __name__ == '__main__':
-  search("\n".join
-      (list(
-        filter(lambda x: x != 'default', map(lambda x: next(iter(to_str(x).split()), ""), run().split(b'\n')[1:]))
-      )
+  search(
+    "\n".join(
+      to_str(summary()).split()
     )
   )
