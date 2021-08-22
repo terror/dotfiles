@@ -30,6 +30,7 @@ alias gb="git branch"
 alias gcb="git checkout -b"
 alias gap="git add -p"
 alias gbd="git branch --delete"
+alias cb="git branch --show-current"
 
 # ls
 alias l="ls"
