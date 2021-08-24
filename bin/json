@@ -1,17 +1,62 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
+# `json` is a script used to format json data either
+# from a file or stdin and print it to stdout.
+
+import argparse
 import json
 import os
-from argparse import ArgumentParser
+import sys
+import traceback
 
-parser = ArgumentParser()
-parser.add_argument('--file', '-f', help='json file')
+class File:
+  def __init__(self, path):
+    self.path = path
+    _, ext = self.parts
+    if ext != '.json':
+      die('Invalid file type.')
 
-args = parser.parse_args()
+  @property
+  def last(self):
+    return os.path.basename(os.path.normpath(self.path))
 
-if not args.file or os.path.splitext(args.file)[1] != ".json":
-    print("Must provide valid json file.")
-    exit()
+  @property
+  def parts(self):
+    return os.path.splitext(self.last)
 
-with open(os.path.join(os.getcwd(), args.file), "r") as f:
-    print(json.dumps(json.load(f), indent=4))
+  @property
+  def out(self):
+    try:
+      with open(self.path, 'r') as file:
+        print(
+          json.dumps(
+            json.load(file),
+            indent = 2
+          )
+        )
+    except Exception as error:
+      die(f'Failure to format JSON: {error}')
+    sys.exit(0)
+
+def e(*args, **kwargs):
+  print(*args, **kwargs, file=sys.stderr)
+
+def die(*args, **kwargs):
+  e(*args, **kwargs)
+  sys.exit(-1)
+
+def main(args):
+  if os.path.exists(args):
+    File(args).out
+
+  print(
+    json.dumps(
+      args,
+      indent = 2
+    )
+  )
+
+if __name__ == '__main__':
+  if len(sys.argv) != 2:
+    die('usage: json <path|input>')
+  main(sys.argv[1])
