@@ -22,10 +22,10 @@ setup(
   license                       = "{%license%}",
   keywords                      = "",
   url                           = "http://packages.python.org/{%pkg_name%}",
-  project_urls                  = {"Source Code": "https://github.com/terror/{%pkg_name}"},
+  project_urls                  = {"Source Code": "https://github.com/terror/{%pkg_name%}"},
   packages                      = find_packages(),
   long_description              = read("README.md"),
-  classifiers                   = ["Development Status :: 3 - Alpha", "Topic :: Utilities", "License :: OSI Approved :: {%license} License"],
+  classifiers                   = ["Development Status :: 3 - Alpha", "Topic :: Utilities", "License :: OSI Approved :: {%license%} License"],
   install_requires              = [],
   python_requires               = ">= 3.7",
 )
