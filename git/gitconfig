@@ -38,6 +38,7 @@ track = branch --set-upstream-to upstream/master master
 cl    = clone
 cld   = clone --depth 1
 rbi   = rebase -i
+root  = rev-parse --show-toplevel
 
 [delta]
 plus-style   = "syntax #012800"
