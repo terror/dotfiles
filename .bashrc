@@ -23,6 +23,16 @@ export SAVEHIST=5000000
 export TERM=xterm-color
 export VISUAL=nvim
 
+export FZF_DEFAULT_OPTS="
+  --bind ctrl-/:toggle-preview
+  --height 50%
+  --min-height 20
+  --preview 'bat --style=numbers --color=always --line-range :500 {}'
+  --preview-window 75
+  --ansi
+  --border
+"
+
 # config files
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
