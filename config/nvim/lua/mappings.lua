@@ -6,6 +6,7 @@ local config  = home .. '/.config/nvim'
 map('i', '!',                                         '!<c-g>u')
 map('i', ',',                                         ',<c-g>u')
 map('i', '.',                                         '.<c-g>u')
+map('i', '<c-j>',                                       '<esc>')
 map('i', '<down>',                                      '<nop>')
 map('i', '<left>',                                      '<nop>')
 map('i', '<right>',                                     '<nop>')
