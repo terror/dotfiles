@@ -13,6 +13,9 @@ tap "tlk/imagemagick-x11"
 tap "yudai/gotty"
 tap "zegervdv/zathura"
 
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
+
 # Core application library for C
 brew "glib"
 
@@ -153,6 +156,9 @@ brew "tree"
 
 # Validating, recursive, caching DNS resolver
 brew "unbound"
+
+# Maintained ctags implementation
+brew "universal-ctags"
 
 # Google's JavaScript engine
 brew "v8"
