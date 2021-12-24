@@ -1,5 +1,5 @@
 ## dotfiles
-My preferences for mac osx. I use [dotbot](https://github.com/anishathalye/dotbot) to manage everything.
+My preferences for macOS. I use [dotbot](https://github.com/anishathalye/dotbot) to manage everything.
 
 ![](./assets/neovim)
 
