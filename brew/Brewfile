@@ -9,6 +9,7 @@ tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "mongodb/brew"
 tap "rhysd/actionlint", "https://github.com/rhysd/actionlint"
+tap "rhysd/tweet-app", "https://github.com/rhysd/tweet-app"
 tap "tlk/imagemagick-x11"
 tap "yudai/gotty"
 tap "zegervdv/zathura"
@@ -18,6 +19,18 @@ brew "python@3.9"
 
 # Core application library for C
 brew "glib"
+
+# Generate introspection data for GObject libraries
+brew "gobject-introspection"
+
+# OpenType text shaping engine
+brew "harfbuzz"
+
+# Framework for layout and rendering of i18n text
+brew "pango"
+
+# Icons for the GNOME project
+brew "adwaita-icon-theme"
 
 # Record and share terminal sessions
 brew "asciinema"
@@ -38,7 +51,16 @@ brew "cmake"
 brew "discount"
 
 # Create Docker hosts locally and on cloud providers
-brew "docker-machine"
+brew "docker-machine", restart_service: true
+
+# GNU Ubiquitous Intelligent Language for Extensions
+brew "guile"
+
+# Validating, recursive, caching DNS resolver
+brew "unbound", restart_service: true
+
+# GNU Emacs text editor
+brew "emacs", restart_service: true
 
 # Calculator REPL, similar to bc(1)
 brew "eva"
@@ -73,6 +95,12 @@ brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+
+# GSettings schemas for desktop components
+brew "gsettings-desktop-schemas"
+
 # Command-line hex viewer
 brew "hexyl"
 
@@ -88,20 +116,32 @@ brew "jq"
 # Handy way to save and run project-specific commands
 brew "just"
 
+# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
+brew "libheif"
+
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8"
 
+# Library that provides automatic proxy configuration management
+brew "libproxy"
+
 # Next-gen compiler infrastructure
 brew "llvm"
+
+# Small build system for use with gyp or CMake
+brew "ninja"
+
+# Fast and user friendly build system
+brew "meson"
 
 # MIT/GNU Scheme development tools and runtime library
 brew "mit-scheme"
 
 # Open source relational database management system
-brew "mysql"
+brew "mysql", restart_service: true
 
 # Open source relational database management system
-brew "mysql@5.7", restart_service: true
+brew "mysql@5.7"
 
 # Netwide Assembler (NASM) is an 80x86 assembler
 brew "nasm"
@@ -113,16 +153,25 @@ brew "neofetch"
 brew "neovim"
 
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
-brew "nginx"
+brew "nginx", restart_service: true
 
 # Platform built on V8 to build network applications
 brew "node", link: false
 
+# OCaml package manager
+brew "opam"
+
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 
+# Cross-platform application and UI framework
+brew "qt"
+
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+
 # Object-relational database system
-brew "postgresql"
+brew "postgresql", restart_service: true
 
 # Object-relational database system
 brew "postgresql@12", restart_service: true
@@ -133,6 +182,9 @@ brew "redis", restart_service: true
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 
+# Readline wrapper: adds readline support to tools that lack it
+brew "rlwrap"
+
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
 
@@ -141,6 +193,9 @@ brew "shellcheck"
 
 # Autoformat shell script source code
 brew "shfmt"
+
+# Tool to create intelligent and beautiful documentation
+brew "sphinx-doc"
 
 # Cross-shell prompt for astronauts
 brew "starship"
@@ -153,9 +208,6 @@ brew "tmux"
 
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-
-# Validating, recursive, caching DNS resolver
-brew "unbound"
 
 # Maintained ctags implementation
 brew "universal-ctags"
@@ -198,7 +250,6 @@ brew "rhysd/actionlint/actionlint"
 
 # Tools and libraries to manipulate images in many formats (X11 support)
 brew "tlk/imagemagick-x11/imagemagick"
-
 brew "yudai/gotty/gotty"
 brew "zegervdv/zathura/zathura"
 brew "zegervdv/zathura/zathura-pdf-poppler"
@@ -217,8 +268,6 @@ cask "docker"
 
 # Matrix collaboration client
 cask "element"
-
-# Nerd font
 cask "font-caskaydia-cove-nerd-font"
 
 # Terminal emulator as alternative to Apple's Terminal app
@@ -236,13 +285,13 @@ cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 
-# Modern programming language in the Lisp/Scheme family
-cask "racket"
-
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 
-# Free and open-source hosted hypervisor for x86 virtualization
+# Development environment
+cask "vagrant"
+
+# Virtualizer for x86 hardware
 cask "virtualbox"
 
 # Open-source code editor
