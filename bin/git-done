@@ -1,28 +1,9 @@
 #!/bin/bash
 
-# Run `git done` after you're done working on a branch.
+set -euo pipefail
 
-function diff() {
-  if [[ $(git diff --no-ext-diff --quiet --exit-code $1) != 0 ]]; then
-    echo Please commit all your changes.
-    exit 1
-  fi
-}
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-function run() {
-  git checkout master
-  diff
-  git pull --rebase "$1" master
-  diff "$2"
-  git branch -D "$2"
-}
-
-function main() {
-  if ! git rev-parse --is-inside-work-tree &>/dev/null; then
-    echo "Not a git repository." 1>&2
-    exit 1
-  fi
-  run "${1:-origin}" "$(git branch --show-current)"
-}
-
-main "$@"
+git checkout master
+git branch --delete --force "$BRANCH"
+git pull
