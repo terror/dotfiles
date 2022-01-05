@@ -2,10 +2,9 @@
 
 # shortcuts
 alias c="cd ~/src/solutions"
-alias gh="cd ~/src"
-alias fun="cd ~/fun"
-alias jac="cd ~/'JAC CompSci'"
-alias z="cd ~/src/notes"
+alias s="cd ~/src"
+alias jac="cd ~/src/jac"
+alias nn="cd ~/src/notes"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 # from https://github.com/mathiasbynens/dotfiles/blob/main/.aliases
@@ -31,6 +30,7 @@ alias gcb="git checkout -b"
 alias gap="git add -p"
 alias gbd="git branch --delete"
 alias cb="git branch --show-current"
+alias pr="gh pr create --web"
 
 # ls
 alias l="ls"
