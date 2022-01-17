@@ -5,6 +5,8 @@
 # ╚────────────────────────────────────────────────────────────────────────────│
 
 # Run last modified file in directory (C++, Python, Java)
+# e.g: `r p` will run the last modified Python file in the
+# current working directory
 function r() {
   file="$(ls -t | head -n 1)"
   case "$1" in
@@ -20,38 +22,31 @@ function r() {
   esac
 }
 
+# Compile and run a C++ file
 function run() {
   g++ -std=c++17 "$@" && ./a.out;
 }
 
+# Run a Python file
 function py() {
   python3 "$@";
-}
-
-function rs() {
-  cargo run "$@";
-}
-
-function hs() {
- file="$*"
- ghc "$file" && ./"${file%%.*}";
 }
 
 # ───────────────────────────────────────────────────────────────────────────│─╗
 # │ File system                                                            ─╬─│┼
 # ╚────────────────────────────────────────────────────────────────────────────│
 
-# Create and CD into directory
+# Create and cd into directory
 function mkcd() {
   mkdir -p "$@" && cd "$@" || exit
 }
 
-# Open file in chrome
+# Open a file in Google Chrome
 function oc() {
   open -a "Google Chrome" "$@"
 }
 
-# Open directory
+# Open a directory using `open`
 function o() {
   if [ $# -eq 0 ]; then open .; else open "$@"; fi;
 }
@@ -74,11 +69,6 @@ function fs() {
   else
     du $arg .[^.]* ./*;
   fi;
-}
-
-# LS through bat
-function bls() {
-  if [ $# -eq 0 ]; then ls . | bat; else ls "$@" | bat; fi;
 }
 
 # ───────────────────────────────────────────────────────────────────────────│─╗
@@ -104,15 +94,17 @@ function vmo {
   nvim "$(git status --porcelain | awk '{print $2}')"
 }
 
+# Checks if the cwd is a git repository
 function is_in_git_repo() {
   git rev-parse HEAD > /dev/null 2>&1
 }
 
+# Spawn an FZF window
 function fzf-down() {
   fzf --height 50% --min-height 20 --border --bind ctrl-/:toggle-preview "$@"
 }
 
-# search through modified files
+# Search through modified git files with FZF
 function sgf() {
   is_in_git_repo || return
   git -c color.status=always status --short |
@@ -121,7 +113,7 @@ function sgf() {
   cut -c4- | sed 's/.* -> //'
 }
 
-# search through commits
+# Search through git commits with FZF
 function sgc() {
   is_in_git_repo || return
   git log --date=short --format="%C(green)%C(bold)%cd %C(auto)%h%d %s (%an)" --graph --color=always |
@@ -131,8 +123,13 @@ function sgc() {
   grep -o "[a-f0-9]\{7,\}"
 }
 
+# Checkout a git branch with FZF
+function sgb() {
+  git checkout "$(git branch | fzf | tr -d '[:space:]')"
+}
+
 # ───────────────────────────────────────────────────────────────────────────│─╗
-# │ Misc                                                                   ─╬─│┼
+# │ Miscellaneous                                                          ─╬─│┼
 # ╚────────────────────────────────────────────────────────────────────────────│
 
 # Fetch bitcoin price information
@@ -148,32 +145,4 @@ function weather() {
 # Generate a SHA-256 hash
 function sha() {
   echo -n "$@" | shasum -a 256
-}
-
-function sol() {
-  touch solution."$*" && vi solution."$*"
-}
-
-function note() {
-  local notes_dir="$HOME/Dropbox/Notes"
-  case "$1" in
-    c)
-      cd "$notes_dir" || exit
-      ;;
-    l)
-      tree "$notes_dir" -L 1
-      ;;
-    *)
-      vim "$notes_dir/$1"
-  esac
-}
-
-function journal() {
-  local journal_dir="$HOME/Dropbox/Notes/journal"
-  case "$1" in
-    new)
-      cd "$journal_dir" || exit
-      vi "$(date -u '+%Y-%m-%d')".md
-      ;;
-  esac
 }
