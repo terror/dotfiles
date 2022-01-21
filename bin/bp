@@ -1,165 +1,162 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import argparse
+import dataclasses
 import enum
 import functools
+import json
 import os
 import re
 import shutil
 import sys
+import traceback
+import typing as t
 
-# **** config.py ****
-
-CONFIG  = '~/.bp.toml'
+PATH = '~/.bp.json'
 DEFAULT = {'store': '~/.bp'}
 
+@dataclasses.dataclass
 class Config:
-  def __init__(self, store):
-    self.store = os.path.expanduser(store.strip("'"))
+  store: str
 
   @staticmethod
   def load():
-    path = os.path.expanduser(CONFIG)
+    path = os.path.expanduser(PATH)
 
     if not os.path.exists(path):
       with open(path, 'w') as file:
-        for key, value in DEFAULT.items():
-          file.write("{} = {}".format(key, value))
+        json.dump(DEFAULT, file)
 
     with open(path, 'r') as file:
-      lines = file.readlines()
-
-    d = {}
-    for line in lines:
-      key, value = line.split('=')
-      d[key.strip()] = value.strip()
-
-    return Config(**d)
-
-# **** handler.py ****
+      return Config(**json.load(file))
 
 class Handler:
-  def __init__(self, args, config):
-    self.args   = args
-    self.config = config
+  def __init__(self, args):
+    self.args = args
+    self.config = Config.load()
 
-  def run(self):
-    arg, data = self.args
-    {
-      Arg.USE: self.__use,
-      Arg.INT: self.__use_interactive,
-      Arg.SAVE: self.__save,
-      Arg.LIST: self.__list
-    }[arg](*data)
+  def run(self) -> None:
+    for data, func in [
+      (self.args.use, self.__use),
+      (self.args.list, self.__list),
+      (self.args.save, self.__save)
+    ]:
+      if data:
+        func(data)
 
-  def __use(self, *data):
-    names, path = Utils.split(data)
+  def __use(self, filenames: t.List[str]) -> None:
+    for filename in filenames:
+      file = File(os.path.join(self.config.store, f'{filename}.bp'))
 
-    for name in names:
-      file = File(os.path.join(self.config.store, f'{name}.bp'))
-      self.__write(file, path or os.getcwd())
+      if self.args.interactive:
+        print(f'**** template {filename}.bp ****')
+        for var in file.env:
+          if not (inp := input(f'{var} ({file.env[var]}): ')):
+            continue
+          file.env[var] = inp
 
-  def __use_interactive(self, *data):
-    names, path = Utils.split(data)
+      self.__write(file, os.getcwd())
 
-    for name in names:
-      print(f'**** template {name}.bp ****')
+  def __list(self, *args) -> None:
+    print(*os.listdir(os.path.expanduser(self.config.store)), sep="\n")
 
-      file = File(os.path.join(self.config.store, f'{name}.bp'))
-      for var in file.env:
-        inp = input(f'{var} ({file.env[var]}): ')
-        if not inp:
-          continue
-        file.env[var] = inp
+  def __save(self, args: t.List[str]) -> None:
+    name, path = args
+    shutil.move(
+      os.path.abspath(path),
+      os.path.join(os.path.expanduser(self.config.store), f'{name}.bp')
+    )
 
-      self.__write(file, path or os.getcwd())
-
-  def __list(self, *args):
-    d = os.listdir(os.path.expanduser(self.config.store))
-    print(*d, sep="\n")
-
-  def __save(self, name, path):
-    path = os.path.abspath(path)
-    shutil.move(path, os.path.join(self.config.store, f'{name}.bp'))
-
-  def __write(self, file, path):
-    filename = f'{file.env["filename"]}.{file.env["extension"]}' if file.env['extension'] else f'{file.env["filename"]}'
-    parser = Parser(file.env)
+  def __write(self, file, path) -> None:
+    filename = f'{file.env["filename"]}.{file.env["extension"]}' if file.env[
+      'extension'] else f'{file.env["filename"]}'
     with open(os.path.join(path, filename), "w+") as out:
-      lines = parser.run(file.content[file.end:])
-      for line in lines:
+      for line in Parser(file.env).run(file.content[file.end:]):
         out.write(line)
 
-# **** parser.py ****
+class InvalidFileFormat(Exception):
+  pass
+
+@dataclasses.dataclass
+class Arguments:
+  use: t.List[str]
+  list: bool
+  interactive: bool
+  save: t.List[str]
+  verbose: bool
+
+  @staticmethod
+  def from_args():
+    parser = argparse.ArgumentParser(prog="bp")
+
+    parser.add_argument(
+      '--use',
+      '-u',
+      nargs='+',
+      required=False,
+      help='Use a file template in `store`.'
+    )
+
+    parser.add_argument(
+      '--list',
+      '-l',
+      required=False,
+      action='store_true',
+      help='List all available templates.'
+    )
+
+    parser.add_argument(
+      '--interactive',
+      '-i',
+      required=False,
+      action="store_true",
+      help='Be prompted for variables in the files frontmatter.'
+    )
+
+    parser.add_argument(
+      '--save',
+      '-s',
+      nargs='+',
+      required=False,
+      help='Save a template in `store`.'
+    )
+
+    parser.add_argument(
+      '--verbose',
+      '-v',
+      required=False,
+      action="store_true",
+      help='Add tracebacks to error messages.'
+    )
+
+    return Arguments(**vars(parser.parse_args()))
+
+  def run(self):
+    Handler(self).run()
 
 class Parser:
   def __init__(self, env):
     self.env = env
 
   def run(self, lines):
-    for i in range(len(lines)):
-      lines[i] = self.parse_line(lines[i])
-    return lines
+    return list(map(lambda line: self.parse_line(line), lines))
 
-  def get_vars(self, line):
-    return re.findall("{%(.*?)%}", line)
+  def vars(self, line):
+    return re.findall('{%(.*?)%}', line)
 
   def parse_line(self, line):
-    # some cases:
-    # a: 1; b: 2
-    # {%a%} + {%b%} -> 1 + 2
-    # ({%a%}{%b%})  -> (12)
-    vars = self.get_vars(line)
+    vars = self.vars(line)
     if not vars:
       return line
-    for v in vars:
-      if v not in self.env:
+    for var in vars:
+      if var not in self.env:
         continue
-      line = re.sub("{%" + v + "%}", str(self.env[v]), line)
+      line = re.sub('{%' + var + '%}', str(self.env[var]), line)
     return line
-
-# **** utils.py ****
-
-class InvalidFileFormat(Exception):
-  pass
-
-class InvalidOption(Exception):
-  pass
-
-class Utils:
-  @staticmethod
-  def split(l):
-    if not l:
-      return
-    if os.path.exists(l[-1]):
-      return (l[:-1], l[-1])
-    return (l, None)
-
-  @staticmethod
-  def convert(args):
-    for pred, res in [
-      (lambda args: args.use and args.interactive, (Arg.INT, args.use)),
-      (lambda args: args.use, (Arg.USE, args.use)),
-      (lambda args: args.save, (Arg.SAVE, args.save)),
-      (lambda args: args.list, (Arg.LIST, [None]))
-    ]:
-      if pred(args):
-        return res
-    raise InvalidOption("You must pass in a valid option.")
-
-# **** arg.py ****
-
-class Arg(enum.Enum):
-  USE  = 1
-  INT  = 2
-  SAVE = 3
-  LIST = 4
-
-# **** path.py ****
 
 class Path:
   def __init__(self, path):
-    self.path = path
+    self.path = os.path.expanduser(path)
 
   def __repr__(self):
     return self.path
@@ -170,13 +167,11 @@ class Path:
 
   @property
   def filename(self):
-    name, _ = os.path.splitext(self.last)
-    return name
+    return os.path.splitext(self.last)[0]
 
   @property
   def ext(self):
-    _, ext = os.path.splitext(self.last)
-    return ext
+    return os.path.splitext(self.last)[1]
 
 class File(Path):
   def __init__(self, path):
@@ -208,48 +203,13 @@ class File(Path):
       content = file.readlines()
     return content
 
-# **** __main__.py ****
-
-def cli():
-  parser = argparse.ArgumentParser()
-
-  parser.add_argument(
-    '--use',
-    '-u',
-    nargs='+',
-    help='Use a file template.'
-  )
-
-  parser.add_argument(
-    '--list',
-    '-l',
-    action='store_true',
-    help='List all available templates.'
-  )
-
-  parser.add_argument(
-    '--interactive',
-    '-i',
-    action="store_true",
-    help='Be prompted for each variable in files frontmatter.'
-  )
-
-  parser.add_argument(
-    '--save',
-    '-s',
-    nargs='+',
-    help='Save a template in `store`.'
-  )
-
-  return parser.parse_args()
-
-def main(args, config):
-  Handler(Utils.convert(args), config).run()
+def main(args):
+  try:
+    args.run()
+  except Exception as error:
+    if args.verbose:
+      traceback.print_exc()
+    print(f'error: {str(error)}', file=sys.stderr)
 
 if __name__ == '__main__':
-  try:
-    main(cli(), Config.load())
-  except (Exception, InvalidFileFormat, InvalidOption) as error:
-    print(error)
-    # traceback.print_exc()
-    sys.exit(1)
+  main(Arguments.from_args())
