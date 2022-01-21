@@ -1,10 +1,12 @@
 ---
 filename: setup
 extension: py
-pkg_name: placeholder
-version: 0.0.1
 description: placeholder
-license: CC0
+keywords: placeholder
+license: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+pkg_name: placeholder
+topic: placeholder
+version: 0.0.0
 ---
 import os
 from setuptools import setup, find_packages
@@ -13,19 +15,23 @@ def read(fname):
   return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-  name                          = "{%pkg_name%}",
-  version                       = "{%version%}",
-  author                        = "Liam Scalzulli",
-  author_email                  = "liamscalzulli@gmail.com",
-  description                   = ("{%description%}"),
+  name = "{%pkg_name%}",
+  version = "{%version%}",
+  author = "Liam Scalzulli",
+  author_email = "liam@scalzulli.com",
+  description = ("{%description%}"),
   long_description_content_type = "text/markdown",
-  license                       = "{%license%}",
-  keywords                      = "",
-  url                           = "http://packages.python.org/{%pkg_name%}",
-  project_urls                  = {"Source Code": "https://github.com/terror/{%pkg_name%}"},
-  packages                      = find_packages(),
-  long_description              = read("README.md"),
-  classifiers                   = ["Development Status :: 3 - Alpha", "Topic :: Utilities", "License :: OSI Approved :: {%license%} License"],
-  install_requires              = [],
-  python_requires               = ">= 3.7",
+  license = "{%license%}",
+  keywords = "",
+  url = "http://packages.python.org/{%pkg_name%}",
+  project_urls = {"Source Code": "https://github.com/terror/{%pkg_name%}"},
+  packages = find_packages(),
+  long_description = read("README.md"),
+  classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: {%topic%}",
+    "License :: {%license%}"
+  ],
+  install_requires = [],
+  python_requires = ">= 3.9",
 )
