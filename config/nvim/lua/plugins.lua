@@ -1,101 +1,106 @@
-local execute      = vim.api.nvim_command
-local fn           = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local execute = vim.api.nvim_command
+local fn = vim.fn
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
 if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
-  execute 'packadd packer.nvim'
+  fn.system({
+    "git",
+    "clone",
+    "https://github.com/wbthomason/packer.nvim",
+    install_path,
+  })
+  execute("packadd packer.nvim")
 end
 
-local use = require('packer').use
+local use = require("packer").use
 
-return require('packer').startup(
-  function()
-    -- justfile syntax highlighting
-    use 'NoahTheDuke/vim-just'
+return require("packer").startup(function()
+  -- justfile syntax highlighting
+  use("NoahTheDuke/vim-just")
 
-    --  changes Vim working directory to project root
-    use 'airblade/vim-rooter'
+  --  changes Vim working directory to project root
+  use("airblade/vim-rooter")
 
-    --  check syntax asynchronously
-    use 'dense-analysis/ale'
+  --  check syntax asynchronously
+  use("dense-analysis/ale")
 
-    -- support .editorconfig
-    use 'editorconfig/editorconfig-vim'
+  -- support .editorconfig
+  use("editorconfig/editorconfig-vim")
 
-    -- a vim alignment plugin
-    use 'junegunn/vim-easy-align'
+  -- a vim alignment plugin
+  use("junegunn/vim-easy-align")
 
-    -- cool start screen
-    use 'mhinz/vim-startify'
+  -- cool start screen
+  use("mhinz/vim-startify")
 
-    -- support for treesitter
-    use 'nvim-treesitter/nvim-treesitter'
+  -- support for treesitter
+  use("nvim-treesitter/nvim-treesitter")
 
-    -- tabline
-    use 'romgrk/barbar.nvim'
+  -- tabline
+  use("romgrk/barbar.nvim")
 
-    -- comment stuff out
-    use 'tpope/vim-commentary'
+  -- comment stuff out
+  use("tpope/vim-commentary")
 
-    -- package manager
-    use 'wbthomason/packer.nvim'
+  -- package manager
+  use("wbthomason/packer.nvim")
 
-    -- pair completing
-    use 'windwp/nvim-autopairs'
+  -- pair completing
+  use("windwp/nvim-autopairs")
 
-    -- toml syntax
-    use 'cespare/vim-toml'
+  -- toml syntax
+  use("cespare/vim-toml")
 
-    -- preview markdown files in the browser
-    use {
-      'euclio/vim-markdown-composer',
-      cmd = 'ComposerStart',
-      ft  = 'markdown',
-      run = 'cargo build --release --locked'
-    }
+  -- language server protocol
+  use("neovim/nvim-lspconfig")
 
-    -- text filtering and alignment
-    use {
-      'godlygeek/tabular',
-      cmd = 'Tabularize'
-    }
+  -- preview markdown files in the browser
+  use({
+    "euclio/vim-markdown-composer",
+    cmd = "ComposerStart",
+    ft = "markdown",
+    run = "cargo build --release --locked",
+  })
 
-    -- markdown syntax support
-    use {
-      'plasticboy/vim-markdown',
-      ft = 'markdown'
-    }
+  -- text filtering and alignment
+  use({
+    "godlygeek/tabular",
+    cmd = "Tabularize",
+  })
 
-    -- statusline
-    use {
-      'hoob3rt/lualine.nvim',
-      requires = {
-        'kyazdani42/nvim-web-devicons',
-        opt = true
-      }
-    }
+  -- markdown syntax support
+  use({
+    "plasticboy/vim-markdown",
+    ft = "markdown",
+  })
 
-    -- fuzzy file finder
-    use {
-      'nvim-telescope/telescope.nvim',
-      requires = {
-        'nvim-lua/plenary.nvim',
-        'nvim-lua/popup.nvim'
-      }
-    }
+  -- statusline
+  use({
+    "hoob3rt/lualine.nvim",
+    requires = {
+      "kyazdani42/nvim-web-devicons",
+      opt = true,
+    },
+  })
 
-    -- treesitter playground
-    use {
-      'nvim-treesitter/playground',
-      cmd = 'TSPlaygroundToggle'
-    }
+  -- fuzzy file finder
+  use({
+    "nvim-telescope/telescope.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-lua/popup.nvim",
+    },
+  })
 
-    -- rust support
-    use {
-      'rust-lang/rust.vim',
-      ft = 'rust'
-    }
+  -- treesitter playground
+  use({
+    "nvim-treesitter/playground",
+    cmd = "TSPlaygroundToggle",
+  })
 
-  end
-)
+  -- rust support
+  use({
+    "rust-lang/rust.vim",
+    ft = "rust",
+  })
+end)
