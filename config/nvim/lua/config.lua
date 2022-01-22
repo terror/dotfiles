@@ -224,17 +224,38 @@ g.netrw_winsize = 20
 -- │ LSP                                                                        │
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
-require("lspconfig").rust_analyzer.setup({
+local lsp = require("lspconfig")
+
+local on_attach = function(client)
+  map("n", "<leader>=", "<cmd>lua vim.lsp.buf.formatting()<CR>")
+  map("n", "<leader>ar", "<cmd>lua vim.lsp.buf.rename()<CR>")
+  map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
+  map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
+  map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
+  map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
+end
+
+lsp.rust_analyzer.setup({
+  on_attach = on_attach,
   handlers = {
-    ["textDocument/publishDiagnostics"] = vim.lsp.with(
-      vim.lsp.diagnostic.on_publish_diagnostics,
-      {
-        virtual_text = false,
-      }
-    ),
+    -- disable diagnostics
+    ["textDocument/publishDiagnostics"] = function() end,
   },
   settings = {
     ["rust-analyzer"] = {
+      diagnostics = { disabled = { "inactive-code" } },
+    },
+  },
+})
+
+lsp.pyright.setup({
+  on_attach = on_attach,
+  handlers = {
+    -- disable diagnostics
+    ["textDocument/publishDiagnostics"] = function() end,
+  },
+  settings = {
+    ["pyright"] = {
       diagnostics = { disabled = { "inactive-code" } },
     },
   },

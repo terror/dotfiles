@@ -15,46 +15,46 @@ end
 local use = require("packer").use
 
 return require("packer").startup(function()
-  -- justfile syntax highlighting
+  -- Justfile syntax highlighting
   use("NoahTheDuke/vim-just")
 
-  --  changes Vim working directory to project root
+  --  Changes Vim working directory to project root
   use("airblade/vim-rooter")
 
-  --  check syntax asynchronously
+  --  Check syntax asynchronously
   use("dense-analysis/ale")
 
-  -- support .editorconfig
+  -- Support .editorconfig
   use("editorconfig/editorconfig-vim")
 
-  -- a vim alignment plugin
+  -- A vim alignment plugin
   use("junegunn/vim-easy-align")
 
-  -- cool start screen
+  -- Cool start screen
   use("mhinz/vim-startify")
 
-  -- support for treesitter
+  -- Support for treesitter
   use("nvim-treesitter/nvim-treesitter")
 
-  -- tabline
+  -- Tabline
   use("romgrk/barbar.nvim")
 
-  -- comment stuff out
+  -- Comment stuff out
   use("tpope/vim-commentary")
 
-  -- package manager
+  -- Package manager
   use("wbthomason/packer.nvim")
 
-  -- pair completing
+  -- Pair completing
   use("windwp/nvim-autopairs")
 
-  -- toml syntax
+  -- Toml syntax
   use("cespare/vim-toml")
 
-  -- language server protocol
+  -- Language server protocol
   use("neovim/nvim-lspconfig")
 
-  -- preview markdown files in the browser
+  -- Preview markdown files in the browser
   use({
     "euclio/vim-markdown-composer",
     cmd = "ComposerStart",
@@ -62,19 +62,19 @@ return require("packer").startup(function()
     run = "cargo build --release --locked",
   })
 
-  -- text filtering and alignment
+  -- Text filtering and alignment
   use({
     "godlygeek/tabular",
     cmd = "Tabularize",
   })
 
-  -- markdown syntax support
+  -- Markdown syntax support
   use({
     "plasticboy/vim-markdown",
     ft = "markdown",
   })
 
-  -- statusline
+  -- Statusline
   use({
     "hoob3rt/lualine.nvim",
     requires = {
@@ -83,7 +83,7 @@ return require("packer").startup(function()
     },
   })
 
-  -- fuzzy file finder
+  -- Fuzzy file finder
   use({
     "nvim-telescope/telescope.nvim",
     requires = {
@@ -92,13 +92,13 @@ return require("packer").startup(function()
     },
   })
 
-  -- treesitter playground
+  -- Treesitter playground
   use({
     "nvim-treesitter/playground",
     cmd = "TSPlaygroundToggle",
   })
 
-  -- rust support
+  -- Rust support
   use({
     "rust-lang/rust.vim",
     ft = "rust",

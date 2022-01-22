@@ -108,6 +108,11 @@ local no_errors, error_msg = pcall(function()
       path = "/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
       url = "https://github.com/windwp/nvim-autopairs",
     },
+    ["nvim-lspconfig"] = {
+      loaded = true,
+      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+      url = "https://github.com/neovim/nvim-lspconfig",
+    },
     ["nvim-treesitter"] = {
       loaded = true,
       path = "/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -217,7 +222,7 @@ local no_errors, error_msg = pcall(function()
   time([[Defining lazy-load commands]], true)
   pcall(
     vim.cmd,
-    [[command -nargs=* -range -bang -complete=file ComposerStart lua require("packer.load")({'vim-markdown-composer'}, { cmd = "ComposerStart", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]]
+    [[command -nargs=* -range -bang -complete=file Tabularize lua require("packer.load")({'tabular'}, { cmd = "Tabularize", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]]
   )
   pcall(
     vim.cmd,
@@ -225,7 +230,7 @@ local no_errors, error_msg = pcall(function()
   )
   pcall(
     vim.cmd,
-    [[command -nargs=* -range -bang -complete=file Tabularize lua require("packer.load")({'tabular'}, { cmd = "Tabularize", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]]
+    [[command -nargs=* -range -bang -complete=file ComposerStart lua require("packer.load")({'vim-markdown-composer'}, { cmd = "ComposerStart", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]]
   )
   time([[Defining lazy-load commands]], false)
 
@@ -233,8 +238,12 @@ local no_errors, error_msg = pcall(function()
   vim.cmd([[au!]])
   -- Filetype lazy-loads
   time([[Defining lazy-load filetype autocommands]], true)
-  vim.cmd([[au FileType markdown ++once lua require("packer.load")({'vim-markdown', 'vim-markdown-composer'}, { ft = "markdown" }, _G.packer_plugins)]])
-  vim.cmd([[au FileType rust ++once lua require("packer.load")({'rust.vim'}, { ft = "rust" }, _G.packer_plugins)]])
+  vim.cmd(
+    [[au FileType markdown ++once lua require("packer.load")({'vim-markdown', 'vim-markdown-composer'}, { ft = "markdown" }, _G.packer_plugins)]]
+  )
+  vim.cmd(
+    [[au FileType rust ++once lua require("packer.load")({'rust.vim'}, { ft = "rust" }, _G.packer_plugins)]]
+  )
   time([[Defining lazy-load filetype autocommands]], false)
   vim.cmd("augroup END")
   vim.cmd([[augroup filetypedetect]])
@@ -242,7 +251,9 @@ local no_errors, error_msg = pcall(function()
     [[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]],
     true
   )
-  vim.cmd([[source /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]])
+  vim.cmd(
+    [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]]
+  )
   time(
     [[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]],
     false
@@ -251,7 +262,9 @@ local no_errors, error_msg = pcall(function()
     [[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]],
     true
   )
-  vim.cmd([[source /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]])
+  vim.cmd(
+    [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]]
+  )
   time(
     [[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]],
     false
