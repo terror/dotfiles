@@ -41,6 +41,12 @@ brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 
+# Glorious Glasgow Haskell Compilation System
+brew "ghc"
+
+# Command-line interface for Cabal and Hackage
+brew "cabal-install"
+
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 
@@ -80,9 +86,6 @@ brew "gcc"
 # GitHub command-line tool
 brew "gh"
 
-# Glorious Glasgow Haskell Compilation System
-brew "ghc"
-
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
 
@@ -103,6 +106,9 @@ brew "gsettings-desktop-schemas"
 
 # Command-line hex viewer
 brew "hexyl"
+
+# Haskell source code suggestions
+brew "hlint"
 
 # Improved top (interactive process viewer)
 brew "htop"
@@ -161,6 +167,9 @@ brew "node", link: false
 # OCaml package manager
 brew "opam"
 
+# Formatter for Haskell source code
+brew "ormolu"
+
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 
@@ -176,6 +185,9 @@ brew "postgresql", restart_service: true
 # Object-relational database system
 brew "postgresql@12", restart_service: true
 
+# Static type checker for Python
+brew "pyright"
+
 # Persistent key-value database, with built-in net interface
 brew "redis", restart_service: true
 
@@ -187,6 +199,9 @@ brew "rlwrap"
 
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
+
+# Experimental Rust compiler front-end for IDEs
+brew "rust-analyzer"
 
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
@@ -250,6 +265,7 @@ brew "rhysd/actionlint/actionlint"
 
 # Tools and libraries to manipulate images in many formats (X11 support)
 brew "tlk/imagemagick-x11/imagemagick"
+
 brew "yudai/gotty/gotty"
 brew "zegervdv/zathura/zathura"
 brew "zegervdv/zathura/zathura-pdf-poppler"
@@ -268,6 +284,7 @@ cask "docker"
 
 # Matrix collaboration client
 cask "element"
+
 cask "font-caskaydia-cove-nerd-font"
 
 # Terminal emulator as alternative to Apple's Terminal app
