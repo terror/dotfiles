@@ -235,31 +235,21 @@ local on_attach = function(client)
   map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
 end
 
-lsp.rust_analyzer.setup({
-  on_attach = on_attach,
-  handlers = {
-    -- disable diagnostics
-    ["textDocument/publishDiagnostics"] = function() end,
-  },
-  settings = {
-    ["rust-analyzer"] = {
-      diagnostics = { disabled = { "inactive-code" } },
+local servers = { "rust_analyzer", "pyright" }
+for _, server in ipairs(servers) do
+  lsp[server].setup({
+    on_attach = on_attach,
+    handlers = {
+      -- disable diagnostics
+      ["textDocument/publishDiagnostics"] = function() end,
     },
-  },
-})
-
-lsp.pyright.setup({
-  on_attach = on_attach,
-  handlers = {
-    -- disable diagnostics
-    ["textDocument/publishDiagnostics"] = function() end,
-  },
-  settings = {
-    ["pyright"] = {
-      diagnostics = { disabled = { "inactive-code" } },
+    settings = {
+      [server] = {
+        diagnostics = { disabled = { "inactive-code" } },
+      },
     },
-  },
-})
+  })
+end
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Ultisnips                                                                  │
