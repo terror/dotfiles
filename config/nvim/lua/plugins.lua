@@ -54,6 +54,9 @@ return require("packer").startup(function()
   -- Language server protocol
   use("neovim/nvim-lspconfig")
 
+  -- Snippets
+  use("SirVer/ultisnips")
+
   -- Preview markdown files in the browser
   use({
     "euclio/vim-markdown-composer",

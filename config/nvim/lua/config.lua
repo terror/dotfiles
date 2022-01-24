@@ -260,3 +260,11 @@ lsp.pyright.setup({
     },
   },
 })
+
+-- ───────────────────────────────────────────────────────────────────────────-─╗
+-- │ Ultisnips                                                                  │
+-- ╚────────────────────────────────────────────────────────────────────────────│
+
+g.UltiSnipsExpandTrigger = "<tab>"
+g.UltiSnipsJumpBackwardTrigger = "<c-z>"
+g.UltiSnipsJumpForwardTrigger = "<c-b>"

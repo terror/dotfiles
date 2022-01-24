@@ -1,0 +1,47 @@
+snippet p "println!"
+println!($1);
+endsnippet
+
+snippet common "use common crate"
+use crate::common::*;
+endsnippet
+
+snippet vec "create a new vec"
+let mut $1 = Vec::new();
+endsnippet
+
+snippet fn "create a new function"
+fn $1() {
+  $2
+}
+endsnippet
+
+snippet display "impl Display"
+impl Display for $1 {
+  fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
+    write!(f, "{}", $2)
+  }
+}
+endsnippet
+
+snippet struct "create a new struct"
+#[derive(Debug)]
+pub(crate) struct $1 {
+  $2
+}
+endsnippet
+
+snippet enum "create a new enum"
+#[derive(Debug)]
+pub(crate) enum $1 {
+  $2
+}
+endsnippet
+
+snippet test "standard test setup"
+#[cfg(test)]
+mod tests {
+  use super::*;
+  $1
+}
+endsnippet

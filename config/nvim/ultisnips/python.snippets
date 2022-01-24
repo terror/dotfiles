@@ -1,0 +1,19 @@
+snippet main "main template"
+def main():
+	$1
+
+if __name__ == '__main__':
+	main($2)
+endsnippet
+
+snippet for "for loop"
+for i in range($1):
+	$2
+endsnippet
+
+snippet try "try except"
+try:
+	$1
+except Exception as error:
+	print(f'error: {str(error)}')
+endsnippet

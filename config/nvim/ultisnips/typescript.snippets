@@ -1,0 +1,86 @@
+snippet rh "Typescript React Functional Component"
+import React from 'react';
+
+interface `!p snip.rv = snip.basename`Props {$1}
+
+export const `!p snip.rv = snip.basename`: React.FC<`!p snip.rv = snip.basename`Props> = ($2) => {
+	return ($3)
+}
+endsnippet
+
+snippet rpc "Typescript React PureComponent"
+import React from 'react';
+
+export class `!p snip.rv = snip.basename` extends React.PureComponent {
+	render() {
+		return ($1)
+	}
+}
+endsnippet
+
+snippet st "Typescript React useState hook"
+const [$1, $2] = React.useState($3);
+endsnippet
+
+snippet server "Simple express server boilerplate"
+import express, { Request, Response } from 'express';
+
+const app = express();
+const port = 5000;
+
+app.get('/', (_: Request, res: Response) => {
+	res.send('Hello, world!');
+})
+
+app.listen(port, () => {
+	console.log(`Server started on port: ${port}`)
+})
+endsnippet
+
+snippet fn "function"
+const $1 = () => {
+	$2
+}
+endsnippet
+
+snippet fe "forEach"
+$1.forEach((item: $2) => {
+	$3
+})
+endsnippet
+
+snippet mp "map"
+$1.map((item: $2, idx: number) => {
+	$3
+})
+endsnippet
+
+snippet doc "doc tags"
+/*
+$1
+*/
+endsnippet
+
+snippet div "div tag"
+<div>
+	$1
+</div>
+endsnippet
+
+snippet cl "console.log"
+console.log($1);
+endsnippet
+
+snippet if "if statement"
+if ($1) {
+	$2
+}
+endsnippet
+
+snippet try "try catch"
+try {
+	$1
+} catch(err) {
+	console.log(err);
+}
+endsnippet
