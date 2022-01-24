@@ -1,3 +1,0 @@
-#!/bin/bash
-
-brew upgrade && brew cleanup
