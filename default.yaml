@@ -5,20 +5,20 @@
 - clean: ['~']
 
 - link:
-    ~/.vim: vim
-    ~/.vimrc: .vimrc
-    ~/.config: config
-    ~/.gitconfig: git/gitconfig
-    ~/.hooks: hooks
-    ~/.bash_profile: .bash_profile
-    ~/.bashrc: .bashrc
-    ~/.functions: .functions
-    ~/.aliases: .aliases
-    ~/.vscode: vscode
-    ~/.hushlogin: config/hushlogin
-    ~/.submodules: submodules
-    ~/.bin: bin
-    ~/Brewfile: brew/Brewfile
+  ~/.Brewfile: brew/Brewfile
+  ~/.aliases: .aliases
+  ~/.bash_profile: .bash_profile
+  ~/.bashrc: .bashrc
+  ~/.bin: bin
+  ~/.config: config
+  ~/.functions: .functions
+  ~/.gitconfig: git/gitconfig
+  ~/.hooks: hooks
+  ~/.hushlogin: config/hushlogin
+  ~/.submodules: submodules
+  ~/.vim: vim
+  ~/.vimrc: .vimrc
+  ~/.vscode: vscode
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
