@@ -1,13 +1,13 @@
 -- Automatically generated packer.nvim plugin loader code
 
-if vim.api.nvim_call_function("has", { "nvim-0.5" }) ~= 1 then
+if vim.api.nvim_call_function('has', { 'nvim-0.5' }) ~= 1 then
   vim.api.nvim_command(
     'echohl WarningMsg | echom "Invalid Neovim version for packer.nvim! | echohl None"'
   )
   return
 end
 
-vim.api.nvim_command("packadd packer.nvim")
+vim.api.nvim_command('packadd packer.nvim')
 
 local no_errors, error_msg = pcall(function()
   local time
@@ -38,7 +38,7 @@ local no_errors, error_msg = pcall(function()
     local results = {}
     for i, elem in ipairs(sorted_times) do
       if not threshold or threshold and elem[2] > threshold then
-        results[i] = elem[1] .. " took " .. elem[2] .. "ms"
+        results[i] = elem[1] .. ' took ' .. elem[2] .. 'ms'
       end
     end
 
@@ -48,15 +48,15 @@ local no_errors, error_msg = pcall(function()
 
   time([[Luarocks path setup]], true)
   local package_path_str =
-    "/Users/liam/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+    '/Users/liam/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua'
   local install_cpath_pattern =
-    "/Users/liam/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+    '/Users/liam/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so'
   if not string.find(package.path, package_path_str, 1, true) then
-    package.path = package.path .. ";" .. package_path_str
+    package.path = package.path .. ';' .. package_path_str
   end
 
   if not string.find(package.cpath, install_cpath_pattern, 1, true) then
-    package.cpath = package.cpath .. ";" .. install_cpath_pattern
+    package.cpath = package.cpath .. ';' .. install_cpath_pattern
   end
 
   time([[Luarocks path setup]], false)
@@ -66,11 +66,11 @@ local no_errors, error_msg = pcall(function()
     if not success then
       vim.schedule(function()
         vim.api.nvim_notify(
-          "packer.nvim: Error running "
+          'packer.nvim: Error running '
             .. component
-            .. " for "
+            .. ' for '
             .. name
-            .. ": "
+            .. ': '
             .. result,
           vim.log.levels.ERROR,
           {}
@@ -85,134 +85,134 @@ local no_errors, error_msg = pcall(function()
   _G.packer_plugins = {
     ale = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/ale",
-      url = "https://github.com/dense-analysis/ale",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/ale',
+      url = 'https://github.com/dense-analysis/ale',
     },
-    ["barbar.nvim"] = {
+    ['barbar.nvim'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-      url = "https://github.com/romgrk/barbar.nvim",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/barbar.nvim',
+      url = 'https://github.com/romgrk/barbar.nvim',
     },
-    ["editorconfig-vim"] = {
+    ['editorconfig-vim'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/editorconfig-vim",
-      url = "https://github.com/editorconfig/editorconfig-vim",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/editorconfig-vim',
+      url = 'https://github.com/editorconfig/editorconfig-vim',
     },
-    ["lualine.nvim"] = {
+    ['lualine.nvim'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-      url = "https://github.com/hoob3rt/lualine.nvim",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/lualine.nvim',
+      url = 'https://github.com/hoob3rt/lualine.nvim',
     },
-    ["nvim-autopairs"] = {
+    ['nvim-autopairs'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
-      url = "https://github.com/windwp/nvim-autopairs",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-autopairs',
+      url = 'https://github.com/windwp/nvim-autopairs',
     },
-    ["nvim-lspconfig"] = {
+    ['nvim-lspconfig'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
-      url = "https://github.com/neovim/nvim-lspconfig",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-lspconfig',
+      url = 'https://github.com/neovim/nvim-lspconfig',
     },
-    ["nvim-treesitter"] = {
+    ['nvim-treesitter'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
-      url = "https://github.com/nvim-treesitter/nvim-treesitter",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-treesitter',
+      url = 'https://github.com/nvim-treesitter/nvim-treesitter',
     },
-    ["nvim-web-devicons"] = {
+    ['nvim-web-devicons'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-      url = "https://github.com/kyazdani42/nvim-web-devicons",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-web-devicons',
+      url = 'https://github.com/kyazdani42/nvim-web-devicons',
     },
-    ["packer.nvim"] = {
+    ['packer.nvim'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/packer.nvim",
-      url = "https://github.com/wbthomason/packer.nvim",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/packer.nvim',
+      url = 'https://github.com/wbthomason/packer.nvim',
     },
     playground = {
-      commands = { "TSPlaygroundToggle" },
+      commands = { 'TSPlaygroundToggle' },
       loaded = false,
       needs_bufread = true,
       only_cond = false,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/opt/playground",
-      url = "https://github.com/nvim-treesitter/playground",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/opt/playground',
+      url = 'https://github.com/nvim-treesitter/playground',
     },
-    ["plenary.nvim"] = {
+    ['plenary.nvim'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/plenary.nvim",
-      url = "https://github.com/nvim-lua/plenary.nvim",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/plenary.nvim',
+      url = 'https://github.com/nvim-lua/plenary.nvim',
     },
-    ["popup.nvim"] = {
+    ['popup.nvim'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/popup.nvim",
-      url = "https://github.com/nvim-lua/popup.nvim",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/popup.nvim',
+      url = 'https://github.com/nvim-lua/popup.nvim',
     },
-    ["rust.vim"] = {
+    ['rust.vim'] = {
       loaded = false,
       needs_bufread = true,
       only_cond = false,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim",
-      url = "https://github.com/rust-lang/rust.vim",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim',
+      url = 'https://github.com/rust-lang/rust.vim',
     },
     tabular = {
       after_files = {
-        "/Users/liam/.local/share/nvim/site/pack/packer/opt/tabular/after/plugin/TabularMaps.vim",
+        '/Users/liam/.local/share/nvim/site/pack/packer/opt/tabular/after/plugin/TabularMaps.vim',
       },
-      commands = { "Tabularize" },
+      commands = { 'Tabularize' },
       loaded = false,
       needs_bufread = false,
       only_cond = false,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/opt/tabular",
-      url = "https://github.com/godlygeek/tabular",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/opt/tabular',
+      url = 'https://github.com/godlygeek/tabular',
     },
-    ["telescope.nvim"] = {
+    ['telescope.nvim'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/telescope.nvim",
-      url = "https://github.com/nvim-telescope/telescope.nvim",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/telescope.nvim',
+      url = 'https://github.com/nvim-telescope/telescope.nvim',
     },
-    ["vim-commentary"] = {
+    ['vim-commentary'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/vim-commentary",
-      url = "https://github.com/tpope/vim-commentary",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/vim-commentary',
+      url = 'https://github.com/tpope/vim-commentary',
     },
-    ["vim-easy-align"] = {
+    ['vim-easy-align'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/vim-easy-align",
-      url = "https://github.com/junegunn/vim-easy-align",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/vim-easy-align',
+      url = 'https://github.com/junegunn/vim-easy-align',
     },
-    ["vim-just"] = {
+    ['vim-just'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/vim-just",
-      url = "https://github.com/NoahTheDuke/vim-just",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/vim-just',
+      url = 'https://github.com/NoahTheDuke/vim-just',
     },
-    ["vim-markdown"] = {
+    ['vim-markdown'] = {
       loaded = false,
       needs_bufread = true,
       only_cond = false,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown",
-      url = "https://github.com/plasticboy/vim-markdown",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown',
+      url = 'https://github.com/plasticboy/vim-markdown',
     },
-    ["vim-markdown-composer"] = {
-      commands = { "ComposerStart" },
+    ['vim-markdown-composer'] = {
+      commands = { 'ComposerStart' },
       loaded = false,
       needs_bufread = true,
       only_cond = false,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown-composer",
-      url = "https://github.com/euclio/vim-markdown-composer",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown-composer',
+      url = 'https://github.com/euclio/vim-markdown-composer',
     },
-    ["vim-rooter"] = {
+    ['vim-rooter'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/vim-rooter",
-      url = "https://github.com/airblade/vim-rooter",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/vim-rooter',
+      url = 'https://github.com/airblade/vim-rooter',
     },
-    ["vim-startify"] = {
+    ['vim-startify'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/vim-startify",
-      url = "https://github.com/mhinz/vim-startify",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/vim-startify',
+      url = 'https://github.com/mhinz/vim-startify',
     },
-    ["vim-toml"] = {
+    ['vim-toml'] = {
       loaded = true,
-      path = "/Users/liam/.local/share/nvim/site/pack/packer/start/vim-toml",
-      url = "https://github.com/cespare/vim-toml",
+      path = '/Users/liam/.local/share/nvim/site/pack/packer/start/vim-toml',
+      url = 'https://github.com/cespare/vim-toml',
     },
   }
 
@@ -245,7 +245,7 @@ local no_errors, error_msg = pcall(function()
     [[au FileType rust ++once lua require("packer.load")({'rust.vim'}, { ft = "rust" }, _G.packer_plugins)]]
   )
   time([[Defining lazy-load filetype autocommands]], false)
-  vim.cmd("augroup END")
+  vim.cmd('augroup END')
   vim.cmd([[augroup filetypedetect]])
   time(
     [[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]],
@@ -269,7 +269,7 @@ local no_errors, error_msg = pcall(function()
     [[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]],
     false
   )
-  vim.cmd("augroup END")
+  vim.cmd('augroup END')
   if should_profile then
     save_profiles()
   end
