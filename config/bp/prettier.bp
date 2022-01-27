@@ -1,0 +1,11 @@
+---
+filename: .prettierrc
+tabWidth: 2
+---
+{
+  "trailingComma": "es5",
+  "tabWidth": {%tabWidth%},
+  "semi": true,
+  "singleQuote": true,
+  "jsxSingleQuote": true
+}
