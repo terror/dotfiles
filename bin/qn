@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess as sp
+import tempfile
+
+P = os.path.expanduser('~/Dropbox/Notes/Inbox')
+
+def main(editor):
+  with tempfile.NamedTemporaryFile(suffix = '.md', mode = 'w+t') as temp:
+    sp.call([editor, temp.name])
+    temp.seek(0)
+    with open(os.path.join(P, f'{input("Name: ")}.md'), 'w+') as note:
+      note.write(temp.read())
+
+if __name__ == '__main__':
+  try:
+    main(os.environ.get('EDITOR'))
+  except Exception as error:
+    print(f'error: {str(error)}')
