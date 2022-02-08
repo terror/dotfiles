@@ -5,6 +5,9 @@ email = liam@scalzulli.com
 [github]
 user = terror
 
+[commit]
+verbose = True
+
 [core]
 editor       = nvim
 pager        = delta
