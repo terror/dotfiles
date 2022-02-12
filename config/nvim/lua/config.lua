@@ -7,7 +7,9 @@ local g = vim.g
 -- │ Telescope                                                                  │
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
-require('telescope').setup({
+local telescope = require('telescope')
+
+telescope.setup({
   defaults = {
     vimgrep_arguments = {
       'rg',
@@ -49,6 +51,12 @@ require('telescope').setup({
     qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
   },
 })
+
+-- Load all extensions
+local extensions = { 'file_browser' }
+for _, extension in ipairs(extensions) do
+  telescope.load_extension(extension)
+end
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Treesitter                                                                 │
@@ -233,6 +241,23 @@ for _, server in ipairs(servers) do
     },
   })
 end
+
+local configs = require('lspconfig.configs')
+
+if not configs.just_lsp then
+  configs.just_lsp = {
+    default_config = {
+      cmd = { '/Users/liam/src/just-lsp/run' },
+      filetypes = { 'just' },
+      root_dir = function(name)
+        return lsp.util.find_git_ancestor(name)
+      end,
+      settings = {},
+    },
+  }
+end
+
+lsp.just_lsp.setup({})
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Lualine                                                                    │

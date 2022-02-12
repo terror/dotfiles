@@ -98,6 +98,9 @@ return require('packer').startup(function()
     },
   })
 
+  -- Telescope file browser
+  use({ 'nvim-telescope/telescope-file-browser.nvim' })
+
   -- Treesitter playground
   use({
     'nvim-treesitter/playground',

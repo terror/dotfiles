@@ -39,6 +39,7 @@ map('n', '^', '0')
 map('n', 'n', 'nzzzv')
 map('o', 'b', 'i[')
 map('o', 'p', 'i(')
+map('v', '<c-j>', '<esc>')
 map('v', '<leader>a"', ':Tabularize /"<cr>')
 map('v', '<leader>a#', ':Tabularize /#<cr>')
 map('v', '<leader>a:', ':Tabularize /:<cr>')
@@ -70,12 +71,9 @@ map(
 map(
   'n',
   '<c-p>',
-  strip([[
-    <cmd>
-    lua require(
-      'telescope.builtin'
-    ).file_browser()
-    <cr>
-  ]]),
+  ':Telescope file_browser<cr>',
   { noremap = true, silent = true }
 )
+
+-- Open `lsp.log`
+map('n', '<leader>ll', ":lua vim.cmd(':e' .. vim.lsp.get_log_path())<cr>")
