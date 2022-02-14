@@ -1,1 +1,55 @@
-source ~/.vimrc
+set nocompatible
+filetype off
+
+let mapleader = "\<space>"
+
+set ai
+set autochdir
+set autoread
+set backup
+set expandtab
+set hidden
+set hlsearch
+set ignorecase
+set incsearch
+set linebreak
+set noerrorbells
+set nofoldenable
+set ruler
+set showcmd
+set smartcase
+set smartindent
+set splitbelow
+set splitright
+set title
+set undofile
+set wrap
+
+set background=dark
+set backspace=indent,eol,start
+set belloff=all
+set clipboard=unnamed
+set foldmethod=marker
+set mouse=a
+set numberwidth=1
+set shiftwidth=2
+set tabpagemax=30
+set tabstop=2
+set textwidth=120
+
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+inoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <up> <nop>
+
+nnoremap 0 ^
+nnoremap Q <nop>
+nnoremap ^ 0
+
+onoremap b i[
+onoremap in( :<c-u>normal! f(vi(<cr>
+onoremap p i(
+
+vnoremap <leader>s :sort<cr>
