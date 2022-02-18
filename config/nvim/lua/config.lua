@@ -89,6 +89,9 @@ require('nvim-treesitter.configs').setup({
   },
 })
 
+-- Setup just TS parser
+require('tree-sitter-just').setup({})
+
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Bufferline                                                                 │
 -- ╚────────────────────────────────────────────────────────────────────────────│
@@ -247,7 +250,7 @@ local configs = require('lspconfig.configs')
 if not configs.just_lsp then
   configs.just_lsp = {
     default_config = {
-      cmd = { '/Users/liam/src/just-lsp/run' },
+      cmd = { '/Users/liam/src/just-lsp/bin/start' },
       filetypes = { 'just' },
       root_dir = function(name)
         return lsp.util.find_git_ancestor(name)

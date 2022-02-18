@@ -60,6 +60,9 @@ return require('packer').startup(function()
   -- View LSP startup progress
   use('arkav/lualine-lsp-progress')
 
+  -- Treesitter parser for just
+  use ("IndianBoy42/tree-sitter-just")
+
   -- Preview markdown files in the browser
   use({
     'euclio/vim-markdown-composer',
