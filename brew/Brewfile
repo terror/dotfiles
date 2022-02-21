@@ -32,6 +32,9 @@ brew "pango"
 # Icons for the GNOME project
 brew "adwaita-icon-theme"
 
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
+
 # Record and share terminal sessions
 brew "asciinema"
 
@@ -40,6 +43,9 @@ brew "bash"
 
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+
+# Decentralized, peer to peer payment network
+brew "bitcoin"
 
 # Glorious Glasgow Haskell Compilation System
 brew "ghc"
@@ -57,16 +63,16 @@ brew "cmake"
 brew "discount"
 
 # Create Docker hosts locally and on cloud providers
-brew "docker-machine", restart_service: true
+brew "docker-machine"
 
 # GNU Ubiquitous Intelligent Language for Extensions
 brew "guile"
 
 # Validating, recursive, caching DNS resolver
-brew "unbound", restart_service: true
+brew "unbound"
 
 # GNU Emacs text editor
-brew "emacs", restart_service: true
+brew "emacs"
 
 # Calculator REPL, similar to bc(1)
 brew "eva"
@@ -144,7 +150,7 @@ brew "meson"
 brew "mit-scheme"
 
 # Open source relational database management system
-brew "mysql", restart_service: true
+brew "mysql"
 
 # Open source relational database management system
 brew "mysql@5.7"
@@ -159,7 +165,7 @@ brew "neofetch"
 brew "neovim"
 
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
-brew "nginx", restart_service: true
+brew "nginx"
 
 # Platform built on V8 to build network applications
 brew "node", link: false
@@ -188,6 +194,9 @@ brew "postgresql@12", restart_service: true
 # Static type checker for Python
 brew "pyright"
 
+# Software environment for statistical computing
+brew "r"
+
 # Persistent key-value database, with built-in net interface
 brew "redis", restart_service: true
 
@@ -214,6 +223,9 @@ brew "sphinx-doc"
 
 # Cross-shell prompt for astronauts
 brew "starship"
+
+# User interface to the TELNET protocol
+brew "telnet"
 
 # Programmatically correct mistyped console commands
 brew "thefuck"
@@ -276,15 +288,23 @@ cask "adoptopenjdk8"
 # Application launcher and productivity software
 cask "alfred"
 
+# Bitcoin client and wallet
+cask "bitcoin-core"
+
+# Virtual Audio Driver
+cask "blackhole-2ch"
+
 # E-books management software
 cask "calibre"
 
 # App to build and share containerized applications and microservices
 cask "docker"
 
+# Developer platform
+cask "dotnet-sdk"
+
 # Matrix collaboration client
 cask "element"
-
 cask "font-caskaydia-cove-nerd-font"
 
 # Terminal emulator as alternative to Apple's Terminal app
@@ -295,6 +315,9 @@ cask "kindle"
 
 # Full TeX Live distribution with GUI applications
 cask "mactex"
+
+# Free and open-source RSS reader
+cask "netnewswire"
 
 # App to write, plan, collaborate, and get organized
 cask "notion"
