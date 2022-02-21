@@ -63,6 +63,9 @@ return require('packer').startup(function()
   -- Treesitter parser for just
   use ("IndianBoy42/tree-sitter-just")
 
+  -- Plant UML syntax
+  use ("aklt/plantuml-syntax")
+
   -- Preview markdown files in the browser
   use({
     'euclio/vim-markdown-composer',
