@@ -1,0 +1,26 @@
+#!/bin/bash
+
+dirs=("src" "dropbox/code")
+start=$SECONDS
+count=0
+
+function clean() {
+  for project in $(fd -a . "$HOME"/"$1" -d 1); do
+    if [ -f "$project/Cargo.toml" ]; then
+      echo "[~] Cleaning $(basename "$project")"
+      cd "$project" && cargo clean
+      ((count += 1))
+    fi
+  done
+}
+
+function run() {
+  dirs=("$@")
+  for dir in "${dirs[@]}"; do
+    echo "Cleaning rust projects in ${dir}..."
+    clean "$dir"
+  done
+  echo "Cleaned $count projects in $((SECONDS - start))s."
+}
+
+run "${dirs[@]}"
