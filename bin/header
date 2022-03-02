@@ -1,0 +1,6 @@
+#!/bin/bash
+
+name="$1"
+delim="$2"
+
+figlet -f graffiti "$name" | sed -e "s+^+$delim +" | pbcopy
