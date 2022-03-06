@@ -1,3 +1,4 @@
+export GOPATH="$HOME/.go"
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/Desktop/contest-cli:$PATH"
@@ -8,6 +9,7 @@ export PATH="/usr/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/sbin:$PATH"
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 if [ -f "$HOME"/.bashrc ]; then
   source "$HOME"/.bashrc
