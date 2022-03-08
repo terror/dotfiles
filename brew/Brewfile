@@ -65,6 +65,9 @@ brew "discount"
 # Create Docker hosts locally and on cloud providers
 brew "docker-machine"
 
+# More intuitive version of du in rust
+brew "dust"
+
 # GNU Ubiquitous Intelligent Language for Extensions
 brew "guile"
 
@@ -79,6 +82,9 @@ brew "eva"
 
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+
+# Banner-like program prints strings as ASCII art
+brew "figlet"
 
 # Command-line fuzzy finder written in Go
 brew "fzf"
@@ -103,6 +109,12 @@ brew "gnuplot"
 
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+
+# Fast linters runner for Go
+brew "golangci-lint"
+
+# Language server for the Go language
+brew "gopls"
 
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
@@ -153,7 +165,7 @@ brew "mit-scheme"
 brew "mysql"
 
 # Open source relational database management system
-brew "mysql@5.7"
+brew "mysql@5.7", restart_service: true
 
 # Netwide Assembler (NASM) is an 80x86 assembler
 brew "nasm"
@@ -165,7 +177,7 @@ brew "neofetch"
 brew "neovim"
 
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
-brew "nginx"
+brew "nginx", restart_service: true
 
 # Platform built on V8 to build network applications
 brew "node", link: false
