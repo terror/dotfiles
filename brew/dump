@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -euo pipefail
+
+brew leaves > leaves
+brew list --cask > casks
