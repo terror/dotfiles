@@ -18,7 +18,7 @@ export NVM_DIR="$HOME/.nvm"
 export PAGER=less
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
 export SAVEHIST=5000000
-export TERM=xterm-color
+export TERM=xterm-256color
 export VISUAL=nvim
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
