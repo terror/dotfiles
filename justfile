@@ -2,6 +2,9 @@ default:
   git submodule update --init --recursive .
   SHELL=sh ./submodules/dotbot/bin/dotbot -c default.yaml
 
+all:
+  formulae rustup crates
+
 rustup:
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
@@ -14,6 +17,7 @@ crates:
   cargo install fd
   cargo install just
   cargo install loc
+  cargo install present
   cargo install ripgrep
   cargo install stylua
   cargo install typos-cli
