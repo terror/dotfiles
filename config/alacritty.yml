@@ -5,6 +5,9 @@ shell:
   args:
     - --login
 
+env:
+  TERM: xterm-256color
+
 window:
   dimensions:
     columns: 199
@@ -214,7 +217,7 @@ dark: &dark
     background: '0x151718'
     foreground: '0xd6d6d6'
   cursor:
-    text: '0x151718'
+    text:   '0x151718'
     cursor: '0xd6d6d6'
   normal:
     black:   '0x151718'
@@ -227,12 +230,12 @@ dark: &dark
     white:   '0xd6d6d6'
   bright:
     black:   '0x41535b'
-    red:     '0xdb7b55'
-    green:   '0x282a2b'
-    yellow:  '0x3b758c'
-    blue:    '0x43a5d5'
-    magenta: '0xeeeeee'
-    cyan:    '0x8a553f'
+    red:     '0xcd3f45'
+    green:   '0x9fca56'
+    yellow:  '0xe6cd69'
+    blue:    '0x55b5db'
+    magenta: '0xa074c4'
+    cyan:    '0x55dbbe'
     white:   '0xffffff'
 
 light: &light
@@ -240,25 +243,25 @@ light: &light
     background: '0xfefbec'
     foreground: '0x6e6b5e'
   cursor:
-    text: '0xfefbec'
+    text:   '0xfefbec'
     cursor: '0x6e6b5e'
   normal:
-    black:   '0xfefbec'
-    red:     '0xd73737'
-    green:   '0x60ac39'
-    yellow:  '0xae9513'
-    blue:    '0x6684e1'
-    magenta: '0xb854d4'
-    cyan:    '0x1fad83'
-    white:   '0x6e6b5e'
+    black:   '0x151718'
+    red:     '0xcd3f45'
+    green:   '0x9fca56'
+    yellow:  '0xe6cd69'
+    blue:    '0x55b5db'
+    magenta: '0xa074c4'
+    cyan:    '0x55dbbe'
+    white:   '0xd6d6d6'
   bright:
-    black:   '0x999580'
-    red:     '0xd73737'
-    green:   '0x60ac39'
-    yellow:  '0xae9513'
-    blue:    '0x6684e1'
-    magenta: '0xb854d4'
-    cyan:    '0x1fad83'
-    white:   '0x6e6b5e'
+    black:   '0x41535b'
+    red:     '0xcd3f45'
+    green:   '0x9fca56'
+    yellow:  '0xe6cd69'
+    blue:    '0x55b5db'
+    magenta: '0xa074c4'
+    cyan:    '0x55dbbe'
+    white:   '0xffffff'
 
 colors: *dark
