@@ -230,7 +230,9 @@ local on_attach = function(client)
   map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
 end
 
-local servers = { 'rust_analyzer', 'pyright' }
+-- TODO: Find better approach, some servers may not share the
+--       same settings.
+local servers = { 'rust_analyzer', 'pyright', 'gopls' }
 for _, server in ipairs(servers) do
   lsp[server].setup({
     on_attach = on_attach,
@@ -286,3 +288,10 @@ require('lualine').setup({
 g.UltiSnipsExpandTrigger = '<tab>'
 g.UltiSnipsJumpBackwardTrigger = '<c-z>'
 g.UltiSnipsJumpForwardTrigger = '<c-b>'
+
+-- ───────────────────────────────────────────────────────────────────────────-─╗
+-- │ Vimtex                                                                     │
+-- ╚────────────────────────────────────────────────────────────────────────────│
+
+g.vimtex_view_method = 'general'
+g.vimtex_compiler_method = 'tectonic'

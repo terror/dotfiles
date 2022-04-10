@@ -61,10 +61,19 @@ return require('packer').startup(function()
   use('arkav/lualine-lsp-progress')
 
   -- Treesitter parser for just
-  use ("IndianBoy42/tree-sitter-just")
+  use('IndianBoy42/tree-sitter-just')
 
   -- Plant UML syntax
-  use ("aklt/plantuml-syntax")
+  use('aklt/plantuml-syntax')
+
+  -- Distraction free writing
+  use('junegunn/goyo.vim')
+
+  -- A better latex editing experience
+  use({
+    'lervag/vimtex',
+    ft = 'tex',
+  })
 
   -- Preview markdown files in the browser
   use({
