@@ -2,32 +2,35 @@
 filename: justfile
 build: +nightly
 ---
-ci: build test clippy fmt-check
+default:
+  just --list
+
+all: build test clippy fmt-check
 
 build:
-	cargo build
+  cargo build
 
-test:
-	cargo test
+check:
+ cargo check
 
 clippy:
   cargo clippy --all-targets --all-features
+
+fmt:
+  cargo {%build%} fmt
 
 fmt-check:
   cargo {%build%} fmt --all -- --check
   @echo formatting check done
 
 run *args:
-	cargo run -- --{{args}}
+  cargo run -- --{{args}}
 
-fmt:
-	cargo {%build%} fmt
-
-check:
- cargo check
-
-watch +COMMAND='test':
-	cargo watch --clear --exec "{{COMMAND}}"
+test:
+  cargo test
 
 usage:
-	cargo run -- --help | pbcopy
+  cargo run -- --help | pbcopy
+
+watch +COMMAND='test':
+  cargo watch --clear --exec "{{COMMAND}}"
