@@ -19,7 +19,7 @@ augroup({
     },
     {
       'VimEnter,BufEnter',
-      '*.md',
+      '*.md,*.tex',
       'lua setup_markdown()',
     },
     {
