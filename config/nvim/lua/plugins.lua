@@ -69,6 +69,9 @@ return require('packer').startup(function()
   -- Distraction free writing
   use('junegunn/goyo.vim')
 
+  -- GLSL syntax highlighting
+  use ("tikhomirov/vim-glsl");
+
   -- A better latex editing experience
   use({
     'lervag/vimtex',
