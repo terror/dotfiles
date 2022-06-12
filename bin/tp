@@ -1,5 +1,5 @@
 #!/bin/bash
 
-pushd ~/fun/10ff || exit
+pushd ~/src/10ff || exit
 python3 -m 10ff
 popd || exit
