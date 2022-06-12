@@ -38,6 +38,9 @@ brew "python@3.10"
 # Record and share terminal sessions
 brew "asciinema"
 
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
+
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 
@@ -95,6 +98,9 @@ brew "gawk"
 # GNU compiler collection
 brew "gcc"
 
+# GNU debugger
+brew "gdb"
+
 # GitHub command-line tool
 brew "gh"
 
@@ -131,6 +137,9 @@ brew "hlint"
 # Improved top (interactive process viewer)
 brew "htop"
 
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
+
 # Configurable static site generator
 brew "hugo"
 
@@ -149,6 +158,9 @@ brew "python@3.8"
 # Library that provides automatic proxy configuration management
 brew "libproxy"
 
+# Library for USB device access
+brew "libusb"
+
 # Next-gen compiler infrastructure
 brew "llvm"
 
@@ -165,7 +177,7 @@ brew "mit-scheme"
 brew "mysql"
 
 # Open source relational database management system
-brew "mysql@5.7", restart_service: true
+brew "mysql@5.7"
 
 # Netwide Assembler (NASM) is an 80x86 assembler
 brew "nasm"
@@ -185,6 +197,9 @@ brew "node", link: false
 # OCaml package manager
 brew "opam"
 
+# Development kit for the Java programming language
+brew "openjdk"
+
 # Formatter for Haskell source code
 brew "ormolu"
 
@@ -203,6 +218,9 @@ brew "postgresql", restart_service: true
 # Object-relational database system
 brew "postgresql@12", restart_service: true
 
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+
 # Static type checker for Python
 brew "pyright"
 
@@ -217,6 +235,9 @@ brew "ripgrep"
 
 # Readline wrapper: adds readline support to tools that lack it
 brew "rlwrap"
+
+# Utility that provides fast incremental file transfer
+brew "rsync"
 
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
@@ -235,6 +256,9 @@ brew "sphinx-doc"
 
 # Cross-shell prompt for astronauts
 brew "starship"
+
+# Modernized, complete, self-contained TeX/LaTeX engine
+brew "tectonic"
 
 # User interface to the TELNET protocol
 brew "telnet"
@@ -291,17 +315,21 @@ brew "rhysd/actionlint/actionlint"
 brew "tlk/imagemagick-x11/imagemagick"
 
 brew "yudai/gotty/gotty"
-brew "zegervdv/zathura/zathura"
-brew "zegervdv/zathura/zathura-pdf-poppler"
 
-# Prebuilt OpenJDK binaries
-cask "adoptopenjdk8"
+brew "zegervdv/zathura/zathura"
+
+brew "zegervdv/zathura/zathura-pdf-poppler"
 
 # Application launcher and productivity software
 cask "alfred"
 
-# Bitcoin client and wallet
-cask "bitcoin-core"
+cask "android-sdk"
+
+# Memory training application
+cask "anki"
+
+# Compact TeX distribution as alternative to the full TeX Live / MacTeX
+cask "basictex"
 
 # Virtual Audio Driver
 cask "blackhole-2ch"
@@ -317,16 +345,16 @@ cask "dotnet-sdk"
 
 # Matrix collaboration client
 cask "element"
+
 cask "font-caskaydia-cove-nerd-font"
+
+cask "font-fira-code"
 
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 
 # Interface for reading and syncing eBooks
 cask "kindle"
-
-# Full TeX Live distribution with GUI applications
-cask "mactex"
 
 # Free and open-source RSS reader
 cask "netnewswire"
@@ -351,6 +379,3 @@ cask "visual-studio-code"
 
 # Open-source version of the X.Org X Window System
 cask "xquartz"
-
-# Collect, organize, cite, and share research sources
-cask "zotero"
