@@ -4,7 +4,6 @@
 alias c="cd ~/src/solutions"
 alias s="cd ~/src"
 alias jac="cd ~/src/jac"
-alias nn="cd ~/src/notes"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 # from https://github.com/mathiasbynens/dotfiles/blob/main/.aliases
