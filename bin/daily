@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -euxo pipefail
+
+# Update homebrew and installed packages
+brew update && brew upgrade && brew cleanup
+
+# Update rust version
+rustup update
+
+# Recursively clean all rust projects
+rclean
+
+# Sync /src with dropbox
+rsync -auv --delete "$HOME/src/" "$HOME/dropbox/code"
