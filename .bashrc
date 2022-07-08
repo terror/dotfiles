@@ -9,7 +9,7 @@ export HISTSIZE=5500000
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOST=$(hostname)
 export KEYTIMEOUT=1
-export LANG=en_US.UTF-8
+export LANG=en_CA.UTF-8
 export LESS=-ifRMx2
 export LS_OPTIONS='--color=auto'
 export MANPAGER='nvim +Man!'
