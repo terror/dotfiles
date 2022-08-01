@@ -14,11 +14,11 @@ tap "tlk/imagemagick-x11"
 tap "yudai/gotty"
 tap "zegervdv/zathura"
 
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
-
 # Core application library for C
 brew "glib"
+
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 
 # Generate introspection data for GObject libraries
 brew "gobject-introspection"
@@ -191,6 +191,9 @@ brew "neovim"
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx", restart_service: true
 
+# Statically typed compiled systems programming language
+brew "nim"
+
 # Platform built on V8 to build network applications
 brew "node", link: false
 
@@ -206,9 +209,6 @@ brew "ormolu"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 
-# Cross-platform application and UI framework
-brew "qt"
-
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 
@@ -218,11 +218,17 @@ brew "postgresql", restart_service: true
 # Object-relational database system
 brew "postgresql@12", restart_service: true
 
+# Linter for prose
+brew "proselint"
+
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 
 # Static type checker for Python
 brew "pyright"
+
+# Cross-platform application and UI framework
+brew "qt"
 
 # Software environment for statistical computing
 brew "r"
@@ -337,6 +343,9 @@ cask "blackhole-2ch"
 # E-books management software
 cask "calibre"
 
+# Browser for SQLite databases
+cask "db-browser-for-sqlite"
+
 # App to build and share containerized applications and microservices
 cask "docker"
 
@@ -355,6 +364,9 @@ cask "iterm2"
 
 # Interface for reading and syncing eBooks
 cask "kindle"
+
+# Explore and manipulate your MongoDB data
+cask "mongodb-compass"
 
 # Free and open-source RSS reader
 cask "netnewswire"
