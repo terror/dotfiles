@@ -27,3 +27,14 @@ snippet prop "proposition"
   $1
 \end{proposition}
 endsnippet
+
+snippet graph "graph"
+\begin{center}
+  \begin{tikzpicture}[main/.style = {draw, circle}]
+    $1
+    \node[main] (1) {$a$};
+    \node[main] (2) [below of=1] {$b$};
+    \draw (1) -- (2);
+  \end{tikzpicture}
+\end{center}
+endsnippet
