@@ -45,7 +45,7 @@ return require('packer').startup(function()
   -- Package manager
   use('wbthomason/packer.nvim')
 
-  -- Pair completing
+  -- Pair completion
   use('windwp/nvim-autopairs')
 
   -- Toml syntax
@@ -70,11 +70,23 @@ return require('packer').startup(function()
   use('junegunn/goyo.vim')
 
   -- GLSL syntax highlighting
-  use ("tikhomirov/vim-glsl");
+  use('tikhomirov/vim-glsl')
+
+  -- Nim syntax highlighting
+  use ('zah/nim.vim')
+
+  -- Telescope file browser
+  use({ 'nvim-telescope/telescope-file-browser.nvim' })
 
   -- A better latex editing experience
   use({
     'lervag/vimtex',
+    ft = 'tex',
+  })
+
+  -- Latex concealer
+  use({
+    'KeitaNakamura/tex-conceal.vim',
     ft = 'tex',
   })
 
@@ -115,9 +127,6 @@ return require('packer').startup(function()
       'nvim-lua/popup.nvim',
     },
   })
-
-  -- Telescope file browser
-  use({ 'nvim-telescope/telescope-file-browser.nvim' })
 
   -- Treesitter playground
   use({

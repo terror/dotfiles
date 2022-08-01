@@ -64,23 +64,25 @@ end
 
 require('nvim-treesitter.configs').setup({
   ensure_installed = {
+    'go',
+    'latex',
     'lua',
     'python',
-    'rust',
+    'rust'
   },
 
   highlight = {
-    enable = true
+    enable = true,
   },
 
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = "<cr>",
-      node_incremental = "grn",
-      scope_incremental = "grc",
-      node_decremental = "grm",
-    }
+      init_selection = '<cr>',
+      node_incremental = 'grn',
+      scope_incremental = 'grc',
+      node_decremental = 'grm',
+    },
   },
 
   playground = {
@@ -307,5 +309,8 @@ g.UltiSnipsJumpForwardTrigger = '<c-b>'
 -- │ Vimtex                                                                     │
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
-g.vimtex_view_method = 'general'
+g.tex_conceal = 'abdmg'
+g.tex_flavor = 'latex'
 g.vimtex_compiler_method = 'tectonic'
+g.vimtex_quickfix_mode = 0
+g.vimtex_view_method = 'zathura'
