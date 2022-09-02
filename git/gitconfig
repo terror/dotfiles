@@ -1,5 +1,5 @@
 [user]
-name  = Liam
+name = Liam
 email = liam@scalzulli.com
 
 [github]
@@ -9,19 +9,19 @@ user = terror
 verbose = True
 
 [core]
-editor       = nvim
-pager        = delta
+editor = nvim
 excludesfile = /Users/liam/.gitignore.global
-hooksPath    = "/Users/liam/.hooks"
+hooksPath = "/Users/liam/.hooks"
+pager = delta
 
 [web]
 browser = google-chrome
 
 [filter "lfs"]
-clean    = git-lfs clean -- %f
-process  = git-lfs filter-process
+clean = git-lfs clean -- %f
+process = git-lfs filter-process
 required = true
-smudge   = git-lfs smudge -- %f
+smudge = git-lfs smudge -- %f
 
 [pull]
 rebase = true
@@ -30,24 +30,24 @@ rebase = true
 autoStash = true
 
 [alias]
-f     = fetch
-fu    = fetch upstream master
-last  = log -1 HEAD
-lg    = log --oneline
-p     = pull
-rmc   = rm -r --cached .
-hash  = rev-parse HEAD
+cl = clone
+cld = clone --depth 1
+f = fetch
+fu = fetch upstream master
+hash = rev-parse HEAD
+last = log -1 HEAD
+lg = log --oneline
+p = pull
+rbi = rebase -i
+rmc = rm -r --cached .
+root = rev-parse --show-toplevel
 track = branch --set-upstream-to upstream/master master
-cl    = clone
-cld   = clone --depth 1
-rbi   = rebase -i
-root  = rev-parse --show-toplevel
 
 [delta]
-plus-style   = "syntax #012800"
-minus-style  = "syntax #340001"
+minus-style = "syntax #340001"
+navigate = true
+plus-style = "syntax #012800"
 syntax-theme = Monokai Extended
-navigate     = true
 
 [interactive]
 diffFilter = delta --color-only
