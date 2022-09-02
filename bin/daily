@@ -11,5 +11,8 @@ rustup update
 # Recursively clean all rust projects
 rclean
 
+# Remove all node modules from /src
+find "$HOME/src" -name 'node_modules' -type d -prune -exec rm -rf '{}' +
+
 # Sync /src with dropbox
 rsync -auv --delete "$HOME/src/" "$HOME/dropbox/code"
