@@ -25,7 +25,7 @@ dpi:
 font:
   normal:
     family: CaskaydiaCove Nerd Font
-    style:  Book
+    style:  Regular
 
   bold:
     family: CaskaydiaCove Nerd Font
