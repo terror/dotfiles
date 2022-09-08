@@ -77,8 +77,4 @@ map(
 )
 
 -- Open `lsp.log`
-map(
-  'n',
-  '<leader>ll',
-  ":lua vim.cmd(':e' .. vim.lsp.get_log_path())<cr>"
-)
+map('n', '<leader>ll', ":lua vim.cmd(':e' .. vim.lsp.get_log_path())<cr>")

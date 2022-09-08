@@ -65,10 +65,11 @@ end
 require('nvim-treesitter.configs').setup({
   ensure_installed = {
     'go',
+    'java',
     'latex',
     'lua',
     'python',
-    'rust'
+    'rust',
   },
 
   highlight = {
@@ -288,7 +289,7 @@ require('lualine').setup({
   options = {
     lower = true,
     theme = 'ayu_mirage',
-    icons_enabled = false,
+    icons_enabled = true,
   },
   sections = {
     lualine_a = { 'mode' },

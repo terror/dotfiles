@@ -36,9 +36,6 @@ return require('packer').startup(function()
   -- Support for treesitter
   use('nvim-treesitter/nvim-treesitter')
 
-  -- Tabline
-  use('romgrk/barbar.nvim')
-
   -- Comment stuff out
   use('tpope/vim-commentary')
 
@@ -73,7 +70,7 @@ return require('packer').startup(function()
   use('tikhomirov/vim-glsl')
 
   -- Nim syntax highlighting
-  use ('zah/nim.vim')
+  use('zah/nim.vim')
 
   -- Telescope file browser
   use({ 'nvim-telescope/telescope-file-browser.nvim' })
@@ -113,6 +110,15 @@ return require('packer').startup(function()
   -- Statusline
   use({
     'hoob3rt/lualine.nvim',
+    requires = {
+      'kyazdani42/nvim-web-devicons',
+      opt = true,
+    },
+  })
+
+  -- Tabline
+  use({
+    'romgrk/barbar.nvim',
     requires = {
       'kyazdani42/nvim-web-devicons',
       opt = true,
