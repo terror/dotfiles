@@ -73,7 +73,16 @@ return require('packer').startup(function()
   use('zah/nim.vim')
 
   -- Telescope file browser
-  use({ 'nvim-telescope/telescope-file-browser.nvim' })
+  use('nvim-telescope/telescope-file-browser.nvim')
+
+  -- Statusline
+  use('hoob3rt/lualine.nvim')
+
+  -- Tabline
+  use('romgrk/barbar.nvim')
+
+  -- Icons for status and tabline
+  use('kyazdani42/nvim-web-devicons')
 
   -- A better latex editing experience
   use({
@@ -105,24 +114,6 @@ return require('packer').startup(function()
   use({
     'plasticboy/vim-markdown',
     ft = 'markdown',
-  })
-
-  -- Statusline
-  use({
-    'hoob3rt/lualine.nvim',
-    requires = {
-      'kyazdani42/nvim-web-devicons',
-      opt = true,
-    },
-  })
-
-  -- Tabline
-  use({
-    'romgrk/barbar.nvim',
-    requires = {
-      'kyazdani42/nvim-web-devicons',
-      opt = true,
-    },
   })
 
   -- Fuzzy file finder
