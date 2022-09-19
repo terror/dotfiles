@@ -312,6 +312,6 @@ g.UltiSnipsJumpForwardTrigger = '<c-b>'
 
 g.tex_conceal = 'abdmg'
 g.tex_flavor = 'latex'
-g.vimtex_compiler_method = 'tectonic'
+g.vimtex_compiler_method = 'latexmk'
 g.vimtex_quickfix_mode = 0
 g.vimtex_view_method = 'zathura'
