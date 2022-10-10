@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function justfile() {
   cat << EOF
@@ -27,6 +27,7 @@ function main() {
     "README.md"
     "justfile"
   )
+
   for f in "${files[@]}"; do
     touch "$f"
   done

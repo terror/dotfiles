@@ -6,7 +6,7 @@
 import sys, os, subprocess as sp
 
 def e(*args, **kwargs):
-  print(*args, **kwargs, file = sys.stderr)
+  print(*args, **kwargs, file=sys.stderr)
 
 def die(*args, **kwargs):
   e(*args, **kwargs)

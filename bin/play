@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-function main() {
+main() {
   cd "$1" || exit
 
   if [ ! -p ./playground ]; then

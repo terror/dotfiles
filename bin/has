@@ -1,22 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-function has() {
+main() {
   case $1 in
-    b | B | brew)
-      brew list | rg "$2"
-      ;;
-    p | P | pip)
-      pip3 list | rg "$2"
-      ;;
-    c | C | cargo)
-      cargo install --list | rg "$2"
-      ;;
-    *)
-      echo 'Unknown package manager.'
-      ;;
+    b | B | brew) brew list | rg "$2";;
+    c | C | cargo) cargo install --list | rg "$2";;
+    p | P | pip) pip3 list | rg "$2";;
+    *) echo 'Unknown package manager.';;
   esac
 }
 
-if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
-  has "$1" "$2"
-fi
+main "$1" "$2"

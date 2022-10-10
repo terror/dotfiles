@@ -1,10 +1,10 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import os, argparse, enum, shutil
 
 class Arg(enum.Enum):
-  USE     = 1
-  SAVE    = 2
+  USE = 1
+  SAVE = 2
   UNKNOWN = 3
 
 class Utils:
@@ -45,7 +45,7 @@ class Handler:
 
     print(f'Justfile with name {name} does not exist.')
 
-  def save(self, path, name = File(os.getcwd()).name):
+  def save(self, path, name=File(os.getcwd()).name):
     candidate = File(path)
 
     if candidate.name.lower() != 'justfile':
@@ -63,8 +63,9 @@ def cli():
 def main(args, handler):
   arg, data = Utils.arg(args)
 
-  { Arg.USE    : handler.use,
-    Arg.SAVE   : handler.save,
+  {
+    Arg.USE: handler.use,
+    Arg.SAVE: handler.save,
     Arg.UNKNOWN: lambda x: print("Unknown argument.")
   }[arg](*data)
 
