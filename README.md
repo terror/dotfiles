@@ -7,7 +7,7 @@ My preferences for macOS. I use [dotbot](https://github.com/anishathalye/dotbot)
 ### ls /etc | less
 
 - [`bin`](https://github.com/terror/dotfiles/tree/master/bin): scripts
-- [`brewfile`](https://github.com/terror/dotfiles/blob/master/brew/Brewfile): programs
-- [`config`](https://github.com/terror/dotfiles/tree/master/config): configs to various apps
-- [`.vimrc`](https://github.com/terror/dotfiles/blob/master/.vimrc): vim config
-- [`.functions`](https://github.com/terror/dotfiles/blob/master/.functions): cool snippets (mostly scavenged)
+- [`brewfile`](https://github.com/terror/dotfiles/blob/master/brew/brewfile): programs
+- [`etc`](https://github.com/terror/dotfiles/tree/master/etc): various configuration files
+- [`nvim`](https://github.com/terror/dotfiles/tree/master/etc/nvim): neovim configuration
+- [`functions`](https://github.com/terror/dotfiles/blob/master/etc/bash/functions): miscellaneous bash snippets
