@@ -2,7 +2,7 @@
 
 My preferences for macOS. I use [dotbot](https://github.com/anishathalye/dotbot) to manage everything.
 
-![](./assets/neovim)
+![](./assets/neovim.png)
 
 ### ls /etc | less
 
