@@ -66,10 +66,13 @@ require('nvim-treesitter.configs').setup({
   ensure_installed = {
     'go',
     'java',
+    'javascript',
     'latex',
     'lua',
     'python',
     'rust',
+    'tsx',
+    'typescript'
   },
 
   highlight = {

@@ -1,4 +1,5 @@
 ## dotfiles
+
 My preferences for macOS. I use [dotbot](https://github.com/anishathalye/dotbot) to manage everything.
 
 ![](./assets/neovim)
@@ -10,4 +11,3 @@ My preferences for macOS. I use [dotbot](https://github.com/anishathalye/dotbot)
 - [`config`](https://github.com/terror/dotfiles/tree/master/config): configs to various apps
 - [`.vimrc`](https://github.com/terror/dotfiles/blob/master/.vimrc): vim config
 - [`.functions`](https://github.com/terror/dotfiles/blob/master/.functions): cool snippets (mostly scavenged)
-

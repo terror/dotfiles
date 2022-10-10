@@ -1,0 +1,3 @@
+editor = 'nvim'
+ext = 'md'
+path = '~/src/notes'

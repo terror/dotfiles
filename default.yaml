@@ -2,23 +2,24 @@
     link:
       relink: true
 
-- clean: ['~']
+- clean:
+  - '~'
+  - '~/.cargo'
+  - '~/.config'
 
 - link:
-  ~/.Brewfile: brew/Brewfile
-  ~/.aliases: .aliases
-  ~/.bash_profile: .bash_profile
-  ~/.bashrc: .bashrc
+  ~/.aliases: etc/bash/aliases
+  ~/.bash_profile: etc/bash/bash_profile
+  ~/.bashrc: etc/bash/bashrc
   ~/.bin: bin
-  ~/.config: config
-  ~/.functions: .functions
-  ~/.gitconfig: git/gitconfig
-  ~/.hooks: hooks
+  ~/.config: etc
+  ~/.functions: etc/bash/functions
+  ~/.gitconfig: etc/gitconfig
   ~/.hushlogin: config/hushlogin
   ~/.submodules: submodules
-  ~/.vim: vim
-  ~/.vimrc: .vimrc
-  ~/.vscode: vscode
+  ~/.vim: etc/vim
+  ~/.vimrc: etc/vimrc
+  ~/.vscode: etc/vscode
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

@@ -1,12 +1,5 @@
-default:
-  git submodule update --init --recursive .
-  SHELL=sh ./submodules/dotbot/bin/dotbot -c default.yaml
-
-all:
-  formulae rustup crates
-
-rustup:
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+bootstrap:
+  ./boostrap
 
 crates:
   cargo install bat
@@ -24,11 +17,11 @@ crates:
   cargo install vim-profiler
   cargo install zkt
 
+formulae: homebrew
+  brew bundle install
+
 homebrew:
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-formulae:
-  brew bundle install
-
-brew-dump:
-  brew bundle dump --describe
+rustup:
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

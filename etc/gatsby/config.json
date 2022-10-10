@@ -5,5 +5,8 @@
 	},
 	"cli": {
 		"packageManager": "npm"
+	},
+	"feedback": {
+		"firstCheckDate": 1663383805105
 	}
 }

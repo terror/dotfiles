@@ -7,7 +7,6 @@
 # The default values are as follows. Uncomment and change to fit your needs.
 # See https://github.com/nvbn/thefuck#settings for more information.
 #
-
 # rules = [<const: All rules enabled>]
 # exclude_rules = []
 # wait_command = 3
