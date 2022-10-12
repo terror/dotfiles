@@ -17,6 +17,7 @@
   ~/.gitconfig: etc/gitconfig
   ~/.hushlogin: config/hushlogin
   ~/.submodules: submodules
+  ~/.tmux.conf: etc/tmux.conf
   ~/.vim: etc/vim
   ~/.vimrc: etc/vimrc
   ~/.vscode: etc/vscode
