@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+"$EDITOR" "$NOTES"/"Journal $(date '+%Y-%m-%d').md"
