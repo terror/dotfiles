@@ -14,6 +14,7 @@ export LESS=-ifRMx2
 export LS_OPTIONS='--color=auto'
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
+export NOTES=~/dropbox/notes
 export NVM_DIR="$HOME/.nvm"
 export PAGER=less
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
