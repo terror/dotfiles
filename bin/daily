@@ -3,7 +3,7 @@
 set -euxo pipefail
 
 # Update homebrew and installed packages
-brew update && brew upgrade && brew cleanup
+brew evolve
 
 # Update rust version
 rustup update
