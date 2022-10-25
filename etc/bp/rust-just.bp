@@ -10,9 +10,6 @@ all: build test clippy fmt-check
 build:
   cargo build
 
-check:
- cargo check
-
 clippy:
   cargo clippy --all-targets --all-features
 
@@ -24,13 +21,10 @@ fmt-check:
   @echo formatting check done
 
 run *args:
-  cargo run -- --{{args}}
+  cargo run -- {{args}}
 
 test:
   cargo test
-
-usage:
-  cargo run -- --help | pbcopy
 
 watch +COMMAND='test':
   cargo watch --clear --exec "{{COMMAND}}"
