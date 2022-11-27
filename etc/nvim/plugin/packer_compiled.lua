@@ -272,15 +272,12 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-markdown-composer', 'vim-markdown'}, { ft = "markdown" }, _G.packer_plugins)]]
 vim.cmd [[au FileType rust ++once lua require("packer.load")({'rust.vim'}, { ft = "rust" }, _G.packer_plugins)]]
-vim.cmd [[au FileType tex ++once lua require("packer.load")({'tex-conceal.vim', 'vimtex'}, { ft = "tex" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-markdown', 'vim-markdown-composer'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex', 'tex-conceal.vim'}, { ft = "tex" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
-time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]], true)
-vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]]
-time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]], false)
 time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], true)
 vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]]
 time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], false)
@@ -293,6 +290,9 @@ time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/pack
 time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]], true)
 vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]]
 time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]], false)
+time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]], true)
+vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]]
+time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]], false)
 vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
