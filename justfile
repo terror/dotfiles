@@ -3,9 +3,12 @@ bootstrap:
 
 crates:
   cargo install bat
+  cargo install cargo-audit
   cargo install cargo-check
   cargo install cargo-edit
+  cargo install cargo-expand
   cargo install cargo-sort
+  cargo install cargo-tarpaulin
   cargo install cargo-watch
   cargo install fd
   cargo install just
@@ -15,7 +18,6 @@ crates:
   cargo install stylua
   cargo install typos-cli
   cargo install vim-profiler
-  cargo install zkt
 
 formulae: homebrew
   brew bundle install
