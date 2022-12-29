@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+EDITOR=${EDITOR:-vim}
+
+enter() {
+  ls "$NOTE_DIR" | fzf \
+    --ansi \
+    --bind "ctrl-d:execute(rm -rf $NOTE_DIR/{})+reload(ls $NOTE_DIR)" \
+    --bind "ctrl-e:execute($EDITOR $NOTE_DIR/{q}.$NOTE_EXT &> /dev/tty)" \
+    --bind "ctrl-r:reload(ls $NOTE_DIR)" \
+    --bind "enter:execute($EDITOR $NOTE_DIR/{} &> /dev/tty)" \
+    --bind 'ctrl-\:toggle-preview' \
+    --bind 'ctrl-c:abort' \
+    --bind 'ctrl-k:preview-up,ctrl-j:preview-down' \
+    --border \
+    --height 90% \
+    --min-height 20 \
+    --preview "bat --style=numbers --color=always --line-range :500 $NOTE_DIR/{}" \
+    --preview-window 75%
+}
+
+format() {
+  prettier \
+    --print-width 80 \
+    --prose-wrap always \
+    --single-quote true \
+    --tab-width 2 \
+    --write "$NOTE_DIR"/*."$NOTE_EXT"
+}
+
+help() {
+  echo 'A simple note management CLI powered by fzf.'
+  echo '                                            '
+  echo 'Usage: notes [COMMAND]                      '
+  echo '                                            '
+  echo 'Available commands:                         '
+  echo '  enter   Interact with the notes directory '
+  echo '  format  Format all files with prettier    '
+  echo '  journal Open up todays journal            '
+  echo '  help    Show this message                 '
+}
+
+journal() {
+  "$EDITOR" "$NOTE_DIR"/"Journal $(date '+%Y-%m-%d').$NOTE_EXT"
+}
+
+main() {
+  case "$1" in
+    e | enter) enter;;
+    f | format) format;;
+    h | help) help;;
+    j | journal) journal;;
+    *) echo 'error: Invalid command';;
+  esac
+}
+
+main "$@"
