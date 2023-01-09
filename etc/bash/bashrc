@@ -1,5 +1,6 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export BLOCKSIZE=K
+export BOOK_DIR=$HOME/dropbox/books
 export CLICOLOR=1
 export EDITOR='nvim'
 export EDMV_EDITOR=nvim
@@ -14,7 +15,8 @@ export LESS=-ifRMx2
 export LS_OPTIONS='--color=auto'
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
-export NOTES=~/dropbox/notes
+export NOTE_DIR=$HOME/dropbox/notes
+export NOTE_EXT="md"
 export NVM_DIR="$HOME/.nvm"
 export PAGER=less
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
@@ -29,8 +31,10 @@ for file in ~/.{aliases,functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
+eval "$(opam env)"
 eval "$(starship init bash)"
 eval "$(thefuck --alias)"
 
 shopt -s globstar
+
 unset file;
