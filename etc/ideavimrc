@@ -1,3 +1,4 @@
+set ideajoin
 set noerrorbells
 set visualbell
 source ~/.vimrc
