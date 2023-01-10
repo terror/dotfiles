@@ -43,6 +43,7 @@ alias e="exit"
 alias g="git"
 alias j="just"
 alias m="tmux"
+alias n="notes e"
 alias w="cd ~/src"
 
 # Ⅸ
