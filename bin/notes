@@ -3,7 +3,7 @@
 EDITOR=${EDITOR:-vim}
 
 enter() {
-  ls "$NOTE_DIR" | fzf \
+  cd "$NOTE_DIR" && fd | fzf \
     --ansi \
     --bind "ctrl-d:execute(rm -rf $NOTE_DIR/{})+reload(ls $NOTE_DIR)" \
     --bind "ctrl-e:execute($EDITOR $NOTE_DIR/{q}.$NOTE_EXT &> /dev/tty)" \
@@ -20,24 +20,24 @@ enter() {
 }
 
 format() {
-  prettier \
+  cd "$NOTE_DIR" && prettier \
     --print-width 80 \
     --prose-wrap always \
     --single-quote true \
     --tab-width 2 \
-    --write "$NOTE_DIR"/*."$NOTE_EXT"
+    --write "${1:-*}"."$NOTE_EXT"
 }
 
 help() {
-  echo 'A simple note management CLI powered by fzf.'
-  echo '                                            '
-  echo 'Usage: notes [COMMAND]                      '
-  echo '                                            '
-  echo 'Available commands:                         '
-  echo '  enter   Interact with the notes directory '
-  echo '  format  Format all files with prettier    '
-  echo '  journal Open up todays journal            '
-  echo '  help    Show this message                 '
+  echo 'A simple note management CLI powered by fzf.         '
+  echo '                                                     '
+  echo 'Usage: notes [COMMAND] [ARGS]                        '
+  echo '                                                     '
+  echo 'Available commands:                                  '
+  echo '  e | enter         Interact with the notes directory'
+  echo '  f | format <name> Format files with prettier       '
+  echo '  j | journal       Open up todays journal           '
+  echo '  h | help          Show this message                '
 }
 
 journal() {
@@ -47,9 +47,9 @@ journal() {
 main() {
   case "$1" in
     e | enter) enter;;
-    f | format) format;;
-    h | help) help;;
+    f | format) format "$2";;
     j | journal) journal;;
+    h | help) help;;
     *) echo 'error: Invalid command';;
   esac
 }
