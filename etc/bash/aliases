@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 # Ⅰ
-alias -- -="cd -"
-alias .....="cd ../../../.."
-alias ....="cd ../../.."
-alias ...="cd ../.."
-alias ..="cd .."
-alias ~="cd ~"
+alias -- -="z -"
+alias .....="z ../../../.."
+alias ....="z ../../.."
+alias ...="z ../.."
+alias ..="z .."
+alias cd="z"
+alias ~="z ~"
 
 # Ⅱ
 alias cb="git branch --show-current"
@@ -38,13 +39,13 @@ alias v="nvim"
 alias vi="nvim"
 
 # Ⅴ
-alias d="cd ~/dotfiles"
+alias d="z ~/dotfiles"
 alias e="exit"
 alias g="git"
 alias j="just"
 alias m="tmux"
 alias n="notes e"
-alias w="cd ~/src"
+alias w="z ~/src"
 
 # Ⅸ
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
@@ -52,7 +53,7 @@ alias dc="docker-compose up -d"
 alias discord='cordless'
 alias dm='docker-machine'
 alias evrc='nvim ~/dotfiles/.vimrc'
-alias fcd='cd "$(fd --type directory | fzf)"'
+alias fcd='z "$(fd --type directory | fzf)"'
 alias gl='globe -s'
 alias lv='nvim -c "normal '\''0" -c bd1'
 alias mysql="docker container exec -it mysql /bin/bash"

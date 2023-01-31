@@ -34,6 +34,7 @@ done;
 eval "$(opam env)"
 eval "$(starship init bash)"
 eval "$(thefuck --alias)"
+eval "$(zoxide init bash)"
 
 shopt -s globstar
 
