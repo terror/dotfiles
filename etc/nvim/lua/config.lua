@@ -52,8 +52,8 @@ telescope.setup({
   },
 })
 
--- Load all extensions
 local extensions = { 'file_browser' }
+
 for _, extension in ipairs(extensions) do
   telescope.load_extension(extension)
 end
@@ -69,6 +69,7 @@ require('nvim-treesitter.configs').setup({
     'javascript',
     'latex',
     'lua',
+    'ocaml',
     'python',
     'rust',
     'tsx',
@@ -140,8 +141,8 @@ g.bufferline = {
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
 g.startify_custom_header = {
-  '',
-  '',
+  '                                                            ',
+  '                                                            ',
   '                                                            ',
   '                                        ░░                  ',
   '      ███████   █████   ██████  ██    ██ ██ ██████████      ',
@@ -150,8 +151,8 @@ g.startify_custom_header = {
   '      ░██  ░██░██░░░░ ░██   ░██ ░░████  ░██ ░██ ░██ ░██     ',
   '      ███  ░██░░██████░░██████   ░░██   ░██ ███ ░██ ░██     ',
   '     ░░░   ░░  ░░░░░░  ░░░░░░     ░░    ░░ ░░░  ░░  ░░      ',
-  '',
-  '',
+  '                                                            ',
+  '                                                            ',
 }
 
 g.startify_bookmarks = {
@@ -193,7 +194,7 @@ g.rustfmt_autosave = 0
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
 g.markdown_composer_autostart = 0
-g.markdown_composer_syntax_theme = 'monokai'
+g.markdown_composer_syntax_theme = 'dark'
 g.markdown_folding = 0
 g.vim_markdown_auto_insert_bullets = 0
 g.vim_markdown_conceal = 0
@@ -250,9 +251,8 @@ local on_attach = function(client)
   map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
 end
 
--- TODO: Find better approach, some servers may not share the
---       same settings.
-local servers = { 'rust_analyzer', 'pyright', 'gopls' }
+local servers = { 'rust_analyzer', 'pyright', 'gopls', 'ocamllsp' }
+
 for _, server in ipairs(servers) do
   lsp[server].setup({
     on_attach = on_attach,
@@ -290,9 +290,9 @@ lsp.just_lsp.setup({})
 
 require('lualine').setup({
   options = {
+    icons_enabled = true,
     lower = true,
     theme = 'ayu_mirage',
-    icons_enabled = true,
   },
   sections = {
     lualine_a = { 'mode' },

@@ -136,4 +136,10 @@ return require('packer').startup(function()
     'rust-lang/rust.vim',
     ft = 'rust',
   })
+
+  -- Query ChatGPT
+  use({
+    'terror/chatgpt.nvim',
+     run = 'pip3 install -r requirements.txt'
+  })
 end)
