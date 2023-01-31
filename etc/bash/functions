@@ -2,9 +2,11 @@
 
 function run() {
   file="$(ls -t | head -n 1)"
+
   case "$1" in
     p) python3 "$file";;
     j) javac "$file" && java "${file%.*}";;
+    c) gcc "$file" && ./a.out && rm -rf a.out;;
     *) g++ -std=c++17 "$file" && ./a.out && rm -rf a.out;;
   esac
 }
