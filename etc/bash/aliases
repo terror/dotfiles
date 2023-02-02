@@ -42,6 +42,7 @@ alias vi="nvim"
 alias d="z ~/dotfiles"
 alias e="exit"
 alias g="git"
+alias i='zi'
 alias j="just"
 alias m="tmux"
 alias n="notes e"
