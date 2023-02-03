@@ -73,7 +73,8 @@ require('nvim-treesitter.configs').setup({
     'python',
     'rust',
     'tsx',
-    'typescript'
+    'typescript',
+    'zig',
   },
 
   highlight = {
@@ -169,21 +170,6 @@ g.startify_commands = {
 }
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
--- │ Ale                                                                        │
--- ╚────────────────────────────────────────────────────────────────────────────│
-
-g.ale_echo_msg_error_str = 'E'
-g.ale_echo_msg_format = '[%linter%] %s [%severity%]'
-g.ale_echo_msg_warning_str = 'W'
-g.ale_fix_on_save = 1
-g.ale_rust_rustfmt_options = '+nightly'
-g.ale_set_highlights = 0
-
-g.ale_fixers = {
-  { rust = { 'rustfmt' } },
-}
-
--- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Rustfmt                                                                    │
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
@@ -251,14 +237,17 @@ local on_attach = function(client)
   map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
 end
 
-local servers = { 'rust_analyzer', 'pyright', 'gopls', 'ocamllsp' }
+local servers = {
+  'gopls',
+  'ocamllsp',
+  'pyright',
+  'rust_analyzer',
+  'zls',
+}
 
 for _, server in ipairs(servers) do
   lsp[server].setup({
     on_attach = on_attach,
-    handlers = {
-      ['textDocument/publishDiagnostics'] = function() end,
-    },
     settings = {
       [server] = {
         diagnostics = { disabled = { 'inactive-code' } },

@@ -21,9 +21,6 @@ return require('packer').startup(function()
   --  Changes Vim working directory to project root
   use('airblade/vim-rooter')
 
-  --  Check syntax asynchronously
-  use('dense-analysis/ale')
-
   -- Support .editorconfig
   use('editorconfig/editorconfig-vim')
 
@@ -140,6 +137,6 @@ return require('packer').startup(function()
   -- Query ChatGPT
   use({
     'terror/chatgpt.nvim',
-     run = 'pip3 install -r requirements.txt'
+    run = 'pip3 install -r requirements.txt',
   })
 end)
