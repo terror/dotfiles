@@ -66,9 +66,6 @@ return require('packer').startup(function()
   -- GLSL syntax highlighting
   use('tikhomirov/vim-glsl')
 
-  -- Nim syntax highlighting
-  use('zah/nim.vim')
-
   -- Telescope file browser
   use('nvim-telescope/telescope-file-browser.nvim')
 
