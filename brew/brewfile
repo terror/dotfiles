@@ -1,3 +1,4 @@
+tap "bell-sw/liberica"
 tap "bios-marcel/cordless"
 tap "heroku/brew"
 tap "homebrew/bundle"
@@ -7,7 +8,9 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
+tap "michaeleisel/zld"
 tap "mongodb/brew"
+tap "redis-stack/redis-stack"
 tap "rhysd/actionlint", "https://github.com/rhysd/actionlint"
 tap "rhysd/tweet-app", "https://github.com/rhysd/tweet-app"
 tap "tlk/imagemagick-x11"
@@ -17,11 +20,11 @@ tap "zegervdv/zathura"
 # Core application library for C
 brew "glib"
 
+# Manage compile and link flags for libraries
+brew "pkg-config"
+
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
-
-# Generate introspection data for GObject libraries
-brew "gobject-introspection"
 
 # OpenType text shaping engine
 brew "harfbuzz"
@@ -33,10 +36,16 @@ brew "pango"
 brew "adwaita-icon-theme"
 
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
+brew "python@3.10", link: false
 
 # Record and share terminal sessions
 brew "asciinema"
+
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+
+# Official Amazon AWS command-line interface
+brew "awscli"
 
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
@@ -46,6 +55,12 @@ brew "bash"
 
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+
+# Collection of portable C++ source libraries
+brew "boost"
+
+# Asynchronous event library
+brew "libevent"
 
 # Decentralized, peer to peer payment network
 brew "bitcoin"
@@ -71,6 +86,9 @@ brew "docker-machine"
 # More intuitive version of du in rust
 brew "dust"
 
+# Generic library support script
+brew "libtool"
+
 # GNU Ubiquitous Intelligent Language for Extensions
 brew "guile"
 
@@ -80,6 +98,9 @@ brew "unbound"
 # GNU Emacs text editor
 brew "emacs"
 
+# Project Euler command-line tool written in Python
+brew "euler-py", link: false
+
 # Calculator REPL, similar to bc(1)
 brew "eva"
 
@@ -88,6 +109,9 @@ brew "fd"
 
 # Banner-like program prints strings as ASCII art
 brew "figlet"
+
+# Command-line tools for fly.io services
+brew "flyctl"
 
 # Command-line fuzzy finder written in Go
 brew "fzf"
@@ -104,8 +128,17 @@ brew "gdb"
 # GitHub command-line tool
 brew "gh"
 
+# Distributed revision control system
+brew "git"
+
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+
+# Library for USB device access
+brew "libusb"
+
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
 
 # Powerful, lightweight programming language
 brew "lua"
@@ -116,11 +149,23 @@ brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 
+# Generate introspection data for GObject libraries
+brew "gobject-introspection"
+
 # Fast linters runner for Go
 brew "golangci-lint"
 
+# Development kit for the Java programming language
+brew "openjdk"
+
+# Reformats Java source code to comply with Google Java Style
+brew "google-java-format"
+
 # Language server for the Go language
 brew "gopls"
+
+# Open-source build automation tool based on the Groovy and Kotlin DSL
+brew "gradle"
 
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
@@ -157,9 +202,6 @@ brew "python@3.8"
 
 # Library that provides automatic proxy configuration management
 brew "libproxy"
-
-# Library for USB device access
-brew "libusb"
 
 # Next-gen compiler infrastructure
 brew "llvm"
@@ -200,9 +242,6 @@ brew "node", link: false
 # OCaml package manager
 brew "opam"
 
-# Development kit for the Java programming language
-brew "openjdk"
-
 # Formatter for Haskell source code
 brew "ormolu"
 
@@ -213,10 +252,10 @@ brew "pandoc"
 brew "poppler"
 
 # Object-relational database system
-brew "postgresql", restart_service: true
+brew "postgresql@12", restart_service: true
 
 # Object-relational database system
-brew "postgresql@12", restart_service: true
+brew "postgresql@14", restart_service: true
 
 # Linter for prose
 brew "proselint"
@@ -260,6 +299,9 @@ brew "shfmt"
 # Tool to create intelligent and beautiful documentation
 brew "sphinx-doc"
 
+# Terminal-based client for Spotify
+brew "spotify-tui"
+
 # Cross-shell prompt for astronauts
 brew "starship"
 
@@ -284,9 +326,6 @@ brew "universal-ctags"
 # Google's JavaScript engine
 brew "v8"
 
-# Vi 'workalike' with many additional features
-brew "vim"
-
 # Internet file retriever
 brew "wget"
 
@@ -296,8 +335,17 @@ brew "wifi-password"
 # Allow GNU Readline to be used with arbitrary programs
 brew "with-readline"
 
+# Formatter for python code
+brew "yapf"
+
 # JavaScript package manager
 brew "yarn"
+
+# Programming language designed for robustness, optimality, and clarity
+brew "zig"
+
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
@@ -312,23 +360,23 @@ brew "koekeishiya/formulae/yabai"
 brew "mongodb/brew/mongodb-community"
 
 # An interactive JavaScript command-line interface to MongoDB
-brew "mongodb/brew/mongodb-community-shell", link: false
+brew "mongodb/brew/mongodb-community-shell"
 
 # Static checker for GitHub Actions workflow files
 brew "rhysd/actionlint/actionlint"
 
 # Tools and libraries to manipulate images in many formats (X11 support)
 brew "tlk/imagemagick-x11/imagemagick"
-
 brew "yudai/gotty/gotty"
 
+# PDF viewer
 brew "zegervdv/zathura/zathura"
 
+# Poppler backend plugin for zathura
 brew "zegervdv/zathura/zathura-pdf-poppler"
 
 # Application launcher and productivity software
 cask "alfred"
-
 cask "android-sdk"
 
 # Memory training application
@@ -355,15 +403,32 @@ cask "dotnet-sdk"
 # Matrix collaboration client
 cask "element"
 
+# Developer targeted fonts with a high number of glyphs
 cask "font-caskaydia-cove-nerd-font"
 
+# Free monospaced font with programming ligatures
 cask "font-fira-code"
+
+# Vector graphics editor
+cask "inkscape"
+
+# Java IDE by JetBrains
+cask "intellij-idea"
 
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 
 # Interface for reading and syncing eBooks
 cask "kindle"
+
+# 100% open-source Java implementation
+cask "liberica-jdk11"
+
+# Digital logic designer and simulator
+cask "logisim-evolution"
+
+# Mips Assembly and Runtime Simulator
+cask "mars"
 
 # Explore and manipulate your MongoDB data
 cask "mongodb-compass"
@@ -379,6 +444,24 @@ cask "obsidian"
 
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+
+# Redis server with additional database capabilities and the visualisation tool RedisInsight.
+cask "redis-stack"
+
+# A graphical tool for visualizing data and managing Redis databases
+cask "redis-stack-redisinsight"
+
+# Redis Stack Server install a Redis server with additional database capabilities
+cask "redis-stack-server"
+
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin"
+
+# Web browser focusing on security
+cask "tor-browser"
+
+# Free streaming software designed for new streamers
+cask "twitch-studio"
 
 # Development environment
 cask "vagrant"
