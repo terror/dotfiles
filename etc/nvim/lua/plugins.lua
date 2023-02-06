@@ -78,6 +78,12 @@ return require('packer').startup(function()
   -- Icons for status and tabline
   use('kyazdani42/nvim-web-devicons')
 
+  -- Use FZF for telescope fuzzy file finding algorithm
+  use({
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'make',
+  })
+
   -- A better latex editing experience
   use({
     'lervag/vimtex',

@@ -9,54 +9,41 @@ local g = vim.g
 
 local telescope = require('telescope')
 
-telescope.setup({
-  defaults = {
-    vimgrep_arguments = {
-      'rg',
-      '--color=never',
-      '--no-heading',
-      '--with-filename',
-      '--line-number',
-      '--column',
-      '--smart-case',
-    },
-
-    prompt_prefix = '> ',
-    selection_caret = '> ',
-    entry_prefix = '  ',
-    initial_mode = 'insert',
-    selection_strategy = 'reset',
-    sorting_strategy = 'descending',
-    layout_strategy = 'vertical',
-
-    layout_config = {
-      horizontal = { mirror = false },
-      vertical = { mirror = false },
-    },
-
-    borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
-    brder = {},
-    color_devicons = true,
-    file_ignore_patterns = {},
-    path_display = {},
-    set_env = { ['COLORTERM'] = 'truecolor' },
-    use_less = true,
-    winblend = 0,
-
-    buffer_previewer_maker = require('telescope.previewers').buffer_previewer_maker,
-    file_previewer = require('telescope.previewers').vim_buffer_cat.new,
-    file_sorter = require('telescope.sorters').get_fuzzy_file,
-    generic_sorter = require('telescope.sorters').get_generic_fuzzy_sorter,
-    grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
-    qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
-  },
-})
-
-local extensions = { 'file_browser' }
+local extensions = { 'file_browser', 'fzf' }
 
 for _, extension in ipairs(extensions) do
   telescope.load_extension(extension)
 end
+
+local dropdown = { theme = 'dropdown', previewer = false }
+
+local ivy = {
+  theme = 'ivy',
+  previewer = false,
+  border = false,
+  layout_config = { height = 10 },
+}
+
+telescope.setup({
+  defaults = {
+    prompt_prefix = ' ',
+  },
+  pickers = {
+    buffers = dropdown,
+    file_browser = ivy,
+    find_files = dropdown,
+    git_files = dropdown,
+    lsp_references = ivy,
+  },
+  extensions = {
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = 'smart_case',
+    },
+  },
+})
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Treesitter                                                                 │

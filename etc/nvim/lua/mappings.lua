@@ -48,6 +48,7 @@ map('v', '<leader>s', ':sort<cr>')
 
 -- Add custom find command to telescope: `find_files`, in order
 -- to find dotfiles and ignore git files.
+
 map(
   'n',
   '<c-s>',
@@ -68,6 +69,7 @@ map(
 
 -- Map `<c-p>` to open the telescope file browser, can create
 -- files with <c-e>.
+
 map(
   'n',
   '<c-p>',
@@ -76,4 +78,5 @@ map(
 )
 
 -- Open `lsp.log`
+
 map('n', '<leader>ll', ":lua vim.cmd(':e' .. vim.lsp.get_log_path())<cr>")
