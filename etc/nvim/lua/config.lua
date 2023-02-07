@@ -15,7 +15,11 @@ for _, extension in ipairs(extensions) do
   telescope.load_extension(extension)
 end
 
-local dropdown = { theme = 'dropdown', previewer = false }
+local dropdown = {
+  theme = 'dropdown',
+  previewer = false,
+  layout_config = { height = 50, width = 150 },
+}
 
 local ivy = {
   theme = 'ivy',
