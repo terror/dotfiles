@@ -18,7 +18,7 @@ end
 local dropdown = {
   theme = 'dropdown',
   previewer = false,
-  layout_config = { height = 50, width = 150 },
+  layout_config = { height = 0.5, width = 0.8 },
 }
 
 local ivy = {
