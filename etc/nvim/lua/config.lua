@@ -230,6 +230,7 @@ end
 
 local servers = {
   'gopls',
+  'hls',
   'ocamllsp',
   'pyright',
   'rust_analyzer',
