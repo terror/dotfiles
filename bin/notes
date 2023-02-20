@@ -41,7 +41,15 @@ help() {
 }
 
 journal() {
-  "$EDITOR" "$NOTE_DIR"/"Journal $(date '+%Y-%m-%d').$NOTE_EXT"
+  date=$(date '+%Y-%m-%d')
+
+  path="$NOTE_DIR/Journal $date.$NOTE_EXT"
+
+  if [[ ! -f $path ]] then
+    echo "## $date" > "$path"
+  fi
+
+  "$EDITOR" "$path"
 }
 
 main() {
