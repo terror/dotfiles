@@ -86,14 +86,14 @@ brew "docker-machine"
 # More intuitive version of du in rust
 brew "dust"
 
+# Validating, recursive, caching DNS resolver
+brew "unbound"
+
 # Generic library support script
 brew "libtool"
 
 # GNU Ubiquitous Intelligent Language for Extensions
 brew "guile"
-
-# Validating, recursive, caching DNS resolver
-brew "unbound"
 
 # GNU Emacs text editor
 brew "emacs"
@@ -173,6 +173,9 @@ brew "graphviz"
 # GSettings schemas for desktop components
 brew "gsettings-desktop-schemas"
 
+# Integration point for ghcide and haskell-ide-engine. One IDE to rule them all
+brew "haskell-language-server"
+
 # Command-line hex viewer
 brew "hexyl"
 
@@ -215,6 +218,9 @@ brew "meson"
 # MIT/GNU Scheme development tools and runtime library
 brew "mit-scheme"
 
+# Platform built on V8 to build network applications
+brew "node", link: false
+
 # Open source relational database management system
 brew "mysql"
 
@@ -231,13 +237,10 @@ brew "neofetch"
 brew "neovim"
 
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
-brew "nginx", restart_service: true
+brew "nginx"
 
 # Statically typed compiled systems programming language
 brew "nim"
-
-# Platform built on V8 to build network applications
-brew "node", link: false
 
 # OCaml package manager
 brew "opam"
@@ -252,10 +255,10 @@ brew "pandoc"
 brew "poppler"
 
 # Object-relational database system
-brew "postgresql@12", restart_service: true
+brew "postgresql@12"
 
 # Object-relational database system
-brew "postgresql@14", restart_service: true
+brew "postgresql@14"
 
 # Linter for prose
 brew "proselint"
@@ -273,7 +276,7 @@ brew "qt"
 brew "r"
 
 # Persistent key-value database, with built-in net interface
-brew "redis", restart_service: true
+brew "redis"
 
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
@@ -391,6 +394,9 @@ cask "blackhole-2ch"
 # E-books management software
 cask "calibre"
 
+# Tool to remove unnecessary files and folders from disk
+cask "cleanmymac"
+
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 
@@ -414,9 +420,6 @@ cask "inkscape"
 
 # Java IDE by JetBrains
 cask "intellij-idea"
-
-# Terminal emulator as alternative to Apple's Terminal app
-cask "iterm2"
 
 # Interface for reading and syncing eBooks
 cask "kindle"
@@ -454,11 +457,23 @@ cask "redis-stack-redisinsight"
 # Redis Stack Server install a Redis server with additional database capabilities
 cask "redis-stack-server"
 
+# Tool for sending personal documents to Kindles from Macs
+cask "send-to-kindle"
+
+# Instant messaging application focusing on security
+cask "signal"
+
+# Bitcoin wallet application
+cask "sparrow"
+
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
 
 # Web browser focusing on security
 cask "tor-browser"
+
+# Enable and disable the Intel CPU Turbo Boost feature
+cask "turbo-boost-switcher"
 
 # Free streaming software designed for new streamers
 cask "twitch-studio"
