@@ -3,20 +3,10 @@
 EDITOR=${EDITOR:-vim}
 
 enter() {
-  cd "$NOTE_DIR" && fd | fzf \
-    --ansi \
+  cd "$NOTE_DIR" && fd | query \
     --bind "ctrl-d:execute(rm -rf $NOTE_DIR/{})+reload(ls $NOTE_DIR)" \
-    --bind "ctrl-e:execute($EDITOR $NOTE_DIR/{q}.$NOTE_EXT &> /dev/tty)" \
-    --bind "ctrl-r:reload(ls $NOTE_DIR)" \
     --bind "enter:execute($EDITOR $NOTE_DIR/{} &> /dev/tty)" \
-    --bind 'ctrl-\:toggle-preview' \
-    --bind 'ctrl-c:abort' \
-    --bind 'ctrl-k:preview-up,ctrl-j:preview-down' \
-    --border \
-    --height 90% \
-    --min-height 20 \
-    --preview "bat --style=numbers --color=always --line-range :500 $NOTE_DIR/{}" \
-    --preview-window 75%
+    --preview "bat --style=numbers --color=always --line-range :500 $NOTE_DIR/{}"
 }
 
 format() {
@@ -36,8 +26,9 @@ help() {
   echo 'Available commands:                                  '
   echo '  e | enter         Interact with the notes directory'
   echo '  f | format <name> Format files with prettier       '
-  echo '  j | journal       Open up todays journal           '
   echo '  h | help          Show this message                '
+  echo '  j | journal       Open up todays journal           '
+  echo '  s | search        Start a full-text search         '
 }
 
 journal() {
@@ -52,10 +43,43 @@ journal() {
   "$EDITOR" "$path"
 }
 
+query() {
+  fzf \
+    --ansi \
+    --bind "ctrl-e:execute($EDITOR $NOTE_DIR/{q}.$NOTE_EXT &> /dev/tty)" \
+    --bind "ctrl-r:reload(ls $NOTE_DIR)" \
+    --bind 'ctrl-\:toggle-preview' \
+    --bind 'ctrl-c:abort' \
+    --bind 'ctrl-k:preview-up,ctrl-j:preview-down' \
+    --border \
+    --height 90% \
+    --min-height 20 \
+    --preview-window 75% \
+    "$@"
+}
+
+search() {
+  INITIAL_QUERY=""
+
+  RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
+
+  FZF_DEFAULT_COMMAND="$RG_PREFIX '$INITIAL_QUERY'"
+
+  cd "$NOTE_DIR" && query \
+    --bind "change:reload:$RG_PREFIX {q} || true" \
+    --bind "ctrl-d:execute(rm -rf $NOTE_DIR/{1})+reload(ls $NOTE_DIR)" \
+    --bind "enter:execute($EDITOR $NOTE_DIR/{1} &> /dev/tty)" \
+    --delimiter=':' \
+    --disabled \
+    --preview "bat --style=numbers --color=always --line-range :500 $NOTE_DIR/{1}" \
+    --query "$INITIAL_QUERY"
+}
+
 main() {
   case "$1" in
     e | enter) enter;;
     f | format) format "$2";;
+    s | search) search;;
     j | journal) journal;;
     h | help) help;;
     *) echo 'error: Invalid command';;
