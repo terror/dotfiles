@@ -1,27 +1,43 @@
-- defaults:
-    link:
-      relink: true
-
 - clean:
   - '~'
-  - '~/.cargo'
-  - '~/.config'
+  - ~/.cargo
+  - ~/.config
+
+- create:
+  - ~/.cargo
+  - ~/.config/alacritty
+  - ~/.config/neofetch
+  - ~/src
+  - ~/tmp
 
 - link:
-  ~/.Brewfile: brew/Brewfile
-  ~/.aliases: etc/bash/aliases
-  ~/.bash_profile: etc/bash/bash_profile
-  ~/.bashrc: etc/bash/bashrc
-  ~/.bin: bin
-  ~/.config: etc
-  ~/.functions: etc/bash/functions
-  ~/.gitconfig: etc/gitconfig
-  ~/.hushlogin: etc/hushlogin
-  ~/.submodules: submodules
-  ~/.tmux.conf: etc/tmux.conf
-  ~/.vim: etc/vim
-  ~/.vimrc: etc/vimrc
-  ~/.vscode: etc/vscode
+    ~/.Brewfile: brew/Brewfile
+    ~/.aliases: etc/bash/aliases
+    ~/.bash_profile: etc/bash/bash_profile
+    ~/.bashrc: etc/bash/bashrc
+    ~/.bin: bin
+    ~/.config/alacritty/alacritty.yml: etc/alacritty.yml
+    ~/.config/gitconfig: etc/gitconfig
+    ~/.config/htoprc: etc/htoprc
+    ~/.config/neofetch/config.conf: etc/neofetch/config.conf
+    ~/.config/nvim: etc/nvim
+    ~/.functions: etc/bash/functions
+    ~/.gitconfig: etc/gitconfig
+    ~/.gitignore.global: etc/gitignore.global
+    ~/.haxornewsconfig: etc/haxornewsconfig
+    ~/.hushlogin: etc/hushlogin
+    ~/.ripgreprc: etc/ripgreprc
+    ~/.skhdrc: etc/skhdrc
+    ~/.starship.toml: etc/starship.toml
+    ~/.submodules: submodules
+    ~/.tmux.conf: etc/tmux.conf
+    ~/.vim: etc/vim
+    ~/.vimrc: etc/vimrc
+    ~/.vscode: etc/vscode
+    ~/.yabairc: etc/yabairc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  - brew install just
+  - just all

@@ -1,8 +1,9 @@
-bootstrap:
-  ./boostrap
+all:
+  just rustup
+  just formulae
+  just crates
 
 crates:
-  cargo install bat
   cargo install cargo-audit
   cargo install cargo-check
   cargo install cargo-edit
@@ -10,8 +11,6 @@ crates:
   cargo install cargo-sort
   cargo install cargo-tarpaulin
   cargo install cargo-watch
-  cargo install fd
-  cargo install just
   cargo install loc
   cargo install present
   cargo install ripgrep
@@ -19,11 +18,8 @@ crates:
   cargo install typos-cli
   cargo install vim-profiler
 
-formulae: homebrew
-  brew bundle install
-
-homebrew:
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+formulae:
+  brew bundle install --file=brew/Brewfile
 
 rustup:
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
