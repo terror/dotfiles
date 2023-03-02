@@ -8,6 +8,7 @@
   - '~/.config'
 
 - link:
+  ~/.Brewfile: brew/Brewfile
   ~/.aliases: etc/bash/aliases
   ~/.bash_profile: etc/bash/bash_profile
   ~/.bashrc: etc/bash/bashrc
@@ -15,7 +16,7 @@
   ~/.config: etc
   ~/.functions: etc/bash/functions
   ~/.gitconfig: etc/gitconfig
-  ~/.hushlogin: config/hushlogin
+  ~/.hushlogin: etc/hushlogin
   ~/.submodules: submodules
   ~/.tmux.conf: etc/tmux.conf
   ~/.vim: etc/vim
