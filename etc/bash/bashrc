@@ -21,6 +21,7 @@ export NVM_DIR="$HOME/.nvm"
 export PAGER=less
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
 export SAVEHIST=5000000
+export SHELL=/bin/bash
 export TERM=xterm-256color
 export VISUAL=nvim
 
@@ -35,7 +36,5 @@ eval "$(opam env)"
 eval "$(starship init bash)"
 eval "$(thefuck --alias)"
 eval "$(zoxide init bash)"
-
-shopt -s globstar
 
 unset file;
