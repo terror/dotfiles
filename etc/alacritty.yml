@@ -1,7 +1,7 @@
 draw_bold_text_with_bright_colors: true
 
 shell:
-  program: /usr/local/bin/bash
+  program: /bin/bash
   args:
     - --login
 
@@ -44,8 +44,6 @@ font:
   glyph_offset:
     x: 0
     y: 0
-
-  use_thin_strokes: true
 
 bell:
   animation: EaseOutExpo
