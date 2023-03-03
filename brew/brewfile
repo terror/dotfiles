@@ -20,12 +20,6 @@ tap "zegervdv/zathura"
 # Core application library for C
 brew "glib"
 
-# Manage compile and link flags for libraries
-brew "pkg-config"
-
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
-
 # OpenType text shaping engine
 brew "harfbuzz"
 
@@ -35,9 +29,6 @@ brew "pango"
 # Icons for the GNOME project
 brew "adwaita-icon-theme"
 
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10", link: false
-
 # Record and share terminal sessions
 brew "asciinema"
 
@@ -46,6 +37,9 @@ brew "automake"
 
 # Official Amazon AWS command-line interface
 brew "awscli"
+
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10", link: false
 
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
@@ -89,12 +83,6 @@ brew "dust"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 
-# Generic library support script
-brew "libtool"
-
-# GNU Ubiquitous Intelligent Language for Extensions
-brew "guile"
-
 # GNU Emacs text editor
 brew "emacs"
 
@@ -122,9 +110,6 @@ brew "gawk"
 # GNU compiler collection
 brew "gcc"
 
-# GNU debugger
-brew "gdb"
-
 # GitHub command-line tool
 brew "gh"
 
@@ -149,6 +134,9 @@ brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 
+# Manage compile and link flags for libraries
+brew "pkg-config"
+
 # Generate introspection data for GObject libraries
 brew "gobject-introspection"
 
@@ -167,11 +155,17 @@ brew "gopls"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
 
+# Generic library support script
+brew "libtool"
+
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 
 # GSettings schemas for desktop components
 brew "gsettings-desktop-schemas"
+
+# GNU Ubiquitous Intelligent Language for Extensions
+brew "guile"
 
 # Integration point for ghcide and haskell-ide-engine. One IDE to rule them all
 brew "haskell-language-server"
@@ -191,17 +185,17 @@ brew "httpie"
 # Configurable static site generator
 brew "hugo"
 
+# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
+brew "libheif"
+
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 
 # Handy way to save and run project-specific commands
 brew "just"
-
-# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
-brew "libheif"
-
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
 
 # Library that provides automatic proxy configuration management
 brew "libproxy"
@@ -214,12 +208,6 @@ brew "ninja"
 
 # Fast and user friendly build system
 brew "meson"
-
-# MIT/GNU Scheme development tools and runtime library
-brew "mit-scheme"
-
-# Platform built on V8 to build network applications
-brew "node", link: false
 
 # Open source relational database management system
 brew "mysql"
@@ -242,6 +230,9 @@ brew "nginx"
 # Statically typed compiled systems programming language
 brew "nim"
 
+# Platform built on V8 to build network applications
+brew "node", link: false
+
 # OCaml package manager
 brew "opam"
 
@@ -263,11 +254,14 @@ brew "postgresql@14"
 # Linter for prose
 brew "proselint"
 
-# Tools and libraries to manipulate images in many formats
-brew "imagemagick"
-
 # Static type checker for Python
 brew "pyright"
+
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
+
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 
 # Cross-platform application and UI framework
 brew "qt"
@@ -368,15 +362,14 @@ brew "mongodb/brew/mongodb-community-shell"
 # Static checker for GitHub Actions workflow files
 brew "rhysd/actionlint/actionlint"
 
-# Tools and libraries to manipulate images in many formats (X11 support)
-brew "tlk/imagemagick-x11/imagemagick"
-brew "yudai/gotty/gotty"
-
 # PDF viewer
 brew "zegervdv/zathura/zathura"
 
 # Poppler backend plugin for zathura
 brew "zegervdv/zathura/zathura-pdf-poppler"
+
+# GPU-accelerated terminal emulator
+cask "alacritty"
 
 # Application launcher and productivity software
 cask "alfred"
@@ -387,6 +380,9 @@ cask "anki"
 
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
 cask "basictex"
+
+# Desktop password and login vault
+cask "bitwarden"
 
 # Virtual Audio Driver
 cask "blackhole-2ch"
@@ -406,6 +402,9 @@ cask "docker"
 # Developer platform
 cask "dotnet-sdk"
 
+# Client for the Dropbox cloud storage service
+cask "dropbox"
+
 # Matrix collaboration client
 cask "element"
 
@@ -414,6 +413,9 @@ cask "font-caskaydia-cove-nerd-font"
 
 # Free monospaced font with programming ligatures
 cask "font-fira-code"
+
+# Web browser
+cask "google-chrome"
 
 # Vector graphics editor
 cask "inkscape"
@@ -442,6 +444,9 @@ cask "netnewswire"
 # App to write, plan, collaborate, and get organized
 cask "notion"
 
+# Open-source software for live streaming and screen recording
+cask "obs"
+
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 
@@ -466,23 +471,20 @@ cask "signal"
 # Bitcoin wallet application
 cask "sparrow"
 
+# Music streaming service
+cask "spotify"
+
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
 
 # Web browser focusing on security
 cask "tor-browser"
 
-# Enable and disable the Intel CPU Turbo Boost feature
-cask "turbo-boost-switcher"
-
 # Free streaming software designed for new streamers
 cask "twitch-studio"
 
 # Development environment
 cask "vagrant"
-
-# Virtualizer for x86 hardware
-cask "virtualbox"
 
 # Open-source code editor
 cask "visual-studio-code"
