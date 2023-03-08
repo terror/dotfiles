@@ -1,5 +1,3 @@
-tap "bell-sw/liberica"
-tap "bios-marcel/cordless"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -73,6 +71,9 @@ brew "cmake"
 
 # C implementation of Markdown
 brew "discount"
+
+# Pack, ship and run any application as a lightweight container
+brew "docker", link: false
 
 # Create Docker hosts locally and on cloud providers
 brew "docker-machine"
@@ -231,7 +232,7 @@ brew "nginx"
 brew "nim"
 
 # Platform built on V8 to build network applications
-brew "node", link: false
+brew "node"
 
 # OCaml package manager
 brew "opam"
@@ -242,6 +243,9 @@ brew "ormolu"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 
+# Python package management tool
+brew "poetry"
+
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 
@@ -250,6 +254,9 @@ brew "postgresql@12"
 
 # Object-relational database system
 brew "postgresql@14"
+
+# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
+brew "prettier"
 
 # Linter for prose
 brew "proselint"
@@ -396,6 +403,9 @@ cask "cleanmymac"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 
+# Voice and text chat software
+cask "discord"
+
 # App to build and share containerized applications and microservices
 cask "docker"
 
@@ -420,14 +430,8 @@ cask "google-chrome"
 # Vector graphics editor
 cask "inkscape"
 
-# Java IDE by JetBrains
-cask "intellij-idea"
-
 # Interface for reading and syncing eBooks
 cask "kindle"
-
-# 100% open-source Java implementation
-cask "liberica-jdk11"
 
 # Digital logic designer and simulator
 cask "logisim-evolution"
@@ -480,9 +484,6 @@ cask "temurin"
 # Web browser focusing on security
 cask "tor-browser"
 
-# Free streaming software designed for new streamers
-cask "twitch-studio"
-
 # Development environment
 cask "vagrant"
 
@@ -491,3 +492,6 @@ cask "visual-studio-code"
 
 # Open-source version of the X.Org X Window System
 cask "xquartz"
+
+# Video communication and virtual meeting platform
+cask "zoom"
