@@ -49,19 +49,13 @@ alias n="notes e"
 alias w="z ~/src"
 
 # Ⅸ
-alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+alias arc='open /Application/Arc.app'
 alias dc="docker-compose up -d"
-alias discord='cordless'
-alias dm='docker-machine'
-alias evrc='nvim ~/dotfiles/.vimrc'
+alias evrc='nvim ~/dotfiles/etc/nvim'
 alias fcd='z "$(fd --type directory | fzf)"'
-alias gl='globe -s'
 alias lv='nvim -c "normal '\''0" -c bd1'
-alias mysql="docker container exec -it mysql /bin/bash"
-alias pv="pipenv"
 alias reload="exec ${SHELL} -l"
 alias sb='source ~/.bash_profile'
 alias sra='alias | fzf'
 alias trm="tmux kill-server"
-alias upip='pip install --upgrade pip'
 alias wifi='wifi-password'
