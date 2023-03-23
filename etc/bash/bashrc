@@ -26,7 +26,7 @@ export VISUAL=nvim
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-for file in ~/.{aliases,functions}; do
+for file in "$HOME"/.{aliases,functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
