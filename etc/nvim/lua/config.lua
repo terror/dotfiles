@@ -234,6 +234,7 @@ local servers = {
   'ocamllsp',
   'pyright',
   'rust_analyzer',
+  'tsserver',
   'zls',
 }
 
