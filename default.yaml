@@ -11,12 +11,12 @@
   - ~/tmp
 
 - link:
-    ~/.Brewfile: brew/Brewfile
     ~/.aliases: etc/bash/aliases
     ~/.bash_profile: etc/bash/bash_profile
     ~/.bashrc: etc/bash/bashrc
     ~/.bin: bin
     ~/.bp: etc/bp
+    ~/.brewfile: brew/brewfile
     ~/.config/alacritty/alacritty.yml: etc/alacritty.yml
     ~/.config/gitconfig: etc/gitconfig
     ~/.config/htoprc: etc/htoprc
