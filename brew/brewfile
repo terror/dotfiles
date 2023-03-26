@@ -201,9 +201,6 @@ brew "just"
 # Library that provides automatic proxy configuration management
 brew "libproxy"
 
-# Next-gen compiler infrastructure
-brew "llvm"
-
 # Small build system for use with gyp or CMake
 brew "ninja"
 
@@ -306,6 +303,9 @@ brew "sphinx-doc"
 # Terminal-based client for Spotify
 brew "spotify-tui"
 
+# Command-line utility for SQLx, the Rust SQL toolkit
+brew "sqlx-cli"
+
 # Cross-shell prompt for astronauts
 brew "starship"
 
@@ -348,6 +348,9 @@ brew "yarn"
 # Programming language designed for robustness, optimality, and clarity
 brew "zig"
 
+# Language Server for Zig
+brew "zls"
+
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 
@@ -378,13 +381,6 @@ brew "zegervdv/zathura/zathura-pdf-poppler"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 
-# Application launcher and productivity software
-cask "alfred"
-cask "android-sdk"
-
-# Memory training application
-cask "anki"
-
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
 cask "basictex"
 
@@ -394,23 +390,14 @@ cask "bitwarden"
 # Virtual Audio Driver
 cask "blackhole-2ch"
 
-# E-books management software
-cask "calibre"
-
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
-
-# Browser for SQLite databases
-cask "db-browser-for-sqlite"
 
 # Voice and text chat software
 cask "discord"
 
 # App to build and share containerized applications and microservices
 cask "docker"
-
-# Developer platform
-cask "dotnet-sdk"
 
 # Client for the Dropbox cloud storage service
 cask "dropbox"
@@ -439,32 +426,17 @@ cask "logisim-evolution"
 # Mips Assembly and Runtime Simulator
 cask "mars"
 
-# Explore and manipulate your MongoDB data
-cask "mongodb-compass"
-
-# Free and open-source RSS reader
-cask "netnewswire"
-
-# App to write, plan, collaborate, and get organized
-cask "notion"
-
 # Open-source software for live streaming and screen recording
 cask "obs"
 
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
+# All-in-one bookmark manager
+cask "raindropio"
+
+# Control your tools with a few keystrokes
+cask "raycast"
 
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
-
-# Redis server with additional database capabilities and the visualisation tool RedisInsight.
-cask "redis-stack"
-
-# A graphical tool for visualizing data and managing Redis databases
-cask "redis-stack-redisinsight"
-
-# Redis Stack Server install a Redis server with additional database capabilities
-cask "redis-stack-server"
 
 # Tool for sending personal documents to Kindles from Macs
 cask "send-to-kindle"
@@ -478,20 +450,11 @@ cask "sparrow"
 # Music streaming service
 cask "spotify"
 
-# JDK from the Eclipse Foundation (Adoptium)
-cask "temurin"
-
 # Web browser focusing on security
 cask "tor-browser"
 
 # Development environment
 cask "vagrant"
-
-# Open-source code editor
-cask "visual-studio-code"
-
-# Open-source version of the X.Org X Window System
-cask "xquartz"
 
 # Video communication and virtual meeting platform
 cask "zoom"
