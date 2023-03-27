@@ -10,10 +10,11 @@ tap "michaeleisel/zld"
 tap "mongodb/brew"
 tap "redis-stack/redis-stack"
 tap "rhysd/actionlint", "https://github.com/rhysd/actionlint"
-tap "rhysd/tweet-app", "https://github.com/rhysd/tweet-app"
 tap "tlk/imagemagick-x11"
-tap "yudai/gotty"
 tap "zegervdv/zathura"
+
+# Run your GitHub Actions locally 🚀
+brew "act"
 
 # Core application library for C
 brew "glib"
@@ -324,6 +325,9 @@ brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 
+# Language Server Protocol implementation for TypeScript wrapping tsserver
+brew "typescript-language-server", link: false
+
 # Maintained ctags implementation
 brew "universal-ctags"
 
@@ -455,6 +459,9 @@ cask "tor-browser"
 
 # Development environment
 cask "vagrant"
+
+# Open-source code editor
+cask "visual-studio-code"
 
 # Video communication and virtual meeting platform
 cask "zoom"
