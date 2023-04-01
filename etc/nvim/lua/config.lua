@@ -109,24 +109,32 @@ require('tree-sitter-just').setup({})
 -- │ Bufferline                                                                 │
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
-g.bufferline = {
+require('barbar').setup({
   animation = false,
-  auto_hide = false,
-  tabpages = true,
-  closable = true,
-  clickable = true,
-  icons = true,
-  icon_separator_active = '',
-  icon_separator_inactive = '',
-  icon_close_tab = '',
-  icon_close_tab_modified = '●',
-  icon_pinned = '車',
-  maximum_padding = 1,
-  maximum_length = 30,
-  semantic_letters = true,
+  hide = { extensions = false, inactive = false },
+  icons = {
+    button = '',
+    diagnostics = {
+      [vim.diagnostic.severity.ERROR] = { enabled = true, icon = 'ﬀ' },
+      [vim.diagnostic.severity.WARN] = { enabled = false },
+      [vim.diagnostic.severity.INFO] = { enabled = false },
+      [vim.diagnostic.severity.HINT] = { enabled = true },
+    },
+    filetype = { custom_colors = false, enabled = true },
+    separator = { left = '', right = '' },
+    modified = { button = '●' },
+    pinned = { button = '車' },
+    alternate = { filetype = { enabled = false } },
+    current = { buffer_index = false },
+    inactive = { button = '×' },
+    visible = { modified = { buffer_number = false } },
+  },
   letters = 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP',
+  maximum_length = 30,
+  maximum_padding = 1,
+  minimum_padding = 1,
   no_name_title = nil,
-}
+})
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Startify                                                                   │
