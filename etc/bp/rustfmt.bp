@@ -4,6 +4,7 @@ extension: toml
 tab_spaces: 2
 ---
 edition = "2018"
+max_width = 80
 newline_style = "Unix"
 tab_spaces = {%tab_spaces%}
 use_field_init_shorthand = true
