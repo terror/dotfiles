@@ -333,7 +333,7 @@ commands = {
   'autocmd ColorScheme * hi! CmpItemAbbrMatch guifg=' .. colors.blue,
   'autocmd ColorScheme * hi! CmpItemAbbrMatchFuzzy guifg=' .. colors.yellow,
   'autocmd ColorScheme * hi! CmpItemKind guifg=' .. colors.green,
-  'autocmd ColorScheme * hi! CmpItemMenu guifg=' .. colors.purple
+  'autocmd ColorScheme * hi! CmpItemMenu guifg=' .. colors.purple,
 }
 
 for _, command in pairs(commands) do

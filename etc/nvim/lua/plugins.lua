@@ -24,9 +24,6 @@ return require('packer').startup(function()
   -- Support .editorconfig
   use('editorconfig/editorconfig-vim')
 
-  -- A vim alignment plugin
-  use('junegunn/vim-easy-align')
-
   -- Cool start screen
   use('mhinz/vim-startify')
 
@@ -56,12 +53,6 @@ return require('packer').startup(function()
 
   -- Treesitter parser for just
   use('IndianBoy42/tree-sitter-just')
-
-  -- Plant UML syntax
-  use('aklt/plantuml-syntax')
-
-  -- Distraction free writing
-  use('junegunn/goyo.vim')
 
   -- GLSL syntax highlighting
   use('tikhomirov/vim-glsl')
@@ -102,12 +93,6 @@ return require('packer').startup(function()
   -- A better latex editing experience
   use({
     'lervag/vimtex',
-    ft = 'tex',
-  })
-
-  -- Latex concealer
-  use({
-    'KeitaNakamura/tex-conceal.vim',
     ft = 'tex',
   })
 
