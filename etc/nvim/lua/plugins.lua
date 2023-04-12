@@ -45,9 +45,6 @@ return require('packer').startup(function()
   -- Language server protocol
   use('neovim/nvim-lspconfig')
 
-  -- Snippets
-  use('SirVer/ultisnips')
-
   -- View LSP startup progress
   use('arkav/lualine-lsp-progress')
 
@@ -75,14 +72,17 @@ return require('packer').startup(function()
   -- Snippets source for nvim-cmp
   use('saadparwaiz1/cmp_luasnip')
 
-  -- Lua snippets plugin
-  use('L3MON4D3/LuaSnip')
-
   -- LSP source for nvim-cmp
   use('hrsh7th/cmp-nvim-lsp')
 
   -- Cool vscode-like pictograms
   use('onsails/lspkind.nvim')
+
+  -- A lua-based snippet engine
+  use({
+    'L3MON4D3/LuaSnip',
+    tag = 'v<CurrentMajor>.*',
+  })
 
   -- Use FZF for telescope fuzzy file finding algorithm
   use({

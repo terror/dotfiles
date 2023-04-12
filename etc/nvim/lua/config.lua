@@ -252,11 +252,6 @@ for _, server in ipairs(servers) do
   lsp[server].setup({
     on_attach = on_attach,
     capabilities = capabilities,
-    settings = {
-      [server] = {
-        diagnostics = { disabled = { 'inactive-code' } },
-      },
-    },
   })
 end
 
@@ -295,14 +290,6 @@ require('lualine').setup({
 })
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
--- │ Ultisnips                                                                  │
--- ╚────────────────────────────────────────────────────────────────────────────│
-
-g.UltiSnipsExpandTrigger = '<tab>'
-g.UltiSnipsJumpBackwardTrigger = '<c-z>'
-g.UltiSnipsJumpForwardTrigger = '<c-b>'
-
--- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Vimtex                                                                     │
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
@@ -311,6 +298,19 @@ g.tex_flavor = 'latex'
 g.vimtex_compiler_method = 'latexmk'
 g.vimtex_quickfix_mode = 0
 g.vimtex_view_method = 'zathura'
+
+-- ───────────────────────────────────────────────────────────────────────────-─╗
+-- │ Luasnip                                                                    │
+-- ╚────────────────────────────────────────────────────────────────────────────│
+
+local luasnip = require('luasnip')
+
+require('luasnip.loaders.from_snipmate').lazy_load()
+
+luasnip.config.set_config({
+  history = true,
+  updateevents = 'TextChanged,TextChangedI',
+})
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Completion                                                                 │
@@ -340,15 +340,12 @@ for _, command in pairs(commands) do
   vim.api.nvim_command(command)
 end
 
-local luasnip = require('luasnip')
-
 local cmp = require('cmp')
 
 cmp.setup({
-  snippet = {
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end,
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
   },
   formatting = {
     format = function(_, item)
@@ -389,8 +386,9 @@ cmp.setup({
       end
     end, { 'i', 's' }),
   }),
-  sources = {
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
   },
 })
