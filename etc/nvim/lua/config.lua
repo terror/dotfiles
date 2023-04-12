@@ -327,29 +327,18 @@ local colors = {
   purple = '#9a859d',
 }
 
-vim.api.nvim_command(
-  'autocmd ColorScheme * hi! CmpItemAbbr guifg=' .. colors.fg
-)
-
-vim.api.nvim_command(
-  'autocmd ColorScheme * hi! CmpItemAbbrDeprecated guifg=' .. colors.red
-)
-
-vim.api.nvim_command(
-  'autocmd ColorScheme * hi! CmpItemAbbrMatch guifg=' .. colors.blue
-)
-
-vim.api.nvim_command(
-  'autocmd ColorScheme * hi! CmpItemAbbrMatchFuzzy guifg=' .. colors.yellow
-)
-
-vim.api.nvim_command(
-  'autocmd ColorScheme * hi! CmpItemKind guifg=' .. colors.green
-)
-
-vim.api.nvim_command(
+commands = {
+  'autocmd ColorScheme * hi! CmpItemAbbr guifg=' .. colors.fg,
+  'autocmd ColorScheme * hi! CmpItemAbbrDeprecated guifg=' .. colors.red,
+  'autocmd ColorScheme * hi! CmpItemAbbrMatch guifg=' .. colors.blue,
+  'autocmd ColorScheme * hi! CmpItemAbbrMatchFuzzy guifg=' .. colors.yellow,
+  'autocmd ColorScheme * hi! CmpItemKind guifg=' .. colors.green,
   'autocmd ColorScheme * hi! CmpItemMenu guifg=' .. colors.purple
-)
+}
+
+for _, command in pairs(commands) do
+  vim.api.nvim_command(command)
+end
 
 local luasnip = require('luasnip')
 
@@ -362,9 +351,9 @@ cmp.setup({
     end,
   },
   formatting = {
-    format = function(_, vim_item)
-      vim_item.kind = require('lspkind').presets.default[vim_item.kind]
-      return vim_item
+    format = function(_, item)
+      item.kind = require('lspkind').presets.default[item.kind]
+      return item
     end,
   },
   completion = {
