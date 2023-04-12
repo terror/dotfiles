@@ -227,7 +227,7 @@ g.netrw_winsize = 20
 
 local lsp = require('lspconfig')
 
-local on_attach = function(client)
+local on_attach = function(_)
   map('n', '<leader>=', '<cmd>lua vim.lsp.buf.formatting()<CR>')
   map('n', '<leader>ar', '<cmd>lua vim.lsp.buf.rename()<CR>')
   map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
@@ -239,11 +239,12 @@ end
 local servers = {
   'gopls',
   'hls',
+  'lua_ls',
   'ocamllsp',
   'pyright',
   'rust_analyzer',
   'tsserver',
-  'zls',
+  'zls'
 }
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -327,7 +328,7 @@ local colors = {
   purple = '#9a859d',
 }
 
-commands = {
+local commands = {
   'autocmd ColorScheme * hi! CmpItemAbbr guifg=' .. colors.fg,
   'autocmd ColorScheme * hi! CmpItemAbbrDeprecated guifg=' .. colors.red,
   'autocmd ColorScheme * hi! CmpItemAbbrMatch guifg=' .. colors.blue,
