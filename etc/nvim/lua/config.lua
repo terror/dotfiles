@@ -66,13 +66,11 @@ require('nvim-treesitter.configs').setup({
     'rust',
     'tsx',
     'typescript',
-    'zig'
+    'zig',
   },
-
   highlight = {
     enable = true,
   },
-
   incremental_selection = {
     enable = true,
     keymaps = {
@@ -82,7 +80,6 @@ require('nvim-treesitter.configs').setup({
       node_decremental = 'grm',
     },
   },
-
   playground = {
     enable = true,
     disable = {},
@@ -170,12 +167,6 @@ g.startify_commands = {
 }
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
--- │ Rustfmt                                                                    │
--- ╚────────────────────────────────────────────────────────────────────────────│
-
-g.rustfmt_autosave = 0
-
--- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Markdown Composer                                                          │
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
@@ -229,8 +220,8 @@ g.netrw_winsize = 20
 local lsp = require('lspconfig')
 
 local on_attach = function(_)
-  map('n', '<leader>=', '<cmd>lua vim.lsp.buf.formatting()<CR>')
   map('n', '<leader>ar', '<cmd>lua vim.lsp.buf.rename()<CR>')
+  map('n', '<leader>s', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>')
   map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
   map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
   map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
@@ -245,7 +236,7 @@ local servers = {
   'pyright',
   'rust_analyzer',
   'tsserver',
-  'zls'
+  'zls',
 }
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
