@@ -78,6 +78,21 @@ return require('packer').startup(function()
   -- Icons for status and tabline
   use('kyazdani42/nvim-web-devicons')
 
+  -- Autocompletion plugin
+  use('hrsh7th/nvim-cmp')
+
+  -- Snippets source for nvim-cmp
+  use('saadparwaiz1/cmp_luasnip')
+
+  -- Lua snippets plugin
+  use('L3MON4D3/LuaSnip')
+
+  -- LSP source for nvim-cmp
+  use('hrsh7th/cmp-nvim-lsp')
+
+  -- Cool vscode-like pictograms
+  use('onsails/lspkind.nvim')
+
   -- Use FZF for telescope fuzzy file finding algorithm
   use({
     'nvim-telescope/telescope-fzf-native.nvim',

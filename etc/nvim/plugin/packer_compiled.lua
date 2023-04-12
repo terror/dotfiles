@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/Users/liam/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/Users/liam/.local/share/nvim/site/pack/packer/start/barbar.nvim",
@@ -84,6 +89,16 @@ _G.packer_plugins = {
     path = "/Users/liam/.local/share/nvim/site/pack/packer/start/chatgpt.nvim",
     url = "https://github.com/terror/chatgpt.nvim"
   },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/Users/liam/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/Users/liam/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
   ["editorconfig-vim"] = {
     loaded = true,
     path = "/Users/liam/.local/share/nvim/site/pack/packer/start/editorconfig-vim",
@@ -93,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/liam/.local/share/nvim/site/pack/packer/start/goyo.vim",
     url = "https://github.com/junegunn/goyo.vim"
+  },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "/Users/liam/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
   },
   ["lualine-lsp-progress"] = {
     loaded = true,
@@ -108,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/Users/liam/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -263,13 +288,6 @@ time([[Defining packer_plugins]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.api.nvim_create_user_command, 'TSPlaygroundToggle', function(cmdargs)
-          require('packer.load')({'playground'}, { cmd = 'TSPlaygroundToggle', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'playground'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('TSPlaygroundToggle ', 'cmdline')
-      end})
 pcall(vim.api.nvim_create_user_command, 'ComposerStart', function(cmdargs)
           require('packer.load')({'vim-markdown-composer'}, { cmd = 'ComposerStart', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
@@ -284,15 +302,22 @@ pcall(vim.api.nvim_create_user_command, 'Tabularize', function(cmdargs)
           require('packer.load')({'tabular'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('Tabularize ', 'cmdline')
       end})
+pcall(vim.api.nvim_create_user_command, 'TSPlaygroundToggle', function(cmdargs)
+          require('packer.load')({'playground'}, { cmd = 'TSPlaygroundToggle', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'playground'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('TSPlaygroundToggle ', 'cmdline')
+      end})
 time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex', 'tex-conceal.vim'}, { ft = "tex" }, _G.packer_plugins)]]
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-markdown', 'vim-markdown-composer'}, { ft = "markdown" }, _G.packer_plugins)]]
 vim.cmd [[au FileType rust ++once lua require("packer.load")({'rust.vim'}, { ft = "rust" }, _G.packer_plugins)]]
-vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex', 'tex-conceal.vim'}, { ft = "tex" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]

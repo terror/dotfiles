@@ -246,9 +246,12 @@ local servers = {
   'zls',
 }
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 for _, server in ipairs(servers) do
   lsp[server].setup({
     on_attach = on_attach,
+    capabilities = capabilities,
     settings = {
       [server] = {
         diagnostics = { disabled = { 'inactive-code' } },
@@ -308,3 +311,97 @@ g.tex_flavor = 'latex'
 g.vimtex_compiler_method = 'latexmk'
 g.vimtex_quickfix_mode = 0
 g.vimtex_view_method = 'zathura'
+
+-- ───────────────────────────────────────────────────────────────────────────-─╗
+-- │ Completion                                                                 │
+-- ╚────────────────────────────────────────────────────────────────────────────│
+
+local colors = {
+  bg = '#151718',
+  fg = '#d6d6d6',
+  green = '#55dbbe',
+  red = '#f23d3d',
+  blue = '#66d9ee',
+  yellow = '#dcdb86',
+  cyan = '#ac80a6',
+  purple = '#9a859d',
+}
+
+vim.api.nvim_command(
+  'autocmd ColorScheme * hi! CmpItemAbbr guifg=' .. colors.fg
+)
+
+vim.api.nvim_command(
+  'autocmd ColorScheme * hi! CmpItemAbbrDeprecated guifg=' .. colors.red
+)
+
+vim.api.nvim_command(
+  'autocmd ColorScheme * hi! CmpItemAbbrMatch guifg=' .. colors.blue
+)
+
+vim.api.nvim_command(
+  'autocmd ColorScheme * hi! CmpItemAbbrMatchFuzzy guifg=' .. colors.yellow
+)
+
+vim.api.nvim_command(
+  'autocmd ColorScheme * hi! CmpItemKind guifg=' .. colors.green
+)
+
+vim.api.nvim_command(
+  'autocmd ColorScheme * hi! CmpItemMenu guifg=' .. colors.purple
+)
+
+local luasnip = require('luasnip')
+
+local cmp = require('cmp')
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+  formatting = {
+    format = function(_, vim_item)
+      vim_item.kind = require('lspkind').presets.default[vim_item.kind]
+      return vim_item
+    end,
+  },
+  completion = {
+    keyword_length = 1,
+  },
+  experimental = {
+    ghost_text = true,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-d>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    }),
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+  }),
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  },
+})
