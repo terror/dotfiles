@@ -55,6 +55,7 @@ telescope.setup({
 
 require('nvim-treesitter.configs').setup({
   ensure_installed = {
+    'cpp',
     'go',
     'java',
     'javascript',
@@ -65,7 +66,7 @@ require('nvim-treesitter.configs').setup({
     'rust',
     'tsx',
     'typescript',
-    'zig',
+    'zig'
   },
 
   highlight = {
