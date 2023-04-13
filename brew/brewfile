@@ -38,7 +38,7 @@ brew "automake"
 brew "awscli"
 
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.10", link: false
+brew "python@3.10"
 
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
@@ -145,6 +145,9 @@ brew "gobject-introspection"
 # Fast linters runner for Go
 brew "golangci-lint"
 
+# Golang formatter that fixes long lines
+brew "golines"
+
 # Development kit for the Java programming language
 brew "openjdk"
 
@@ -193,6 +196,9 @@ brew "libheif"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 
+# Dynamic language and bytecode vm
+brew "janet"
+
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 
@@ -201,6 +207,9 @@ brew "just"
 
 # Library that provides automatic proxy configuration management
 brew "libproxy"
+
+# Language Server for the Lua language
+brew "lua-language-server"
 
 # Small build system for use with gyp or CMake
 brew "ninja"
@@ -241,6 +250,9 @@ brew "ormolu"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 
+# Python dependency management tool
+brew "pipenv"
+
 # Python package management tool
 brew "poetry"
 
@@ -273,6 +285,9 @@ brew "qt"
 
 # Software environment for statistical computing
 brew "r"
+
+# Develop and deploy code with zero configuration
+brew "railway"
 
 # Persistent key-value database, with built-in net interface
 brew "redis"
