@@ -15,7 +15,9 @@ main() {
   bp --use rust-just
   bp --use editorconfig
 
+  just fmt
+
   "$EDITOR" src/main.rs
 }
 
-main "$HOME/fun/rust"
+main "$HOME/src/rust"
