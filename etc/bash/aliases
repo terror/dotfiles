@@ -49,7 +49,7 @@ alias n="notes e"
 alias w="z ~/src"
 
 # Ⅸ
-alias arc='open /Application/Arc.app'
+alias arc='open /Applications/Arc.app'
 alias dc="docker-compose up -d"
 alias evrc='nvim ~/dotfiles/etc/nvim'
 alias fcd='z "$(fd --type directory | fzf)"'
