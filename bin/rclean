@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 count=0
-dirs=("$HOME/src" "$DROPBOX/code")
+dirs=("$HOME/src" "$HOME/tmp" "$DROPBOX/code")
 start=$SECONDS
 
 clean() {
