@@ -78,6 +78,25 @@ return require('packer').startup(function()
   -- Cool vscode-like pictograms
   use('onsails/lspkind.nvim')
 
+  -- Github copilot
+  use({
+    'zbirenbaum/copilot.lua',
+    cmd = 'Copilot',
+    event = 'InsertEnter',
+    config = function()
+      require('copilot').setup({})
+    end,
+  })
+
+  -- Github copilot cmp integration
+  use({
+    'zbirenbaum/copilot-cmp',
+    after = { 'copilot.lua' },
+    config = function()
+      require('copilot_cmp').setup()
+    end,
+  })
+
   -- A lua-based snippet engine
   use({
     'L3MON4D3/LuaSnip',
