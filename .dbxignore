@@ -1,0 +1,19 @@
+.dropbox.device
+.localized
+.volumeicon.icns
+.fseventsd
+.spotlight-v100
+.documentrevisions-v100
+.temporaryitems
+.trashes
+.com.apple.timemachine.donotpresent
+system volume information
+$recycle.bin
+filehistory
+toolkit
+.dbxignore
+**/*.paper
+**/*.gdoc
+**/*.gsheet
+**/*.gslides
+**/._*
