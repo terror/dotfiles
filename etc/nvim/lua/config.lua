@@ -220,7 +220,8 @@ g.netrw_winsize = 20
 
 local lsp = require('lspconfig')
 
-local on_attach = function(_)
+local on_attach = function(client)
+  client.server_capabilities.semanticTokensProvider = nil
   map('n', '<leader>ar', '<cmd>lua vim.lsp.buf.rename()<CR>')
   map('n', '<leader>s', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>')
   map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
