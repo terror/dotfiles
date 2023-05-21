@@ -157,9 +157,6 @@ brew "google-java-format"
 # Language server for the Go language
 brew "gopls"
 
-# Open-source build automation tool based on the Groovy and Kotlin DSL
-brew "gradle"
-
 # Generic library support script
 brew "libtool"
 
@@ -189,6 +186,9 @@ brew "httpie"
 
 # Configurable static site generator
 brew "hugo"
+
+# Command-line benchmarking tool
+brew "hyperfine"
 
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
