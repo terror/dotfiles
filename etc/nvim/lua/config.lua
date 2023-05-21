@@ -112,7 +112,7 @@ require('barbar').setup({
   animation = false,
   hide = { extensions = false, inactive = false },
   icons = {
-    button = '',
+    button = '×',
     diagnostics = {
       [vim.diagnostic.severity.ERROR] = { enabled = false, icon = 'ﬀ' },
       [vim.diagnostic.severity.WARN] = { enabled = false },
