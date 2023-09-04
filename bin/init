@@ -12,9 +12,7 @@ EOF
 }
 
 function main() {
-  name="$2"
-
-  cd "$1" || exit
+  name="$1"
 
   mkdir "$name" && \
     cd "$name" || exit
@@ -37,4 +35,4 @@ function main() {
   echo "/.DS_Store"  >> .gitignore
 }
 
-main "$HOME/src" "$@"
+main "$@"
