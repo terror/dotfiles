@@ -3,9 +3,10 @@ filename: .prettierrc
 tabWidth: 2
 ---
 {
-  "trailingComma": "es5",
-  "tabWidth": {%tabWidth%},
+  "jsxSingleQuote": true,
+  "proseWrap": "always",
   "semi": true,
   "singleQuote": true,
-  "jsxSingleQuote": true
+  "tabWidth": {%tabWidth%},
+  "trailingComma": "es5"
 }
