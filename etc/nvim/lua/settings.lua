@@ -8,6 +8,7 @@ cmd('colorscheme base16-seti')
 cmd('syntax on')
 
 opt('g', 'mapleader', ' ')
+opt('g', 'maplocalleader', ' ')
 opt('o', 'autochdir', true)
 opt('o', 'autoindent', true)
 opt('o', 'autoread', true)

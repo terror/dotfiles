@@ -55,7 +55,9 @@ telescope.setup({
 
 require('nvim-treesitter.configs').setup({
   ensure_installed = {
+    'clojure',
     'cpp',
+    'glsl',
     'go',
     'java',
     'javascript',
@@ -231,6 +233,7 @@ local on_attach = function(client)
 end
 
 local servers = {
+  'clangd',
   'gopls',
   'hls',
   'lua_ls',
