@@ -24,15 +24,15 @@ dpi:
 
 font:
   normal:
-    family: CaskaydiaCove Nerd Font
+    family: CaskaydiaCove NF
     style:  Regular
 
   bold:
-    family: CaskaydiaCove Nerd Font
+    family: CaskaydiaCove NF
     style:  Bold
 
   italic:
-    family: CaskaydiaCove Nerd Font
+    family: CaskaydiaCove NF
     style:  Oblique
 
   size: 12.0
