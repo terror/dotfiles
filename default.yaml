@@ -17,7 +17,7 @@
     ~/.bin: bin
     ~/.bp: etc/bp
     ~/.brewfile: brew/brewfile
-    ~/.config/alacritty/alacritty.yml: etc/alacritty.yml
+    ~/.config/alacritty/alacritty.toml: etc/alacritty.toml
     ~/.config/gitconfig: etc/gitconfig
     ~/.config/htoprc: etc/htoprc
     ~/.config/neofetch/config.conf: etc/neofetch/config.conf
