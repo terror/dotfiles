@@ -78,6 +78,9 @@ return require('packer').startup(function()
   -- Cool vscode-like pictograms
   use('onsails/lspkind.nvim')
 
+  -- General-purpose motion plugin
+  use('ggandor/leap.nvim')
+
   -- Github copilot
   use({
     'zbirenbaum/copilot.lua',
