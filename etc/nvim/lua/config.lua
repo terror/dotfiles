@@ -420,4 +420,13 @@ cmp.setup({
 -- │ Leap                                                                       │
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
-require('leap').create_default_mappings()
+local leap = require('leap')
+
+leap.init_highlight(true)
+leap.opts.special_keys.prev_group = '<bs>'
+leap.opts.special_keys.prev_target = '<bs>'
+
+vim.keymap.set({'n', 'x', 'o'}, 'M', '<Plug>(leap-forward-to)')
+vim.keymap.set({'n', 'x', 'o'}, 'L', '<Plug>(leap-backward-to)')
+
+require('leap.user').set_repeat_keys('<cr>', '<bs>')
