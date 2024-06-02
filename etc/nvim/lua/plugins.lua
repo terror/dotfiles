@@ -15,9 +15,6 @@ end
 local use = require('packer').use
 
 return require('packer').startup(function()
-  -- Justfile syntax highlighting
-  use('NoahTheDuke/vim-just')
-
   --  Changes Vim working directory to project root
   use('airblade/vim-rooter')
 
@@ -80,6 +77,12 @@ return require('packer').startup(function()
 
   -- General-purpose motion plugin
   use('ggandor/leap.nvim')
+
+  -- Just syntax highlighting
+  use({
+    "NoahTheDuke/vim-just",
+    ft = { "just" },
+  })
 
   -- Github copilot
   use({
