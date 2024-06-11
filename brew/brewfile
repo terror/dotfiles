@@ -8,13 +8,17 @@ tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "michaeleisel/zld"
 tap "mongodb/brew"
+tap "oven-sh/bun"
 tap "redis-stack/redis-stack"
 tap "rhysd/actionlint", "https://github.com/rhysd/actionlint"
 tap "tlk/imagemagick-x11"
 tap "zegervdv/zathura"
 
-# Run your GitHub Actions locally 🚀
+# Run your GitHub Actions locally
 brew "act"
+
+# Library for command-line editing
+brew "readline"
 
 # Core application library for C
 brew "glib"
@@ -36,9 +40,6 @@ brew "automake"
 
 # Official Amazon AWS command-line interface
 brew "awscli"
-
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
 
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
@@ -67,26 +68,50 @@ brew "cabal-install"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 
+# Development kit for the Java programming language
+brew "openjdk"
+
+# Readline wrapper: adds readline support to tools that lack it
+brew "rlwrap"
+
+# Dynamic, general-purpose programming language
+brew "clojure"
+
+# Language Server (LSP) for Clojure
+brew "clojure-lsp"
+
 # Cross-platform make
 brew "cmake"
+
+# Cross-platform C and C++ unit testing framework for the 21st century
+brew "criterion"
 
 # C implementation of Markdown
 brew "discount"
 
-# Pack, ship and run any application as a lightweight container
-brew "docker", link: false
-
-# Create Docker hosts locally and on cloud providers
-brew "docker-machine"
-
 # More intuitive version of du in rust
 brew "dust"
+
+# Generic library support script
+brew "libtool"
+
+# Functional metaprogramming aware language built on Erlang VM
+brew "elixir"
 
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 
+# Parser generator tool and incremental parsing library
+brew "tree-sitter"
+
 # GNU Emacs text editor
 brew "emacs"
+
+# Platform built on V8 to build network applications
+brew "node", args: ["HEAD"]
+
+# LLVM bytecode to JavaScript compiler
+brew "emscripten"
 
 # Project Euler command-line tool written in Python
 brew "euler-py", link: false
@@ -130,6 +155,9 @@ brew "gnupg"
 # Powerful, lightweight programming language
 brew "lua"
 
+# Cross-platform application and UI framework
+brew "qt"
+
 # Command-driven, interactive function plotting
 brew "gnuplot"
 
@@ -148,17 +176,17 @@ brew "golangci-lint"
 # Golang formatter that fixes long lines
 brew "golines"
 
-# Development kit for the Java programming language
-brew "openjdk"
-
 # Reformats Java source code to comply with Google Java Style
 brew "google-java-format"
 
 # Language server for the Go language
 brew "gopls"
 
-# Generic library support script
-brew "libtool"
+# Deliver Go binaries as fast and easily as possible
+brew "goreleaser"
+
+# Open-source build automation tool based on the Groovy and Kotlin DSL
+brew "gradle"
 
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
@@ -241,8 +269,11 @@ brew "nginx"
 # Statically typed compiled systems programming language
 brew "nim"
 
-# Platform built on V8 to build network applications
-brew "node"
+# Manage multiple Node.js versions
+brew "nvm"
+
+# Command-line Git information tool
+brew "onefetch"
 
 # OCaml package manager
 brew "opam"
@@ -255,6 +286,9 @@ brew "pandoc"
 
 # Python dependency management tool
 brew "pipenv"
+
+# Fast, disk space efficient package manager
+brew "pnpm"
 
 # Python package management tool
 brew "poetry"
@@ -274,17 +308,20 @@ brew "prettier"
 # Linter for prose
 brew "proselint"
 
+# Python version management
+brew "pyenv"
+
 # Static type checker for Python
 brew "pyright"
+
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8"
 
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
-
-# Cross-platform application and UI framework
-brew "qt"
 
 # Software environment for statistical computing
 brew "r"
@@ -297,9 +334,6 @@ brew "redis"
 
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-
-# Readline wrapper: adds readline support to tools that lack it
-brew "rlwrap"
 
 # Utility that provides fast incremental file transfer
 brew "rsync"
@@ -361,6 +395,9 @@ brew "universal-ctags"
 # Google's JavaScript engine
 brew "v8"
 
+# Watch files and take action when they change
+brew "watchman"
+
 # Internet file retriever
 brew "wget"
 
@@ -400,6 +437,9 @@ brew "mongodb/brew/mongodb-community"
 # An interactive JavaScript command-line interface to MongoDB
 brew "mongodb/brew/mongodb-community-shell"
 
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
+
 # Static checker for GitHub Actions workflow files
 brew "rhysd/actionlint/actionlint"
 
@@ -409,8 +449,8 @@ brew "zegervdv/zathura/zathura"
 # Poppler backend plugin for zathura
 brew "zegervdv/zathura/zathura-pdf-poppler"
 
-# Password manager that keeps all passwords secure behind one password
-cask "1password"
+# Password manager
+cask "1password@nightly"
 
 # GPU-accelerated terminal emulator
 cask "alacritty"
@@ -424,11 +464,14 @@ cask "blackhole-2ch"
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
 
+# Tool for formatting Clojure code
+cask "cljstyle"
+
 # Voice and text chat software
 cask "discord"
 
-# App to build and share containerized applications and microservices
-cask "docker"
+# Online diagram software
+cask "drawio"
 
 # Client for the Dropbox cloud storage service
 cask "dropbox"
@@ -448,11 +491,20 @@ cask "inkscape"
 # Interface for reading and syncing eBooks
 cask "kindle"
 
+# App to manage software development and track bugs
+cask "linear-linear"
+
 # VPN client
 cask "mullvadvpn"
 
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
+
 # Open-source software for live streaming and screen recording
 cask "obs"
+
+# Replacement for Docker Desktop
+cask "orbstack"
 
 # All-in-one bookmark manager
 cask "raindropio"
@@ -472,11 +524,17 @@ cask "send-to-kindle"
 # Instant messaging application focusing on security
 cask "signal"
 
+# Team communication and collaboration software
+cask "slack"
+
 # Bitcoin wallet application
 cask "sparrow"
 
 # Music streaming service
 cask "spotify"
+
+# Controls screen display settings
+cask "switchresx"
 
 # Web browser focusing on security
 cask "tor-browser"
@@ -489,3 +547,23 @@ cask "visual-studio-code"
 
 # Video communication and virtual meeting platform
 cask "zoom"
+vscode "christian-kohler.npm-intellisense"
+vscode "dbaeumer.vscode-eslint"
+vscode "esbenp.prettier-vscode"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "gruntfuggly.todo-tree"
+vscode "james-yu.latex-workshop"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode.vscode-typescript-next"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "redhat.vscode-yaml"
+vscode "vscodevim.vim"
+vscode "yoavbls.pretty-ts-errors"
