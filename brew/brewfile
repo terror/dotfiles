@@ -86,6 +86,9 @@ brew "cmake"
 # Cross-platform C and C++ unit testing framework for the 21st century
 brew "criterion"
 
+# Diff that understands syntax
+brew "difftastic"
+
 # C implementation of Markdown
 brew "discount"
 
@@ -461,6 +464,9 @@ cask "basictex"
 # Virtual Audio Driver
 cask "blackhole-2ch"
 
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
 
@@ -475,11 +481,7 @@ cask "drawio"
 
 # Client for the Dropbox cloud storage service
 cask "dropbox"
-
-# Developer targeted fonts with a high number of glyphs
 cask "font-caskaydia-cove-nerd-font"
-
-# Free monospaced font with programming ligatures
 cask "font-fira-code"
 
 # Web browser
@@ -565,5 +567,6 @@ vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode.vscode-typescript-next"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "redhat.vscode-yaml"
+vscode "rust-lang.rust-analyzer"
 vscode "vscodevim.vim"
 vscode "yoavbls.pretty-ts-errors"

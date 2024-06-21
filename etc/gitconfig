@@ -14,6 +14,18 @@ excludesfile = /Users/liam/.gitignore.global
 hooksPath = "/Users/liam/.hooks"
 pager = delta
 
+[diff]
+tool = difftastic
+
+[difftool]
+prompt = false
+
+[difftool "difftastic"]
+cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+difftool = true
+
 [web]
 browser = google-chrome
 
@@ -32,6 +44,8 @@ autoStash = true
 [alias]
 cl = clone
 cld = clone --depth 1
+dft = difftool
+dlog = "-c diff.external=difft log -p --ext-diff"
 f = fetch
 fu = fetch upstream master
 hash = rev-parse HEAD
