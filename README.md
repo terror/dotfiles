@@ -1,4 +1,4 @@
-## terror/dotfiles
+## dotfiles
 
 My preferences for macOS. I use [dotbot](https://github.com/anishathalye/dotbot) to manage everything.
 
