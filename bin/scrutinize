@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+words=$(
+  echo \
+  '(unwrap
+    |FIXME
+    |TODO
+    |XXX
+    |panic!
+    |todo!
+    |unsafe
+    |#\[ignore\]
+   )' | tr -d '[:space:]'
+ )
+
+fd --glob *.rs | xargs rg -w "$words"

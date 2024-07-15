@@ -1,0 +1,6 @@
+[
+  { "key": "alt+r",      "command": "code-runner.run"                 },
+  { "key": "ctrl+alt+n", "command": "-code-runner.run"                },
+  { "key": "ctrl+k",     "command": "workbench.action.nextEditor"     },
+  { "key": "ctrl+j",     "command": "workbench.action.previousEditor" }
+]

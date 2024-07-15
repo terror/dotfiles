@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+path() {
+  cd "$(dirname "$1")" &>/dev/null && printf "%s/%s" "$PWD" "${1##*/}"
+}
+
+main() {
+  open -na "Google Chrome" --args --incognito "$(path "$1")"
+}
+
+main "$@"

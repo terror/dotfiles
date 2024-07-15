@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cd "$1" || exit
+
+for file in *; do
+  content=$(expand -t 2 "$file")
+  echo "$content" > "$file"
+done

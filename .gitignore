@@ -1,0 +1,12 @@
+*.swo
+*.swp
+*~
+.DS_Store
+/etc/asciinema/install-id
+/etc/configstore
+/etc/vim/black
+/etc/vim/plugged/*
+/etc/vscode/extensions
+/notes.md
+__pycache__/
+node_modules/

@@ -1,0 +1,572 @@
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "koekeishiya/formulae"
+tap "michaeleisel/zld"
+tap "mongodb/brew"
+tap "oven-sh/bun"
+tap "redis-stack/redis-stack"
+tap "rhysd/actionlint", "https://github.com/rhysd/actionlint"
+tap "tlk/imagemagick-x11"
+tap "zegervdv/zathura"
+
+# Run your GitHub Actions locally
+brew "act"
+
+# Library for command-line editing
+brew "readline"
+
+# Core application library for C
+brew "glib"
+
+# OpenType text shaping engine
+brew "harfbuzz"
+
+# Framework for layout and rendering of i18n text
+brew "pango"
+
+# Icons for the GNOME project
+brew "adwaita-icon-theme"
+
+# Record and share terminal sessions
+brew "asciinema"
+
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+
+# Official Amazon AWS command-line interface
+brew "awscli"
+
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
+
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+
+# Collection of portable C++ source libraries
+brew "boost"
+
+# Asynchronous event library
+brew "libevent"
+
+# Decentralized, peer to peer payment network
+brew "bitcoin"
+
+# Glorious Glasgow Haskell Compilation System
+brew "ghc"
+
+# Command-line interface for Cabal and Hackage
+brew "cabal-install"
+
+# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
+brew "clang-format"
+
+# Development kit for the Java programming language
+brew "openjdk"
+
+# Readline wrapper: adds readline support to tools that lack it
+brew "rlwrap"
+
+# Dynamic, general-purpose programming language
+brew "clojure"
+
+# Language Server (LSP) for Clojure
+brew "clojure-lsp"
+
+# Cross-platform make
+brew "cmake"
+
+# Cross-platform C and C++ unit testing framework for the 21st century
+brew "criterion"
+
+# Diff that understands syntax
+brew "difftastic"
+
+# C implementation of Markdown
+brew "discount"
+
+# More intuitive version of du in rust
+brew "dust"
+
+# Generic library support script
+brew "libtool"
+
+# Functional metaprogramming aware language built on Erlang VM
+brew "elixir"
+
+# Validating, recursive, caching DNS resolver
+brew "unbound"
+
+# Parser generator tool and incremental parsing library
+brew "tree-sitter"
+
+# GNU Emacs text editor
+brew "emacs"
+
+# Platform built on V8 to build network applications
+brew "node", args: ["HEAD"]
+
+# LLVM bytecode to JavaScript compiler
+brew "emscripten"
+
+# Project Euler command-line tool written in Python
+brew "euler-py", link: false
+
+# Calculator REPL, similar to bc(1)
+brew "eva"
+
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+
+# Banner-like program prints strings as ASCII art
+brew "figlet"
+
+# Command-line tools for fly.io services
+brew "flyctl"
+
+# Command-line fuzzy finder written in Go
+brew "fzf"
+
+# GNU awk utility
+brew "gawk"
+
+# GNU compiler collection
+brew "gcc"
+
+# GitHub command-line tool
+brew "gh"
+
+# Distributed revision control system
+brew "git"
+
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+
+# Library for USB device access
+brew "libusb"
+
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+
+# Powerful, lightweight programming language
+brew "lua"
+
+# Cross-platform application and UI framework
+brew "qt"
+
+# Command-driven, interactive function plotting
+brew "gnuplot"
+
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+
+# Manage compile and link flags for libraries
+brew "pkg-config"
+
+# Generate introspection data for GObject libraries
+brew "gobject-introspection"
+
+# Fast linters runner for Go
+brew "golangci-lint"
+
+# Golang formatter that fixes long lines
+brew "golines"
+
+# Reformats Java source code to comply with Google Java Style
+brew "google-java-format"
+
+# Language server for the Go language
+brew "gopls"
+
+# Deliver Go binaries as fast and easily as possible
+brew "goreleaser"
+
+# Open-source build automation tool based on the Groovy and Kotlin DSL
+brew "gradle"
+
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+
+# GSettings schemas for desktop components
+brew "gsettings-desktop-schemas"
+
+# GNU Ubiquitous Intelligent Language for Extensions
+brew "guile"
+
+# Integration point for ghcide and haskell-ide-engine. One IDE to rule them all
+brew "haskell-language-server"
+
+# Command-line hex viewer
+brew "hexyl"
+
+# Haskell source code suggestions
+brew "hlint"
+
+# Improved top (interactive process viewer)
+brew "htop"
+
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
+
+# Configurable static site generator
+brew "hugo"
+
+# Command-line benchmarking tool
+brew "hyperfine"
+
+# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
+brew "libheif"
+
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+
+# Dynamic language and bytecode vm
+brew "janet"
+
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+
+# Handy way to save and run project-specific commands
+brew "just"
+
+# Library that provides automatic proxy configuration management
+brew "libproxy"
+
+# Language Server for the Lua language
+brew "lua-language-server"
+
+# Small build system for use with gyp or CMake
+brew "ninja"
+
+# Fast and user friendly build system
+brew "meson"
+
+# Scala language server
+brew "metals"
+
+# Open source relational database management system
+brew "mysql"
+
+# Open source relational database management system
+brew "mysql@5.7"
+
+# Netwide Assembler (NASM) is an 80x86 assembler
+brew "nasm"
+
+# Fast, highly customisable system info script
+brew "neofetch"
+
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+
+# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
+brew "nginx"
+
+# Statically typed compiled systems programming language
+brew "nim"
+
+# Manage multiple Node.js versions
+brew "nvm"
+
+# Command-line Git information tool
+brew "onefetch"
+
+# OCaml package manager
+brew "opam"
+
+# Formatter for Haskell source code
+brew "ormolu"
+
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+
+# Python dependency management tool
+brew "pipenv"
+
+# Fast, disk space efficient package manager
+brew "pnpm"
+
+# Python package management tool
+brew "poetry"
+
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+
+# Object-relational database system
+brew "postgresql@12"
+
+# Object-relational database system
+brew "postgresql@14"
+
+# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
+brew "prettier"
+
+# Linter for prose
+brew "proselint"
+
+# Python version management
+brew "pyenv"
+
+# Static type checker for Python
+brew "pyright"
+
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
+
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
+
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
+
+# Software environment for statistical computing
+brew "r"
+
+# Develop and deploy code with zero configuration
+brew "railway"
+
+# Persistent key-value database, with built-in net interface
+brew "redis"
+
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+
+# Utility that provides fast incremental file transfer
+brew "rsync"
+
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+
+# Extremely fast Python linter, written in Rust
+brew "ruff"
+
+# Experimental Rust compiler front-end for IDEs
+brew "rust-analyzer"
+
+# Build tool for Scala projects
+brew "sbt"
+
+# JVM-based programming language
+brew "scala"
+
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+
+# Autoformat shell script source code
+brew "shfmt"
+
+# Tool to create intelligent and beautiful documentation
+brew "sphinx-doc"
+
+# Terminal-based client for Spotify
+brew "spotify-tui"
+
+# Command-line utility for SQLx, the Rust SQL toolkit
+brew "sqlx-cli"
+
+# Cross-shell prompt for astronauts
+brew "starship"
+
+# Modernized, complete, self-contained TeX/LaTeX engine
+brew "tectonic"
+
+# User interface to the TELNET protocol
+brew "telnet"
+
+# Programmatically correct mistyped console commands
+brew "thefuck"
+
+# Terminal multiplexer
+brew "tmux"
+
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+
+# Language Server Protocol implementation for TypeScript wrapping tsserver
+brew "typescript-language-server", link: false
+
+# Maintained ctags implementation
+brew "universal-ctags"
+
+# Google's JavaScript engine
+brew "v8"
+
+# Watch files and take action when they change
+brew "watchman"
+
+# Internet file retriever
+brew "wget"
+
+# Show the current WiFi network password
+brew "wifi-password"
+
+# Allow GNU Readline to be used with arbitrary programs
+brew "with-readline"
+
+# Formatter for python code
+brew "yapf"
+
+# JavaScript package manager
+brew "yarn"
+
+# Programming language designed for robustness, optimality, and clarity
+brew "zig"
+
+# Language Server for Zig
+brew "zls"
+
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
+
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd"
+
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai"
+
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community"
+
+# An interactive JavaScript command-line interface to MongoDB
+brew "mongodb/brew/mongodb-community-shell"
+
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
+
+# Static checker for GitHub Actions workflow files
+brew "rhysd/actionlint/actionlint"
+
+# PDF viewer
+brew "zegervdv/zathura/zathura"
+
+# Poppler backend plugin for zathura
+brew "zegervdv/zathura/zathura-pdf-poppler"
+
+# Password manager
+cask "1password@nightly"
+
+# GPU-accelerated terminal emulator
+cask "alacritty"
+
+# Compact TeX distribution as alternative to the full TeX Live / MacTeX
+cask "basictex"
+
+# Virtual Audio Driver
+cask "blackhole-2ch"
+
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+
+# Tool to remove unnecessary files and folders from disk
+cask "cleanmymac"
+
+# Tool for formatting Clojure code
+cask "cljstyle"
+
+# Voice and text chat software
+cask "discord"
+
+# Online diagram software
+cask "drawio"
+
+# Client for the Dropbox cloud storage service
+cask "dropbox"
+cask "font-caskaydia-cove-nerd-font"
+cask "font-fira-code"
+
+# Web browser
+cask "google-chrome"
+
+# Vector graphics editor
+cask "inkscape"
+
+# Interface for reading and syncing eBooks
+cask "kindle"
+
+# App to manage software development and track bugs
+cask "linear-linear"
+
+# VPN client
+cask "mullvadvpn"
+
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
+
+# Open-source software for live streaming and screen recording
+cask "obs"
+
+# Replacement for Docker Desktop
+cask "orbstack"
+
+# All-in-one bookmark manager
+cask "raindropio"
+
+# Control your tools with a few keystrokes
+cask "raycast"
+
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
+
+# Block your own access to distracting websites
+cask "selfcontrol"
+
+# Tool for sending personal documents to Kindles from Macs
+cask "send-to-kindle"
+
+# Instant messaging application focusing on security
+cask "signal"
+
+# Team communication and collaboration software
+cask "slack"
+
+# Bitcoin wallet application
+cask "sparrow"
+
+# Music streaming service
+cask "spotify"
+
+# Controls screen display settings
+cask "switchresx"
+
+# Web browser focusing on security
+cask "tor-browser"
+
+# Development environment
+cask "vagrant"
+
+# Open-source code editor
+cask "visual-studio-code"
+
+# Video communication and virtual meeting platform
+cask "zoom"
+vscode "christian-kohler.npm-intellisense"
+vscode "dbaeumer.vscode-eslint"
+vscode "esbenp.prettier-vscode"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "gruntfuggly.todo-tree"
+vscode "james-yu.latex-workshop"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode.vscode-typescript-next"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "redhat.vscode-yaml"
+vscode "rust-lang.rust-analyzer"
+vscode "vscodevim.vim"
+vscode "yoavbls.pretty-ts-errors"

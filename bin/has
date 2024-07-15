@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+main() {
+  case $1 in
+    b | B | brew) brew list | rg "$2";;
+    c | C | cargo) cargo install --list | rg "$2";;
+    p | P | pip) pip3 list | rg "$2";;
+    *) echo 'Unknown package manager.';;
+  esac
+}
+
+main "$1" "$2"

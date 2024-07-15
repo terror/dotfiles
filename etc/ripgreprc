@@ -1,0 +1,4 @@
+--glob=!Cargo.lock
+--glob=!target
+--glob=!venv
+--smart-case

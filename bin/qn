@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess as sp
+import tempfile
+
+E = os.environ['EDITOR']
+P = os.environ['NOTES']
+
+with tempfile.NamedTemporaryFile(suffix = '.md', mode = 'w+t') as temp:
+  sp.call([E, temp.name])
+  temp.seek(0)
+  with open(os.path.join(P, f'{input("> ")}.md'), 'w+') as note:
+    note.write(temp.read())

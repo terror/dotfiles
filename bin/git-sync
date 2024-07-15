@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+git checkout master || git checkout main
+git pull origin master || git pull origin main
+
+git checkout "$BRANCH"
+git merge master || git merge main

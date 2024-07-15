@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+count=0
+dirs=("$HOME/src" "$HOME/tmp" "$DROPBOX/src")
+start=$SECONDS
+
+clean() {
+  for project in $(fd -a . "$1" -d 1); do
+    if [[ -f $project/Cargo.toml && -d $project/target ]]; then
+      echo "[~] Cleaning $(basename "$project")"
+      cd "$project" && cargo clean
+      ((count += 1))
+    fi
+  done
+}
+
+main() {
+  dirs=("$@")
+  for dir in "${dirs[@]}"; do
+    echo "Cleaning rust projects in ${dir}..."
+    clean "$dir"
+  done
+  echo "Cleaned $count projects in $((SECONDS - start))s."
+}
+
+main "${dirs[@]}"

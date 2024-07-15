@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+pushd ~/src/10ff || exit
+python3 -m 10ff
+popd || exit

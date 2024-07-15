@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+git checkout master || git checkout main
+git branch --delete --force "$BRANCH"
+git pull

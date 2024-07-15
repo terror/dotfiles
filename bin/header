@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+figlet -f graffiti "$1" | sed -e "s+^+$2 +" | pbcopy

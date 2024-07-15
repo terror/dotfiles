@@ -1,0 +1,50 @@
+---
+filename: build
+extension: yaml
+name: Build
+---
+name: {%name%}
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os:
+        - macos-latest
+        - ubuntu-latest
+
+    runs-on: ${{matrix.os}}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pipenv
+        pipenv install --dev
+
+    - name: Lint
+      run: |
+        pipenv run lint
+
+    - name: Test
+      run: |
+        pipenv run test
+
+    - name: Forbid
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        sudo apt-get install ripgrep
+        ./bin/forbid

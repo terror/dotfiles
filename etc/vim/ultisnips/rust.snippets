@@ -1,0 +1,19 @@
+snippet echo "println macro"
+println!($1);
+endsnippet
+
+snippet common "use common rs"
+use crate::common::*;
+endsnippet
+
+snippet vec "create a new vec"
+let mut $1 = Vec::new();
+endsnippet
+
+snippet test "standard test setup"
+#[cfg(test)]
+mod tests {
+  use super::*;
+  $1
+}
+endsnippet

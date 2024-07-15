@@ -1,0 +1,21 @@
+[haxor-news]
+clr_bold = cyan
+clr_code = cyan
+clr_general = None
+clr_header = yellow
+clr_link = green
+clr_list = cyan
+clr_num_comments = green
+clr_num_points = green
+clr_tag = cyan
+clr_time = yellow
+clr_title = None
+clr_tooltip = None
+clr_user = cyan
+clr_view_index = magenta
+clr_view_link = magenta
+freelance_id = 0
+hiring_id = 0
+item_cache = ['']
+item_ids = [28068542, 28047446, 28070619, 28072189, 28068741, 28047458, 28047615, 28069695, 28071725, 28071096]
+show_tip = True

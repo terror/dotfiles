@@ -1,0 +1,53 @@
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export BLOCKSIZE=K
+export CLICOLOR=1
+export EDITOR='nvim'
+export EDMV_EDITOR=nvim
+export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/*' --glob '!*.pyc'"
+export HISTFILE=~/.history
+export HISTSIZE=5500000
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOST=$(hostname)
+export KEYTIMEOUT=1
+export LANG=en_CA.UTF-8
+export LESS=-ifRMx2
+export LS_OPTIONS='--color=auto'
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+export NOTE_EXT="md"
+export NVM_DIR="$HOME/.nvm"
+export PAGER=less
+export PYENV_ROOT="$HOME/.pyenv"
+export RIPGREP_CONFIG_PATH=~/.ripgreprc
+export SAVEHIST=5000000
+export SHELL=/bin/bash
+export TERM=xterm-256color
+export VISUAL=nvim
+
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+for file in "$HOME"/.{aliases,functions}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+
+if [[ $(uname -m) == 'arm64' ]]; then
+  export DROPBOX="$HOME/Library/CloudStorage/Dropbox"
+else
+  export DROPBOX="$HOME/dropbox"
+fi
+
+export BOOK_DIR=$DROPBOX/books
+export NOTE_DIR=$DROPBOX/notes
+
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+
+eval "$(opam env)"
+eval "$(pyenv init -)"
+eval "$(starship init bash)"
+eval "$(thefuck --alias)"
+eval "$(zoxide init bash)"
+
+unset file;

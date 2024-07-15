@@ -1,0 +1,105 @@
+#!/usr/bin/env bash
+
+EDITOR=${EDITOR:-vim}
+NOTE_DIR=${NOTE_DIR:-~/notes}
+NOTE_EXT=${NOTE_EXT:-md}
+NOTE_FORMAT_COMMAND=${NOTE_FORMAT_COMMAND:-prettier --print-width 80 --prose-wrap always --single-quote true --tab-width 2 --write}
+
+enter() {
+  cd "$NOTE_DIR" && fd | query \
+    --bind "ctrl-d:execute(rm -rf $NOTE_DIR/{})+reload(ls $NOTE_DIR)" \
+    --bind "enter:become($EDITOR $NOTE_DIR/{} &> /dev/tty)" \
+    --preview "bat --style=numbers --color=always --line-range :500 $NOTE_DIR/{}"
+}
+
+format() {
+  cd "$NOTE_DIR" && fd | query \
+    --bind "ctrl-d:execute(rm -rf $NOTE_DIR/{})+reload(ls $NOTE_DIR)" \
+    --bind "enter:become($NOTE_FORMAT_COMMAND $NOTE_DIR/{})" \
+    --preview "bat --style=numbers --color=always --line-range :500 $NOTE_DIR/{}"
+}
+
+help() {
+  echo 'A simple note management CLI powered by fzf, fd, and ripgrep.'
+  echo '                                                             '
+  echo 'Usage: notes [COMMAND]                                       '
+  echo '                                                             '
+  echo 'Available commands:                                          '
+  echo '  e | enter         Interact with the notes directory        '
+  echo '  f | format        Format files with a prose formatter      '
+  echo '  h | help          Show this message                        '
+  echo '  j | journal       Open up todays journal                   '
+  echo '  k | keybindings   View all fzf window keybindings          '
+  echo '  s | search        Start a full-text search                 '
+}
+
+journal() {
+  date=$(date '+%Y-%m-%d')
+
+  path="$NOTE_DIR/Journal $date.$NOTE_EXT"
+
+  if [[ ! -f $path ]] then
+    echo "## $date" > "$path"
+  fi
+
+  "$EDITOR" "$path"
+}
+
+keybindings() {
+  echo '<ctrl-\> Toggle the preview window'
+  echo '<ctrl-c> Exit'
+  echo '<ctrl-d> Delete the selected file'
+  echo '<ctrl-e> Create a new file whose name is the current query string'
+  echo '<ctrl-f> Format the selected file'
+  echo '<ctrl-j> Scroll down the preview window'
+  echo '<ctrl-k> Scroll up the preview window'
+  echo '<ctrl-r> Reload the result buffer'
+  echo '<enter>  Edit the selected file'
+}
+
+search() {
+  INITIAL_QUERY=""
+
+  RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
+
+  FZF_DEFAULT_COMMAND="$RG_PREFIX '$INITIAL_QUERY'"
+
+  cd "$NOTE_DIR" && query \
+    --bind "change:reload:$RG_PREFIX {q} || true" \
+    --bind "ctrl-d:execute(rm -rf $NOTE_DIR/{1})+reload(ls $NOTE_DIR)" \
+    --bind "enter:become($EDITOR $NOTE_DIR/{1} &> /dev/tty)" \
+    --delimiter=':' \
+    --disabled \
+    --preview "bat --style=numbers --color=always {1} --highlight-line {2} --line-range :500 $NOTE_DIR/{1}" \
+    --query "$INITIAL_QUERY"
+}
+
+query() {
+  fzf \
+    --ansi \
+    --bind "ctrl-e:become($EDITOR $NOTE_DIR/{q}.$NOTE_EXT &> /dev/tty)" \
+    --bind "ctrl-f:execute($NOTE_FORMAT_COMMAND $NOTE_DIR/{})+reload(ls $NOTE_DIR)" \
+    --bind "ctrl-r:reload(ls $NOTE_DIR)" \
+    --bind 'ctrl-\:toggle-preview' \
+    --bind 'ctrl-c:abort' \
+    --bind 'ctrl-k:preview-up,ctrl-j:preview-down' \
+    --border \
+    --height 90% \
+    --min-height 20 \
+    --preview-window 75% \
+    "$@"
+}
+
+main() {
+  case "$1" in
+    e | enter) enter;;
+    f | format) format;;
+    h | help) help;;
+    j | journal) journal;;
+    k | keybindings) keybindings;;
+    s | search) search;;
+    *) echo 'error: Invalid command';;
+  esac
+}
+
+main "$@"

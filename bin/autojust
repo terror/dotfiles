@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+
+import os, argparse, enum, shutil
+
+class Arg(enum.Enum):
+  USE = 1
+  SAVE = 2
+  UNKNOWN = 3
+
+class Utils:
+  @staticmethod
+  def arg(args):
+    if args.use:
+      return (Arg.USE, args.use)
+    if args.save:
+      return (Arg.SAVE, args.save)
+    return (Arg.UNKNOWN, None)
+
+class File:
+  def __init__(self, path):
+    self.path = path
+
+  @property
+  def last(self):
+    return os.path.basename(os.path.normpath(self.path))
+
+  @property
+  def name(self):
+    name, _ = os.path.splitext(self.last)
+    return name
+
+class Handler:
+  def __init__(self, store):
+    self.store = store
+
+    if not os.path.exists(store):
+      os.mkdir(store)
+
+  def use(self, name):
+    justfile = os.path.join(self.store, f'{name}.just')
+
+    if os.path.exists(justfile):
+      shutil.copyfile(justfile, os.path.join(os.getcwd(), 'justfile'))
+      return
+
+    print(f'Justfile with name {name} does not exist.')
+
+  def save(self, path, name=File(os.getcwd()).name):
+    candidate = File(path)
+
+    if candidate.name.lower() != 'justfile':
+      print("You must pass in a path to a Justfile.")
+      return
+
+    shutil.copyfile(candidate.path, os.path.join(self.store, f'{name}.just'))
+
+def cli():
+  parser = argparse.ArgumentParser()
+  parser.add_argument("--use", "-u", nargs=1, help="Use a saved justfile.")
+  parser.add_argument("--save", "-s", nargs=2, help="Save a justfile.")
+  return parser.parse_args()
+
+def main(args, handler):
+  arg, data = Utils.arg(args)
+
+  {
+    Arg.USE: handler.use,
+    Arg.SAVE: handler.save,
+    Arg.UNKNOWN: lambda x: print("Unknown argument.")
+  }[arg](*data)
+
+if __name__ == '__main__':
+  main(cli(), Handler(os.path.expanduser('~/.autojust')))

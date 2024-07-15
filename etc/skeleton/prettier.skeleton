@@ -1,0 +1,20 @@
+---
+filename: .prettierrc
+groups: [frontend]
+tabWidth: 2
+---
+{
+  "importOrder": ["^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "jsxSingleQuote": true,
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+  "proseWrap": "always",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": {% tabWidth %},
+  "trailingComma": "es5"
+}

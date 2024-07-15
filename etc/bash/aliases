@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+# Ⅰ
+alias -- -="z -"
+alias .....="z ../../../.."
+alias ....="z ../../.."
+alias ...="z ../.."
+alias ..="z .."
+alias cd="z"
+alias ~="z ~"
+
+# Ⅱ
+alias cb="git branch --show-current"
+alias ga="git add"
+alias gap="git add -p"
+alias gb="git branch"
+alias gbd="git branch --delete"
+alias gc="git commit"
+alias gca="git commit --amend --no-edit"
+alias gcb="git checkout -b"
+alias gch="git checkout"
+alias gd="git diff"
+alias gp="git push -u origin master"
+alias gpf="git push -f origin master"
+alias gpo="git push origin"
+alias gst="git status"
+alias pr="gh pr create --web"
+
+# Ⅲ
+alias l="ls"
+alias la="ls -a"
+alias ll="ls -lah"
+alias lt="tree -L 1"
+alias sl="ls"
+
+# Ⅳ
+alias ov="vim"
+alias v="nvim"
+alias vi="nvim"
+
+# Ⅴ
+alias d="z ~/dotfiles"
+alias e="exit"
+alias g="git"
+alias i='zi'
+alias j="just"
+alias m="tmux"
+alias n="notes e"
+alias w="z ~/src"
+
+# Ⅸ
+alias arc='open /Applications/Arc.app'
+alias dc="docker-compose up -d"
+alias evrc='nvim ~/dotfiles/etc/nvim'
+alias fcd='z "$(fd --type directory | fzf)"'
+alias lv='nvim -c "normal '\''0" -c bd1'
+alias nj='notes journal'
+alias ns='notes search'
+alias reload="exec ${SHELL} -l"
+alias sb='source ~/.bash_profile'
+alias sra='alias | fzf'
+alias trm="tmux kill-server"
+alias wifi='wifi-password'

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
+# Disable press-and-hold for keys in favor of key repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false

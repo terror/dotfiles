@@ -1,0 +1,70 @@
+[user]
+name = Liam
+email = liam@scalzulli.com
+
+[github]
+user = terror
+
+[commit]
+verbose = True
+
+[core]
+editor = nvim
+excludesfile = /Users/liam/.gitignore.global
+hooksPath = "/Users/liam/.hooks"
+pager = delta
+
+[diff]
+tool = difftastic
+
+[difftool]
+prompt = false
+
+[difftool "difftastic"]
+cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+difftool = true
+
+[web]
+browser = google-chrome
+
+[filter "lfs"]
+clean = git-lfs clean -- %f
+process = git-lfs filter-process
+required = true
+smudge = git-lfs smudge -- %f
+
+[pull]
+rebase = true
+
+[rebase]
+autoStash = true
+
+[alias]
+cl = clone
+cld = clone --depth 1
+dft = difftool
+dlog = "-c diff.external=difft log -p --ext-diff"
+f = fetch
+fu = fetch upstream master
+hash = rev-parse HEAD
+last = log -1 HEAD
+lg = log --oneline
+p = pull
+rbi = rebase -i
+rmc = rm -r --cached .
+root = rev-parse --show-toplevel
+track = branch --set-upstream-to upstream/master master
+
+[delta]
+minus-style = "syntax #340001"
+navigate = true
+plus-style = "syntax #012800"
+syntax-theme = Monokai Extended
+
+[interactive]
+diffFilter = delta --color-only
+
+[init]
+defaultBranch = master

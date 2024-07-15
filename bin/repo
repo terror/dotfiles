@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+
+import json
+import requests
+import sys
+
+from dataclasses import dataclass
+from textwrap import dedent
+
+def e(*args, **kwargs):
+  print(*args, **kwargs, file=sys.stderr)
+
+def die(*args, **kwargs):
+  e(*args, **kwargs)
+  sys.exit(-1)
+
+@dataclass
+class Repo:
+  name: str
+  stars: int
+  watchers: int
+  lang: str
+  license: str
+  clone_url: str
+
+  def __str__(self):
+    return (
+      f"{self.name} [{self.lang}]\n"
+      f"⭐{self.stars}\n"
+      f"🔭 {self.watchers}\n"
+      f"📜 {self.license.upper()}"
+    )
+
+  def create(data):
+    return Repo(
+      name = data["full_name"],
+      stars = data["stargazers_count"],
+      watchers = data["watchers"],
+      lang = data["language"],
+      license = data["license"]["key"],
+      clone_url = data["clone_url"]
+    )
+
+def main(query):
+  user, repo = query.split('/')
+  response = requests.get(f'https://api.github.com/repos/{user}/{repo}')
+  response.raise_for_status()
+  print(Repo.create(response.json()))
+
+if __name__ == '__main__':
+  if len(sys.argv) > 2: die('usage: repo <user/repo>')
+  try:
+    main(sys.argv[1])
+  except (Exception, requests.exceptions.HTTPError) as error:
+    die(f'Fatal error: {error}.')

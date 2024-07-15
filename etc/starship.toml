@@ -1,0 +1,16 @@
+add_newline = false
+format = ': $directory$git_branch'
+
+[directory]
+style = "bold blue"
+truncate_to_repo  = false
+truncation_length = 100
+
+[character]
+style_failure = "bold green"
+symbol = "$"
+
+[git_branch]
+format = '[\[$branch$symbol\]]($style) '
+style = "bold green"
+symbol = " "

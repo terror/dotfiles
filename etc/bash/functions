@@ -1,0 +1,94 @@
+#!/bin/bash
+
+function run() {
+  file="$(ls -t | head -n 1)"
+
+  case "$1" in
+    p) python3 "$file";;
+    j) javac "$file" && java "${file%.*}";;
+    c) gcc "$file" && ./a.out && rm -rf a.out;;
+    *) g++ -std=c++17 "$file" && ./a.out && rm -rf a.out;;
+  esac
+}
+
+function mkcd() {
+  mkdir -p "$@" && cd "$@" || exit
+}
+
+function oc() {
+  open -a "Google Chrome" "$@"
+}
+
+function o() {
+  if [ $# -eq 0 ]; then open .; else open "$@"; fi;
+}
+
+function realpath() {
+  [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
+function fs() {
+  if du -b /dev/null > /dev/null 2>&1; then
+    local arg=-sbh;
+  else
+    local arg=-sh;
+  fi
+  if [[ -n "$*" ]]; then
+    du $arg -- "$@";
+  else
+    du $arg .[^.]* ./*;
+  fi;
+}
+
+function redis() {
+ redis-server /usr/local/etc/redis.conf
+}
+
+function noc() {
+  git rev-list --count HEAD
+}
+
+function vmo {
+  nvim "$(git status --porcelain | awk '{print $2}')"
+}
+
+function is_in_git_repo() {
+  git rev-parse HEAD > /dev/null 2>&1
+}
+
+function fzf-down() {
+  fzf --height 50% --min-height 20 --border --bind ctrl-/:toggle-preview "$@"
+}
+
+function sgf() {
+  is_in_git_repo || return
+  git -c color.status=always status --short |
+  fzf-down -m --ansi --nth 2..,.. \
+    --preview '(git diff --color=always -- {-1} | sed 1,4d; cat {-1})' |
+  cut -c4- | sed 's/.* -> //'
+}
+
+function sgc() {
+  is_in_git_repo || return
+  git log --date=short --format="%C(green)%C(bold)%cd %C(auto)%h%d %s (%an)" --graph --color=always |
+  fzf-down --ansi --no-sort --reverse --multi --bind 'ctrl-s:toggle-sort' \
+    --header 'Press CTRL-S to toggle sort' \
+    --preview 'grep -o "[a-f0-9]\{7,\}" <<< {} | xargs git show --color=always' |
+  grep -o "[a-f0-9]\{7,\}"
+}
+
+function sgb() {
+  git checkout "$(git branch | fzf | tr -d '[:space:]')"
+}
+
+function btc() {
+  curl rate.sx/btc
+}
+
+function weather() {
+  curl -s "wttr.in/?format=%l:+%c+%t\n"
+}
+
+function sha() {
+  echo -n "$@" | shasum -a 256
+}

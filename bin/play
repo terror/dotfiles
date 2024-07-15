@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+main() {
+  cd "$1" || exit
+
+  if [ ! -p ./playground ]; then
+    rm -rf ./playground
+  fi
+
+  cargo new playground
+
+  cd playground || exit
+
+  bp --use rustfmt
+  bp --use rust-just
+  bp --use editorconfig
+
+  just fmt
+
+  "$EDITOR" src/main.rs
+}
+
+main "$HOME/src/rust"

@@ -1,0 +1,44 @@
+snippet ex "example"
+        \begin{example}
+          $1
+        \end{example}
+
+snippet def "definition"
+        \begin{definition}[$1]
+          $2
+        \end{definition}
+
+snippet proof "proof"
+        \begin{proof}
+          $1
+        \end{proof}
+
+snippet theorem "theorem"
+        \begin{theorem}[$1]
+          $2
+        \end{theorem}
+
+snippet prop "proposition"
+        \begin{proposition}
+          $1
+        \end{proposition}
+
+snippet graph "graph"
+        \begin{center}
+          \begin{tikzpicture}[main/.style = {draw, circle}]
+            $1
+            \node[main] (1) {$a$};
+            \node[main] (2) [below of=1] {$b$};
+            \draw (1) -- (2);
+          \end{tikzpicture}
+        \end{center}
+
+snippet start "start"
+        \documentclass[10pt]{article}
+
+        \input{../../../templates/note.tex}
+
+        \title{$1}
+        \author{Liam Scalzulli\\
+        \href{mailto:$2}{$2}}
+        \date{\today}

@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+
+import re
+import subprocess as s
+import sys
+
+def e(*args, **kwargs):
+  print(*args, **kwargs, file=sys.stderr)
+
+def die(*args, **kwargs):
+  e(*args, **kwargs)
+  sys.exit(-1)
+
+def to_str(bytes):
+  return bytes.decode('utf-8').strip()
+
+def summary():
+  return s.check_output(['just', '--summary'], stderr=s.PIPE)
+
+def search(recipes):
+  s.run([
+    'just',
+    to_str(
+      s.check_output([
+        'fzf',
+        '--height',
+        '50%',
+        '--min-height',
+        '20',
+        '--border',
+        '--bind',
+        'ctrl-/:toggle-preview',
+        '--ansi',
+        '--preview',
+        'just --show {}',
+        '--preview-window',
+        '75%'
+      ],
+                     input=str.encode(recipes))
+    ),
+    *list(input('arguments (enter to skip): ').split())
+  ])
+
+if __name__ == '__main__':
+  try:
+    search("\n".join(to_str(summary()).split()))
+  except s.CalledProcessError as err:
+    die(f'Error running `{" ".join(err.cmd)}`.')

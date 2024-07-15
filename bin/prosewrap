@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+
+# `prosewrap` is a thin wrapper around the `fmt` utility that modifies a file
+# in place with the contents of fmt -w <width> <filepath>.
+
+import sys, os, subprocess as sp
+
+def e(*args, **kwargs):
+  print(*args, **kwargs, file=sys.stderr)
+
+def die(*args, **kwargs):
+  e(*args, **kwargs)
+  sys.exit(1)
+
+def main(args):
+  filepath, width = args
+
+  if not os.path.exists(filepath) or not os.path.isfile(filepath):
+    die('error: invalid file path')
+
+  content = sp.check_output(['fmt', '-w', width, filepath]).decode('utf8').strip('\n')
+
+  with open(filepath, 'w') as buffer:
+    buffer.write(content)
+
+if __name__ == '__main__':
+  if len(sys.argv) < 3:
+    die('usage: prosewrap <filepath> <width>')
+  main(sys.argv[1:])
