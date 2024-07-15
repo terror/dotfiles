@@ -14,6 +14,7 @@ crates:
   cargo install loc
   cargo install present
   cargo install ripgrep
+  cargo install skeleton-cli
   cargo install stylua
   cargo install typos-cli
   cargo install vim-profiler
