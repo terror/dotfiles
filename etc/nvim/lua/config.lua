@@ -430,3 +430,9 @@ vim.keymap.set({'n', 'x', 'o'}, 'M', '<Plug>(leap-forward-to)')
 vim.keymap.set({'n', 'x', 'o'}, 'L', '<Plug>(leap-backward-to)')
 
 require('leap.user').set_repeat_keys('<cr>', '<bs>')
+
+-- ───────────────────────────────────────────────────────────────────────────-─╗
+-- │ Zig                                                                        │
+-- ╚────────────────────────────────────────────────────────────────────────────│
+
+vim.g.zig_fmt_autosave = 0
