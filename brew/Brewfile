@@ -116,14 +116,14 @@ brew "node"
 # LLVM bytecode to JavaScript compiler
 brew "emscripten"
 
-# Project Euler command-line tool written in Python
-brew "euler-py", link: false
-
 # Calculator REPL, similar to bc(1)
 brew "eva"
 
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 
 # Banner-like program prints strings as ASCII art
 brew "figlet"
@@ -317,15 +317,6 @@ brew "pyenv"
 # Static type checker for Python
 brew "pyright"
 
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
-
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
-
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
-
 # Software environment for statistical computing
 brew "r"
 
@@ -464,9 +455,6 @@ cask "basictex"
 # Virtual Audio Driver
 cask "blackhole-2ch"
 
-# OpenAI's official ChatGPT desktop app
-cask "chatgpt"
-
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
 
@@ -475,9 +463,6 @@ cask "cljstyle"
 
 # Voice and text chat software
 cask "discord"
-
-# Online diagram software
-cask "drawio"
 
 # Client for the Dropbox cloud storage service
 cask "dropbox"
@@ -504,6 +489,9 @@ cask "ngrok"
 
 # Open-source software for live streaming and screen recording
 cask "obs"
+
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 
 # Replacement for Docker Desktop
 cask "orbstack"
@@ -535,8 +523,8 @@ cask "sparrow"
 # Music streaming service
 cask "spotify"
 
-# Controls screen display settings
-cask "switchresx"
+# Helper application for Things
+cask "thingsmacsandboxhelper"
 
 # Web browser focusing on security
 cask "tor-browser"
