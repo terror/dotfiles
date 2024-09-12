@@ -1,3 +1,38 @@
 #!/usr/bin/env bash
 
-cd "$BOOK_DIR" && open "$(fd | fzf)"
+directories=("$BOOK_DIR" "$PAPER_DIR")
+
+results=""
+
+for dir in "${directories[@]}"; do
+  if [ -d "$dir" ]; then
+    if [ -z "$results" ]; then
+      results=$(fd . "$dir" -d 1 | sed "s|^$dir/||")
+    else
+      results+=$'\n'$(fd . "$dir" -d 1 | sed "s|^$dir/||")
+    fi
+  else
+    echo "warning: directory \`$dir\` does not exist, skipping..." >&2
+  fi
+done
+
+if [ -n "$results" ]; then
+  selected=$(echo "$results" | fzf)
+
+  if [ -n "$selected" ]; then
+    for dir in "${directories[@]}"; do
+      full_path="$dir/$selected"
+
+      if [ -e "$full_path" ]; then
+          open "$full_path"
+          exit 0
+      fi
+    done
+
+    echo "error: Could not find the full path of the selected file."
+  else
+    echo "No file selected."
+  fi
+else
+  echo "error: no valid directories to search"
+fi

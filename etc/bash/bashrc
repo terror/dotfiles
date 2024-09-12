@@ -41,6 +41,7 @@ fi
 
 export BOOK_DIR=$DROPBOX/books
 export NOTE_DIR=$DROPBOX/notes
+export PAPER_DIR=$DROPBOX/papers
 
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 
