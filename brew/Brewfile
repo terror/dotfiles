@@ -50,14 +50,14 @@ brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 
-# Collection of portable C++ source libraries
-brew "boost"
-
 # Asynchronous event library
 brew "libevent"
 
 # Decentralized, peer to peer payment network
 brew "bitcoin"
+
+# Collection of portable C++ source libraries
+brew "boost"
 
 # Glorious Glasgow Haskell Compilation System
 brew "ghc"
@@ -76,9 +76,6 @@ brew "rlwrap"
 
 # Dynamic, general-purpose programming language
 brew "clojure"
-
-# Language Server (LSP) for Clojure
-brew "clojure-lsp"
 
 # Cross-platform make
 brew "cmake"
@@ -181,9 +178,6 @@ brew "golines"
 
 # Reformats Java source code to comply with Google Java Style
 brew "google-java-format"
-
-# Language server for the Go language
-brew "gopls"
 
 # Deliver Go binaries as fast and easily as possible
 brew "goreleaser"
@@ -337,9 +331,6 @@ brew "ruby"
 
 # Extremely fast Python linter, written in Rust
 brew "ruff"
-
-# Experimental Rust compiler front-end for IDEs
-brew "rust-analyzer"
 
 # Build tool for Scala projects
 brew "sbt"
@@ -505,14 +496,8 @@ cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 
-# Block your own access to distracting websites
-cask "selfcontrol"
-
 # Tool for sending personal documents to Kindles from Macs
 cask "send-to-kindle"
-
-# Instant messaging application focusing on security
-cask "signal"
 
 # Team communication and collaboration software
 cask "slack"

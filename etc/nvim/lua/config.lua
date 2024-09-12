@@ -233,17 +233,22 @@ local on_attach = function(client)
 end
 
 local servers = {
+  'bashls',
   'clangd',
   'gopls',
-  'hls',
   'lua_ls',
-  'metals',
-  'ocamllsp',
   'pyright',
   'rust_analyzer',
-  'tsserver',
+  'ts_ls',
   'zls',
 }
+
+require('mason').setup()
+
+require('mason-lspconfig').setup({
+  automatic_installation = true,
+  ensure_installed = servers,
+})
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -314,7 +319,6 @@ luasnip.config.set_config({
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Completion                                                                 │
 -- ╚────────────────────────────────────────────────────────────────────────────│
-
 local colors = {
   bg = '#151718',
   fg = '#d6d6d6',
@@ -426,8 +430,8 @@ leap.init_highlight(true)
 leap.opts.special_keys.prev_group = '<bs>'
 leap.opts.special_keys.prev_target = '<bs>'
 
-vim.keymap.set({'n', 'x', 'o'}, 'M', '<Plug>(leap-forward-to)')
-vim.keymap.set({'n', 'x', 'o'}, 'L', '<Plug>(leap-backward-to)')
+vim.keymap.set({ 'n', 'x', 'o' }, 'M', '<Plug>(leap-forward-to)')
+vim.keymap.set({ 'n', 'x', 'o' }, 'L', '<Plug>(leap-backward-to)')
 
 require('leap.user').set_repeat_keys('<cr>', '<bs>')
 
