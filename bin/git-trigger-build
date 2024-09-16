@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# https://stackoverflow.com/questions/20138640/pushing-empty-commits-to-remote
+
+git commit --amend
+git push --force-with-lease # (as opposed to --force, it doesn't overwrite others' work)
