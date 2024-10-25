@@ -377,6 +377,9 @@ brew "typescript-language-server", link: false
 # Maintained ctags implementation
 brew "universal-ctags"
 
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+
 # Google's JavaScript engine
 brew "v8"
 
@@ -434,14 +437,14 @@ brew "zegervdv/zathura/zathura"
 # Poppler backend plugin for zathura
 brew "zegervdv/zathura/zathura-pdf-poppler"
 
+# Command-line interface for 1Password
+cask "1password-cli"
+
 # Password manager
 cask "1password@nightly"
 
 # GPU-accelerated terminal emulator
 cask "alacritty"
-
-# Compact TeX distribution as alternative to the full TeX Live / MacTeX
-cask "basictex"
 
 # Virtual Audio Driver
 cask "blackhole-2ch"
@@ -472,6 +475,9 @@ cask "kindle"
 # App to manage software development and track bugs
 cask "linear-linear"
 
+# Full TeX Live distribution with GUI applications
+cask "mactex"
+
 # VPN client
 cask "mullvadvpn"
 
@@ -498,9 +504,6 @@ cask "rectangle"
 
 # Tool for sending personal documents to Kindles from Macs
 cask "send-to-kindle"
-
-# Team communication and collaboration software
-cask "slack"
 
 # Bitcoin wallet application
 cask "sparrow"
@@ -540,9 +543,14 @@ vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpptools"
+vscode "ms-vscode.cpptools-extension-pack"
+vscode "ms-vscode.cpptools-themes"
 vscode "ms-vscode.vscode-typescript-next"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
+vscode "twxs.cmake"
 vscode "vscodevim.vim"
 vscode "yoavbls.pretty-ts-errors"
