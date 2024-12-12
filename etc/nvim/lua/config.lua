@@ -260,23 +260,6 @@ for _, server in ipairs(servers) do
   })
 end
 
-local configs = require('lspconfig.configs')
-
-if not configs.just_lsp then
-  configs.just_lsp = {
-    default_config = {
-      cmd = { '/Users/liam/src/just-lsp/bin/start' },
-      filetypes = { 'just' },
-      root_dir = function(name)
-        return lsp.util.find_git_ancestor(name)
-      end,
-      settings = {},
-    },
-  }
-end
-
-lsp.just_lsp.setup({})
-
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Lualine                                                                    │
 -- ╚────────────────────────────────────────────────────────────────────────────│
