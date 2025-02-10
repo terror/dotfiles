@@ -24,3 +24,6 @@ formulae:
 
 rustup:
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+tpm:
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
