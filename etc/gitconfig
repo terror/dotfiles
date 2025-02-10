@@ -1,11 +1,13 @@
 [user]
 name = Liam
 email = liam@scalzulli.com
+signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDoI5e2zmxMcJQi41Y7OO6IFSmsP0TgI6MpIuga8xfuK
 
 [github]
 user = terror
 
 [commit]
+gpgsign = true
 verbose = True
 
 [core]
@@ -34,6 +36,12 @@ clean = git-lfs clean -- %f
 process = git-lfs filter-process
 required = true
 smudge = git-lfs smudge -- %f
+
+[gpg]
+format = ssh
+
+[gpg "ssh"]
+program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [pull]
 rebase = true
