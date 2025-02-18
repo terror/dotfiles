@@ -61,9 +61,6 @@ return require('packer').startup(function()
   -- A lua-based snippet engine
   use({ 'L3MON4D3/LuaSnip', tag = 'v<CurrentMajor>.*' })
 
-  -- A better latex editing experience
-  use({ 'lervag/vimtex', ft = 'tex' })
-
   -- Cool start screen
   use('mhinz/vim-startify')
 
