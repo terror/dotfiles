@@ -31,6 +31,7 @@ local ivy = {
 telescope.setup({
   defaults = {
     prompt_prefix = ' ',
+    file_ignore_patterns = { 'node_modules', 'vendor', 'target' },
   },
   pickers = {
     buffers = dropdown,
