@@ -45,6 +45,11 @@ map('v', '<leader>a:', ':Tabularize /:<cr>')
 map('v', '<leader>a=', ':Tabularize /=<cr>')
 map('v', '<leader>s', ':sort<cr>')
 
+-- Parrot mappings
+map('v', '<leader>a', ':PrtAppend<cr>')
+map('v', '<leader>i', ':PrtImplement<cr>')
+map('v', '<leader>w', ':PrtRewrite<cr>')
+
 -- Add custom find command to telescope: `find_files`, in order
 -- to find dotfiles and ignore git files.
 

@@ -156,4 +156,26 @@ return require('packer').startup(function()
       require('copilot_cmp').setup()
     end,
   })
+
+  -- LLM integration
+  use({
+    "frankroeder/parrot.nvim",
+    dependencies = { 'ibhagwan/fzf-lua', 'nvim-lua/plenary.nvim', 'folke/noice.nvim' },
+    config = function()
+      require("parrot").setup {
+        providers = {
+          anthropic = {
+            api_key = os.getenv "ANTHROPIC_API_KEY",
+          },
+          ollama = {},
+          openai = {
+            api_key = os.getenv "OPENAI_API_KEY",
+          },
+          xai = {
+            api_key = os.getenv "XAI_API_KEY",
+          },
+        },
+      }
+    end,
+  })
 end)
