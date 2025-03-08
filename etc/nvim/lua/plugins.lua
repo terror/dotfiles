@@ -37,12 +37,6 @@ return require('packer').startup(function()
     run = 'cargo build --release --locked',
   })
 
-  -- General-purpose motion plugin
-  use('ggandor/leap.nvim')
-
-  -- Text filtering and alignment
-  use({ 'godlygeek/tabular', cmd = 'Tabularize' })
-
   -- Statusline
   use('hoob3rt/lualine.nvim')
 
@@ -114,9 +108,6 @@ return require('packer').startup(function()
 
   -- Automated LSP server installation
   use({ 'williamboman/mason-lspconfig.nvim', 'williamboman/mason.nvim' })
-
-  -- Pair completion
-  use('windwp/nvim-autopairs')
 
   -- Github copilot
   use({

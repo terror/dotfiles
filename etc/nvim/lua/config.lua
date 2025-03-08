@@ -184,31 +184,6 @@ g.vim_markdown_conceal_code_blocks = 0
 g.vim_markdown_new_list_item_indent = 0
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
--- │ Autopairs                                                                  │
--- ╚────────────────────────────────────────────────────────────────────────────│
-
-require('nvim-autopairs').setup()
-
-local npairs = require('nvim-autopairs')
-
-_G.MUtils = {}
-
-MUtils.completion_confirm = function()
-  if vim.fn.pumvisible() ~= 0 then
-    return npairs.esc('<cr>')
-  else
-    return npairs.autopairs_cr()
-  end
-end
-
-map(
-  'i',
-  '<CR>',
-  'v:lua.MUtils.completion_confirm()',
-  { expr = true, noremap = true }
-)
-
--- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Netrw                                                                      │
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
@@ -394,21 +369,6 @@ cmp.setup({
     end,
   },
 })
-
--- ───────────────────────────────────────────────────────────────────────────-─╗
--- │ Leap                                                                       │
--- ╚────────────────────────────────────────────────────────────────────────────│
-
-local leap = require('leap')
-
-leap.init_highlight(true)
-leap.opts.special_keys.prev_group = '<bs>'
-leap.opts.special_keys.prev_target = '<bs>'
-
-vim.keymap.set({ 'n', 'x', 'o' }, 'M', '<Plug>(leap-forward-to)')
-vim.keymap.set({ 'n', 'x', 'o' }, 'L', '<Plug>(leap-backward-to)')
-
-require('leap.user').set_repeat_keys('<cr>', '<bs>')
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Zig                                                                        │
