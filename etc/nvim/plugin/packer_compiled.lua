@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/liam/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?/init.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/liam/.cache/nvim/packer_hererocks/2.1.1736781742/lib/lua/5.1/?.so"
+local package_path_str = "/Users/liam/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?/init.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/liam/.cache/nvim/packer_hererocks/2.1.1741730670/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -107,7 +107,7 @@ _G.packer_plugins = {
   ["copilot.lua"] = {
     after = { "copilot-cmp" },
     commands = { "Copilot" },
-    config = { "\27LJ\2\nü\3\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\3=\3\t\0025\3\n\0005\4\v\0=\4\5\3=\3\f\2B\0\2\1K\0\1\0\15suggestion\1\0\6\tnext\n<C-n>\16accept_line\1\16accept_word\1\fdismiss\n<C-]>\vaccept\n<Tab>\tprev\n<C-p>\1\0\4\rdebounce\3K\fenabled\2\17auto_trigger\2\vkeymap\0\npanel\1\0\2\npanel\0\15suggestion\0\vlayout\1\0\2\nratio\4ö≥ÊÃ\tô≥Ê˛\3\rposition\vbottom\vkeymap\1\0\5\14jump_prev\a[[\vaccept\t<CR>\topen\v<M-CR>\frefresh\agr\14jump_next\a]]\1\0\4\17auto_refresh\2\fenabled\2\vlayout\0\vkeymap\0\nsetup\fcopilot\frequire\0" },
+    config = { "\27LJ\2\nü\3\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\3=\3\t\0025\3\n\0005\4\v\0=\4\5\3=\3\f\2B\0\2\1K\0\1\0\15suggestion\1\0\6\vaccept\n<Tab>\tnext\n<C-n>\16accept_line\1\tprev\n<C-p>\fdismiss\n<C-]>\16accept_word\1\1\0\4\rdebounce\3K\fenabled\2\17auto_trigger\2\vkeymap\0\npanel\1\0\2\npanel\0\15suggestion\0\vlayout\1\0\2\nratio\4ö≥ÊÃ\tô≥Ê˛\3\rposition\vbottom\vkeymap\1\0\5\frefresh\agr\vaccept\t<CR>\14jump_next\a]]\14jump_prev\a[[\topen\v<M-CR>\1\0\4\17auto_refresh\2\fenabled\2\vlayout\0\vkeymap\0\nsetup\fcopilot\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -170,7 +170,7 @@ _G.packer_plugins = {
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["parrot.nvim"] = {
-    config = { "\27LJ\2\n÷\2\0\0\b\0\19\0 6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\17\0005\3\b\0005\4\6\0006\5\3\0009\5\4\5'\a\5\0B\5\2\2=\5\a\4=\4\t\0034\4\0\0=\4\n\0035\4\f\0006\5\3\0009\5\4\5'\a\v\0B\5\2\2=\5\a\4=\4\r\0035\4\15\0006\5\3\0009\5\4\5'\a\14\0B\5\2\2=\5\a\4=\4\16\3=\3\18\2B\0\2\1K\0\1\0\14providers\1\0\1\14providers\0\bxai\1\0\1\fapi_key\0\16XAI_API_KEY\vopenai\1\0\1\fapi_key\0\19OPENAI_API_KEY\vollama\14anthropic\1\0\4\14anthropic\0\vollama\0\bxai\0\vopenai\0\fapi_key\1\0\1\fapi_key\0\22ANTHROPIC_API_KEY\vgetenv\aos\nsetup\vparrot\frequire\0" },
+    config = { "\27LJ\2\n÷\2\0\0\b\0\19\0 6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\17\0005\3\b\0005\4\6\0006\5\3\0009\5\4\5'\a\5\0B\5\2\2=\5\a\4=\4\t\0034\4\0\0=\4\n\0035\4\f\0006\5\3\0009\5\4\5'\a\v\0B\5\2\2=\5\a\4=\4\r\0035\4\15\0006\5\3\0009\5\4\5'\a\14\0B\5\2\2=\5\a\4=\4\16\3=\3\18\2B\0\2\1K\0\1\0\14providers\1\0\1\14providers\0\bxai\1\0\1\fapi_key\0\16XAI_API_KEY\vopenai\1\0\1\fapi_key\0\19OPENAI_API_KEY\vollama\14anthropic\1\0\4\vopenai\0\14anthropic\0\vollama\0\bxai\0\fapi_key\1\0\1\fapi_key\0\22ANTHROPIC_API_KEY\vgetenv\aos\nsetup\vparrot\frequire\0" },
     loaded = true,
     path = "/Users/liam/.local/share/nvim/site/pack/packer/start/parrot.nvim",
     url = "https://github.com/frankroeder/parrot.nvim"
@@ -219,6 +219,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/liam/.local/share/nvim/site/pack/packer/start/tree-sitter-just",
     url = "https://github.com/IndianBoy42/tree-sitter-just"
+  },
+  ["typst-preview.nvim"] = {
+    config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18typst-preview\frequire\0" },
+    loaded = true,
+    path = "/Users/liam/.local/share/nvim/site/pack/packer/start/typst-preview.nvim",
+    url = "https://github.com/chomosuke/typst-preview.nvim"
   },
   ["vim-commentary"] = {
     loaded = true,
@@ -272,18 +278,15 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: parrot.nvim
 time([[Config for parrot.nvim]], true)
-try_loadstring("\27LJ\2\n÷\2\0\0\b\0\19\0 6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\17\0005\3\b\0005\4\6\0006\5\3\0009\5\4\5'\a\5\0B\5\2\2=\5\a\4=\4\t\0034\4\0\0=\4\n\0035\4\f\0006\5\3\0009\5\4\5'\a\v\0B\5\2\2=\5\a\4=\4\r\0035\4\15\0006\5\3\0009\5\4\5'\a\14\0B\5\2\2=\5\a\4=\4\16\3=\3\18\2B\0\2\1K\0\1\0\14providers\1\0\1\14providers\0\bxai\1\0\1\fapi_key\0\16XAI_API_KEY\vopenai\1\0\1\fapi_key\0\19OPENAI_API_KEY\vollama\14anthropic\1\0\4\14anthropic\0\vollama\0\bxai\0\vopenai\0\fapi_key\1\0\1\fapi_key\0\22ANTHROPIC_API_KEY\vgetenv\aos\nsetup\vparrot\frequire\0", "config", "parrot.nvim")
+try_loadstring("\27LJ\2\n÷\2\0\0\b\0\19\0 6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\17\0005\3\b\0005\4\6\0006\5\3\0009\5\4\5'\a\5\0B\5\2\2=\5\a\4=\4\t\0034\4\0\0=\4\n\0035\4\f\0006\5\3\0009\5\4\5'\a\v\0B\5\2\2=\5\a\4=\4\r\0035\4\15\0006\5\3\0009\5\4\5'\a\14\0B\5\2\2=\5\a\4=\4\16\3=\3\18\2B\0\2\1K\0\1\0\14providers\1\0\1\14providers\0\bxai\1\0\1\fapi_key\0\16XAI_API_KEY\vopenai\1\0\1\fapi_key\0\19OPENAI_API_KEY\vollama\14anthropic\1\0\4\vopenai\0\14anthropic\0\vollama\0\bxai\0\fapi_key\1\0\1\fapi_key\0\22ANTHROPIC_API_KEY\vgetenv\aos\nsetup\vparrot\frequire\0", "config", "parrot.nvim")
 time([[Config for parrot.nvim]], false)
+-- Config for: typst-preview.nvim
+time([[Config for typst-preview.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18typst-preview\frequire\0", "config", "typst-preview.nvim")
+time([[Config for typst-preview.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.api.nvim_create_user_command, 'ComposerStart', function(cmdargs)
-          require('packer.load')({'vim-markdown-composer'}, { cmd = 'ComposerStart', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-markdown-composer'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('ComposerStart ', 'cmdline')
-      end})
 pcall(vim.api.nvim_create_user_command, 'TSPlaygroundToggle', function(cmdargs)
           require('packer.load')({'playground'}, { cmd = 'TSPlaygroundToggle', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
@@ -297,6 +300,13 @@ pcall(vim.api.nvim_create_user_command, 'Copilot', function(cmdargs)
         {nargs = '*', range = true, bang = true, complete = function()
           require('packer.load')({'copilot.lua'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('Copilot ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'ComposerStart', function(cmdargs)
+          require('packer.load')({'vim-markdown-composer'}, { cmd = 'ComposerStart', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-markdown-composer'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('ComposerStart ', 'cmdline')
       end})
 time([[Defining lazy-load commands]], false)
 
@@ -314,18 +324,18 @@ vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'copilot.lua'}, { 
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
+time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]], true)
+vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]]
+time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]], false)
+time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], true)
+vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]]
+time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], false)
 time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-just/ftdetect/just.lua]], true)
 vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-just/ftdetect/just.lua]]
 time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-just/ftdetect/just.lua]], false)
 time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-just/ftdetect/just.vim]], true)
 vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-just/ftdetect/just.vim]]
 time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-just/ftdetect/just.vim]], false)
-time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], true)
-vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]]
-time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], false)
-time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]], true)
-vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]]
-time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]], false)
 vim.cmd("augroup END")
 
 _G._packer.inside_compile = false

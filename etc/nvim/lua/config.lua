@@ -70,6 +70,7 @@ require('nvim-treesitter.configs').setup({
     'scala',
     'tsx',
     'typescript',
+    'typst',
     'zig',
   },
   highlight = {
@@ -216,6 +217,7 @@ local servers = {
   'lua_ls',
   'pyright',
   'rust_analyzer',
+  'tinymist',
   'ts_ls',
   'zls',
 }
@@ -311,9 +313,6 @@ cmp.setup({
   },
   completion = {
     keyword_length = 1,
-  },
-  experimental = {
-    ghost_text = true,
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),

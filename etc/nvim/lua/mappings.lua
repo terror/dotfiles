@@ -22,10 +22,12 @@ map('n', '<c-w>', ':bd<cr>')
 map('n', '<down>', '<nop>')
 map('n', '<leader>ea', ':split ~/.aliases<cr>')
 map('n', '<leader>en', ':e notes.md<cr>')
+map('n', '<leader>ll', ":lua vim.cmd(':e' .. vim.lsp.get_log_path())<cr>")
 map('n', '<leader>sa', '<cmd>Telescope live_grep<cr>')
 map('n', '<leader>sb', '<cmd>Telescope buffers<cr>')
 map('n', '<leader>ss', ':source %<cr>')
 map('n', '<leader>sv', ':luafile ' .. config .. '/init.lua<cr>')
+map('n', '<leader>tp', ':TypstPreview<cr>')
 map('n', '<left>', '<nop>')
 map('n', '<right>', '<nop>')
 map('n', '<up>', '<nop>')
@@ -39,19 +41,10 @@ map('o', 'b', 'i[')
 map('o', 'in', ':<c-u>normal! f(vi(<cr>')
 map('o', 'p', 'i(')
 map('v', '<c-j>', '<esc>')
-map('v', '<leader>a"', ':Tabularize /"<cr>')
-map('v', '<leader>a#', ':Tabularize /#<cr>')
-map('v', '<leader>a:', ':Tabularize /:<cr>')
-map('v', '<leader>a=', ':Tabularize /=<cr>')
-map('v', '<leader>s', ':sort<cr>')
-
--- Parrot mappings
 map('v', '<leader>a', ':PrtAppend<cr>')
 map('v', '<leader>i', ':PrtImplement<cr>')
+map('v', '<leader>s', ':sort<cr>')
 map('v', '<leader>w', ':PrtRewrite<cr>')
-
--- Add custom find command to telescope: `find_files`, in order
--- to find dotfiles and ignore git files.
 
 map(
   'n',
@@ -80,7 +73,3 @@ map(
   ':Telescope file_browser<cr>',
   { noremap = true, silent = true }
 )
-
--- Open `lsp.log`
-
-map('n', '<leader>ll', ":lua vim.cmd(':e' .. vim.lsp.get_log_path())<cr>")
