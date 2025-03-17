@@ -24,6 +24,7 @@ alias gp="git push -u origin master"
 alias gpf="git push -f origin master"
 alias gpo="git push origin"
 alias gst="git status"
+alias pcb='git push origin "$(git branch --show-current)"'
 alias pr="gh pr create --web"
 
 # Ⅲ
