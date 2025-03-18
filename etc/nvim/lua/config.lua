@@ -62,6 +62,7 @@ require('nvim-treesitter.configs').setup({
     'go',
     'java',
     'javascript',
+    'just',
     'latex',
     'lua',
     'ocaml',
@@ -105,9 +106,6 @@ require('nvim-treesitter.configs').setup({
     },
   },
 })
-
--- Setup just TS parser
-require('tree-sitter-just').setup({})
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Bufferline                                                                 │
@@ -202,6 +200,7 @@ local lsp = require('lspconfig')
 
 local on_attach = function(client)
   client.server_capabilities.semanticTokensProvider = nil
+
   map('n', '<leader>ar', '<cmd>lua vim.lsp.buf.rename()<CR>')
   map('n', '<leader>s', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>')
   map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
@@ -237,6 +236,26 @@ for _, server in ipairs(servers) do
     capabilities = capabilities,
   })
 end
+
+local configs = require('lspconfig.configs')
+
+if not configs.just_lsp then
+  configs.just_lsp = {
+    default_config = {
+      cmd = { '/Users/liam/src/just-lsp/target/debug/just-lsp' },
+      filetypes = { 'just' },
+      root_dir = function(fname)
+        return lsp.util.find_git_ancestor(fname)
+      end,
+      settings = {},
+    },
+  }
+end
+
+lsp.just_lsp.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Lualine                                                                    │

@@ -46,9 +46,6 @@ return require('packer').startup(function()
   -- Autocompletion plugin
   use('hrsh7th/nvim-cmp')
 
-  -- Treesitter parser for just
-  use('IndianBoy42/tree-sitter-just')
-
   -- Icons for status and tabline
   use('kyazdani42/nvim-web-devicons')
 
@@ -60,9 +57,6 @@ return require('packer').startup(function()
 
   -- Language server protocol
   use('neovim/nvim-lspconfig')
-
-  -- Just syntax highlighting
-  use({ 'NoahTheDuke/vim-just', ft = { 'just' } })
 
   -- Telescope file browser
   use('nvim-telescope/telescope-file-browser.nvim')
