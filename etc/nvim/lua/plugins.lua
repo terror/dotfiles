@@ -103,6 +103,12 @@ return require('packer').startup(function()
   -- Automated LSP server installation
   use({ 'williamboman/mason-lspconfig.nvim', 'williamboman/mason.nvim' })
 
+  -- Syntax highlighting for justfiles
+  --
+  -- n.b. This is better than the highlighting that we currently get
+  -- from the tree-sitter just parser.
+  use({ 'NoahTheDuke/vim-just', ft = { 'just' } })
+
   -- Github copilot
   use({
     'zbirenbaum/copilot.lua',
@@ -153,32 +159,36 @@ return require('packer').startup(function()
 
   -- LLM integration
   use({
-    "frankroeder/parrot.nvim",
-    dependencies = { 'ibhagwan/fzf-lua', 'nvim-lua/plenary.nvim', 'folke/noice.nvim' },
+    'frankroeder/parrot.nvim',
+    dependencies = {
+      'ibhagwan/fzf-lua',
+      'nvim-lua/plenary.nvim',
+      'folke/noice.nvim',
+    },
     config = function()
-      require("parrot").setup {
+      require('parrot').setup({
         providers = {
           anthropic = {
-            api_key = os.getenv "ANTHROPIC_API_KEY",
+            api_key = os.getenv('ANTHROPIC_API_KEY'),
           },
           ollama = {},
           openai = {
-            api_key = os.getenv "OPENAI_API_KEY",
+            api_key = os.getenv('OPENAI_API_KEY'),
           },
           xai = {
-            api_key = os.getenv "XAI_API_KEY",
+            api_key = os.getenv('XAI_API_KEY'),
           },
         },
-      }
+      })
     end,
   })
 
   -- Markup-based typesetting system live previews
-  use {
+  use({
     'chomosuke/typst-preview.nvim',
     tag = 'v1.*',
     config = function()
-      require 'typst-preview'.setup {}
+      require('typst-preview').setup({})
     end,
-  }
+  })
 end)

@@ -58,6 +58,7 @@ require('nvim-treesitter.configs').setup({
   ensure_installed = {
     'clojure',
     'cpp',
+    'gleam',
     'glsl',
     'go',
     'java',
@@ -76,7 +77,7 @@ require('nvim-treesitter.configs').setup({
   },
   highlight = {
     enable = true,
-    disable = { "markdown" }
+    disable = { 'markdown', 'just' },
   },
   incremental_selection = {
     enable = true,
@@ -290,6 +291,7 @@ luasnip.config.set_config({
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Completion                                                                 │
 -- ╚────────────────────────────────────────────────────────────────────────────│
+
 local colors = {
   bg = '#151718',
   fg = '#d6d6d6',
