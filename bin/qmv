@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+  echo "Usage: qmv source_file new_filename"
+  echo "Example: qmv foo/bar/baz.txt quux.txt"
+  exit 1
+fi
+
+SOURCE="$1"
+NEW_FILENAME="$2"
+
+if [ ! -e "$SOURCE" ]; then
+  echo "Error: Source file '$SOURCE' does not exist."
+  exit 1
+fi
+
+DIRECTORY=$(dirname "$SOURCE")
+
+DESTINATION="$DIRECTORY/$NEW_FILENAME"
+
+if mv "$SOURCE" "$DESTINATION"; then
+  echo "$(basename "$SOURCE") -> $NEW_FILENAME"
+else
+  echo "Error: Failed to rename file."
+  exit 1
+fi
