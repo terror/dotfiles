@@ -209,10 +209,15 @@ local on_attach = function(client)
 
   map('n', '<leader>ar', '<cmd>lua vim.lsp.buf.rename()<CR>')
   map('n', '<leader>s', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>')
+
   map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
   map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
   map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
   map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
+
+  vim.keymap.set("n", "<leader>ca", function()
+    require("tiny-code-action").code_action()
+  end, { noremap = true, silent = true })
 end
 
 local servers = {

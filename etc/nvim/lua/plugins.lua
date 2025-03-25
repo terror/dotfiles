@@ -191,4 +191,17 @@ return require('packer').startup(function()
       require('typst-preview').setup({})
     end,
   })
+
+  -- Better view for LSP code actions
+  use({
+    "rachartier/tiny-code-action.nvim",
+    dependencies = {
+      {"nvim-lua/plenary.nvim"},
+      {"nvim-telescope/telescope.nvim"},
+    },
+    event = "LspAttach",
+    config = function()
+      require('tiny-code-action').setup()
+    end
+  })
 end)
