@@ -194,14 +194,14 @@ return require('packer').startup(function()
 
   -- Better view for LSP code actions
   use({
-    "rachartier/tiny-code-action.nvim",
+    'rachartier/tiny-code-action.nvim',
     dependencies = {
-      {"nvim-lua/plenary.nvim"},
-      {"nvim-telescope/telescope.nvim"},
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-telescope/telescope.nvim' },
     },
-    event = "LspAttach",
+    event = 'LspAttach',
     config = function()
       require('tiny-code-action').setup()
-    end
+    end,
   })
 end)

@@ -211,13 +211,43 @@ local on_attach = function(client)
   map('n', '<leader>s', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>')
 
   map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
-  map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
-  map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
-  map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
 
-  vim.keymap.set("n", "<leader>ca", function()
-    require("tiny-code-action").code_action()
+  vim.keymap.set('n', 'gd', function()
+    require('telescope.builtin').lsp_definitions()
   end, { noremap = true, silent = true })
+
+  vim.keymap.set('n', 'gi', function()
+    require('telescope.builtin').lsp_implementations()
+  end, { noremap = true, silent = true })
+
+  vim.keymap.set('n', 'gr', function()
+    require('telescope.builtin').lsp_references()
+  end, { noremap = true, silent = true })
+
+  vim.keymap.set('n', '<leader>ca', function()
+    require('tiny-code-action').code_action()
+  end, { noremap = true, silent = true })
+
+  vim.api.nvim_create_autocmd('CursorHold', {
+    buffer = 0,
+    callback = function()
+      vim.lsp.buf.document_highlight()
+    end,
+  })
+
+  vim.api.nvim_create_autocmd('CursorHoldI', {
+    buffer = 0,
+    callback = function()
+      vim.lsp.buf.document_highlight()
+    end,
+  })
+
+  vim.api.nvim_create_autocmd('CursorMoved', {
+    buffer = 0,
+    callback = function()
+      vim.lsp.buf.clear_references()
+    end,
+  })
 end
 
 local servers = {
