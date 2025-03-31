@@ -17,9 +17,6 @@ tap "zegervdv/zathura"
 # Run your GitHub Actions locally
 brew "act"
 
-# Library for command-line editing
-brew "readline"
-
 # Core application library for C
 brew "glib"
 
@@ -32,11 +29,26 @@ brew "pango"
 # Icons for the GNOME project
 brew "adwaita-icon-theme"
 
+# Library for command-line editing
+brew "readline"
+
+# Development kit for the Java programming language
+brew "openjdk"
+
+# Java build tool
+brew "ant"
+
 # Record and share terminal sessions
 brew "asciinema"
 
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+
+# Platform built on V8 to build network applications
+brew "node"
+
+# AWS Cloud Development Kit - framework for defining AWS infra as code
+brew "aws-cdk"
 
 # Official Amazon AWS command-line interface
 brew "awscli"
@@ -67,9 +79,6 @@ brew "cabal-install"
 
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
-
-# Development kit for the Java programming language
-brew "openjdk"
 
 # Readline wrapper: adds readline support to tools that lack it
 brew "rlwrap"
@@ -107,9 +116,6 @@ brew "tree-sitter"
 # GNU Emacs text editor
 brew "emacs"
 
-# Platform built on V8 to build network applications
-brew "node"
-
 # LLVM bytecode to JavaScript compiler
 brew "emscripten"
 
@@ -118,6 +124,9 @@ brew "eva"
 
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
 
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
@@ -143,8 +152,14 @@ brew "gh"
 # Distributed revision control system
 brew "git"
 
+# Highly customizable changelog generator
+brew "git-cliff"
+
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+
+# Statically typed language for the Erlang VM
+brew "gleam"
 
 # Library for USB device access
 brew "libusb"
@@ -164,8 +179,8 @@ brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 
-# Manage compile and link flags for libraries
-brew "pkg-config"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 
 # Generate introspection data for GObject libraries
 brew "gobject-introspection"
@@ -197,9 +212,6 @@ brew "guile"
 # Integration point for ghcide and haskell-ide-engine. One IDE to rule them all
 brew "haskell-language-server"
 
-# Command-line hex viewer
-brew "hexyl"
-
 # Haskell source code suggestions
 brew "hlint"
 
@@ -221,17 +233,26 @@ brew "libheif"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 
-# Dynamic language and bytecode vm
-brew "janet"
-
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 
 # Handy way to save and run project-specific commands
 brew "just"
 
+# Add indentation to LaTeX files
+brew "latexindent"
+
+# Graphical front-end for GCC's coverage testing tool (gcov)
+brew "lcov"
+
 # Library that provides automatic proxy configuration management
 brew "libproxy"
+
+# Linux virtual machines
+brew "lima"
+
+# CLI for the Linode API
+brew "linode-cli"
 
 # Language Server for the Lua language
 brew "lua-language-server"
@@ -244,6 +265,9 @@ brew "meson"
 
 # Scala language server
 brew "metals"
+
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 
 # Open source relational database management system
 brew "mysql"
@@ -263,12 +287,6 @@ brew "neovim"
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
 
-# Statically typed compiled systems programming language
-brew "nim"
-
-# Manage multiple Node.js versions
-brew "nvm"
-
 # Command-line Git information tool
 brew "onefetch"
 
@@ -280,9 +298,6 @@ brew "ormolu"
 
 # Swiss-army knife of markup format conversion
 brew "pandoc"
-
-# Python dependency management tool
-brew "pipenv"
 
 # Fast, disk space efficient package manager
 brew "pnpm"
@@ -305,11 +320,14 @@ brew "prettier"
 # Linter for prose
 brew "proselint"
 
-# Python version management
-brew "pyenv"
+# Fast static code analyzer & language server for Python
+brew "pylyzer"
 
 # Static type checker for Python
 brew "pyright"
+
+# Generic machine emulator and virtualizer
+brew "qemu"
 
 # Software environment for statistical computing
 brew "r"
@@ -328,9 +346,6 @@ brew "rsync"
 
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
-
-# Extremely fast Python linter, written in Rust
-brew "ruff"
 
 # Build tool for Scala projects
 brew "sbt"
@@ -356,9 +371,6 @@ brew "sqlx-cli"
 # Cross-shell prompt for astronauts
 brew "starship"
 
-# Modernized, complete, self-contained TeX/LaTeX engine
-brew "tectonic"
-
 # User interface to the TELNET protocol
 brew "telnet"
 
@@ -373,6 +385,9 @@ brew "tree"
 
 # Language Server Protocol implementation for TypeScript wrapping tsserver
 brew "typescript-language-server", link: false
+
+# Markup-based typesetting system
+brew "typst"
 
 # Maintained ctags implementation
 brew "universal-ctags"
@@ -396,7 +411,7 @@ brew "wifi-password"
 brew "with-readline"
 
 # Formatter for python code
-brew "yapf"
+brew "yapf", link: false
 
 # JavaScript package manager
 brew "yarn"
@@ -446,14 +461,14 @@ cask "1password@nightly"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 
+# Chromium based browser
+cask "arc"
+
 # Virtual Audio Driver
 cask "blackhole-2ch"
 
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
-
-# Tool for formatting Clojure code
-cask "cljstyle"
 
 # Voice and text chat software
 cask "discord"
@@ -466,17 +481,14 @@ cask "font-fira-code"
 # Web browser
 cask "google-chrome"
 
-# Vector graphics editor
-cask "inkscape"
+# GraalVM from Oracle
+cask "graalvm-jdk"
+
+# Dedicated scratchpad for developers
+cask "heynote"
 
 # Interface for reading and syncing eBooks
 cask "kindle"
-
-# App to manage software development and track bugs
-cask "linear-linear"
-
-# Full TeX Live distribution with GUI applications
-cask "mactex"
 
 # VPN client
 cask "mullvadvpn"
@@ -505,6 +517,9 @@ cask "rectangle"
 # Tool for sending personal documents to Kindles from Macs
 cask "send-to-kindle"
 
+# Instant messaging application focusing on security
+cask "signal"
+
 # Bitcoin wallet application
 cask "sparrow"
 
@@ -519,6 +534,9 @@ cask "tor-browser"
 
 # Development environment
 cask "vagrant"
+
+# Virtualizer for x86 and arm64 hardware
+cask "virtualbox@beta"
 
 # Open-source code editor
 cask "visual-studio-code"
@@ -535,6 +553,7 @@ vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "gruntfuggly.todo-tree"
 vscode "james-yu.latex-workshop"
+vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
@@ -549,8 +568,17 @@ vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
 vscode "ms-vscode.vscode-typescript-next"
 vscode "ms-vsliveshare.vsliveshare"
+vscode "redhat.java"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
 vscode "twxs.cmake"
+vscode "visualstudioexptteam.intellicode-api-usage-examples"
+vscode "visualstudioexptteam.vscodeintellicode"
+vscode "vscjava.vscode-gradle"
+vscode "vscjava.vscode-java-debug"
+vscode "vscjava.vscode-java-dependency"
+vscode "vscjava.vscode-java-pack"
+vscode "vscjava.vscode-java-test"
+vscode "vscjava.vscode-maven"
 vscode "vscodevim.vim"
 vscode "yoavbls.pretty-ts-errors"

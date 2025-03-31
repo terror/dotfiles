@@ -15,18 +15,13 @@ export LS_OPTIONS='--color=auto'
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 export NOTE_EXT="md"
-export NVM_DIR="$HOME/.nvm"
 export PAGER=less
-export PYENV_ROOT="$HOME/.pyenv"
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
 export SAVEHIST=5000000
 export SHELL=/bin/bash
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 export TERM=xterm-256color
 export VISUAL=nvim
-
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -44,10 +39,8 @@ export BOOK_DIR=$DROPBOX/books
 export NOTE_DIR=$DROPBOX/notes
 export PAPER_DIR=$DROPBOX/papers
 
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-
+eval "$(mise activate bash)"
 eval "$(opam env)"
-eval "$(pyenv init -)"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 

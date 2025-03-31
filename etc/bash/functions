@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function run() {
+  # shellcheck disable=SC2012
   file="$(ls -t | head -n 1)"
 
   case "$1" in

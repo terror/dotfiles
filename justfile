@@ -2,6 +2,7 @@ all:
   just rustup
   just formulae
   just crates
+  just tpm
 
 crates:
   cargo install cargo-audit
