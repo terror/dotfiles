@@ -112,38 +112,10 @@ return require('packer').startup(function()
   -- Github copilot
   use({
     'zbirenbaum/copilot.lua',
-    cmd = 'Copilot',
-    event = 'InsertEnter',
     config = function()
       require('copilot').setup({
-        panel = {
-          enabled = true,
-          auto_refresh = true,
-          keymap = {
-            jump_prev = '[[',
-            jump_next = ']]',
-            accept = '<CR>',
-            refresh = 'gr',
-            open = '<M-CR>',
-          },
-          layout = {
-            position = 'bottom',
-            ratio = 0.4,
-          },
-        },
-        suggestion = {
-          enabled = true,
-          auto_trigger = true,
-          debounce = 75,
-          keymap = {
-            accept = '<Tab>',
-            accept_word = false,
-            accept_line = false,
-            next = '<C-n>',
-            prev = '<C-p>',
-            dismiss = '<C-]>',
-          },
-        },
+        panel = { enabled = false },
+        suggestion = { enabled = false },
       })
     end,
   })
