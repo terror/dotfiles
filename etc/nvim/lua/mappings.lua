@@ -22,6 +22,7 @@ map('n', '<c-w>', ':bd<cr>')
 map('n', '<down>', '<nop>')
 map('n', '<leader>ea', ':split ~/.aliases<cr>')
 map('n', '<leader>en', ':e notes.md<cr>')
+map('n', '<leader>g', ":GitMessenger<cr>")
 map('n', '<leader>ll', ":lua vim.cmd(':e' .. vim.lsp.get_log_path())<cr>")
 map('n', '<leader>sa', '<cmd>Telescope live_grep<cr>')
 map('n', '<leader>sb', '<cmd>Telescope buffers<cr>')
@@ -63,9 +64,6 @@ map(
   ]]),
   { noremap = true, silent = true }
 )
-
--- Map `<c-p>` to open the telescope file browser, can create
--- files with <c-e>.
 
 map(
   'n',

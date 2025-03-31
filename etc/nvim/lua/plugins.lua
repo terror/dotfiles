@@ -103,6 +103,9 @@ return require('packer').startup(function()
   -- Automated LSP server installation
   use({ 'williamboman/mason-lspconfig.nvim', 'williamboman/mason.nvim' })
 
+  -- See commit information on hover
+  use({ 'rhysd/git-messenger.vim' })
+
   -- Syntax highlighting for justfiles
   --
   -- n.b. This is better than the highlighting that we currently get
