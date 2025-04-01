@@ -224,6 +224,14 @@ _G.packer_plugins = {
     path = "/Users/liam/.local/share/nvim/site/pack/packer/opt/tiny-code-action.nvim",
     url = "https://github.com/rachartier/tiny-code-action.nvim"
   },
+  ["tiny-inline-diagnostic.nvim"] = {
+    config = { "\27LJ\2\n¾\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\3=\3\a\2B\0\2\1K\0\1\0\foptions\15multilines\1\0\1\15multilines\0\1\0\2\16always_show\2\fenabled\2\1\0\3\vpreset\fclassic\foptions\0\19transparent_bg\2\nsetup\27tiny-inline-diagnostic\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/liam/.local/share/nvim/site/pack/packer/opt/tiny-inline-diagnostic.nvim",
+    url = "https://github.com/rachartier/tiny-inline-diagnostic.nvim"
+  },
   ["typst-preview.nvim"] = {
     config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18typst-preview\frequire\0" },
     loaded = true,
@@ -329,7 +337,7 @@ vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-markdown'
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au LspAttach * ++once lua require("packer.load")({'tiny-code-action.nvim'}, { event = "LspAttach *" }, _G.packer_plugins)]]
+vim.cmd [[au LspAttach * ++once lua require("packer.load")({'tiny-code-action.nvim', 'tiny-inline-diagnostic.nvim'}, { event = "LspAttach *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]

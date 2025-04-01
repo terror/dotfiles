@@ -174,9 +174,28 @@ return require('packer').startup(function()
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-telescope/telescope.nvim' },
     },
-    event = 'LspAttach',
+    event = "LspAttach",
     config = function()
       require('tiny-code-action').setup()
+    end,
+  })
+
+  -- Better view for LSP diagnostics
+  use({
+    "rachartier/tiny-inline-diagnostic.nvim",
+    priority = 1000,
+    event = "LspAttach",
+    config = function()
+      require('tiny-inline-diagnostic').setup({
+        preset = "classic",
+        transparent_bg = true,
+        options = {
+          multilines = {
+            enabled = true,
+            always_show = true,
+          },
+        }
+      })
     end,
   })
 end)

@@ -362,9 +362,9 @@ local copilot_ok, copilot = pcall(require, 'copilot.suggestion')
 
 cmp.setup({
   sources = {
-    { name = 'copilot', group_index = 2 },
-    { name = 'luasnip', group_index = 2 },
-    { name = 'nvim_lsp', group_index = 2 },
+    { name = 'copilot' },
+    { name = 'luasnip' },
+    { name = 'nvim_lsp' }
   },
   formatting = {
     format = function(_, item)
