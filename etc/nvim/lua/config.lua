@@ -227,27 +227,6 @@ local on_attach = function(client)
   vim.keymap.set('n', '<leader>ca', function()
     require('tiny-code-action').code_action()
   end, { noremap = true, silent = true })
-
-  vim.api.nvim_create_autocmd('CursorHold', {
-    buffer = 0,
-    callback = function()
-      vim.lsp.buf.document_highlight()
-    end,
-  })
-
-  vim.api.nvim_create_autocmd('CursorHoldI', {
-    buffer = 0,
-    callback = function()
-      vim.lsp.buf.document_highlight()
-    end,
-  })
-
-  vim.api.nvim_create_autocmd('CursorMoved', {
-    buffer = 0,
-    callback = function()
-      vim.lsp.buf.clear_references()
-    end,
-  })
 end
 
 local servers = {
@@ -277,6 +256,31 @@ for _, server in ipairs(servers) do
     capabilities = capabilities,
   })
 end
+
+lsp.java_language_server.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+    allow_incremental_sync = true,
+  },
+  handlers = {
+    ['client/registerCapability'] = function(err, result, ctx, config)
+      return vim.lsp.handlers['client/registerCapability'](err, {
+        registrations = { result },
+      }, ctx, config)
+    end,
+  },
+  settings = {
+    java = {
+      signatureHelp = { enabled = true },
+      contentProvider = { preferred = 'fernflower' },
+      completion = {
+        favoriteStaticMembers = {},
+      },
+    },
+  },
+})
 
 local configs = require('lspconfig.configs')
 
@@ -364,7 +368,7 @@ cmp.setup({
   sources = {
     { name = 'copilot' },
     { name = 'luasnip' },
-    { name = 'nvim_lsp' }
+    { name = 'nvim_lsp' },
   },
   formatting = {
     format = function(_, item)
