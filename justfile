@@ -28,3 +28,6 @@ rustup:
 
 tpm:
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+update-brewfile:
+  cd brew && brew dump
