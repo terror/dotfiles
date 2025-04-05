@@ -20,6 +20,9 @@ brew "act"
 # Core application library for C
 brew "glib"
 
+# Zstandard is a real-time compression algorithm
+brew "zstd"
+
 # OpenType text shaping engine
 brew "harfbuzz"
 
@@ -40,6 +43,9 @@ brew "ant"
 
 # Record and share terminal sessions
 brew "asciinema"
+
+# Code searching, linting, rewriting
+brew "ast-grep"
 
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
@@ -254,8 +260,17 @@ brew "lima"
 # CLI for the Linode API
 brew "linode-cli"
 
+# Next-gen compiler infrastructure
+brew "llvm"
+
+# Next-gen compiler infrastructure
+brew "llvm@18"
+
 # Language Server for the Lua language
 brew "lua-language-server"
+
+# Java-based project management
+brew "maven"
 
 # Small build system for use with gyp or CMake
 brew "ninja"
@@ -268,6 +283,9 @@ brew "metals"
 
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+
+# MIT/GNU Scheme development tools and runtime library
+brew "mit-scheme"
 
 # Open source relational database management system
 brew "mysql"
@@ -389,6 +407,9 @@ brew "typescript-language-server", link: false
 # Markup-based typesetting system
 brew "typst"
 
+# Beautiful and reliable typst code formatter
+brew "typstyle"
+
 # Maintained ctags implementation
 brew "universal-ctags"
 
@@ -470,6 +491,9 @@ cask "blackhole-2ch"
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
 
+# Write, edit, and chat about your code with AI
+cask "cursor"
+
 # Voice and text chat software
 cask "discord"
 
@@ -477,6 +501,8 @@ cask "discord"
 cask "dropbox"
 cask "font-caskaydia-cove-nerd-font"
 cask "font-fira-code"
+cask "font-fontawesome"
+cask "font-inter"
 
 # Web browser
 cask "google-chrome"

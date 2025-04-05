@@ -34,15 +34,12 @@ function fs() {
   else
     local arg=-sh;
   fi
+
   if [[ -n "$*" ]]; then
     du $arg -- "$@";
   else
     du $arg .[^.]* ./*;
   fi;
-}
-
-function redis() {
- redis-server /usr/local/etc/redis.conf
 }
 
 function noc() {
@@ -63,18 +60,24 @@ function fzf-down() {
 
 function sgf() {
   is_in_git_repo || return
+
   git -c color.status=always status --short |
+
   fzf-down -m --ansi --nth 2..,.. \
     --preview '(git diff --color=always -- {-1} | sed 1,4d; cat {-1})' |
+
   cut -c4- | sed 's/.* -> //'
 }
 
 function sgc() {
   is_in_git_repo || return
+
   git log --date=short --format="%C(green)%C(bold)%cd %C(auto)%h%d %s (%an)" --graph --color=always |
+
   fzf-down --ansi --no-sort --reverse --multi --bind 'ctrl-s:toggle-sort' \
     --header 'Press CTRL-S to toggle sort' \
     --preview 'grep -o "[a-f0-9]\{7,\}" <<< {} | xargs git show --color=always' |
+
   grep -o "[a-f0-9]\{7,\}"
 }
 
