@@ -2,18 +2,15 @@
 
 set -euxo pipefail
 
-# Update homebrew and installed packages
 brew evolve
 
-# Update rust version
 rustup update
 
-# Recursively clean all rust projects
-rclean
+clean-rust-projects
 
-# Remove all node modules from /src and /tmp
+install-crates
+
 find "$HOME/src" -name 'node_modules' -type d -prune -exec rm -rf '{}' +
 find "$HOME/tmp" -name 'node_modules' -type d -prune -exec rm -rf '{}' +
 
-# Sync /src with dropbox
 rsync -auv --delete "$HOME/src/" "$DROPBOX/src"

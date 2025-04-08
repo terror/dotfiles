@@ -1,24 +1,7 @@
-all:
-  just rustup
-  just formulae
-  just crates
-  just tpm
+all: rustup formulae crates tpm
 
 crates:
-  cargo install cargo-audit
-  cargo install cargo-check
-  cargo install cargo-edit
-  cargo install cargo-expand
-  cargo install cargo-sort
-  cargo install cargo-tarpaulin
-  cargo install cargo-watch
-  cargo install loc
-  cargo install present
-  cargo install ripgrep
-  cargo install skeleton-cli
-  cargo install stylua
-  cargo install typos-cli
-  cargo install vim-profiler
+  ./bin/crates
 
 formulae:
   brew bundle install --file=brew/Brewfile

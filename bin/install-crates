@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+crates=(
+  "cargo-audit"
+  "cargo-check"
+  "cargo-edit"
+  "cargo-expand"
+  "cargo-sort"
+  "cargo-tarpaulin"
+  "cargo-watch"
+  "loc"
+  "present"
+  "ripgrep"
+  "skeleton-cli"
+  "stylua"
+  "typos-cli"
+  "vim-profiler"
+)
+
+for crate in "${crates[@]}"; do
+  echo "Installing $crate..."
+  cargo install "$crate"
+done
+
+echo "All crates have been installed!"
