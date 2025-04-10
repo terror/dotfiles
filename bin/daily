@@ -14,3 +14,4 @@ find "$HOME/src" -name 'node_modules' -type d -prune -exec rm -rf '{}' +
 find "$HOME/tmp" -name 'node_modules' -type d -prune -exec rm -rf '{}' +
 
 rsync -auv --delete "$HOME/src/" "$DROPBOX/src"
+rsync -auv --delete "$HOME/work/" "$DROPBOX/work"
