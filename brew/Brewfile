@@ -485,6 +485,9 @@ cask "alacritty"
 # Chromium based browser
 cask "arc"
 
+# Compact TeX distribution as alternative to the full TeX Live / MacTeX
+cask "basictex"
+
 # Virtual Audio Driver
 cask "blackhole-2ch"
 
