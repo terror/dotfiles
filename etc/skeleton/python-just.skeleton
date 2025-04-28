@@ -1,0 +1,20 @@
+---
+filename: justfile
+---
+set dotenv-load
+
+export EDITOR := 'nvim'
+
+alias c := check
+alias f := fmt
+
+default:
+  just --list
+
+[group: 'check']
+check:
+  uv run ruff check
+
+[group: 'format']
+fmt:
+  uv run ruff check --select I --fix && uv run ruff format
