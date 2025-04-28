@@ -14,7 +14,9 @@ crates=(
   "skeleton-cli"
   "stylua"
   "typos-cli"
+  "val"
   "vim-profiler"
+  "zk-cli"
 )
 
 for crate in "${crates[@]}"; do
