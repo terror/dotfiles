@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/liam/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?/init.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/liam/.cache/nvim/packer_hererocks/2.1.1741730670/lib/lua/5.1/?.so"
+local package_path_str = "/Users/liam/.cache/nvim/packer_hererocks/2.1.1744318430/share/lua/5.1/?.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.1744318430/share/lua/5.1/?/init.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.1744318430/lib/luarocks/rocks-5.1/?.lua;/Users/liam/.cache/nvim/packer_hererocks/2.1.1744318430/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/liam/.cache/nvim/packer_hererocks/2.1.1744318430/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -225,7 +225,7 @@ _G.packer_plugins = {
     url = "https://github.com/rachartier/tiny-code-action.nvim"
   },
   ["tiny-inline-diagnostic.nvim"] = {
-    config = { "\27LJ\2\næ\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\3=\3\a\2B\0\2\1K\0\1\0\foptions\15multilines\1\0\1\15multilines\0\1\0\2\16always_show\2\fenabled\2\1\0\3\19transparent_bg\2\foptions\0\vpreset\fclassic\nsetup\27tiny-inline-diagnostic\frequire\0" },
+    config = { "\27LJ\2\næ\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\3=\3\a\2B\0\2\1K\0\1\0\foptions\15multilines\1\0\1\15multilines\0\1\0\2\16always_show\2\fenabled\2\1\0\3\19transparent_bg\2\vpreset\fclassic\foptions\0\nsetup\27tiny-inline-diagnostic\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -292,14 +292,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for typst-preview.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18typst-preview\frequire\0", "config", "typst-preview.nvim")
 time([[Config for typst-preview.nvim]], false)
--- Config for: parrot.nvim
-time([[Config for parrot.nvim]], true)
-try_loadstring("\27LJ\2\n÷\2\0\0\b\0\19\0 6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\17\0005\3\b\0005\4\6\0006\5\3\0009\5\4\5'\a\5\0B\5\2\2=\5\a\4=\4\t\0034\4\0\0=\4\n\0035\4\f\0006\5\3\0009\5\4\5'\a\v\0B\5\2\2=\5\a\4=\4\r\0035\4\15\0006\5\3\0009\5\4\5'\a\14\0B\5\2\2=\5\a\4=\4\16\3=\3\18\2B\0\2\1K\0\1\0\14providers\1\0\1\14providers\0\bxai\1\0\1\fapi_key\0\16XAI_API_KEY\vopenai\1\0\1\fapi_key\0\19OPENAI_API_KEY\vollama\14anthropic\1\0\4\vopenai\0\14anthropic\0\vollama\0\bxai\0\fapi_key\1\0\1\fapi_key\0\22ANTHROPIC_API_KEY\vgetenv\aos\nsetup\vparrot\frequire\0", "config", "parrot.nvim")
-time([[Config for parrot.nvim]], false)
 -- Config for: copilot.lua
 time([[Config for copilot.lua]], true)
 try_loadstring("\27LJ\2\nà\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\15suggestion\1\0\1\fenabled\1\npanel\1\0\2\15suggestion\0\npanel\0\1\0\1\fenabled\1\nsetup\fcopilot\frequire\0", "config", "copilot.lua")
 time([[Config for copilot.lua]], false)
+-- Config for: parrot.nvim
+time([[Config for parrot.nvim]], true)
+try_loadstring("\27LJ\2\n÷\2\0\0\b\0\19\0 6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\17\0005\3\b\0005\4\6\0006\5\3\0009\5\4\5'\a\5\0B\5\2\2=\5\a\4=\4\t\0034\4\0\0=\4\n\0035\4\f\0006\5\3\0009\5\4\5'\a\v\0B\5\2\2=\5\a\4=\4\r\0035\4\15\0006\5\3\0009\5\4\5'\a\14\0B\5\2\2=\5\a\4=\4\16\3=\3\18\2B\0\2\1K\0\1\0\14providers\1\0\1\14providers\0\bxai\1\0\1\fapi_key\0\16XAI_API_KEY\vopenai\1\0\1\fapi_key\0\19OPENAI_API_KEY\vollama\14anthropic\1\0\4\vopenai\0\14anthropic\0\vollama\0\bxai\0\fapi_key\1\0\1\fapi_key\0\22ANTHROPIC_API_KEY\vgetenv\aos\nsetup\vparrot\frequire\0", "config", "parrot.nvim")
+time([[Config for parrot.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd copilot-cmp ]]
@@ -331,16 +331,19 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType just ++once lua require("packer.load")({'vim-just'}, { ft = "just" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-markdown-composer', 'vim-markdown'}, { ft = "markdown" }, _G.packer_plugins)]]
 vim.cmd [[au FileType rust ++once lua require("packer.load")({'rust.vim'}, { ft = "rust" }, _G.packer_plugins)]]
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-markdown', 'vim-markdown-composer'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType just ++once lua require("packer.load")({'vim-just'}, { ft = "just" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au LspAttach * ++once lua require("packer.load")({'tiny-inline-diagnostic.nvim', 'tiny-code-action.nvim'}, { event = "LspAttach *" }, _G.packer_plugins)]]
+vim.cmd [[au LspAttach * ++once lua require("packer.load")({'tiny-code-action.nvim', 'tiny-inline-diagnostic.nvim'}, { event = "LspAttach *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
+time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]], true)
+vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]]
+time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]], false)
 time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-just/ftdetect/just.lua]], true)
 vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-just/ftdetect/just.lua]]
 time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-just/ftdetect/just.lua]], false)
@@ -350,9 +353,6 @@ time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/pack
 time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], true)
 vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]]
 time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], false)
-time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]], true)
-vim.cmd [[source /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]]
-time([[Sourcing ftdetect script at: /Users/liam/.local/share/nvim/site/pack/packer/opt/rust.vim/ftdetect/rust.vim]], false)
 vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
