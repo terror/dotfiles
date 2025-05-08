@@ -238,6 +238,7 @@ local servers = {
   'rust_analyzer',
   'tinymist',
   'ts_ls',
+  'yamlls',
   'zls',
 }
 
