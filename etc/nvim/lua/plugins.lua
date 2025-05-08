@@ -109,6 +109,9 @@ return require('packer').startup(function()
   -- from the tree-sitter just parser.
   use({ 'NoahTheDuke/vim-just', ft = { 'just' } })
 
+  -- Syntax highlighting for janet
+  use({ 'janet-lang/janet.vim', ft = { 'janet' } })
+
   -- Github copilot
   use({
     'zbirenbaum/copilot.lua',
