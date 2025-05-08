@@ -1,7 +1,7 @@
 all: rustup formulae crates tpm
 
 crates:
-  ./bin/crates
+  ./bin/install-crates
 
 formulae:
   brew bundle install --file=brew/Brewfile
