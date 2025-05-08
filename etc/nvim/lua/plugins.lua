@@ -85,9 +85,6 @@ return require('packer').startup(function()
   -- Tabline
   use('romgrk/barbar.nvim')
 
-  -- Rust support
-  use({ 'rust-lang/rust.vim', ft = 'rust' })
-
   -- Snippets source for nvim-cmp
   use('saadparwaiz1/cmp_luasnip')
 
