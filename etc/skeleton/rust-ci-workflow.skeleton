@@ -1,6 +1,7 @@
 ---
 filename: .github/workflows/ci.yml
-package: package
+groups: [rust]
+package:
 ---
 name: CI
 

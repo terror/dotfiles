@@ -1,5 +1,6 @@
 ---
 filename: rustfmt.toml
+groups: [rust]
 ---
 edition = "2018"
 imports_granularity = "One"

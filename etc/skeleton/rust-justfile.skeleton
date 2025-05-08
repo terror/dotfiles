@@ -1,6 +1,6 @@
 ---
 filename: justfile
-groups: [rust-cli]
+groups: [rust]
 project:
 ---
 set dotenv-load

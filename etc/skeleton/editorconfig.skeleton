@@ -1,5 +1,6 @@
 ---
 filename: .editorconfig
+groups: [general]
 ---
 root = true
 

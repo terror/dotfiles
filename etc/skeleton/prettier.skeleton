@@ -1,6 +1,6 @@
 ---
 filename: .prettierrc
-groups: [frontend]
+groups: [typescript]
 tabWidth: 2
 ---
 {
