@@ -239,6 +239,9 @@ brew "libheif"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 
+# Dynamic language and bytecode vm
+brew "janet"
+
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 
@@ -540,6 +543,9 @@ cask "raindropio"
 # Control your tools with a few keystrokes
 cask "raycast"
 
+# Save articles to read, highlight key content, and organise notes for review
+cask "reader"
+
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 
@@ -578,8 +584,6 @@ cask "zoom"
 vscode "christian-kohler.npm-intellisense"
 vscode "dbaeumer.vscode-eslint"
 vscode "esbenp.prettier-vscode"
-vscode "github.copilot"
-vscode "github.copilot-chat"
 vscode "gruntfuggly.todo-tree"
 vscode "james-yu.latex-workshop"
 vscode "ms-azuretools.vscode-docker"
@@ -611,3 +615,4 @@ vscode "vscjava.vscode-java-test"
 vscode "vscjava.vscode-maven"
 vscode "vscodevim.vim"
 vscode "yoavbls.pretty-ts-errors"
+vscode "ziglang.vscode-zig"
