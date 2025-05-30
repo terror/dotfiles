@@ -245,8 +245,9 @@ local servers = {
 require('mason').setup()
 
 require('mason-lspconfig').setup({
+  automatic_enable = false,
   automatic_installation = true,
-  ensure_installed = servers,
+  ensure_installed = servers
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
