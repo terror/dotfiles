@@ -15,7 +15,7 @@ augroup({
     {
       'FileType',
       'markdown',
-      'map<leader>m :ComposerStart<CR>',
+      'map<leader>m :MarkdownPreview<CR>',
     },
     {
       'VimEnter,BufEnter',

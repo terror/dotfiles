@@ -1,187 +1,187 @@
-local execute = vim.api.nvim_command
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 
-local fn = vim.fn
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
 
-local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-
-if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({
+  local out = vim.fn.system({
     'git',
     'clone',
-    'https://github.com/wbthomason/packer.nvim',
-    install_path,
+    '--filter=blob:none',
+    '--branch=stable',
+    lazyrepo,
+    lazypath,
   })
-  execute('packadd packer.nvim')
+
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { 'Failed to clone lazy.nvim:\n', 'ErrorMsg' },
+      { out, 'WarningMsg' },
+      { '\nPress any key to exit...' },
+    }, true, {})
+
+    vim.fn.getchar()
+
+    os.exit(1)
+  end
 end
 
-local use = require('packer').use
+vim.opt.rtp:prepend(lazypath)
 
-return require('packer').startup(function()
-  --  Changes Vim working directory to project root
-  use('airblade/vim-rooter')
+require('lazy').setup({
+  -- Changes Vim working directory to the project root.
+  'airblade/vim-rooter',
 
-  -- View LSP startup progress
-  use('arkav/lualine-lsp-progress')
+  -- LSP Progress lualine component.
+  'arkav/lualine-lsp-progress',
 
-  -- Toml syntax
-  use('cespare/vim-toml')
+  -- Vim syntax for TOML.
+  'cespare/vim-toml',
 
-  -- Support .editorconfig
-  use('editorconfig/editorconfig-vim')
+  -- EditorConfig plugin for Vim.
+  'editorconfig/editorconfig-vim',
 
-  -- Preview markdown files in the browser
-  use({
-    'euclio/vim-markdown-composer',
-    cmd = 'ComposerStart',
-    ft = 'markdown',
-    run = 'cargo build --release --locked',
-  })
+  -- A statusline plugin written in pure lua.
+  'hoob3rt/lualine.nvim',
 
-  -- Statusline
-  use('hoob3rt/lualine.nvim')
+  -- A `nvim-cmp` source for neovim builtin LSP client.
+  'hrsh7th/cmp-nvim-lsp',
 
-  -- LSP source for nvim-cmp
-  use('hrsh7th/cmp-nvim-lsp')
+  -- A completion plugin for neovim written in Lua.
+  'hrsh7th/nvim-cmp',
 
-  -- Autocompletion plugin
-  use('hrsh7th/nvim-cmp')
+  -- A markdown preview plugin for (neo)vim.
+  {
+    'iamcco/markdown-preview.nvim',
+    build = 'cd app && yarn install',
+    cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
+    ft = { 'markdown' },
+    init = function()
+      vim.g.mkdp_filetypes = { 'markdown' }
+    end,
+  },
 
-  -- Icons for status and tabline
-  use('kyazdani42/nvim-web-devicons')
+  -- Provides Nerd Font icons (glyphs) for use by neovim plugins.
+  'kyazdani42/nvim-web-devicons',
 
-  -- A lua-based snippet engine
-  use({ 'L3MON4D3/LuaSnip', tag = 'v<CurrentMajor>.*' })
+  -- The fancy start screen for Vim.
+  'mhinz/vim-startify',
 
-  -- Cool start screen
-  use('mhinz/vim-startify')
+  -- Quickstart configs for Nvim LSP.
+  'neovim/nvim-lspconfig',
 
-  -- Language server protocol
-  use('neovim/nvim-lspconfig')
-
-  -- Telescope file browser
-  use('nvim-telescope/telescope-file-browser.nvim')
-
-  -- Use FZF for telescope fuzzy file finding algorithm
-  use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
-
-  -- Fuzzy file finder
-  use({
+  -- A highly extendable fuzzy finder over lists.
+  {
     'nvim-telescope/telescope.nvim',
-    requires = { 'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim' },
-  })
+    dependencies = { 'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim' },
+  },
 
-  -- Support for treesitter
-  use('nvim-treesitter/nvim-treesitter')
+  -- File browser extension for telescope.nvim.
+  {
+    'nvim-telescope/telescope-file-browser.nvim',
+    dependencies = { 'nvim-telescope/telescope.nvim' },
+  },
 
-  -- Treesitter playground
-  use({ 'nvim-treesitter/playground', cmd = 'TSPlaygroundToggle' })
+  -- A `fzf` sorter implementation for telescope.
+  {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    build = 'make',
+    dependencies = { 'nvim-telescope/telescope.nvim' },
+  },
 
-  -- Cool vscode-like pictograms
-  use('onsails/lspkind.nvim')
+  -- Neovim Treesitter configurations and abstraction layer.
+  {
+    'nvim-treesitter/nvim-treesitter',
+    branch = 'master',
+    build = ':TSUpdate',
+    lazy = false,
+  },
 
-  -- Markdown syntax support
-  use({ 'plasticboy/vim-markdown', ft = 'markdown' })
+  -- View treesitter information directly in Neovim.
+  {
+    'nvim-treesitter/playground',
+    cmd = 'TSPlaygroundToggle',
+  },
 
-  -- Tabline
-  use('romgrk/barbar.nvim')
+  -- Vscode-like pictograms for neovim lsp completion items.
+  'onsails/lspkind.nvim',
 
-  -- Snippets source for nvim-cmp
-  use('saadparwaiz1/cmp_luasnip')
+  -- Syntax highlighting, matching rules and mappings for the original Markdown and extensions.
+  {
+    'plasticboy/vim-markdown',
+    ft = 'markdown',
+  },
 
-  -- GLSL syntax highlighting
-  use('tikhomirov/vim-glsl')
+  -- The neovim tabline plugin.
+  'romgrk/barbar.nvim',
 
-  -- Comment stuff out
-  use('tpope/vim-commentary')
+  -- Syntax highlighting for OpenGL Shading Language.
+  'tikhomirov/vim-glsl',
 
-  -- Package manager
-  use('wbthomason/packer.nvim')
+  -- A plugin that lets you comment stuff out.
+  'tpope/vim-commentary',
 
-  -- Automated LSP server installation
-  use({ 'williamboman/mason-lspconfig.nvim', 'williamboman/mason.nvim' })
+  -- Portable package manager for Neovim.
+  {
+    'williamboman/mason.nvim',
+    dependencies = { 'williamboman/mason-lspconfig.nvim' },
+  },
 
-  -- See commit information on hover
-  use({ 'rhysd/git-messenger.vim' })
+  -- Vim and Neovim plugin to reveal the commit messages under the cursor.
+  'rhysd/git-messenger.vim',
 
-  -- Syntax highlighting for justfiles
-  --
-  -- n.b. This is better than the highlighting that we currently get
-  -- from the tree-sitter just parser.
-  use({ 'NoahTheDuke/vim-just', ft = { 'just' } })
+  -- Syntax highlighting for `just`, the command runner.
+  {
+    'NoahTheDuke/vim-just',
+    ft = { 'just' },
+  },
 
-  -- Syntax highlighting for janet
-  use({ 'janet-lang/janet.vim', ft = { 'janet' } })
+  -- Syntax highlighting for janet.
+  {
+    'janet-lang/janet.vim',
+    ft = { 'janet' },
+  },
 
-  -- Github copilot
-  use({
+  -- GitHub Copilot integration in lua.
+  {
     'zbirenbaum/copilot.lua',
     config = function()
-      require('copilot').setup({
-        panel = { enabled = false },
-        suggestion = { enabled = false },
-      })
+      require('copilot').setup()
     end,
-  })
+  },
 
-  -- Github copilot cmp integration
-  use({
+  -- A `nvim-cmp` source for GitHub Copilot.
+  {
     'zbirenbaum/copilot-cmp',
-    after = { 'copilot.lua' },
+    dependencies = { 'zbirenbaum/copilot.lua' },
     config = function()
       require('copilot_cmp').setup()
     end,
-  })
+  },
 
-  -- LLM integration
-  use({
-    'frankroeder/parrot.nvim',
-    dependencies = {
-      'ibhagwan/fzf-lua',
-      'nvim-lua/plenary.nvim',
-      'folke/noice.nvim',
-    },
-    config = function()
-      require('parrot').setup({
-        providers = {
-          anthropic = {
-            api_key = os.getenv('ANTHROPIC_API_KEY'),
-          },
-          ollama = {},
-          openai = {
-            api_key = os.getenv('OPENAI_API_KEY'),
-          },
-          xai = {
-            api_key = os.getenv('XAI_API_KEY'),
-          },
-        },
-      })
-    end,
-  })
-
-  -- Markup-based typesetting system live previews
-  use({
+  -- Low latency typst preview for Neovim.
+  {
     'chomosuke/typst-preview.nvim',
-    tag = 'v1.*',
+    version = 'v1.*',
     config = function()
-      require('typst-preview').setup({})
+      require('typst-preview').setup()
     end,
-  })
+  },
 
-  -- Better view for LSP code actions
-  use({
+  -- A Neovim plugin that provides a simple way to run and visualize code actions with Telescope.
+  {
     'rachartier/tiny-code-action.nvim',
     dependencies = {
-      { 'nvim-lua/plenary.nvim' },
-      { 'nvim-telescope/telescope.nvim' },
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
     },
     event = 'LspAttach',
     config = function()
       require('tiny-code-action').setup()
     end,
-  })
+  },
 
-  -- Better view for LSP diagnostics
-  use({
+  -- A Neovim plugin that displays prettier diagnostic messages.
+  {
     'rachartier/tiny-inline-diagnostic.nvim',
     priority = 1000,
     event = 'LspAttach',
@@ -197,5 +197,5 @@ return require('packer').startup(function()
         },
       })
     end,
-  })
-end)
+  },
+})

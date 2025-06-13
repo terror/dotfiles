@@ -177,11 +177,9 @@ g.startify_commands = {
 }
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
--- │ Markdown Composer                                                          │
+-- │ Markdown                                                                   │
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
-g.markdown_composer_autostart = 0
-g.markdown_composer_syntax_theme = 'dark'
 g.markdown_folding = 0
 g.vim_markdown_auto_insert_bullets = 0
 g.vim_markdown_conceal = 0
@@ -247,7 +245,7 @@ require('mason').setup()
 require('mason-lspconfig').setup({
   automatic_enable = false,
   automatic_installation = true,
-  ensure_installed = servers
+  ensure_installed = servers,
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -322,19 +320,6 @@ require('lualine').setup({
 })
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
--- │ Luasnip                                                                    │
--- ╚────────────────────────────────────────────────────────────────────────────│
-
-local luasnip = require('luasnip')
-
-require('luasnip.loaders.from_snipmate').lazy_load()
-
-luasnip.config.set_config({
-  history = true,
-  updateevents = 'TextChanged,TextChangedI',
-})
-
--- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Completion                                                                 │
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
@@ -369,7 +354,6 @@ local copilot_ok, copilot = pcall(require, 'copilot.suggestion')
 cmp.setup({
   sources = {
     { name = 'copilot' },
-    { name = 'luasnip' },
     { name = 'nvim_lsp' },
   },
   formatting = {
@@ -413,8 +397,6 @@ cmp.setup({
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
       else
         fallback()
       end
@@ -422,18 +404,11 @@ cmp.setup({
     ['<S-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
       else
         fallback()
       end
     end, { 'i', 's' }),
   }),
-  snippet = {
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end,
-  },
 })
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
