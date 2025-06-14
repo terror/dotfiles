@@ -29,7 +29,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
   -- Changes Vim working directory to the project root.
-  'airblade/vim-rooter',
+  {
+    'airblade/vim-rooter',
+    event = 'VeryLazy',
+  },
 
   -- LSP Progress lualine component.
   'arkav/lualine-lsp-progress',
@@ -41,16 +44,23 @@ require('lazy').setup({
   },
 
   -- EditorConfig plugin for Vim.
-  'editorconfig/editorconfig-vim',
+  {
+    'editorconfig/editorconfig-vim',
+    event = 'BufReadPre',
+  },
 
   -- A statusline plugin written in pure lua.
   'hoob3rt/lualine.nvim',
 
-  -- A `nvim-cmp` source for neovim builtin LSP client.
-  'hrsh7th/cmp-nvim-lsp',
-
   -- A completion plugin for neovim written in Lua.
-  'hrsh7th/nvim-cmp',
+  {
+    'hrsh7th/nvim-cmp',
+    event = 'InsertEnter',
+    dependencies = {
+      'hrsh7th/cmp-nvim-lsp',
+      'onsails/lspkind.nvim',
+    },
+  },
 
   -- A markdown preview plugin for (neo)vim.
   {
@@ -63,19 +73,28 @@ require('lazy').setup({
     end,
   },
 
-  -- Provides Nerd Font icons (glyphs) for use by neovim plugins.
-  'kyazdani42/nvim-web-devicons',
-
   -- The fancy start screen for Vim.
-  'mhinz/vim-startify',
+  {
+    'mhinz/vim-startify',
+    event = 'VimEnter',
+  },
 
   -- Quickstart configs for Nvim LSP.
-  'neovim/nvim-lspconfig',
+  {
+    'neovim/nvim-lspconfig',
+    event = { 'BufReadPre', 'BufNewFile' },
+    dependencies = {
+      -- A `nvim-cmp` source for neovim builtin LSP client.
+      'hrsh7th/cmp-nvim-lsp',
+      -- Vscode-like pictograms for neovim lsp completion items.
+      'onsails/lspkind.nvim',
+    },
+  },
 
   -- A highly extendable fuzzy finder over lists.
   {
     'nvim-telescope/telescope.nvim',
-    dependencies = { 'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim' },
+    dependencies = { 'nvim-lua/plenary.nvim' },
   },
 
   -- File browser extension for telescope.nvim.
@@ -94,9 +113,8 @@ require('lazy').setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     'nvim-treesitter/nvim-treesitter',
-    branch = 'master',
+    event = { 'BufReadPost', 'BufNewFile' },
     build = ':TSUpdate',
-    lazy = false,
   },
 
   -- View treesitter information directly in Neovim.
@@ -105,9 +123,6 @@ require('lazy').setup({
     cmd = 'TSPlaygroundToggle',
   },
 
-  -- Vscode-like pictograms for neovim lsp completion items.
-  'onsails/lspkind.nvim',
-
   -- Syntax highlighting, matching rules and mappings for the original Markdown and extensions.
   {
     'plasticboy/vim-markdown',
@@ -115,7 +130,14 @@ require('lazy').setup({
   },
 
   -- The neovim tabline plugin.
-  'romgrk/barbar.nvim',
+  {
+    'romgrk/barbar.nvim',
+    event = 'BufAdd',
+    dependencies = {
+      -- Provides Nerd Font icons (glyphs) for use by neovim plugins.
+      'kyazdani42/nvim-web-devicons',
+    },
+  },
 
   -- Syntax highlighting for OpenGL Shading Language.
   {
@@ -124,7 +146,10 @@ require('lazy').setup({
   },
 
   -- A plugin that lets you comment stuff out.
-  'tpope/vim-commentary',
+  {
+    'tpope/vim-commentary',
+    keys = { 'gc', 'gcc', { 'gc', mode = 'v' } },
+  },
 
   -- Portable package manager for Neovim.
   {
@@ -133,7 +158,11 @@ require('lazy').setup({
   },
 
   -- Vim and Neovim plugin to reveal the commit messages under the cursor.
-  'rhysd/git-messenger.vim',
+  {
+    'rhysd/git-messenger.vim',
+    cmd = 'GitMessenger',
+    keys = '<Plug>(git-messenger)',
+  },
 
   -- Syntax highlighting for `just`, the command runner.
   {
