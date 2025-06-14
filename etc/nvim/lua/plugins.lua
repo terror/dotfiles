@@ -57,7 +57,9 @@ require('lazy').setup({
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
     dependencies = {
+      -- A `nvim-cmp` source for neovim builtin LSP client.
       'hrsh7th/cmp-nvim-lsp',
+      -- Vscode-like pictograms for neovim lsp completion items.
       'onsails/lspkind.nvim',
     },
   },
@@ -83,12 +85,6 @@ require('lazy').setup({
   {
     'neovim/nvim-lspconfig',
     event = { 'BufReadPre', 'BufNewFile' },
-    dependencies = {
-      -- A `nvim-cmp` source for neovim builtin LSP client.
-      'hrsh7th/cmp-nvim-lsp',
-      -- Vscode-like pictograms for neovim lsp completion items.
-      'onsails/lspkind.nvim',
-    },
   },
 
   -- A highly extendable fuzzy finder over lists.
