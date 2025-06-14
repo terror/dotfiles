@@ -35,7 +35,10 @@ require('lazy').setup({
   'arkav/lualine-lsp-progress',
 
   -- Vim syntax for TOML.
-  'cespare/vim-toml',
+  {
+    'cespare/vim-toml',
+    ft = { 'toml' },
+  },
 
   -- EditorConfig plugin for Vim.
   'editorconfig/editorconfig-vim',
@@ -115,7 +118,10 @@ require('lazy').setup({
   'romgrk/barbar.nvim',
 
   -- Syntax highlighting for OpenGL Shading Language.
-  'tikhomirov/vim-glsl',
+  {
+    'tikhomirov/vim-glsl',
+    ft = { 'glsl', 'vert', 'frag', 'geom', 'tesc', 'tese', 'comp' },
+  },
 
   -- A plugin that lets you comment stuff out.
   'tpope/vim-commentary',
