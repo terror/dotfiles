@@ -42,10 +42,7 @@ map('o', 'b', 'i[')
 map('o', 'in', ':<c-u>normal! f(vi(<cr>')
 map('o', 'p', 'i(')
 map('v', '<c-j>', '<esc>')
-map('v', '<leader>a', ':PrtAppend<cr>')
-map('v', '<leader>i', ':PrtImplement<cr>')
 map('v', '<leader>s', ':sort<cr>')
-map('v', '<leader>w', ':PrtRewrite<cr>')
 
 map(
   'n',
