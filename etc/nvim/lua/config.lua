@@ -171,8 +171,8 @@ g.startify_bookmarks = {
 
 g.startify_commands = {
   { ch = { 'Health Check', ':checkhealth' } },
-  { ps = { 'Plugin sync', ':PackerSync' } },
-  { pu = { 'Update neovim plugins', ':PackerUpdate' } },
+  { ps = { 'Plugin sync', ':Lazy sync' } },
+  { pu = { 'Update neovim plugins', ':Lazy update' } },
   { h = { 'Help', ':help' } },
 }
 
