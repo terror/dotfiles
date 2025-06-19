@@ -35,7 +35,7 @@ augroup({
     {
       'TextYankPost',
       '*',
-      'silent! lua vim.highlight.on_yank(higroup="IncSearch", timeout=1000)',
+      'silent! lua vim.highlight.on_yank({hl_group="IncSearch", timeout=200})',
     },
   },
 })
