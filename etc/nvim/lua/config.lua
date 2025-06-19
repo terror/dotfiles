@@ -282,6 +282,36 @@ lsp.java_language_server.setup({
   },
 })
 
+lsp.jsonls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    json = {
+      schemas = {
+        {
+          fileMatch = {
+            '.eslintrc',
+            '.eslintrc.json',
+          },
+          url = 'https://www.schemastore.org/eslintrc.json',
+        },
+        {
+          fileMatch = { 'package.json' },
+          url = 'https://www.schemastore.org/package.json',
+        },
+        {
+          fileMatch = {
+            'tsconfig.json',
+            'tsconfig.*.json',
+          },
+          url = 'https://www.schemastore.org/tsconfig.json',
+        },
+      },
+      validate = { enable = true },
+    },
+  },
+})
+
 local configs = require('lspconfig.configs')
 
 if not configs.just_lsp then
