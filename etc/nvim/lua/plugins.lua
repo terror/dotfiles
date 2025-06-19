@@ -27,6 +27,10 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+require('settings')
+require('mappings')
+require('autocmd')
+
 require('lazy').setup({
   -- Changes Vim working directory to the project root.
   {
