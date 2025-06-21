@@ -236,7 +236,6 @@ local servers = {
   'rust_analyzer',
   'tinymist',
   'ts_ls',
-  'yamlls',
   'zls',
 }
 
@@ -308,6 +307,18 @@ lsp.jsonls.setup({
         },
       },
       validate = { enable = true },
+    },
+  },
+})
+
+lsp.yamlls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    yaml = {
+      schemas = {
+        ['https://json.schemastore.org/github-workflow.json'] = '/.github/workflows/*',
+      },
     },
   },
 })
