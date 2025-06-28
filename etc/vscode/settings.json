@@ -1,51 +1,42 @@
 {
-  // live server
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
 
-  // c++
   "C_Cpp.updateChannel": "Insiders",
   "code-runner.executorMapByFileExtension": {},
   "code-runner.runInTerminal": true,
 
-  // python
   "[python]": { "editor.defaultFormatter": "ms-python.python" },
   "python.linting.pylintArgs": ["--generate-members"],
 
-  // emmet
   "emmet.extensionsPath": [ "" ],
   "emmet.includeLanguages": { "javascript": "javascriptreact" },
 
-  // prettier
   "prettier.jsxSingleQuote": true,
 
-  // editor
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "'Cascadia Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
 
-  //javascript
   "javascript.validate.enable": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
   "diffEditor.ignoreTrimWhitespace": false,
 
-  // leetcode
   "leetcode.workspaceFolder": "",
   "leetcode.defaultLanguage": "python3",
   "leetcode.hint.commandShortcut": false,
   "leetcode.hint.configWebviewMarkdown": false,
 
-  // explorer
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "terminal.integrated.shell.osx": "/usr/local/Cellar/bash/5.1.4/bin/bash",
   "typescript.updateImportsOnFileMove.enabled": "always",
 
-  // workbench
   "workbench.iconTheme": "eq-material-theme-icons-darker",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editorAssociations": [
