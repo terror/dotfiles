@@ -12,7 +12,6 @@ tap "oven-sh/bun"
 tap "redis-stack/redis-stack"
 tap "rhysd/actionlint", "https://github.com/rhysd/actionlint"
 tap "tlk/imagemagick-x11"
-tap "zegervdv/zathura"
 
 # Run your GitHub Actions locally
 brew "act"
@@ -32,11 +31,11 @@ brew "pango"
 # Icons for the GNOME project
 brew "adwaita-icon-theme"
 
-# Library for command-line editing
-brew "readline"
-
 # Development kit for the Java programming language
 brew "openjdk"
+
+# Library for command-line editing
+brew "readline"
 
 # Java build tool
 brew "ant"
@@ -443,17 +442,11 @@ brew "yarn"
 # Programming language designed for robustness, optimality, and clarity
 brew "zig"
 
-# Language Server for Zig
-brew "zls"
-
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
-
-# Simple hotkey-daemon for macOS.
-brew "koekeishiya/formulae/skhd"
 
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
@@ -469,12 +462,6 @@ brew "oven-sh/bun/bun"
 
 # Static checker for GitHub Actions workflow files
 brew "rhysd/actionlint/actionlint"
-
-# PDF viewer
-brew "zegervdv/zathura/zathura"
-
-# Poppler backend plugin for zathura
-brew "zegervdv/zathura/zathura-pdf-poppler"
 
 # Command-line interface for 1Password
 cask "1password-cli"
@@ -573,17 +560,8 @@ cask "tor-browser"
 # Development environment
 cask "vagrant"
 
-# Virtualizer for x86 and arm64 hardware
-cask "virtualbox@beta"
-
-# Open-source code editor
-cask "visual-studio-code"
-
 # Multiplayer code editor
 cask "zed"
-
-# Video communication and virtual meeting platform
-cask "zoom"
 vscode "christian-kohler.npm-intellisense"
 vscode "dbaeumer.vscode-eslint"
 vscode "esbenp.prettier-vscode"
