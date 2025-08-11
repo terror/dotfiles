@@ -1,27 +1,43 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
-crates=(
-  "cargo-audit"
-  "cargo-check"
-  "cargo-edit"
-  "cargo-expand"
-  "cargo-sort"
-  "cargo-tarpaulin"
-  "cargo-watch"
-  "loc"
-  "present"
-  "ripgrep"
-  "skeleton-cli"
-  "stylua"
-  "typos-cli"
-  "val"
-  "vim-profiler"
-  "zk-cli"
-)
+import subprocess
+import sys
 
-for crate in "${crates[@]}"; do
-  echo "Installing $crate..."
-  cargo install "$crate"
-done
+CRATES = [
+  "cargo-audit",
+  "cargo-check",
+  "cargo-edit",
+  "cargo-expand",
+  "cargo-sort",
+  "cargo-tarpaulin",
+  "cargo-watch",
+  "loc",
+  "present",
+  "ripgrep",
+  "skeleton-cli",
+  "stylua",
+  "typos-cli",
+  "val",
+  "vim-profiler",
+  "zk-cli",
+]
 
-echo "All crates have been installed!"
+GIT_CRATES = ["https://github.com/terror/typo"]
+
+def main():
+  subprocess.run(["cargo", "--version"])
+
+  for crate in CRATES:
+    subprocess.run(["cargo", "install", crate])
+
+  for url in GIT_CRATES:
+    subprocess.run(["cargo", "install", "--git", url])
+
+if __name__ == "__main__":
+  try:
+    main()
+  except KeyboardInterrupt:
+    sys.exit(130)
+  except Exception as error:
+    print(f'error: {error}')
+    sys.exit(1)
