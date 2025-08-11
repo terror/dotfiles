@@ -76,12 +76,6 @@ brew "bitcoin"
 # Collection of portable C++ source libraries
 brew "boost"
 
-# Glorious Glasgow Haskell Compilation System
-brew "ghc"
-
-# Command-line interface for Cabal and Hackage
-brew "cabal-install"
-
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 
@@ -93,6 +87,12 @@ brew "clojure"
 
 # Cross-platform make
 brew "cmake"
+
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+
+# OpenAI's coding agent that runs in your terminal
+brew "codex"
 
 # Cross-platform C and C++ unit testing framework for the 21st century
 brew "criterion"
@@ -115,7 +115,7 @@ brew "elixir"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 
-# Parser generator tool and incremental parsing library
+# Incremental parsing library
 brew "tree-sitter"
 
 # GNU Emacs text editor
@@ -358,9 +358,6 @@ brew "railway"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
-
 # Utility that provides fast incremental file transfer
 brew "rsync"
 
@@ -483,6 +480,9 @@ cask "blackhole-2ch"
 
 # Automated testing of webapps for Google Chrome
 cask "chromedriver"
+
+# Anthropic's official Claude AI desktop app
+cask "claude"
 
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
