@@ -40,7 +40,6 @@ alias v="nvim"
 alias vi="nvim"
 
 # Ⅴ
-alias c="claude"
 alias d="z ~/dotfiles"
 alias e="exit"
 alias g="git"
