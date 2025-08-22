@@ -323,6 +323,11 @@ lsp.yamlls.setup({
   },
 })
 
+lsp.ocamllsp.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+
 local configs = require('lspconfig.configs')
 
 if not configs.just_lsp then
