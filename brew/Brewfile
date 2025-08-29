@@ -307,8 +307,14 @@ brew "neovim"
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
 
+# RSS reader for the terminal
+brew "nom"
+
 # Command-line Git information tool
 brew "onefetch"
+
+# Utility that provides fast incremental file transfer
+brew "rsync"
 
 # OCaml package manager
 brew "opam"
@@ -318,6 +324,9 @@ brew "ormolu"
 
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+
+# Port of pdftk in java
+brew "pdftk-java"
 
 # Fast, disk space efficient package manager
 brew "pnpm"
@@ -357,9 +366,6 @@ brew "railway"
 
 # Persistent key-value database, with built-in net interface
 brew "redis"
-
-# Utility that provides fast incremental file transfer
-brew "rsync"
 
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
@@ -559,6 +565,9 @@ cask "tor-browser"
 
 # Development environment
 cask "vagrant"
+
+# Open-source code editor
+cask "visual-studio-code"
 
 # Multiplayer code editor
 cask "zed"
