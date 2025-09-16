@@ -1,0 +1,5 @@
+local file=`(cd ~/.dotfiles && fzf)`
+if [[ -z $file ]]; then
+  return 0
+fi
+vim ~/.dotfiles/$file

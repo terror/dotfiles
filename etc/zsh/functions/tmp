@@ -1,0 +1,2 @@
+mkdir -p ~/tmp/$1
+cd ~/tmp/$1

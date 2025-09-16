@@ -6,6 +6,7 @@
 - create:
   - ~/.cargo
   - ~/.config/alacritty
+  - ~/.config/git
   - ~/.config/neofetch
   - ~/src
   - ~/tmp
@@ -40,6 +41,8 @@
     ~/.vimrc: etc/vimrc
     ~/.vscode: etc/vscode
     ~/.yabairc: etc/yabairc
+    ~/.zsh: etc/zsh
+    ~/.zshrc: etc/zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

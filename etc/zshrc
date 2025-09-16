@@ -1,0 +1,157 @@
+unalias -m '*'
+
+autoload colors
+autoload run-help
+autoload zcalc
+autoload zsh/terminfo
+autoload ~/.zsh/functions/*
+
+source: ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source: ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source: ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+fpath=(~/.zsh/completions /opt/homebrew/share/zsh/site-functions $fpath)
+
+zstyle ':completion:*:descriptions' format "%U%B%d%b%u"
+zstyle ':completion:*:messages' format "%F{blue}%d%f"
+
+autoload -Uz compinit
+compinit -C -d ~/.zsh/compdump
+
+INITIAL_PATH_ELEMENTS=(${(s/:/)PATH})
+PATH=''
+
+path: ~/.bin
+path: ~/.fzf/bin
+path: ~/.local/bin
+path: ~/sbin
+path: ~/.cargo/bin
+path: ~/.nix-profile/bin
+path: ~/opt/npm/bin
+path: /usr/local/bin
+path: /usr/local/sbin
+path: /usr/local/opt/bin
+path: /opt/homebrew/bin
+path: /opt/homebrew/sbin
+path: /opt/local/bin
+path: /usr/bin
+path: /usr/sbin
+path: /usr/games
+path: /bin
+path: /sbin
+
+for PART in $INITIAL_PATH_ELEMENTS; do
+  path: $PART
+done
+
+unset MAILCHECK
+
+export BLOCKSIZE=K # show blocks as kilobytes
+export CARGO_ASC=false # show errors in descending order
+export CARGO_MSG_LIMIT=0 # show one message at a time
+export CARGO_OPEN_WARN=true # populate quickfix list with warnings
+export CLICOLOR=1 # use color
+export EDITOR=vim # vim as editor
+export EDMV_EDITOR=vim # vim as editor in edmv
+export HISTFILE=~/.history # location for the history file
+export HISTSIZE=5500000 # save lots of history in memory
+export HOMEBREW_NO_AUTO_UPDATE=1 # don't automatically update packages
+export HOMEBREW_NO_ENV_HINTS=1 # suppress homebrew hints
+export KEYTIMEOUT=1 # don't wait for multibyte sequences
+export LANG=en_US.UTF-8 # use the english utf-8 locale
+export LESS=-ifRMx2 # default options for less
+export LS_OPTIONS='--color=auto' # make ls use color
+export PAGER=less # less as pager
+export PIPENV_VENV_IN_PROJECT=enabled # put pipenv environments in project
+export SAVEHIST=5000000 # save lots of history to disk
+export VISUAL=vim # vim as visual editor
+
+# set HOST variable
+HOSTNAME=`hostname`
+export HOST=${HOSTNAME%.local}
+
+# tell ripgrep to use a config file
+export RIPGREP_CONFIG_PATH=~/.ripgreprc
+
+# use ripgrep with fzf
+export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/*' --glob '!*.pyc'"
+
+# use fd for fzf-file-widget
+export FZF_CTRL_T_COMMAND="fd --hidden --exclude '.git' --exclude '.git/*'"
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=black,bold" # make autosuggestions grey
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20 # don't autosuggest when buffer is large
+ZLE_REMOVE_SUFFIX_CHARS='' # don't remove spaces after completion
+
+setopt auto_remove_slash # automatically remove slash from completions
+setopt brace_ccl # expand expressions in braces
+setopt hist_expire_dups_first # expire duplicate events first
+setopt hist_find_no_dups # ignore duplicates in find
+setopt hist_ignore_dups # dont save duplicate entries in history
+setopt hist_ignore_space # do not save history entries that start with a space
+setopt hist_no_functions # do not save function definitions in history
+setopt inc_append_history # save commands in history immediately
+setopt interactive_comments # allow comments in interactive shells
+setopt multios # allow redirection to multiple files
+setopt prompt_subst # expand the prompt string
+setopt rc_quotes # allow '' to represent a quote in single quoted strings
+setopt share_history # share history between shells
+
+unsetopt beep # never beep
+unsetopt correct # don't correct command spelling
+
+stty -ixoff
+stty -ixon
+stty start undef
+stty stop undef
+tabs -2
+
+ulimit -n 1024
+
+bindkey -v
+
+bind: ' ' magic-space
+bind: '\eK' kill-line-to-system-clipboard
+bind: '\eY' yank-from-system-clipboard
+bind: '\e^?' backward-kill-word
+bind: '\eb' backward-word
+bind: '\ef' forward-word
+bind: '\ek' kill-line-to-system-clipboard
+bind: '\ey' yank-from-system-clipboard
+bind: '^?' backward-delete-char
+bind: '^A' beginning-of-line
+bind: '^B' backward-char
+bind: '^E' end-of-line
+bind: '^F' forward-char
+bind: '^G' fzf-cd-widget
+bind: '^H' backward-delete-char
+bind: '^J' vi-cmd-mode
+bind: '^K' kill-line-to-x-selection
+bind: '^N' down-history
+bind: '^P' up-history
+bind: '^Q' exit-zsh
+bind: '^R' history-incremental-search-backward
+bind: '^S' history-incremental-search-forward
+bind: '^T' fzf-file-widget
+bind: '^U' kill-whole-line
+bind: '^W' backward-kill-word
+bind: '^X' fzf-history-widget
+bind: '^Y' yank-from-x-selection
+bind: '^Z' fzf-file-widget
+bind: '^[[A' history-substring-search-up
+bind: '^[[B' history-substring-search-down
+
+zle -N exit-zsh # exit zsh
+zle -N zle-keymap-select prompt-reset # redraw prompt when keymap changes
+zle -N zle-line-init prompt-reset # redraw prompt on line editor start
+
+source <(fzf --zsh)
+
+source: ~/.fzf.zsh # fzf bindings
+source: ~/.zsh/aliases.zsh # aliases
+source: ~/.zsh/clipboard.zsh # set up system keyboard integration
+
+eval "$(mise activate zsh)"
+eval "$(opam env)"
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
