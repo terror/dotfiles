@@ -730,7 +730,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [terminal.shell]
 args = ["--login"]
-program = "/bin/bash"
+program = "/bin/zsh"
 
 [window]
 decorations = "buttonless"
