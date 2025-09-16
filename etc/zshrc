@@ -53,7 +53,7 @@ export CARGO_ASC=false # show errors in descending order
 export CARGO_MSG_LIMIT=0 # show one message at a time
 export CARGO_OPEN_WARN=true # populate quickfix list with warnings
 export CLICOLOR=1 # use color
-export EDITOR=vim # vim as editor
+export EDITOR=nvim # nvim as editor
 export EDMV_EDITOR=vim # vim as editor in edmv
 export HISTFILE=~/.history # location for the history file
 export HISTSIZE=5500000 # save lots of history in memory
@@ -66,7 +66,7 @@ export LS_OPTIONS='--color=auto' # make ls use color
 export PAGER=less # less as pager
 export PIPENV_VENV_IN_PROJECT=enabled # put pipenv environments in project
 export SAVEHIST=5000000 # save lots of history to disk
-export VISUAL=vim # vim as visual editor
+export VISUAL=nvim # nvim as visual editor
 
 # set HOST variable
 HOSTNAME=`hostname`
