@@ -26,7 +26,6 @@
     ~/.config/nvim: etc/nvim
     ~/.config/starship.toml: etc/starship.toml
     ~/.functions: etc/bash/functions
-    ~/.fzf.bash: etc/fzf.bash
     ~/.gitconfig: etc/gitconfig
     ~/.gitignore.global: etc/gitignore.global
     ~/.haxornewsconfig: etc/haxornewsconfig
