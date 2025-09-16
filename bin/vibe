@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+if ! command -v fzf &> /dev/null; then
+  echo "error: fzf is not installed. Please install fzf first."
+  exit 1
+fi
+
+options=("claude" "codex" "gemini")
+
+selected=$(printf '%s\n' "${options[@]}" | fzf --prompt="what tool would you like to use? " --height=10 --border)
+
+if [[ -z "$selected" ]]; then
+  exit 0
+fi
+
+case "$selected" in
+  "claude")
+    claude --dangerously-skip-permissions
+    ;;
+  "codex")
+    codex --dangerously-bypass-approvals-and-sandbox
+    ;;
+  "gemini")
+    gemini --yolo
+    ;;
+  *)
+    exit 1
+    ;;
+esac
