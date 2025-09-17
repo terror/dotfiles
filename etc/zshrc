@@ -48,7 +48,14 @@ done
 
 unset MAILCHECK
 
+if [[ $(uname -m) == 'arm64' ]]; then
+  export DROPBOX="$HOME/Library/CloudStorage/Dropbox"
+else
+  export DROPBOX="$HOME/dropbox"
+fi
+
 export BLOCKSIZE=K # show blocks as kilobytes
+export BOOK_DIR=$DROPBOX/books
 export CARGO_ASC=false # show errors in descending order
 export CARGO_MSG_LIMIT=0 # show one message at a time
 export CARGO_OPEN_WARN=true # populate quickfix list with warnings
@@ -63,7 +70,9 @@ export KEYTIMEOUT=1 # don't wait for multibyte sequences
 export LANG=en_US.UTF-8 # use the english utf-8 locale
 export LESS=-ifRMx2 # default options for less
 export LS_OPTIONS='--color=auto' # make ls use color
+export NOTE_DIR=$DROPBOX/notes
 export PAGER=less # less as pager
+export PAPER_DIR=$DROPBOX/papers
 export PIPENV_VENV_IN_PROJECT=enabled # put pipenv environments in project
 export SAVEHIST=5000000 # save lots of history to disk
 export VISUAL=nvim # nvim as visual editor
