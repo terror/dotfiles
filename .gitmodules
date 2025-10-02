@@ -10,3 +10,6 @@
 [submodule "etc/zsh/plugins/zsh-syntax-highlighting"]
 	path = etc/zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "etc/zsh/plugins/fzf-tab"]
+	path = etc/zsh/plugins/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab
