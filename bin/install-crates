@@ -8,6 +8,7 @@ CRATES = [
   "cargo-check",
   "cargo-edit",
   "cargo-expand",
+  "cargo-nextest",
   "cargo-sort",
   "cargo-tarpaulin",
   "cargo-watch",
