@@ -94,11 +94,17 @@ brew "ripgrep"
 # OpenAI's coding agent that runs in your terminal
 brew "codex"
 
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+
 # Cross-platform C and C++ unit testing framework for the 21st century
 brew "criterion"
 
 # Diff that understands syntax
 brew "difftastic"
+
+# Load/unload environment variables based on $PWD
+brew "direnv"
 
 # C implementation of Markdown
 brew "discount"
@@ -150,6 +156,9 @@ brew "gawk"
 
 # GNU compiler collection
 brew "gcc"
+
+# Interact with Google Gemini AI models from the command-line
+brew "gemini-cli"
 
 # GitHub command-line tool
 brew "gh"
@@ -217,6 +226,9 @@ brew "guile"
 # Integration point for ghcide and haskell-ide-engine. One IDE to rule them all
 brew "haskell-language-server"
 
+# Git hook and pre-commit lint manager
+brew "hk"
+
 # Haskell source code suggestions
 brew "hlint"
 
@@ -255,6 +267,9 @@ brew "lcov"
 
 # Library that provides automatic proxy configuration management
 brew "libproxy"
+
+# XML security library
+brew "libxmlsec1"
 
 # Linux virtual machines
 brew "lima"
@@ -369,6 +384,9 @@ brew "redis"
 
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
+
+# Extremely fast Python linter, written in Rust
+brew "ruff"
 
 # Build tool for Scala projects
 brew "sbt"
@@ -518,6 +536,12 @@ cask "heynote"
 # Interface for reading and syncing eBooks
 cask "kindle"
 
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+
+# Spreadsheet software
+cask "microsoft-excel"
+
 # VPN client
 cask "mullvad-vpn"
 
@@ -550,6 +574,9 @@ cask "send-to-kindle"
 
 # Instant messaging application focusing on security
 cask "signal"
+
+# Team communication and collaboration software
+cask "slack"
 
 # Bitcoin wallet application
 cask "sparrow"
