@@ -7,7 +7,7 @@ fi
 
 options=("claude" "codex" "gemini")
 
-selected=$(printf '%s\n' "${options[@]}" | fzf --prompt="what tool would you like to use? " --height=10 --border)
+selected=$(printf '%s\n' "${options[@]}" | fzf --height=10 --border)
 
 if [[ -z "$selected" ]]; then
   exit 0
