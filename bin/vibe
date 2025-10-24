@@ -5,7 +5,7 @@ if ! command -v fzf &> /dev/null; then
   exit 1
 fi
 
-options=("claude" "codex" "gemini")
+options=("codex" "claude" "gemini")
 
 selected=$(printf '%s\n' "${options[@]}" | fzf --height=10 --border)
 
