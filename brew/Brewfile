@@ -16,6 +16,12 @@ tap "tlk/imagemagick-x11"
 # Run your GitHub Actions locally
 brew "act"
 
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+
+# Static checker for GitHub Actions workflow files
+brew "actionlint"
+
 # Core application library for C
 brew "glib"
 
@@ -394,9 +400,6 @@ brew "sbt"
 # JVM-based programming language
 brew "scala"
 
-# Static analysis and lint tool, for (ba)sh scripts
-brew "shellcheck"
-
 # Autoformat shell script source code
 brew "shfmt"
 
@@ -480,9 +483,6 @@ brew "mongodb/brew/mongodb-community-shell"
 
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
-
-# Static checker for GitHub Actions workflow files
-brew "rhysd/actionlint/actionlint"
 
 # Command-line interface for 1Password
 cask "1password-cli"
