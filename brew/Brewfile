@@ -1,8 +1,6 @@
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
@@ -93,12 +91,6 @@ brew "clojure"
 
 # Cross-platform make
 brew "cmake"
-
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
-
-# OpenAI's coding agent that runs in your terminal
-brew "codex"
 
 # GNU File, Shell, and Text utilities
 brew "coreutils"
@@ -388,6 +380,9 @@ brew "railway"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
 
@@ -510,6 +505,9 @@ cask "claude"
 
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
+
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 
 # Write, edit, and chat about your code with AI
 cask "cursor"
