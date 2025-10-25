@@ -5,6 +5,7 @@
 
 - create:
   - ~/.cargo
+  - ~/.codex
   - ~/.config/alacritty
   - ~/.config/git
   - ~/.config/neofetch
@@ -18,6 +19,7 @@
     ~/.bin: bin
     ~/.bp: etc/bp
     ~/.brewfile: brew/brewfile
+    ~/.codex/config.toml: etc/codex/config.toml
     ~/.config/alacritty/alacritty.toml: etc/alacritty.toml
     ~/.config/gitconfig: etc/gitconfig
     ~/.config/htoprc: etc/htoprc
