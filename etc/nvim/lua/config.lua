@@ -200,8 +200,6 @@ g.netrw_winsize = 20
 -- │ LSP                                                                        │
 -- ╚────────────────────────────────────────────────────────────────────────────│
 
-local lsp = require('lspconfig')
-
 local on_attach = function(client)
   client.server_capabilities.semanticTokensProvider = nil
 
@@ -249,16 +247,16 @@ require('mason-lspconfig').setup({
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-for _, server in ipairs(servers) do
-  lsp[server].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-  })
-end
-
-lsp.java_language_server.setup({
+vim.lsp.config('*', {
   on_attach = on_attach,
   capabilities = capabilities,
+})
+
+for _, server in ipairs(servers) do
+  vim.lsp.enable(server)
+end
+
+vim.lsp.config('java_language_server', {
   flags = {
     debounce_text_changes = 150,
     allow_incremental_sync = true,
@@ -281,9 +279,9 @@ lsp.java_language_server.setup({
   },
 })
 
-lsp.jsonls.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
+vim.lsp.enable('java_language_server')
+
+vim.lsp.config('jsonls', {
   settings = {
     json = {
       schemas = {
@@ -311,9 +309,9 @@ lsp.jsonls.setup({
   },
 })
 
-lsp.yamlls.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
+vim.lsp.enable('jsonls')
+
+vim.lsp.config('yamlls', {
   settings = {
     yaml = {
       schemas = {
@@ -323,30 +321,23 @@ lsp.yamlls.setup({
   },
 })
 
-lsp.ocamllsp.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
+vim.lsp.enable('yamlls')
+
+vim.lsp.enable('ocamllsp')
+
+vim.lsp.config('just_lsp', {
+  cmd = { '/Users/liam/src/just-lsp/target/debug/just-lsp' },
+  filetypes = { 'just' },
+  root_dir = function(bufnr, on_dir)
+    local root = vim.fs.root(bufnr, { 'justfile', '.git' })
+    if root then
+      on_dir(root)
+    end
+  end,
+  settings = {},
 })
 
-local configs = require('lspconfig.configs')
-
-if not configs.just_lsp then
-  configs.just_lsp = {
-    default_config = {
-      cmd = { '/Users/liam/src/just-lsp/target/debug/just-lsp' },
-      filetypes = { 'just' },
-      root_dir = function(fname)
-        return lsp.util.find_git_ancestor(fname)
-      end,
-      settings = {},
-    },
-  }
-end
-
-lsp.just_lsp.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-})
+vim.lsp.enable('just_lsp')
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Lualine                                                                    │
