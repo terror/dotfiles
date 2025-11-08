@@ -257,6 +257,8 @@ for _, server in ipairs(servers) do
 end
 
 vim.lsp.config('java_language_server', {
+  on_attach = on_attach,
+  capabilities = capabilities,
   flags = {
     debounce_text_changes = 150,
     allow_incremental_sync = true,
@@ -282,6 +284,8 @@ vim.lsp.config('java_language_server', {
 vim.lsp.enable('java_language_server')
 
 vim.lsp.config('jsonls', {
+  on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
     json = {
       schemas = {
@@ -312,6 +316,8 @@ vim.lsp.config('jsonls', {
 vim.lsp.enable('jsonls')
 
 vim.lsp.config('yamlls', {
+  on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
     yaml = {
       schemas = {
@@ -326,6 +332,8 @@ vim.lsp.enable('yamlls')
 vim.lsp.enable('ocamllsp')
 
 vim.lsp.config('just_lsp', {
+  on_attach = on_attach,
+  capabilities = capabilities,
   cmd = { '/Users/liam/src/just-lsp/target/debug/just-lsp' },
   filetypes = { 'just' },
   root_dir = function(bufnr, on_dir)
