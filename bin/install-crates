@@ -12,13 +12,8 @@ CRATES = [
   "cargo-sort",
   "cargo-tarpaulin",
   "cargo-watch",
-  "loc",
-  "present",
-  "ripgrep",
   "skeleton-cli",
-  "stylua",
   "typos-cli",
-  "val",
   "vim-profiler",
   "zk-cli",
 ]

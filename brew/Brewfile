@@ -7,8 +7,7 @@ tap "koekeishiya/formulae"
 tap "michaeleisel/zld"
 tap "mongodb/brew"
 tap "oven-sh/bun"
-tap "redis-stack/redis-stack"
-tap "rhysd/actionlint", "https://github.com/rhysd/actionlint"
+tap "terror/tap"
 tap "tlk/imagemagick-x11"
 
 # Run your GitHub Actions locally
@@ -53,7 +52,7 @@ brew "ast-grep"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 
 # AWS Cloud Development Kit - framework for defining AWS infra as code
@@ -166,6 +165,9 @@ brew "git"
 
 # Highly customizable changelog generator
 brew "git-cliff"
+
+# Enable transparent encryption/decryption of files in a git repo
+brew "git-crypt"
 
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
@@ -410,6 +412,9 @@ brew "sqlx-cli"
 # Cross-shell prompt for astronauts
 brew "starship"
 
+# Opinionated Lua code formatter
+brew "stylua"
+
 # User interface to the TELNET protocol
 brew "telnet"
 
@@ -418,6 +423,9 @@ brew "thefuck"
 
 # Terminal multiplexer
 brew "tmux"
+
+# Program that allows you to count code, quickly
+brew "tokei"
 
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
@@ -439,6 +447,9 @@ brew "uv"
 
 # Google's JavaScript engine
 brew "v8"
+
+# Executes a program periodically, showing output fullscreen
+brew "watch"
 
 # Watch files and take action when they change
 brew "watchman"
@@ -478,6 +489,21 @@ brew "mongodb/brew/mongodb-community-shell"
 
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
+
+# Bulk rename files using your favorite editor
+brew "terror/tap/edmv"
+
+# Language server for just
+brew "terror/tap/just-lsp"
+
+# Interpolate shell command output directly into markdown
+brew "terror/tap/present"
+
+# Centralized view for all of your tmux panes
+brew "terror/tap/spymux"
+
+# Arbitrary precision calculator language
+brew "terror/tap/val"
 
 # Command-line interface for 1Password
 cask "1password-cli"
@@ -567,6 +593,9 @@ cask "reader"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 
+# Block your own access to distracting websites
+cask "selfcontrol"
+
 # Tool for sending personal documents to Kindles from Macs
 cask "send-to-kindle"
 
@@ -582,9 +611,6 @@ cask "sparrow"
 # Music streaming service
 cask "spotify"
 
-# Helper application for Things
-cask "thingsmacsandboxhelper"
-
 # Web browser focusing on security
 cask "tor-browser"
 
@@ -596,40 +622,6 @@ cask "visual-studio-code"
 
 # Multiplayer code editor
 cask "zed"
-vscode "christian-kohler.npm-intellisense"
-vscode "dbaeumer.vscode-eslint"
-vscode "esbenp.prettier-vscode"
-vscode "gruntfuggly.todo-tree"
-vscode "james-yu.latex-workshop"
-vscode "ms-azuretools.vscode-docker"
-vscode "ms-python.debugpy"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "ms-toolsai.jupyter"
-vscode "ms-toolsai.jupyter-keymap"
-vscode "ms-toolsai.jupyter-renderers"
-vscode "ms-toolsai.vscode-jupyter-cell-tags"
-vscode "ms-toolsai.vscode-jupyter-slideshow"
-vscode "ms-vscode-remote.remote-containers"
-vscode "ms-vscode.cmake-tools"
-vscode "ms-vscode.cpptools"
-vscode "ms-vscode.cpptools-extension-pack"
-vscode "ms-vscode.cpptools-themes"
-vscode "ms-vscode.vscode-typescript-next"
-vscode "ms-vsliveshare.vsliveshare"
-vscode "redhat.java"
-vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
-vscode "tamasfe.even-better-toml"
-vscode "twxs.cmake"
-vscode "visualstudioexptteam.intellicode-api-usage-examples"
-vscode "visualstudioexptteam.vscodeintellicode"
-vscode "vscjava.vscode-gradle"
-vscode "vscjava.vscode-java-debug"
-vscode "vscjava.vscode-java-dependency"
-vscode "vscjava.vscode-java-pack"
-vscode "vscjava.vscode-java-test"
-vscode "vscjava.vscode-maven"
 vscode "vscodevim.vim"
-vscode "yoavbls.pretty-ts-errors"
-vscode "ziglang.vscode-zig"
+go "github.com/google/pprof"
