@@ -331,21 +331,53 @@ vim.lsp.enable('yamlls')
 
 vim.lsp.enable('ocamllsp')
 
-vim.lsp.config('just_lsp', {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  cmd = { '/Users/liam/src/just-lsp/target/debug/just-lsp' },
-  filetypes = { 'just' },
-  root_dir = function(bufnr, on_dir)
-    local root = vim.fs.root(bufnr, { 'justfile', '.git' })
-    if root then
-      on_dir(root)
-    end
-  end,
-  settings = {},
-})
+local just_lsp_binary = '/Users/liam/src/just-lsp/target/debug/just-lsp'
 
-vim.lsp.enable('just_lsp')
+if vim.loop.fs_stat(just_lsp_binary) then
+  vim.lsp.config('just_lsp', {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    cmd = { just_lsp_binary },
+    filetypes = { 'just' },
+    root_dir = function(bufnr, on_dir)
+      local root = vim.fs.root(bufnr, { 'justfile', '.git' })
+
+      if root then
+        on_dir(root)
+      end
+    end,
+    settings = {},
+  })
+
+  vim.lsp.enable('just_lsp')
+else
+  vim.lsp.config('just', {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  })
+
+  vim.lsp.enable('just')
+end
+
+local pyproject_binary = '/Users/liam/src/pyproject/target/debug/pyproject'
+
+if vim.loop.fs_stat(pyproject_binary) then
+  vim.lsp.config('pyproject_lsp', {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    cmd = { pyproject_binary, 'server' },
+    filetypes = { 'toml' },
+    root_dir = function(bufnr, on_dir)
+      local root = vim.fs.root(bufnr, { 'pyproject.toml', '.git' })
+      if root then
+        on_dir(root)
+      end
+    end,
+    settings = {},
+  })
+
+  vim.lsp.enable('pyproject_lsp')
+end
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Lualine                                                                    │

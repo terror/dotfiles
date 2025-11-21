@@ -88,7 +88,7 @@ require('lazy').setup({
   -- Quickstart configs for Nvim LSP.
   {
     'neovim/nvim-lspconfig',
-    lazy = false
+    lazy = false,
   },
 
   -- A highly extendable fuzzy finder over lists.
