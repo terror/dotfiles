@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if git show-ref --verify --quiet refs/heads/main; then
+  default_branch=main
+elif git show-ref --verify --quiet refs/heads/master; then
+  default_branch=master
+else
+  echo "Neither 'main' nor 'master' exists in this repo." >&2
+  exit 1
+fi
+
+git reset --soft "$(git merge-base "$default_branch" HEAD)"
