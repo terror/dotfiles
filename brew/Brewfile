@@ -397,6 +397,9 @@ brew "sbt"
 # JVM-based programming language
 brew "scala"
 
+# Rich git commit graph in your terminal
+brew "serie"
+
 # Autoformat shell script source code
 brew "shfmt"
 
@@ -537,6 +540,9 @@ cask "codex"
 
 # Write, edit, and chat about your code with AI
 cask "cursor"
+
+# Command-line agent for Cursor
+cask "cursor-cli"
 
 # Voice and text chat software
 cask "discord"
