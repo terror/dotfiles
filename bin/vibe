@@ -5,7 +5,7 @@ if ! command -v fzf &> /dev/null; then
   exit 1
 fi
 
-options=("codex" "claude" "gemini")
+options=("codex" "claude" "cursor" "gemini")
 
 selected=$(printf '%s\n' "${options[@]}" | fzf --height=10 --border)
 
@@ -19,6 +19,9 @@ case "$selected" in
     ;;
   "codex")
     codex --dangerously-bypass-approvals-and-sandbox
+    ;;
+  "cursor")
+    cursor-agent --force
     ;;
   "gemini")
     gemini --yolo
