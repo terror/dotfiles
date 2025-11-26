@@ -366,7 +366,7 @@ if vim.loop.fs_stat(pyproject_binary) then
     on_attach = on_attach,
     capabilities = capabilities,
     cmd = { pyproject_binary, 'server' },
-    filetypes = { 'toml' },
+    filetypes = { 'pyproject' },
     root_dir = function(bufnr, on_dir)
       local root = vim.fs.root(bufnr, { 'pyproject.toml', '.git' })
       if root then
@@ -375,8 +375,6 @@ if vim.loop.fs_stat(pyproject_binary) then
     end,
     settings = {},
   })
-
-  vim.lsp.enable('pyproject_lsp')
 end
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗

@@ -37,5 +37,10 @@ augroup({
       '*',
       'silent! lua vim.highlight.on_yank({hl_group="IncSearch", timeout=200})',
     },
+    {
+      'BufRead,BufNewFile',
+      'pyproject.toml',
+      'lua vim.bo.filetype = "pyproject"; vim.lsp.enable("pyproject_lsp")',
+    },
   },
 })
