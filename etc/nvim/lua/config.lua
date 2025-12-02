@@ -377,6 +377,23 @@ if vim.loop.fs_stat(pyproject_binary) then
   })
 end
 
+vim.lsp.config('gleam', {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "gleam", "lsp" },
+  filetypes = { 'gleam' },
+  root_dir = function(bufnr, on_dir)
+    local root = vim.fs.root(bufnr, { 'gleam.toml', '.git' })
+
+    if root then
+      on_dir(root)
+    end
+  end,
+  settings = {},
+})
+
+vim.lsp.enable('gleam')
+
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Lualine                                                                    │
 -- ╚────────────────────────────────────────────────────────────────────────────│
