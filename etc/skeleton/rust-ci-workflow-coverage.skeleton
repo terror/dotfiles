@@ -1,5 +1,5 @@
 ---
-filename: .github/workflows/ci.yml
+filename: .github/workflows/ci.yaml
 groups: [rust]
 ---
 name: CI
