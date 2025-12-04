@@ -230,10 +230,10 @@ local servers = {
   'clangd',
   'gopls',
   'lua_ls',
-  'pyright',
   'rust_analyzer',
   'tinymist',
   'ts_ls',
+  'ty',
   'zls',
 }
 
