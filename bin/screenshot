@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -euxo pipefail
+
+file="$HOME/Desktop/$(date +%Y-%m-%d-%H-%M-%S).png"
+
+screencapture "$file"
