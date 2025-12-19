@@ -333,6 +333,12 @@ brew "rsync"
 # OCaml package manager
 brew "opam"
 
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+
+# AI coding agent, built for the terminal
+brew "opencode"
+
 # Formatter for Haskell source code
 brew "ormolu"
 
@@ -380,9 +386,6 @@ brew "railway"
 
 # Persistent key-value database, with built-in net interface
 brew "redis"
-
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
 
 # Powerful, clean, object-oriented scripting language
 brew "ruby"

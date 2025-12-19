@@ -5,7 +5,7 @@ if ! command -v fzf &> /dev/null; then
   exit 1
 fi
 
-options=("codex" "claude" "cursor" "gemini")
+options=("codex" "claude" "cursor" "gemini" "opencode")
 
 selected=$(printf '%s\n' "${options[@]}" | fzf --height=10 --border)
 
@@ -25,6 +25,9 @@ case "$selected" in
     ;;
   "gemini")
     gemini --yolo
+    ;;
+  "opencode")
+    opencode
     ;;
   *)
     exit 1
