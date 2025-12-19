@@ -33,6 +33,7 @@
     ~/.haxornewsconfig: etc/haxornewsconfig
     ~/.hushlogin: etc/hushlogin
     ~/.macos: etc/macos
+    ~/.npmrc: etc/npmrc
     ~/.ripgreprc: etc/ripgreprc
     ~/.skeleton: etc/skeleton
     ~/.skhdrc: etc/skhdrc
