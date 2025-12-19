@@ -7,7 +7,7 @@ FILE = 'Brewfile'
 if os.path.exists(FILE):
   os.remove(FILE)
 
-subprocess.run(['brew', 'bundle', 'dump', '--describe'])
+subprocess.run(['brew', 'bundle', 'dump', '--describe', '--no-cargo', '--no-vscode'])
 
 with open(FILE, 'r') as file:
   lines = file.readlines()

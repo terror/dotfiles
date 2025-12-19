@@ -1,8 +1,4 @@
 tap "heroku/brew"
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
-tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "michaeleisel/zld"
 tap "mongodb/brew"
@@ -79,6 +75,9 @@ brew "bitcoin"
 # Collection of portable C++ source libraries
 brew "boost"
 
+# Command-line interface for Cabal and Hackage
+brew "cabal-install"
+
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 
@@ -117,9 +116,6 @@ brew "elixir"
 
 # Validating, recursive, caching DNS resolver
 brew "unbound"
-
-# Incremental parsing library
-brew "tree-sitter"
 
 # GNU Emacs text editor
 brew "emacs"
@@ -178,7 +174,7 @@ brew "gleam"
 # Library for USB device access
 brew "libusb"
 
-# GNU Pretty Good Privacy (PGP) package
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 
 # Powerful, lightweight programming language
@@ -258,6 +254,9 @@ brew "jq"
 
 # Handy way to save and run project-specific commands
 brew "just"
+
+# Save disk space by cleaning non-essential files from software projects
+brew "kondo"
 
 # Add indentation to LaTeX files
 brew "latexindent"
@@ -433,6 +432,9 @@ brew "tokei"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 
+# Incremental parsing library
+brew "tree-sitter"
+
 # Language Server Protocol implementation for TypeScript wrapping tsserver
 brew "typescript-language-server", link: false
 
@@ -474,6 +476,9 @@ brew "yarn"
 
 # Programming language designed for robustness, optimality, and clarity
 brew "zig"
+
+# Find security issues in GitHub Actions setups
+brew "zizmor"
 
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
@@ -525,6 +530,9 @@ cask "basictex"
 
 # Virtual Audio Driver
 cask "blackhole-2ch"
+
+# Virtual Audio Driver
+cask "blackhole-64ch"
 
 # Automated testing of webapps for Google Chrome
 cask "chromedriver"
@@ -628,6 +636,6 @@ cask "visual-studio-code"
 
 # Multiplayer code editor
 cask "zed"
-vscode "rust-lang.rust-analyzer"
-vscode "vscodevim.vim"
-go "github.com/google/pprof"
+
+# Gecko based web browser
+cask "zen"
