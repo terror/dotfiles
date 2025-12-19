@@ -34,5 +34,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: JohnnyMorganz/stylua-action@v4
+        name: Check lua formatting
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: latest
+          args: --check .
+
       - name: Check bash scripts
         run: shellcheck bin/*
