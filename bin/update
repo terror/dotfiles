@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+
+set -euo pipefail
+
+setopt ERR_EXIT PIPE_FAIL
+
+print -P "%F{cyan}==> Homebrew%f"
+brew evolve
+
+print -P "%F{cyan}==> Rust toolchain%f"
+rustup update
+
+print -P "%F{cyan}==> Rust crates%f"
+crates
+
+print -P "%F{cyan}==> Neovim plugins and language servers%f"
+nvim --headless \
+  "+Lazy! sync" \
+  "+MasonUpdate" \
+  +qa
+
+print -P "\n%F{green}All updates complete ✔%f"

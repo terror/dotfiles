@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+log() {
+  printf "==> %s\n" "$1"
+}
+
+require() {
+  command -v "$1" >/dev/null 2>&1 || {
+    echo "Missing required command: $1" >&2
+    exit 1
+  }
+}
+
+: "${DROPBOX:?DROPBOX is not set}"
+
+require rsync
+require kondo
+require update
+
+log "System update"
+update
+
+log "Cleaning src directory"
+kondo "$HOME/src" --all
+
+log "Syncing src → Dropbox"
+rsync -auv --delete --info=progress2 \
+  --exclude '.git/' \
+  "$HOME/src/" \
+  "$DROPBOX/src/"
+
+log "Syncing work → Dropbox"
+rsync -auv --delete --info=progress2 \
+  --exclude '.git/' \
+  "$HOME/work/" \
+  "$DROPBOX/work/"
+
+log "Sync complete ✔"
