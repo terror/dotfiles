@@ -13,4 +13,4 @@ words=$(
    )' | tr -d '[:space:]'
  )
 
-fd --glob *.rs | xargs rg -w "$words"
+fd --glob '*.rs' | xargs rg -w "$words"

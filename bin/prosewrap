@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# shellcheck disable=SC1071
 
 # `prosewrap` is a thin wrapper around the `fmt` utility that modifies a file
 # in place with the contents of fmt -w <width> <filepath>.

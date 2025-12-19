@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# shellcheck disable=SC1071
 
 """
 Rename files with your favorite editor. (Or whatever happens to be in $EDMV_EDITOR or $EDITOR.)

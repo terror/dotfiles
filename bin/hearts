@@ -3,5 +3,5 @@
 # https://github.com/lloeki/toolbelt/blob/master/hearts
 
 while sleep 0.07; do
-  printf "%-$(( ( RANDOM % $(tput cols) ) - 1))s\e[0;$(( 30 + ($RANDOM % 8) ))m♥\n"
+  printf "%-$(( ( RANDOM % $(tput cols) ) - 1))s\e[0;$(( 30 + (RANDOM % 8) ))m♥\n"
 done

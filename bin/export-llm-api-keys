@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-export ANTHROPIC_API_KEY=$(op read op://dev/ANTHROPIC_API_KEY/password)
-export OPENAI_API_KEY=$(op read op://dev/OPENAI_API_KEY/password)
+ANTHROPIC_API_KEY="$(op read op://dev/ANTHROPIC_API_KEY/password)"
+export ANTHROPIC_API_KEY
+OPENAI_API_KEY="$(op read op://dev/OPENAI_API_KEY/password)"
+export OPENAI_API_KEY

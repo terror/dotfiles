@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-function justfile() {
-  cat << EOF
+write_justfile() {
+  cat << 'EOF' > "$1"
 set dotenv-load
 
 export EDITOR := 'vim'
@@ -30,9 +30,9 @@ function main() {
     touch "$f"
   done
 
-  echo "## $name"    >> README.md
-  echo "$(justfile)" >> justfile
-  echo "/.DS_Store"  >> .gitignore
+  echo "## $name" >> README.md
+  write_justfile justfile
+  echo "/.DS_Store" >> .gitignore
 }
 
 main "$@"
