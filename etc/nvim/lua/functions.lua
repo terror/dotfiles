@@ -1,12 +1,18 @@
 require('util')
 
-local execute = vim.api.nvim_command
-
 function setup_markdown()
-  execute(':setlocal textwidth=80')
-  execute(':setlocal colorcolumn=81')
-  execute(':setlocal spell')
-  execute(':hi ColorColumn ctermbg=grey guibg=grey')
+  vim.opt_local.textwidth = 80
+
+  vim.opt_local.spell = true
+  vim.opt_local.wrap = true
+  vim.opt_local.linebreak = true
+
+  vim.keymap.set(
+    'n',
+    '<leader>m',
+    '<cmd>MarkdownPreview<CR>',
+    { buffer = true, silent = true, desc = 'Markdown Preview' }
+  )
 end
 
 function strip(str)

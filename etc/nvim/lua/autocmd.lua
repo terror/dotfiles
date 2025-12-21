@@ -2,41 +2,28 @@ require('functions')
 
 augroup({
   vimrc = {
-    {
-      'VimEnter,BufNewFile,BufFilePre,BufRead',
-      '*.md',
-      'set filetype=markdown',
-    },
-    {
-      'VimEnter,BufNewFile,BufFilePre,BufRead',
-      '*.tex',
-      'set filetype=tex',
-    },
-    {
-      'FileType',
-      'markdown',
-      'map<leader>m :MarkdownPreview<CR>',
-    },
+    -- Setup markdown environment
     {
       'VimEnter,BufEnter',
-      '*.md,*.tex',
+      '*.md',
       'lua setup_markdown()',
     },
-    {
-      'FileType',
-      'python',
-      'setlocal shiftwidth=2 softtabstop=2 expandtab',
-    },
+
+    -- Disable visual bell
     {
       'GUIEnter',
       '*',
       'set visualbell t_vb=',
     },
+
+    -- Add highlight on yank
     {
       'TextYankPost',
       '*',
       'silent! lua vim.highlight.on_yank({hl_group="IncSearch", timeout=200})',
     },
+
+    -- Set `pyproject` filetype
     {
       'BufRead,BufNewFile',
       'pyproject.toml',
