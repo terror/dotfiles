@@ -36,5 +36,14 @@ augroup({
       'gitcommit',
       'setlocal spell spelllang=en_us',
     },
+
+    --- Apply diagnostic highlights on colorscheme change
+    {
+      'ColorScheme',
+      '*',
+      'lua apply_diagnostic_highlights()',
+    },
   },
 })
+
+apply_diagnostic_highlights()
