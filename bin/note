@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+: "${NOTE_DIR:?NOTE_DIR is not set}"
+
+if [[ $# -eq 0 ]]; then
+  echo "Usage: note <note title>"
+  exit 1
+fi
+
+title="$*"
+note_file="$NOTE_DIR/$title.md"
+
+mkdir -p "$NOTE_DIR"
+touch "$note_file"
+
+"${EDITOR:-vi}" "$note_file"
