@@ -68,3 +68,10 @@ map(
   ':Telescope file_browser<cr>',
   { noremap = true, silent = true }
 )
+
+map(
+  'n',
+  'z=',
+  '<cmd>lua require("telescope.builtin").spell_suggest()<cr>',
+  { noremap = true, silent = true }
+)
