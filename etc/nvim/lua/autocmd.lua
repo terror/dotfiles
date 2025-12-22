@@ -29,5 +29,12 @@ augroup({
       'pyproject.toml',
       'lua vim.bo.filetype = "pyproject"; vim.lsp.enable("pyproject_lsp")',
     },
+
+    -- Enable spellcheck for git commit messages
+    {
+      'FileType',
+      'gitcommit',
+      'setlocal spell spelllang=en_us',
+    },
   },
 })
