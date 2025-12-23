@@ -3,18 +3,18 @@
 EDITOR=${EDITOR:-vim}
 NOTE_DIR=${NOTE_DIR:-~/notes}
 NOTE_EXT=${NOTE_EXT:-md}
-NOTE_FORMAT_COMMAND=${NOTE_FORMAT_COMMAND:-prettier --print-width 80 --prose-wrap always --single-quote true --tab-width 2 --write}
+NOTE_FORMAT_COMMAND=${NOTE_FORMAT_COMMAND:-prettier --single-quote --prose-wrap always --write}
 
 enter() {
-  cd "$NOTE_DIR" && fd | query \
-    --bind "ctrl-d:execute(rm -rf $NOTE_DIR/{})+reload(ls $NOTE_DIR)" \
+  cd "$NOTE_DIR" && fd --type f | query \
+    --bind "ctrl-d:execute(rm -rf $NOTE_DIR/{})+reload(fd --type f)" \
     --bind "enter:become($EDITOR $NOTE_DIR/{} &> /dev/tty)" \
     --preview "bat --style=numbers --color=always --line-range :500 $NOTE_DIR/{}"
 }
 
 format() {
-  cd "$NOTE_DIR" && fd | query \
-    --bind "ctrl-d:execute(rm -rf $NOTE_DIR/{})+reload(ls $NOTE_DIR)" \
+  cd "$NOTE_DIR" && fd --type f | query \
+    --bind "ctrl-d:execute(rm -rf $NOTE_DIR/{})+reload(fd --type f)" \
     --bind "enter:become($NOTE_FORMAT_COMMAND $NOTE_DIR/{})" \
     --preview "bat --style=numbers --color=always --line-range :500 $NOTE_DIR/{}"
 }
@@ -25,24 +25,17 @@ help() {
   echo 'Usage: notes [COMMAND]                                       '
   echo '                                                             '
   echo 'Available commands:                                          '
-  echo '  e | enter         Interact with the notes directory        '
-  echo '  f | format        Format files with a prose formatter      '
+  echo '  d | daily         Open up todays note                      '
   echo '  h | help          Show this message                        '
-  echo '  j | journal       Open up todays journal                   '
   echo '  k | keybindings   View all fzf window keybindings          '
   echo '  s | search        Start a full-text search                 '
 }
 
-journal() {
-  date=$(date '+%Y-%m-%d')
-
-  path="$NOTE_DIR/Journal $date.$NOTE_EXT"
-
-  if [[ ! -f $path ]]; then
-    echo "## $date" > "$path"
-  fi
-
-  "$EDITOR" "$path"
+daily() {
+  local note_file
+  note_file="$NOTE_DIR/$(date +%F).md"
+  touch "$note_file"
+  "$EDITOR" "$note_file"
 }
 
 keybindings() {
@@ -66,11 +59,11 @@ search() {
 
   cd "$NOTE_DIR" && query \
     --bind "change:reload:$RG_PREFIX {q} || true" \
-    --bind "ctrl-d:execute(rm -rf $NOTE_DIR/{1})+reload(ls $NOTE_DIR)" \
+    --bind "ctrl-d:execute(rm -rf $NOTE_DIR/{1})+reload(fd --type f)" \
     --bind "enter:become($EDITOR $NOTE_DIR/{1} &> /dev/tty)" \
     --delimiter=':' \
     --disabled \
-    --preview "bat --style=numbers --color=always {1} --highlight-line {2} --line-range :500 $NOTE_DIR/{1}" \
+    --preview "test -n {1} && bat --style=numbers --color=always --highlight-line {2} --line-range :500 $NOTE_DIR/{1} | rg --color=always --passthru --smart-case {q} || true" \
     --query "$INITIAL_QUERY"
 }
 
@@ -78,8 +71,8 @@ query() {
   fzf \
     --ansi \
     --bind "ctrl-e:become($EDITOR $NOTE_DIR/{q}.$NOTE_EXT &> /dev/tty)" \
-    --bind "ctrl-f:execute($NOTE_FORMAT_COMMAND $NOTE_DIR/{})+reload(ls $NOTE_DIR)" \
-    --bind "ctrl-r:reload(ls $NOTE_DIR)" \
+    --bind "ctrl-f:execute($NOTE_FORMAT_COMMAND $NOTE_DIR/{})+reload(fd --type f)" \
+    --bind "ctrl-r:reload(fd --type f)" \
     --bind 'ctrl-\:toggle-preview' \
     --bind 'ctrl-c:abort' \
     --bind 'ctrl-k:preview-up,ctrl-j:preview-down' \
@@ -92,13 +85,15 @@ query() {
 
 main() {
   case "$1" in
-    e | enter) enter;;
-    f | format) format;;
-    h | help) help;;
-    j | journal) journal;;
-    k | keybindings) keybindings;;
-    s | search) search;;
-    *) echo 'error: Invalid command';;
+  "") enter ;;
+  help) help ;;
+  d | daily) daily ;;
+  k | keybindings) keybindings ;;
+  s | search) search ;;
+  *)
+    echo 'error: Invalid command' >&2
+    return 1
+    ;;
   esac
 }
 
