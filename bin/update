@@ -1,23 +1,24 @@
-#!/usr/bin/env zsh
-# shellcheck disable=SC1071
+#!/usr/bin/env bash
 
 set -euo pipefail
 
-setopt ERR_EXIT PIPE_FAIL
+cyan()  { printf '\033[36m%s\033[0m\n' "$*"; }
+green() { printf '\033[32m%s\033[0m\n' "$*"; }
 
-print -P "%F{cyan}==> Homebrew%f"
+cyan "==> Homebrew"
 brew evolve
 
-print -P "%F{cyan}==> Rust toolchain%f"
+cyan "==> Rust toolchain"
 rustup update
 
-print -P "%F{cyan}==> Rust crates%f"
+cyan "==> Rust crates"
 crates
 
-print -P "%F{cyan}==> Neovim plugins and language servers%f"
+cyan "==> Neovim plugins and language servers"
 nvim --headless \
   "+Lazy! sync" \
   "+MasonUpdate" \
   +qa
 
-print -P "\n%F{green}All updates complete ✔%f"
+green ""
+green "All updates complete ✔"
