@@ -25,6 +25,9 @@ update
 log "Cleaning src directory"
 kondo "$HOME/src" --all
 
+log "Removing all stray \`node_modules\` directories"
+find "$HOME/src" -name 'node_modules' -type d -prune -exec rm -rf '{}' +
+
 log "Syncing src → Dropbox"
 rsync -auv --delete --info=progress2 \
   --exclude '.git/' \
