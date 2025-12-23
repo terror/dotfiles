@@ -31,10 +31,4 @@ rsync -auv --delete --info=progress2 \
   "$HOME/src/" \
   "$DROPBOX/src/"
 
-log "Syncing work → Dropbox"
-rsync -auv --delete --info=progress2 \
-  --exclude '.git/' \
-  "$HOME/work/" \
-  "$DROPBOX/work/"
-
 log "Sync complete ✔"
