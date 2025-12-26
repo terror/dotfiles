@@ -534,9 +534,6 @@ cask "alacritty"
 # Chromium based browser
 cask "arc"
 
-# Compact TeX distribution as alternative to the full TeX Live / MacTeX
-cask "basictex"
-
 # Virtual Audio Driver
 cask "blackhole-2ch"
 
@@ -555,9 +552,6 @@ cask "cleanmymac"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 
-# Write, edit, and chat about your code with AI
-cask "cursor"
-
 # Command-line agent for Cursor
 cask "cursor-cli"
 
@@ -574,20 +568,8 @@ cask "font-inter"
 # Web browser
 cask "google-chrome"
 
-# GraalVM from Oracle
-cask "graalvm-jdk"
-
-# Dedicated scratchpad for developers
-cask "heynote"
-
 # Interface for reading and syncing eBooks
 cask "kindle"
-
-# Provides updates to various Microsoft products
-cask "microsoft-auto-update"
-
-# Spreadsheet software
-cask "microsoft-excel"
 
 # VPN client
 cask "mullvad-vpn"
@@ -598,20 +580,11 @@ cask "ngrok"
 # Open-source software for live streaming and screen recording
 cask "obs"
 
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
-
 # Replacement for Docker Desktop
 cask "orbstack"
 
-# All-in-one bookmark manager
-cask "raindropio"
-
 # Control your tools with a few keystrokes
 cask "raycast"
-
-# Save articles to read, highlight key content, and organise notes for review
-cask "reader"
 
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
@@ -622,14 +595,8 @@ cask "selfcontrol"
 # Tool for sending personal documents to Kindles from Macs
 cask "send-to-kindle"
 
-# Instant messaging application focusing on security
-cask "signal"
-
 # Team communication and collaboration software
 cask "slack"
-
-# Bitcoin wallet application
-cask "sparrow"
 
 # Music streaming service
 cask "spotify"
@@ -642,9 +609,3 @@ cask "vagrant"
 
 # Open-source code editor
 cask "visual-studio-code"
-
-# Multiplayer code editor
-cask "zed"
-
-# Gecko based web browser
-cask "zen"
