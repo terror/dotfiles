@@ -180,9 +180,6 @@ brew "gnupg"
 # Powerful, lightweight programming language
 brew "lua"
 
-# Cross-platform application and UI framework
-brew "qt"
-
 # Command-driven, interactive function plotting
 brew "gnuplot"
 
@@ -378,6 +375,9 @@ brew "pyright"
 # Generic machine emulator and virtualizer
 brew "qemu"
 
+# Cross-platform application and UI framework
+brew "qt"
+
 # Software environment for statistical computing
 brew "r"
 
@@ -509,6 +509,12 @@ brew "terror/tap/just-lsp"
 
 # Interpolate shell command output directly into markdown
 brew "terror/tap/present"
+
+# Linter and language server for pyproject.toml files
+brew "terror/tap/pyproject"
+
+# Project scaffolding utility
+brew "terror/tap/skeleton"
 
 # Centralized view for all of your tmux panes
 brew "terror/tap/spymux"
