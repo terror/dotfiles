@@ -2,9 +2,8 @@
 
 set -euo pipefail
 
-log() {
-  printf "==> %s\n" "$1"
-}
+cyan()  { printf '\033[36m%s\033[0m\n' "$*"; }
+green() { printf '\033[32m%s\033[0m\n' "$*"; }
 
 require() {
   command -v "$1" >/dev/null 2>&1 || {
@@ -15,23 +14,39 @@ require() {
 
 : "${DROPBOX:?DROPBOX is not set}"
 
+
 require rsync
 require kondo
 require update
 
-log "System update"
+cyan "==> System update"
 update
 
-log "Cleaning src directory"
+cyan "==> Cleaning \`src\` directory"
 kondo "$HOME/src" --all
 
-log "Removing all stray \`node_modules\` directories"
+cyan "==> Removing all stray \`node_modules\` directories"
 find "$HOME/src" -name 'node_modules' -type d -prune -exec rm -rf '{}' +
 
-log "Syncing src → Dropbox"
+cyan "==> Syncing \`src\` → Dropbox"
+
+# Directories in `src` to ignore during sync
+IGNORE_DIRS=(
+  "amber"
+  "just"
+  "ruff"
+  "uv"
+)
+
+exclude_args=(--exclude '.git/')
+
+for dir in "${IGNORE_DIRS[@]}"; do
+  exclude_args+=(--exclude "$dir/")
+done
+
 rsync -auv --delete --info=progress2 \
-  --exclude '.git/' \
+  "${exclude_args[@]}" \
   "$HOME/src/" \
   "$DROPBOX/src/"
 
-log "Sync complete ✔"
+green "Sync complete ✔"
