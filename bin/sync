@@ -2,35 +2,21 @@
 
 set -euo pipefail
 
-cyan()  { printf '\033[36m%s\033[0m\n' "$*"; }
-green() { printf '\033[32m%s\033[0m\n' "$*"; }
-
-require() {
-  command -v "$1" >/dev/null 2>&1 || {
-    echo "Missing required command: $1" >&2
-    exit 1
-  }
-}
-
 : "${DROPBOX:?DROPBOX is not set}"
 
+require kondo rsync update
 
-require rsync
-require kondo
-require update
-
-cyan "==> System update"
+colour cyan "==> System update"
 update
 
-cyan "==> Cleaning \`src\` directory"
+colour cyan "==> Cleaning \`src\` directory"
 kondo "$HOME/src" --all
 
-cyan "==> Removing all stray \`node_modules\` directories"
+colour cyan "==> Removing all stray \`node_modules\` directories"
 find "$HOME/src" -name 'node_modules' -type d -prune -exec rm -rf '{}' +
 
-cyan "==> Syncing \`src\` → Dropbox"
+colour cyan "==> Syncing \`src\` → Dropbox"
 
-# Directories in `src` to ignore during sync
 IGNORE_DIRS=(
   "amber"
   "just"
@@ -49,4 +35,4 @@ rsync -auv --delete --info=progress2 \
   "$HOME/src/" \
   "$DROPBOX/src/"
 
-green "Sync complete ✔"
+colour green "Sync complete ✔"

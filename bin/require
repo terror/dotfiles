@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [ "$#" -eq 0 ]; then
+  echo "Usage: $0 <command> [command ...]" >&2
+  exit 2
+fi
+
+missing=0
+
+for cmd in "$@"; do
+  if ! command -v "$cmd" >/dev/null 2>&1; then
+    echo "Missing required command: $cmd" >&2
+    missing=1
+  fi
+done
+
+exit "$missing"

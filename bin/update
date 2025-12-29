@@ -2,23 +2,22 @@
 
 set -euo pipefail
 
-cyan()  { printf '\033[36m%s\033[0m\n' "$*"; }
-green() { printf '\033[32m%s\033[0m\n' "$*"; }
+require brew crates nvim rustup
 
-cyan "==> Homebrew"
+colour cyan "==> Homebrew"
 brew evolve
 
-cyan "==> Rust toolchain"
+colour cyan "==> Rust toolchain"
 rustup update
 
-cyan "==> Rust crates"
+colour cyan "==> Rust crates"
 crates
 
-cyan "==> Neovim plugins and language servers"
+colour cyan "==> Neovim plugins and language servers"
 nvim --headless \
   "+Lazy! sync" \
   "+MasonUpdate" \
   +qa
 
-green ""
-green "All updates complete ✔"
+colour green ""
+colour green "All updates complete ✔"

@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+black() { printf '\033[30m%s\033[0m\n' "$*"; }
+blue() { printf '\033[34m%s\033[0m\n' "$*"; }
+cyan() { printf '\033[36m%s\033[0m\n' "$*"; }
+green() { printf '\033[32m%s\033[0m\n' "$*"; }
+magenta() { printf '\033[35m%s\033[0m\n' "$*"; }
+red() { printf '\033[31m%s\033[0m\n' "$*"; }
+white() { printf '\033[37m%s\033[0m\n' "$*"; }
+yellow() { printf '\033[33m%s\033[0m\n' "$*"; }
+
+if [[ $# -lt 2 ]]; then
+  echo "Usage: colour <color> <text...>"
+  echo "Colors: black, red, green, yellow, blue, magenta, cyan, white"
+  exit 1
+fi
+
+color="$1"
+shift
+
+case "$color" in
+  black|red|green|yellow|blue|magenta|cyan|white)
+    "$color" "$@"
+    ;;
+  *)
+    echo "Unknown color: $color" >&2
+    echo "Available: black, red, green, yellow, blue, magenta, cyan, white" >&2
+    exit 1
+    ;;
+esac
