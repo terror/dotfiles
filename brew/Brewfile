@@ -252,9 +252,6 @@ brew "jq"
 # Handy way to save and run project-specific commands
 brew "just"
 
-# Save disk space by cleaning non-essential files from software projects
-brew "kondo"
-
 # Add indentation to LaTeX files
 brew "latexindent"
 
@@ -518,6 +515,9 @@ brew "terror/tap/skeleton"
 
 # Centralized view for all of your tmux panes
 brew "terror/tap/spymux"
+
+# Configurable project cleaning tool
+brew "terror/tap/swab"
 
 # Arbitrary precision calculator language
 brew "terror/tap/val"

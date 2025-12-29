@@ -4,30 +4,22 @@ set -euo pipefail
 
 : "${DROPBOX:?DROPBOX is not set}"
 
-require kondo rsync update
+require rsync swab update
 
 colour cyan "==> System update"
 update
 
 colour cyan "==> Cleaning \`src\` directory"
-kondo "$HOME/src" --all
-
-colour cyan "==> Removing all stray \`node_modules\` directories"
-find "$HOME/src" -name 'node_modules' -type d -prune -exec rm -rf '{}' +
+swab "$HOME/src"
 
 colour cyan "==> Syncing \`src\` → Dropbox"
 
-IGNORE_DIRS=(
-  "amber"
-  "just"
-  "ruff"
-  "uv"
-)
+SRC_IGNORE=("amber" "just" "ruff" "uv")
 
 exclude_args=(--exclude '.git/')
 
-for dir in "${IGNORE_DIRS[@]}"; do
-  exclude_args+=(--exclude "$dir/")
+for directory in "${SRC_IGNORE[@]}"; do
+  exclude_args+=(--exclude "$directory/")
 done
 
 rsync -auv --delete --info=progress2 \
