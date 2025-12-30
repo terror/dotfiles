@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-main() {
-  cd "$1" || exit
-  "$(fd | fzf \
+set -euo pipefail
+
+cd "$HOME/dotfiles/bin" || exit 1
+
+selection="$(
+  fd | fzf \
     --height 90% \
     --min-height 20 \
     --bind 'ctrl-\:toggle-preview' \
@@ -11,7 +14,8 @@ main() {
     --preview-window 75% \
     --border \
     --ansi
-  )"
-}
+)" || exit 0
 
-main "$HOME"/dotfiles/bin
+[[ -n "$selection" ]] || exit 0
+
+exec "$selection"
