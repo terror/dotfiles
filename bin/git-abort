@@ -3,9 +3,9 @@
 set -euo pipefail
 
 abort() {
-  if git rev-parse --verify $1 > /dev/null 2> /dev/null; then
+  if git rev-parse --verify "$1" > /dev/null 2> /dev/null; then
     echo "Aborting $2…"
-    git $2 --abort
+    git "$2" --abort
   fi
 }
 
