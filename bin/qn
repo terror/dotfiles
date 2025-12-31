@@ -6,7 +6,7 @@ import subprocess as sp
 import tempfile
 
 E = os.environ['EDITOR']
-P = os.environ['NOTES']
+P = os.environ['NOTE_DIR']
 
 with tempfile.NamedTemporaryFile(suffix = '.md', mode = 'w+t') as temp:
   sp.call([E, temp.name])
