@@ -2,7 +2,7 @@
 
 require fzf
 
-options=("codex" "claude" "cursor" "gemini" "opencode")
+options=("codex" "claude" "cursor" "gemini" "opencode" "amp")
 
 selected=$(printf '%s\n' "${options[@]}" | fzf --height=10 --border)
 
@@ -11,6 +11,9 @@ if [[ -z "$selected" ]]; then
 fi
 
 case "$selected" in
+  "amp")
+    amp --dangerously-allow-all --no-notifications
+    ;;
   "claude")
     claude --dangerously-skip-permissions
     ;;
