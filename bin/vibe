@@ -2,7 +2,7 @@
 
 require fzf
 
-options=("codex" "claude" "cursor" "gemini" "opencode" "amp")
+options=("codex" "claude" "cursor" "gemini" "opencode" "amp" "pi")
 
 selected=$(printf '%s\n' "${options[@]}" | fzf --height=10 --border)
 
@@ -28,6 +28,9 @@ case "$selected" in
     ;;
   "opencode")
     opencode
+    ;;
+  "pi")
+    pi
     ;;
   *)
     exit 1
