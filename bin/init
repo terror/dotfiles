@@ -1,0 +1,78 @@
+#!/usr/bin/env python3
+# shellcheck disable=SC1071
+
+import argparse
+import subprocess
+import sys
+from pathlib import Path
+
+JUSTFILE = """\
+set dotenv-load
+
+export EDITOR := 'nvim'
+
+default:
+  just --list
+"""
+
+GITIGNORE = """\
+*.swo
+*.swp
+*~
+.DS_Store
+.env
+.env.local
+.idea/
+.vscode/
+Thumbs.db
+"""
+
+def run(cmd: list[str], **kwargs) -> subprocess.CompletedProcess:
+  return subprocess.run(cmd, check=True, capture_output=True, text=True, **kwargs)
+
+def prompt(message: str) -> str:
+  try:
+    return input(f"{message}: ").strip()
+  except (EOFError, KeyboardInterrupt):
+    sys.exit("\nerror: input cancelled")
+
+def create_project(name: str) -> None:
+  path = Path(name)
+
+  if path.exists():
+    sys.exit(f"error: directory '{name}' already exists")
+
+  description = prompt("description")
+
+  path.mkdir()
+
+  run(["git", "init", "--quiet"], cwd=path)
+  run(["git", "remote", "add", "origin", f"https://github.com/terror/{name}.git"], cwd=path)
+
+  (path / ".gitignore").write_text(GITIGNORE)
+  (path / "justfile").write_text(JUSTFILE)
+  (path / "README.md").write_text(f"## {name}\n\n{description}\n")
+
+  run(["git", "add", "."], cwd=path)
+  run(["git", "commit", "--quiet", "-m", "Initial commit"], cwd=path)
+
+  print(f"created project '{name}'")
+
+def main() -> None:
+  parser = argparse.ArgumentParser(
+    description="create a new project with git, README, justfile, and gitignore"
+  )
+
+  parser.add_argument("name", help="project name")
+
+  args = parser.parse_args()
+
+  try:
+    create_project(args.name)
+  except subprocess.CalledProcessError as e:
+    sys.exit(f"error: command failed: {' '.join(e.cmd)}")
+  except OSError as e:
+    sys.exit(f"error: {e.strerror.lower()}: {e.filename}")
+
+if __name__ == "__main__":
+  main()
