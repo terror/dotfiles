@@ -1,49 +1,77 @@
 #!/usr/bin/env python3
-# shellcheck disable=SC1071
 
-import re
-import subprocess as s
+import json
+import subprocess
 import sys
+from typing import Any, Iterable, NoReturn
 
-def e(*args, **kwargs):
-  print(*args, **kwargs, file=sys.stderr)
+def die(message: str) -> NoReturn:
+  print(message, file=sys.stderr)
+  sys.exit(1)
 
-def die(*args, **kwargs):
-  e(*args, **kwargs)
-  sys.exit(-1)
+def get_recipes() -> dict[str, Any]:
+  result = subprocess.run(
+    ['just', '--dump', '--dump-format', 'json'],
+    capture_output=True,
+    text=True,
+  )
 
-def to_str(bytes):
-  return bytes.decode('utf-8').strip()
+  if result.returncode != 0:
+    die('failed to run`just --dump`')
 
-def summary():
-  return s.check_output(['just', '--summary'], stderr=s.PIPE)
+  return json.loads(result.stdout)['recipes']
 
-def search(recipes):
-  s.run([
-    'just',
-    to_str(
-      s.check_output([
-        'fzf',
-        '--height',
-        '50%',
-        '--min-height',
-        '20',
-        '--border',
-        '--bind',
-        'ctrl-/:toggle-preview',
-        '--ansi',
-        '--preview',
-        'just --show {}',
-        '--preview-window',
-        '75%'
-      ],
-                     input=str.encode(recipes))
-    ),
-    *list(input('arguments (enter to skip): ').split())
-  ])
+def select_recipe(recipe_names: Iterable[str]) -> str:
+  result = subprocess.run(
+    [
+      'fzf',
+      '--border',
+      '--bind', 'ctrl-/:toggle-preview',
+      '--ansi',
+      '--preview', 'just --show {}',
+      '--preview-window', '75%',
+    ],
+    input='\n'.join(recipe_names),
+    capture_output=True,
+    text=True,
+  )
+
+  if result.returncode != 0:
+    sys.exit(0)
+
+  return result.stdout.strip()
+
+def prompt(parameters: list[dict[str, Any]]) -> list[str]:
+  arguments: list[str] = []
+
+  for parameter in parameters:
+    name = parameter['name']
+    default = parameter.get('default')
+    kind = parameter.get('kind', 'singular')
+    optional = kind == 'star' or default is not None
+
+    if optional:
+      message = f'{name} [{default or ""}]: '
+    else:
+      message = f'{name}: '
+
+    value = input(message).strip()
+
+    if value:
+      arguments.append(value)
+    elif default:
+      arguments.append(default)
+    elif not optional:
+      die(f'required argument `{name}` not provided')
+
+  return arguments
+
+def main() -> None:
+  recipes = get_recipes()
+  name = select_recipe(recipes.keys())
+  parameters = recipes[name].get('parameters', [])
+  arguments = prompt(parameters) if parameters else []
+  subprocess.run(['just', name, *arguments])
 
 if __name__ == '__main__':
-  try:
-    search("\n".join(to_str(summary()).split()))
-  except s.CalledProcessError as err:
-    die(f'Error running `{" ".join(err.cmd)}`.')
+  main()
