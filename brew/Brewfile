@@ -405,9 +405,6 @@ brew "shfmt"
 # Tool to create intelligent and beautiful documentation
 brew "sphinx-doc"
 
-# Terminal-based client for Spotify
-brew "spotify-tui"
-
 # Command-line utility for SQLx, the Rust SQL toolkit
 brew "sqlx-cli"
 
