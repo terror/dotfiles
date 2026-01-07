@@ -69,7 +69,6 @@ require('nvim-treesitter.configs').setup({
     'java',
     'javascript',
     'just',
-    'latex',
     'lua',
     'ocaml',
     'python',
