@@ -246,6 +246,9 @@ brew "imagemagick"
 # Dynamic language and bytecode vm
 brew "janet"
 
+# Git-compatible distributed version control system
+brew "jj"
+
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 
@@ -299,9 +302,6 @@ brew "mit-scheme"
 
 # Open source relational database management system
 brew "mysql"
-
-# Open source relational database management system
-brew "mysql@5.7"
 
 # Netwide Assembler (NASM) is an 80x86 assembler
 brew "nasm"
@@ -568,9 +568,6 @@ cask "font-inter"
 # Web browser
 cask "google-chrome"
 
-# Interface for reading and syncing eBooks
-cask "kindle"
-
 # VPN client
 cask "mullvad-vpn"
 
@@ -609,3 +606,4 @@ cask "vagrant"
 
 # Open-source code editor
 cask "visual-studio-code"
+go "github.com/terror/reverie/src"
