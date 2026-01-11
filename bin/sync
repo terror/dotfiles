@@ -14,7 +14,13 @@ swab "$HOME/src"
 
 colour cyan "==> Syncing \`src\` → Dropbox"
 
-SRC_IGNORE=("amber" "just" "ruff" "uv")
+SRC_IGNORE=(
+  "amber"
+  "cargo"
+  "just"
+  "ruff"
+  "uv"
+)
 
 exclude_args=(--exclude '.git/')
 
