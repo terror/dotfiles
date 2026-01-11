@@ -414,6 +414,9 @@ brew "starship"
 # Opinionated Lua code formatter
 brew "stylua"
 
+# Easiest, most secure way to use WireGuard and 2FA
+brew "tailscale"
+
 # User interface to the TELNET protocol
 brew "telnet"
 
@@ -565,11 +568,11 @@ cask "font-inter"
 # Web browser
 cask "google-chrome"
 
-# VPN client
-cask "mullvad-vpn"
-
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+
+# VPN client for secure internet access and private browsing
+cask "nordvpn"
 
 # Open-source software for live streaming and screen recording
 cask "obs"
