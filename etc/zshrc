@@ -31,7 +31,7 @@ path: ~/sbin
 path: ~/.cargo/bin
 path: ~/.nix-profile/bin
 path: ~/opt/npm/bin
-path: ~/go/bin
+path: ~/.go/bin
 path: /usr/local/bin
 path: /usr/local/sbin
 path: /usr/local/opt/bin
@@ -64,6 +64,7 @@ export CARGO_OPEN_WARN=true # populate quickfix list with warnings
 export CLICOLOR=1 # use color
 export EDITOR=nvim # nvim as editor
 export EDMV_EDITOR=vim # vim as editor in edmv
+export GOPATH=$HOME/.go # go workspace
 export HISTFILE=~/.history # location for the history file
 export HISTSIZE=5500000 # save lots of history in memory
 export HOMEBREW_NO_AUTO_UPDATE=1 # don't automatically update packages
