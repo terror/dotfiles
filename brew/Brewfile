@@ -571,9 +571,6 @@ cask "font-inter"
 # Web browser
 cask "google-chrome"
 
-# Interface for reading and syncing eBooks
-cask "kindle"
-
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 
