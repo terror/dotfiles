@@ -19,6 +19,7 @@ SRC_IGNORE=(
   "cargo"
   "just"
   "ruff"
+  "rust"
   "uv"
 )
 
