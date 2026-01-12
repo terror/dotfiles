@@ -4,8 +4,8 @@ if gum confirm "Remove worktree and branch?"; then
   cwd="$(pwd)"
   worktree="$(basename "$cwd")"
 
-  root="${worktree%%-*}"
-  branch="${worktree#*-}"
+  root="${worktree%%--*}"
+  branch="${worktree#*--}"
 
   # Protect against accidentially nuking a non-worktree directory
   if [[ "$root" != "$worktree" ]]; then
