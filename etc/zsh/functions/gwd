@@ -1,0 +1,16 @@
+if gum confirm "Remove worktree and branch?"; then
+  local cwd worktree root branch
+
+  cwd="$(pwd)"
+  worktree="$(basename "$cwd")"
+
+  root="${worktree%%-*}"
+  branch="${worktree#*-}"
+
+  # Protect against accidentially nuking a non-worktree directory
+  if [[ "$root" != "$worktree" ]]; then
+    cd "../$root"
+    git worktree remove "$worktree" --force
+    git branch -D "$branch"
+  fi
+fi

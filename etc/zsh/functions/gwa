@@ -1,0 +1,11 @@
+if [[ -z "$1" ]]; then
+  echo "Usage: gwa [branch name]"
+  return 1
+fi
+
+local branch="$1"
+local base="$(basename "$PWD")"
+local directory="../${base}-${branch}"
+
+git worktree add -b "$branch" "$directory"
+cd "$directory"

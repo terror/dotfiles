@@ -216,6 +216,9 @@ brew "gsettings-desktop-schemas"
 # GNU Ubiquitous Intelligent Language for Extensions
 brew "guile"
 
+# Tool for glamorous shell scripts
+brew "gum"
+
 # Integration point for ghcide and haskell-ide-engine. One IDE to rule them all
 brew "haskell-language-server"
 
@@ -568,6 +571,9 @@ cask "font-inter"
 # Web browser
 cask "google-chrome"
 
+# Interface for reading and syncing eBooks
+cask "kindle"
+
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 
@@ -606,4 +612,3 @@ cask "vagrant"
 
 # Open-source code editor
 cask "visual-studio-code"
-go "github.com/terror/reverie/src"
