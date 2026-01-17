@@ -1,3 +1,4 @@
+tap "anomalyco/tap"
 tap "heroku/brew"
 tap "koekeishiya/formulae"
 tap "michaeleisel/zld"
@@ -128,9 +129,6 @@ brew "eva"
 
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-
-# OCR (Optical Character Recognition) engine
-brew "tesseract"
 
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
@@ -330,12 +328,6 @@ brew "rsync"
 # OCaml package manager
 brew "opam"
 
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
-
-# AI coding agent, built for the terminal
-brew "opencode"
-
 # Formatter for Haskell source code
 brew "ormolu"
 
@@ -387,6 +379,9 @@ brew "railway"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
 
@@ -422,6 +417,9 @@ brew "tailscale"
 
 # User interface to the TELNET protocol
 brew "telnet"
+
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
 
 # Programmatically correct mistyped console commands
 brew "thefuck"
@@ -485,6 +483,9 @@ brew "zizmor"
 
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode"
 
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
