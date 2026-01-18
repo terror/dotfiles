@@ -162,8 +162,9 @@ zle -N zle-line-init prompt-reset # redraw prompt on line editor start
 
 source <(fzf --zsh) # fzf bindings
 
+eval "$(direnv hook zsh)"
 eval "$(mise activate zsh)"
 eval "$(opam env)"
 eval "$(starship init zsh)"
+eval "$(wt config shell init zsh)"
 eval "$(zoxide init zsh)"
-eval "$(direnv hook zsh)"

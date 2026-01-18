@@ -130,7 +130,7 @@ brew "eva"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 
 # Banner-like program prints strings as ASCII art
@@ -241,7 +241,7 @@ brew "hyperfine"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
 
-# Tools and libraries to manipulate images in many formats
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 
 # Dynamic language and bytecode vm
@@ -468,6 +468,9 @@ brew "wifi-password"
 
 # Allow GNU Readline to be used with arbitrary programs
 brew "with-readline"
+
+# CLI for Git worktree management, designed for parallel AI agent workflows
+brew "worktrunk"
 
 # Formatter for python code
 brew "yapf", link: false
