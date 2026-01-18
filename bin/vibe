@@ -1,38 +1,50 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
+# shellcheck disable=SC1071
 
-require fzf
+import os
+import subprocess
+import sys
+from pathlib import Path
 
-options=("codex" "claude" "cursor" "gemini" "opencode" "amp" "pi")
+COMMANDS = {
+  "amp": ["amp", "--dangerously-allow-all", "--no-notifications"],
+  "claude": ["claude", "--dangerously-skip-permissions"],
+  "codex": ["codex", "--dangerously-bypass-approvals-and-sandbox"],
+  "cursor": ["cursor-agent", "--force"],
+  "gemini": ["gemini", "--yolo"],
+  "opencode": ["opencode"],
+  "pi": ["pi"],
+}
 
-selected=$(printf '%s\n' "${options[@]}" | fzf --height=10 --border)
+def main():
+  history_file = Path(os.environ.get("XDG_CACHE_HOME", Path.home() / ".cache")) / "ai-selector-history"
 
-if [[ -z "$selected" ]]; then
-  exit 0
-fi
+  history = []
 
-case "$selected" in
-  "amp")
-    amp --dangerously-allow-all --no-notifications
-    ;;
-  "claude")
-    claude --dangerously-skip-permissions
-    ;;
-  "codex")
-    codex --dangerously-bypass-approvals-and-sandbox
-    ;;
-  "cursor")
-    cursor-agent --force
-    ;;
-  "gemini")
-    gemini --yolo
-    ;;
-  "opencode")
-    opencode
-    ;;
-  "pi")
-    pi
-    ;;
-  *)
-    exit 1
-    ;;
-esac
+  if history_file.exists():
+    history = [line for line in history_file.read_text().splitlines() if line in COMMANDS]
+
+  ordered = history + [opt for opt in COMMANDS if opt not in history]
+
+  result = subprocess.run(
+    ["fzf", "--height=10", "--border"],
+    input="\n".join(ordered),
+    capture_output=True,
+    text=True,
+  )
+
+  selected = result.stdout.strip()
+
+  if not selected:
+    sys.exit(0)
+
+  if selected not in COMMANDS:
+    sys.exit(1)
+
+  history_file.parent.mkdir(parents=True, exist_ok=True)
+  history_file.write_text(selected + "\n" + "\n".join(opt for opt in ordered if opt != selected) + "\n")
+
+  os.execvp(COMMANDS[selected][0], COMMANDS[selected])
+
+if __name__ == "__main__":
+  main()
