@@ -19,6 +19,7 @@
     ~/.bin: bin
     ~/.bp: etc/bp
     ~/.brewfile: brew/brewfile
+    ~/.claude/CLAUDE.md: etc/agents.md
     ~/.codex/config.toml: etc/codex/config.toml
     ~/.config/alacritty/alacritty.toml: etc/alacritty.toml
     ~/.config/gitconfig: etc/gitconfig

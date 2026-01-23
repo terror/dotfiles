@@ -5,5 +5,5 @@ set -euo pipefail
 name="$2"
 
 cargo metadata --format-version=1 \
-  | jq -r '.packages[] | select(.name=="'$name'") | .manifest_path' \
+  | jq -r '.packages[] | select(.name=="'"$name"'") | .manifest_path' \
   | sed 's:[^/]*$::'
