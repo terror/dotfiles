@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-ln -sv "$1" "$2"
