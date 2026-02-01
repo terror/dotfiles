@@ -35,6 +35,7 @@
     ~/.hushlogin: etc/hushlogin
     ~/.macos: etc/macos
     ~/.npmrc: etc/npmrc
+    ~/.pi/agents/AGENTS.md: etc/agents.md
     ~/.ripgreprc: etc/ripgreprc
     ~/.skeleton: etc/skeleton
     ~/.skhdrc: etc/skhdrc
