@@ -1,5 +1,5 @@
 use {
-  anyhow::bail,
+  anyhow::{Context, bail},
   arguments::Arguments,
   clap::{CommandFactory, Parser},
   serde::Deserialize,
@@ -22,7 +22,6 @@ mod link;
 mod style;
 mod subcommand;
 
-const CONFIG: &str = include_str!("../../../default.yaml");
 const DOTFILES: &str = concat!(env!("CARGO_MANIFEST_DIR"), "/../..");
 
 #[derive(Deserialize)]
@@ -31,12 +30,19 @@ struct Entry {
   link: BTreeMap<String, String>,
 }
 
-fn links() -> BTreeMap<String, String> {
-  serde_yaml::from_str::<Vec<Entry>>(CONFIG)
-    .unwrap()
-    .into_iter()
-    .flat_map(|entry| entry.link)
-    .collect()
+fn links() -> Result<BTreeMap<String, String>> {
+  let config_path = PathBuf::from(DOTFILES).join("default.yaml");
+
+  let config = fs::read_to_string(&config_path).with_context(|| {
+    format!("failed to read config file: {}", config_path.display())
+  })?;
+
+  let entries =
+    serde_yaml::from_str::<Vec<Entry>>(&config).with_context(|| {
+      format!("failed to parse config file: {}", config_path.display())
+    })?;
+
+  Ok(entries.into_iter().flat_map(|entry| entry.link).collect())
 }
 
 type Result<T = (), E = anyhow::Error> = std::result::Result<T, E>;

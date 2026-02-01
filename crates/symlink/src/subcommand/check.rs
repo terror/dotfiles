@@ -7,7 +7,7 @@ pub(crate) fn run() -> Result {
 
   let mut errors = 0;
 
-  for (destination, source) in links() {
+  for (destination, source) in links()? {
     let (source, destination) = (
       dotfiles.join(&source),
       PathBuf::from(shellexpand::tilde(&destination).as_ref()),
