@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-git branch | sed 's/^[* ]*//' | fzf --multi --preview 'git log --oneline {}' | xargs -r git branch -D
+# shellcheck disable=SC2016
+git branch | sed 's/^[* ]*//' | fzf --multi \
+  --preview 'git diff $(git merge-base HEAD {})..{} | delta' \
+  --bind 'ctrl-d:preview-half-page-down,ctrl-u:preview-half-page-up' \
+  | xargs -r git branch -D
