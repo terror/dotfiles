@@ -20,6 +20,7 @@ SRC_IGNORE=(
   "just"
   "ruff"
   "rust"
+  "utoipa"
   "uv"
 )
 
@@ -29,7 +30,7 @@ for directory in "${SRC_IGNORE[@]}"; do
   exclude_args+=(--exclude "$directory/")
 done
 
-rsync -auv --delete --info=progress2 \
+rsync -auv --delete --delete-excluded --info=progress2 \
   "${exclude_args[@]}" \
   "$HOME/src/" \
   "$DROPBOX/src/"
