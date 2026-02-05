@@ -1,3 +1,5 @@
+personality = "pragmatic"
+
 [mcp_servers.shadcn]
 command = "npx"
 args = ["shadcn@latest", "mcp"]
