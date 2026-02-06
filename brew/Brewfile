@@ -526,6 +526,9 @@ brew "terror/tap/swab"
 # Arbitrary precision calculator language
 brew "terror/tap/val"
 
+# Simple git worktree manager
+brew "terror/tap/wt"
+
 # Command-line interface for 1Password
 cask "1password-cli"
 
