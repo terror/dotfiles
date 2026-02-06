@@ -469,9 +469,6 @@ brew "wifi-password"
 # Allow GNU Readline to be used with arbitrary programs
 brew "with-readline"
 
-# CLI for Git worktree management, designed for parallel AI agent workflows
-brew "worktrunk"
-
 # Formatter for python code
 brew "yapf", link: false
 
