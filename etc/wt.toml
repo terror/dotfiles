@@ -1,0 +1,3 @@
+[[hooks.post_worktree_change]]
+command = "direnv reload"
+only_if = ".envrc"
