@@ -25,6 +25,7 @@
     ~/.config/alacritty/alacritty.toml: etc/alacritty.toml
     ~/.config/gitconfig: etc/gitconfig
     ~/.config/htoprc: etc/htoprc
+    ~/.config/jj/config.toml: etc/jj.toml
     ~/.config/mise: etc/mise
     ~/.config/neofetch/config.conf: etc/neofetch/config.conf
     ~/.config/nvim: etc/nvim
