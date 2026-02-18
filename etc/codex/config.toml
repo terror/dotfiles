@@ -7,3 +7,6 @@ args = ["shadcn@latest", "mcp"]
 
 [notice.model_migrations]
 "gpt-5.2-codex" = "gpt-5.3-codex"
+
+[tui]
+notifications = false
