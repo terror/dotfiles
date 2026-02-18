@@ -8,6 +8,17 @@ Do not end responses with suggestions for next steps, such as running tests or
 adding additional features, unless those suggestions are interesting and
 non-obvious.
 
+If you notice issues unrelated to the current task, mention them.
+
+Overview
+--------
+
+Run the following command when starting work, to get an overview of the layout of the project:
+
+```shell
+rg --files
+```
+
 Documentation
 -------------
 
@@ -60,7 +71,7 @@ module and be inherited by child modules with `use super::*`.
 Style
 -----
 
-Do not write comments.
+Do not write comments. Comments will be added by the user as necessary.
 
 Don't create mutable variables that are initialized in a conditional:
 
@@ -133,8 +144,13 @@ let name_string = name.to_string();
 let name = name.to_string();
 ```
 
+Collect related data and functions into structs and methods.
+
 Testing
 -------
+
+Do not perform any manual testing. All tests should be in the form of unit and
+integration tests.
 
 Tests should use `foo`, `bar`, and similar placeholders in strings to make
 clear that the values themselves are not significant.
@@ -185,6 +201,35 @@ fn parsing() {
   case("bob", Foo::Bob);
 }
 ```
+
+Prefer turbofish over type ascription:
+
+```rust bad
+let foo: T = foo.parse().unwrap();
+let bar: Vec<u8> = foo.into_iter().collect();
+```
+
+```rust good
+let foo = foo.parse::<T>().unwrap();
+let bar = foo.into_iter().collect::<Vec<u8>>();
+```
+
+Use modern Rust when available.
+
+Style
+-----
+
+Run `cargo fmt` to ensure code is correctly formatted.
+
+Performance
+-----------
+
+Correctness and clarity are more important than performance.
+
+Always measure baseline performance before optimizing.
+
+Always profile before optimizing, picking optimization targets is notoriously
+difficult.
 
 Tips
 ----
