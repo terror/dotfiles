@@ -1,33 +1,53 @@
 #!/usr/bin/env python3
 # shellcheck disable=SC1071
 
+from dataclasses import dataclass
+from enum import Enum, auto
 import subprocess
 import sys
 
-CRATES = [
-  "cargo-audit",
-  "cargo-check",
-  "cargo-edit",
-  "cargo-expand",
-  "cargo-nextest",
-  "cargo-sort",
-  "cargo-tarpaulin",
-  "cargo-watch",
-  "typos-cli",
-  "vim-profiler",
-  "zk-cli",
+class Source(Enum):
+  GIT = auto()
+  LOCKED = auto()
+  REGISTRY = auto()
+
+@dataclass(frozen=True)
+class Crate:
+  value: str
+  source: Source = Source.REGISTRY
+
+  def install_args(self) -> list[str]:
+    match self.source:
+      case Source.GIT:
+        return ["cargo", "install", "--git", self.value]
+      case Source.LOCKED:
+        return ["cargo", "install", "--locked", self.value]
+      case Source.REGISTRY:
+        return ["cargo", "install", self.value]
+      case _:
+        raise ValueError(f"unknown source: {self.source!r}")
+
+CRATES: list[Crate] = [
+  Crate("cargo-audit"),
+  Crate("cargo-check"),
+  Crate("cargo-edit"),
+  Crate("cargo-expand"),
+  Crate("cargo-nextest", Source.LOCKED),
+  Crate("cargo-sort"),
+  Crate("cargo-tarpaulin"),
+  Crate("cargo-unused-features"),
+  Crate("cargo-watch"),
+  Crate("https://github.com/terror/typo", Source.GIT),
+  Crate("typos-cli"),
+  Crate("vim-profiler"),
+  Crate("zk-cli"),
 ]
 
-GIT_CRATES = ["https://github.com/terror/typo"]
-
-def main():
-  subprocess.run(["cargo", "--version"])
+def main() -> None:
+  subprocess.run(["cargo", "--version"], check=True)
 
   for crate in CRATES:
-    subprocess.run(["cargo", "install", crate])
-
-  for url in GIT_CRATES:
-    subprocess.run(["cargo", "install", "--git", url])
+    subprocess.run(crate.install_args(), check=True)
 
 if __name__ == "__main__":
   try:
@@ -35,5 +55,5 @@ if __name__ == "__main__":
   except KeyboardInterrupt:
     sys.exit(130)
   except Exception as error:
-    print(f'error: {error}')
+    print(f"error: {error}")
     sys.exit(1)
