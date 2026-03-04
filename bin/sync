@@ -16,7 +16,9 @@ colour cyan "==> Syncing \`src\` → Dropbox"
 
 SRC_IGNORE=(
   "amber"
+  "biome"
   "cargo"
+  "jj"
   "just"
   "ruff"
   "rust"
