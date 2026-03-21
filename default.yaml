@@ -31,6 +31,7 @@
     ~/.config/nvim: etc/nvim
     ~/.config/starship.toml: etc/starship.toml
     ~/.config/wt/config.toml: etc/wt.toml
+    ~/.config/zed/settings.json: etc/zed/settings.json
     ~/.functions: etc/bash/functions
     ~/.gitconfig: etc/gitconfig
     ~/.gitignore.global: etc/gitignore.global
