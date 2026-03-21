@@ -1,5 +1,5 @@
 personality = "pragmatic"
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 
 [mcp_servers.shadcn]
 command = "npx"
@@ -7,6 +7,7 @@ args = ["shadcn@latest", "mcp"]
 
 [notice.model_migrations]
 "gpt-5.2-codex" = "gpt-5.3-codex"
+"gpt-5.3-codex" = "gpt-5.4"
 
 [tui]
 notifications = false
