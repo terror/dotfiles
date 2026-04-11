@@ -184,6 +184,25 @@ require('lazy').setup({
     'zbirenbaum/copilot-cmp',
     dependencies = { 'zbirenbaum/copilot.lua' },
     config = function()
+      local source = require('copilot_cmp.source')
+
+      -- Patch `copilot_cmp.source.is_available` to silence a deprecation
+      -- warning on every buffer load. Upstream calls `self.client.is_stopped()`
+      -- as a dot-call, which is deprecated in Neovim 0.11+ in favor of the
+      -- method-call form `self.client:is_stopped()`.
+      source.is_available = function(self)
+        if not self.client or self.client:is_stopped() or self.client.name ~= 'copilot' then
+          return false
+        end
+
+        local clients = vim.lsp.get_clients({
+          bufnr = vim.api.nvim_get_current_buf(),
+          id = self.client.id,
+        })
+
+        return next(clients) ~= nil
+      end
+
       require('copilot_cmp').setup()
     end,
   },
