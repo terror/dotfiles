@@ -428,11 +428,8 @@ end
 
 local cmp = require('cmp')
 
-local copilot_ok, copilot = pcall(require, 'copilot.suggestion')
-
 cmp.setup({
   sources = {
-    { name = 'copilot' },
     { name = 'nvim_lsp' },
   },
   formatting = {
@@ -452,27 +449,6 @@ cmp.setup({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     }),
-    ['<C-l>'] = cmp.mapping(function(fallback)
-      if copilot_ok and copilot.is_visible() then
-        copilot.next()
-      else
-        fallback()
-      end
-    end, { 'i' }),
-    ['<C-h>'] = cmp.mapping(function(fallback)
-      if copilot_ok and copilot.is_visible() then
-        copilot.prev()
-      else
-        fallback()
-      end
-    end, { 'i' }),
-    ['<C-y>'] = cmp.mapping(function(fallback)
-      if copilot_ok and copilot.is_visible() then
-        copilot.dismiss()
-      else
-        fallback()
-      end
-    end, { 'i' }),
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
