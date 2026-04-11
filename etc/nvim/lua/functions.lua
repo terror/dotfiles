@@ -16,6 +16,9 @@ function setup_markdown()
   vim.opt_local.wrap = true
   vim.opt_local.linebreak = true
 
+  vim.opt_local.conceallevel = 0
+  vim.opt_local.foldenable = false
+
   vim.keymap.set(
     'n',
     '<leader>m',

@@ -74,6 +74,8 @@ require('nvim-treesitter').install({
   'javascript',
   'just',
   'lua',
+  'markdown',
+  'markdown_inline',
   'ocaml',
   'python',
   'rust',
@@ -86,7 +88,6 @@ require('nvim-treesitter').install({
 
 local treesitter_highlight_disable = {
   just = true,
-  markdown = true,
 }
 
 vim.api.nvim_create_autocmd('FileType', {
@@ -161,17 +162,6 @@ g.startify_commands = {
   { pu = { 'Update neovim plugins', ':Lazy update' } },
   { h = { 'Help', ':help' } },
 }
-
--- ───────────────────────────────────────────────────────────────────────────-─╗
--- │ Markdown                                                                   │
--- ╚────────────────────────────────────────────────────────────────────────────│
-
-g.markdown_folding = 0
-g.vim_markdown_auto_insert_bullets = 0
-g.vim_markdown_conceal = 0
-g.vim_markdown_conceal_code_blocks = 0
-g.vim_markdown_folding_disabled = 1
-g.vim_markdown_new_list_item_indent = 0
 
 -- ───────────────────────────────────────────────────────────────────────────-─╗
 -- │ Netrw                                                                      │

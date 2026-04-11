@@ -118,12 +118,6 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
-  -- Syntax highlighting, matching rules and mappings for the original Markdown and extensions.
-  {
-    'plasticboy/vim-markdown',
-    ft = 'markdown',
-  },
-
   -- The neovim tabline plugin.
   {
     'romgrk/barbar.nvim',

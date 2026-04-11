@@ -27,7 +27,6 @@
   "vim-commentary": { "branch": "master", "commit": "64a654ef4a20db1727938338310209b6a63f60c9" },
   "vim-glsl": { "branch": "master", "commit": "40dd0b143ef93f3930a8a409f60c1bb85e28b727" },
   "vim-just": { "branch": "main", "commit": "11b0f3177e2854cafa0c4baef5329e7d0f0dccbd" },
-  "vim-markdown": { "branch": "master", "commit": "1bc9d0cd8e1cc3e901b0a49c2b50a843f1c89397" },
   "vim-rooter": { "branch": "master", "commit": "51402fb77c4d6ae94994e37dc7ca13bec8f4afcc" },
   "vim-startify": { "branch": "master", "commit": "4e089dffdad46f3f5593f34362d530e8fe823dcf" },
   "vim-toml": { "branch": "main", "commit": "da051b7c23bad3c52d18886203c594739780ec09" }
