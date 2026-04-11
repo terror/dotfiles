@@ -34,9 +34,6 @@ brew "adwaita-icon-theme"
 # Development kit for the Java programming language
 brew "openjdk"
 
-# Library for command-line editing
-brew "readline"
-
 # Java build tool
 brew "ant"
 
@@ -48,6 +45,9 @@ brew "ast-grep"
 
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+
+# Library for command-line editing
+brew "readline"
 
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
@@ -147,6 +147,9 @@ brew "gawk"
 
 # GNU compiler collection
 brew "gcc"
+
+# WebDriver <-> Marionette proxy
+brew "geckodriver"
 
 # Interact with Google Gemini AI models from the command-line
 brew "gemini-cli"
@@ -310,6 +313,9 @@ brew "nasm"
 # Fast, highly customisable system info script
 brew "neofetch"
 
+# Incremental parsing library
+brew "tree-sitter"
+
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 
@@ -433,8 +439,8 @@ brew "tokei"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 
-# Incremental parsing library
-brew "tree-sitter"
+# Parser generator tool
+brew "tree-sitter-cli"
 
 # Language Server Protocol implementation for TypeScript wrapping tsserver
 brew "typescript-language-server", link: false
@@ -547,9 +553,6 @@ cask "blackhole-2ch"
 # Virtual Audio Driver
 cask "blackhole-64ch"
 
-# Automated testing of webapps for Google Chrome
-cask "chromedriver"
-
 # Anthropic's official Claude AI desktop app
 cask "claude"
 
@@ -567,13 +570,13 @@ cask "discord"
 
 # Client for the Dropbox cloud storage service
 cask "dropbox"
+
+# Web browser
+cask "firefox"
 cask "font-caskaydia-cove-nerd-font"
 cask "font-fira-code"
 cask "font-fontawesome"
 cask "font-inter"
-
-# Web browser
-cask "google-chrome"
 
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"

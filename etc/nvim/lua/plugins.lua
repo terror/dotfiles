@@ -191,7 +191,11 @@ require('lazy').setup({
       -- as a dot-call, which is deprecated in Neovim 0.11+ in favor of the
       -- method-call form `self.client:is_stopped()`.
       source.is_available = function(self)
-        if not self.client or self.client:is_stopped() or self.client.name ~= 'copilot' then
+        if
+          not self.client
+          or self.client:is_stopped()
+          or self.client.name ~= 'copilot'
+        then
           return false
         end
 
