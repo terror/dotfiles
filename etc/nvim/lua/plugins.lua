@@ -113,14 +113,9 @@ require('lazy').setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     'nvim-treesitter/nvim-treesitter',
-    event = { 'BufReadPost', 'BufNewFile' },
+    branch = 'main',
+    lazy = false,
     build = ':TSUpdate',
-  },
-
-  -- View treesitter information directly in Neovim.
-  {
-    'nvim-treesitter/playground',
-    cmd = 'TSPlaygroundToggle',
   },
 
   -- Syntax highlighting, matching rules and mappings for the original Markdown and extensions.
