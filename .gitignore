@@ -4,6 +4,9 @@
 .DS_Store
 /etc/asciinema/install-id
 /etc/configstore
+/etc/pi/agent/auth.json
+/etc/pi/agent/sessions/
+/etc/pi/agent/settings.json.bak.*
 /etc/vim/black
 /etc/vim/plugged/*
 /etc/vscode/extensions
