@@ -1,5 +1,6 @@
 personality = "pragmatic"
-model = "gpt-5.4"
+model = "gpt-5.5"
+model_reasoning_effort = "medium"
 
 [mcp_servers.shadcn]
 command = "npx"
@@ -11,3 +12,6 @@ args = ["shadcn@latest", "mcp"]
 
 [tui]
 notifications = false
+
+[tui.model_availability_nux]
+"gpt-5.5" = 2
