@@ -18,12 +18,15 @@ SRC_IGNORE=(
   "amber"
   "biome"
   "cargo"
+  "egui"
   "jj"
   "just"
+  "rerun"
   "ruff"
   "rust"
   "utoipa"
   "uv"
+  "zed"
 )
 
 exclude_args=(--exclude '.git/')
