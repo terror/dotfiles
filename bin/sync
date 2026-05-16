@@ -14,26 +14,7 @@ swab "$HOME/src"
 
 colour cyan "==> Syncing \`src\` → Dropbox"
 
-SRC_IGNORE=(
-  "amber"
-  "biome"
-  "cargo"
-  "egui"
-  "jj"
-  "just"
-  "rerun"
-  "ruff"
-  "rust"
-  "utoipa"
-  "uv"
-  "zed"
-)
-
 exclude_args=(--exclude '.git/')
-
-for directory in "${SRC_IGNORE[@]}"; do
-  exclude_args+=(--exclude "$directory/")
-done
 
 rsync -auv --delete --delete-excluded --info=progress2 \
   "${exclude_args[@]}" \
