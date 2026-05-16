@@ -3,8 +3,8 @@ if [[ $# -ne 1 ]]; then
   return 1
 fi
 
-local src_dir="$HOME/src"
-[[ -d "$src_dir" ]] || { echo "error: $src_dir does not exist" >&2; return 1; }
+local fork_dir="$HOME/fork"
+[[ -d "$fork_dir" ]] || { echo "error: $fork_dir does not exist" >&2; return 1; }
 
 local input="$1"
 local repo_url
@@ -19,7 +19,7 @@ fi
 repo_name="$(basename "$repo_url")"
 repo_name="${repo_name%.git}"
 
-cd "$src_dir"
+cd "$fork_dir"
 [[ ! -d "$repo_name" ]] || { echo "error: $repo_name already exists" >&2; return 1; }
 
 git clone "$repo_url"
