@@ -1,5 +1,5 @@
 [tools]
-node = "22"
+node = "latest"
 python = "3.12"
 
 [settings]
