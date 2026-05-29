@@ -1,0 +1,2 @@
+default_model = "deepseek-v4-pro"
+default_provider = "deepseek"
