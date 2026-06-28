@@ -12,7 +12,7 @@ COMMANDS = {
   "codex": ["codex", "--dangerously-bypass-approvals-and-sandbox"],
   "cursor": ["cursor-agent", "--force"],
   "gemini": ["gemini", "--yolo"],
-  "opencode": ["opencode"],
+  "opencode": ["opencode", "--mini"],
   "pi": ["pi"],
 }
 
