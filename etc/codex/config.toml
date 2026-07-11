@@ -1,17 +1,15 @@
 personality = "pragmatic"
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
+
+[tui]
+notifications = false
+show_tooltips = false
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["@playwright/mcp@latest"]
 
 [mcp_servers.shadcn]
 command = "npx"
 args = ["shadcn@latest", "mcp"]
-
-[notice.model_migrations]
-"gpt-5.2-codex" = "gpt-5.3-codex"
-"gpt-5.3-codex" = "gpt-5.4"
-
-[tui]
-notifications = false
-
-[tui.model_availability_nux]
-"gpt-5.5" = 2
