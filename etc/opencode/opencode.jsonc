@@ -5,6 +5,19 @@
       "type": "local",
       "command": ["npx", "@playwright/mcp@latest"],
       "enabled": true
+    },
+    "x": {
+      "type": "remote",
+      "url": "https://api.x.com/mcp",
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer {env:X_BEARER_TOKEN}"
+      }
+    },
+    "x-docs": {
+      "type": "remote",
+      "url": "https://docs.x.com/mcp",
+      "enabled": true
     }
   }
 }
