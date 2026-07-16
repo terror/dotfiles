@@ -3,6 +3,7 @@
   "model": "opencode-go/kimi-k2.7-code",
   "share": "disabled",
   "autoupdate": true,
+  "lsp": true,
   "mcp": {
     "playwright": {
       "type": "local",
