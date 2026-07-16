@@ -9,6 +9,7 @@
   - ~/.config/alacritty
   - ~/.config/git
   - ~/.config/neofetch
+  - ~/.config/opencode
   - ~/src
   - ~/tmp
 
@@ -30,6 +31,7 @@
     ~/.config/mise: etc/mise
     ~/.config/neofetch/config.conf: etc/neofetch/config.conf
     ~/.config/nvim: etc/nvim
+    ~/.config/opencode/opencode.jsonc: etc/opencode/opencode.jsonc
     ~/.config/starship.toml: etc/starship.toml
     ~/.config/wt/config.toml: etc/wt.toml
     ~/.config/zed/settings.json: etc/zed/settings.json
