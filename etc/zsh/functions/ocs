@@ -1,0 +1,7 @@
+local session
+
+session="$(command ocs --print "$@")" || return
+
+[[ -n "$session" ]] || return
+
+command opencode --session "$session"
