@@ -1,10 +1,10 @@
 tap "anomalyco/tap"
+tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git"
 tap "heroku/brew"
-tap "koekeishiya/formulae"
 tap "michaeleisel/zld"
 tap "mongodb/brew"
 tap "oven-sh/bun"
-tap "terror/tap"
+tap "terror/tap", trusted: true
 tap "tlk/imagemagick-x11"
 
 # Run your GitHub Actions locally
@@ -136,6 +136,9 @@ brew "ffmpeg"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
 
+# Serialization library for C++, supporting Java, C#, and Go
+brew "flatbuffers"
+
 # Command-line tools for fly.io services
 brew "flyctl"
 
@@ -168,6 +171,9 @@ brew "git-crypt"
 
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+
+# Git extension for versioning large files
+brew "git-lfs"
 
 # Statically typed language for the Erlang VM
 brew "gleam"
@@ -222,6 +228,9 @@ brew "gum"
 
 # Integration point for ghcide and haskell-ide-engine. One IDE to rule them all
 brew "haskell-language-server"
+
+# CLI for the Pkl programming language
+brew "pkl"
 
 # Git hook and pre-commit lint manager
 brew "hk"
@@ -491,22 +500,7 @@ brew "zizmor"
 brew "zoxide"
 
 # The AI coding agent built for the terminal.
-brew "anomalyco/tap/opencode"
-
-# Everything you need to get started with Heroku
-brew "heroku/brew/heroku"
-
-# A tiling window manager for macOS based on binary space partitioning.
-brew "koekeishiya/formulae/yabai"
-
-# High-performance, schema-free, document-oriented database
-brew "mongodb/brew/mongodb-community"
-
-# An interactive JavaScript command-line interface to MongoDB
-brew "mongodb/brew/mongodb-community-shell"
-
-# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
-brew "oven-sh/bun/bun"
+brew "anomalyco/tap/opencode", trusted: true
 
 # Bulk rename files using your favorite editor
 brew "terror/tap/edmv"
@@ -553,6 +547,9 @@ cask "blackhole-2ch"
 # Virtual Audio Driver
 cask "blackhole-64ch"
 
+# Automated testing of webapps for Google Chrome
+cask "chromedriver"
+
 # Anthropic's official Claude AI desktop app
 cask "claude"
 
@@ -577,6 +574,9 @@ cask "font-caskaydia-cove-nerd-font"
 cask "font-fira-code"
 cask "font-fontawesome"
 cask "font-inter"
+
+# Open-source keystroke visualiser
+cask "keycastr"
 
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
@@ -616,3 +616,6 @@ cask "vagrant"
 
 # Open-source code editor
 cask "visual-studio-code"
+
+# Multiplayer code editor
+cask "zed"
