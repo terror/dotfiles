@@ -229,9 +229,6 @@ brew "gum"
 # Integration point for ghcide and haskell-ide-engine. One IDE to rule them all
 brew "haskell-language-server"
 
-# CLI for the Pkl programming language
-brew "pkl"
-
 # Git hook and pre-commit lint manager
 brew "hk"
 
@@ -351,6 +348,9 @@ brew "pandoc"
 
 # Port of pdftk in java
 brew "pdftk-java"
+
+# CLI for the Pkl programming language
+brew "pkl"
 
 # Fast, disk space efficient package manager
 brew "pnpm"
@@ -507,6 +507,9 @@ brew "terror/tap/edmv"
 
 # Language server for just
 brew "terror/tap/just-lsp"
+
+# Session picker for opencode
+brew "terror/tap/ocs", trusted: true
 
 # Interpolate shell command output directly into markdown
 brew "terror/tap/present"
