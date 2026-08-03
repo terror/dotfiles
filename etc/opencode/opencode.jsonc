@@ -19,7 +19,7 @@
     "x": {
       "type": "remote",
       "url": "https://api.x.com/mcp",
-      "enabled": true,
+      "enabled": false,
       "headers": {
         "Authorization": "Bearer {env:X_BEARER_TOKEN}"
       }
@@ -27,7 +27,7 @@
     "x-docs": {
       "type": "remote",
       "url": "https://docs.x.com/mcp",
-      "enabled": true
+      "enabled": false
     }
   }
 }
