@@ -1,6 +1,11 @@
 local session
 
-session="$(command ocs --print "$@")" || return
+if (( $# )); then
+  command ocs "$@"
+  return
+fi
+
+session="$(command ocs --print)" || return
 
 [[ -n "$session" ]] || return
 
