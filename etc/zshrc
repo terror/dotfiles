@@ -151,7 +151,6 @@ bind: '^S' history-incremental-search-forward
 bind: '^T' fzf-file-widget
 bind: '^U' kill-whole-line
 bind: '^W' backward-kill-word
-bind: '^X' fzf-history-widget
 bind: '^Y' yank-from-x-selection
 bind: '^Z' fzf-file-widget
 bind: '^[[A' history-substring-search-up
@@ -166,6 +165,7 @@ source <(fzf --zsh) # fzf bindings
 eval "$(direnv hook zsh)"
 eval "$(honu init zsh)"
 eval "$(mise activate zsh)"
+eval "$(ocs init zsh)"
 eval "$(opam env)"
 eval "$(starship init zsh)"
 eval "$(wt init zsh)"
