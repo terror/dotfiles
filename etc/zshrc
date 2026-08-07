@@ -30,6 +30,7 @@ path: ~/.local/bin
 path: ~/sbin
 path: ~/.cargo/bin
 path: ~/.nix-profile/bin
+path: ~/.bun/bin
 path: ~/opt/npm/bin
 path: ~/.go/bin
 path: ~/.amp/bin
