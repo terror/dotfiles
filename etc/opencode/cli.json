@@ -1,0 +1,18 @@
+{
+  "theme": {
+    "name": "transparent",
+    "mode": "dark"
+  },
+  "diffs": {
+    "wrap": "word"
+  },
+  "session": {
+    "sidebar": "auto",
+    "scrollbar": false,
+    "thinking": "hide"
+  },
+  "animations": true,
+  "tabs": {
+    "enabled": false
+  }
+}

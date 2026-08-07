@@ -31,6 +31,7 @@
     ~/.config/mise: etc/mise
     ~/.config/neofetch/config.conf: etc/neofetch/config.conf
     ~/.config/nvim: etc/nvim
+    ~/.config/opencode/cli.json: etc/opencode/cli.json
     ~/.config/opencode/opencode.jsonc: etc/opencode/opencode.jsonc
     ~/.config/opencode/themes/transparent.json: etc/opencode/themes/transparent.json
     ~/.config/opencode/tui.json: etc/opencode/tui.json
