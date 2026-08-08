@@ -1,2 +1,2 @@
-default_model = "deepseek-v4-pro"
+default_model = "deepseek-v4-flash"
 default_provider = "deepseek"
