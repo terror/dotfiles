@@ -541,9 +541,6 @@ cask "blackhole-2ch"
 # Virtual Audio Driver
 cask "blackhole-64ch"
 
-# Automated testing of webapps for Google Chrome
-cask "chromedriver"
-
 # Anthropic's official Claude AI desktop app
 cask "claude"
 
