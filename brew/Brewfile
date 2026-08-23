@@ -473,6 +473,9 @@ brew "zoxide"
 # The AI coding agent built for the terminal.
 brew "anomalyco/tap/opencode", trusted: true
 
+# JavaScript runtime, bundler, test runner, and package manager
+brew "oven-sh/bun/bun", trusted: true
+
 # Bulk rename files using your favorite editor
 brew "terror/tap/edmv"
 
