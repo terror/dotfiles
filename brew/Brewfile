@@ -424,9 +424,6 @@ brew "telnet"
 # OCR (Optical Character Recognition) engine
 brew "tesseract"
 
-# Programmatically correct mistyped console commands
-brew "thefuck"
-
 # Terminal multiplexer
 brew "tmux"
 
