@@ -154,9 +154,6 @@ brew "gcc"
 # WebDriver <-> Marionette proxy
 brew "geckodriver"
 
-# Interact with Google Gemini AI models from the command-line
-brew "gemini-cli"
-
 # GitHub command-line tool
 brew "gh"
 
@@ -534,6 +531,9 @@ cask "1password@nightly"
 
 # GPU-accelerated terminal emulator
 cask "alacritty"
+
+# Terminal interface for Antigravity agents
+cask "antigravity-cli"
 
 # Chromium based browser
 cask "arc"
