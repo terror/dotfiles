@@ -73,9 +73,6 @@ brew "bitcoin"
 # Collection of portable C++ source libraries
 brew "boost"
 
-# Command-line interface for Cabal and Hackage
-brew "cabal-install"
-
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 
@@ -220,14 +217,8 @@ brew "guile"
 # Tool for glamorous shell scripts
 brew "gum"
 
-# Integration point for ghcide and haskell-ide-engine. One IDE to rule them all
-brew "haskell-language-server"
-
 # Git hook and pre-commit lint manager
 brew "hk"
-
-# Haskell source code suggestions
-brew "hlint"
 
 # Improved top (interactive process viewer)
 brew "htop"
@@ -333,9 +324,6 @@ brew "rsync"
 
 # OCaml package manager
 brew "opam"
-
-# Formatter for Haskell source code
-brew "ormolu"
 
 # Swiss-army knife of markup format conversion
 brew "pandoc"
