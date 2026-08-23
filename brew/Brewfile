@@ -1,5 +1,4 @@
 tap "anomalyco/tap"
-tap "mongodb/brew"
 tap "oven-sh/bun"
 tap "terror/tap", trusted: true
 
