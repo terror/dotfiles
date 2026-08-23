@@ -310,8 +310,8 @@ brew "mysql"
 # Netwide Assembler (NASM) is an 80x86 assembler
 brew "nasm"
 
-# Fast, highly customisable system info script
-brew "neofetch"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
 
 # Incremental parsing library
 brew "tree-sitter"
