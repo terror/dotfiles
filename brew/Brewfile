@@ -361,12 +361,6 @@ brew "poetry"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 
-# Object-relational database system
-brew "postgresql@12"
-
-# Object-relational database system
-brew "postgresql@14"
-
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
 
@@ -527,7 +521,7 @@ brew "terror/tap/spymux"
 brew "terror/tap/swab"
 
 # Arbitrary precision calculator language
-brew "terror/tap/val"
+brew "terror/tap/val", trusted: true
 
 # Simple git worktree manager
 brew "terror/tap/wt"
@@ -622,3 +616,4 @@ cask "visual-studio-code"
 
 # Multiplayer code editor
 cask "zed"
+npm "@earendil-works/pi-coding-agent"
