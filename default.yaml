@@ -49,13 +49,11 @@
     ~/.pi: etc/pi
     ~/.ripgreprc: etc/ripgreprc
     ~/.skeleton: etc/skeleton
-    ~/.skhdrc: etc/skhdrc
     ~/.submodules: submodules
     ~/.tmux.conf: etc/tmux.conf
     ~/.vim: etc/vim
     ~/.vimrc: etc/vimrc
     ~/.vscode: etc/vscode
-    ~/.yabairc: etc/yabairc
     ~/.zsh: etc/zsh
     ~/.zshrc: etc/zshrc
 
