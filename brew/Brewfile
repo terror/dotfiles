@@ -558,9 +558,6 @@ cask "keycastr"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 
-# VPN client for secure internet access and private browsing
-cask "nordvpn"
-
 # Open-source software for live streaming and screen recording
 cask "obs"
 
