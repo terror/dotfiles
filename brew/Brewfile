@@ -602,14 +602,8 @@ cask "slack"
 # Music streaming service
 cask "spotify"
 
-# Web browser focusing on security
-cask "tor-browser"
-
 # Development environment
 cask "vagrant"
-
-# Open-source code editor
-cask "visual-studio-code"
 
 # Multiplayer code editor
 cask "zed"
