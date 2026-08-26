@@ -107,8 +107,8 @@ brew "libtool"
 # Functional metaprogramming aware language built on Erlang VM
 brew "elixir"
 
-# Validating, recursive, caching DNS resolver
-brew "unbound"
+# Incremental parsing library
+brew "tree-sitter"
 
 # GNU Emacs text editor
 brew "emacs"
@@ -118,6 +118,9 @@ brew "emscripten"
 
 # Calculator REPL, similar to bc(1)
 brew "eva"
+
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
 
 # Simple, fast and user-friendly alternative to find
 brew "fd"
@@ -200,6 +203,9 @@ brew "google-java-format"
 # Deliver Go binaries as fast and easily as possible
 brew "goreleaser"
 
+# Validating, recursive, caching DNS resolver
+brew "unbound"
+
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
 
@@ -214,6 +220,9 @@ brew "guile"
 
 # Tool for glamorous shell scripts
 brew "gum"
+
+# CLI for Heroku
+brew "heroku"
 
 # Git hook and pre-commit lint manager
 brew "hk"
@@ -298,12 +307,6 @@ brew "mysql"
 
 # Netwide Assembler (NASM) is an 80x86 assembler
 brew "nasm"
-
-# Like neofetch, but much faster because written mostly in C
-brew "fastfetch"
-
-# Incremental parsing library
-brew "tree-sitter"
 
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
@@ -473,7 +476,7 @@ brew "zoxide"
 # The AI coding agent built for the terminal.
 brew "anomalyco/tap/opencode", trusted: true
 
-# JavaScript runtime, bundler, test runner, and package manager
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun", trusted: true
 
 # Bulk rename files using your favorite editor
