@@ -1,7 +1,128 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
+# shellcheck disable=SC1071
 
-set -euo pipefail
+import subprocess
+import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
 
-for pkg in $(brew list --formula -1 | grep -E '\.|\.\.'); do
-  echo "$pkg" "$(brew info "$pkg" | grep -E '[0-9]* files, ' | sed 's/^.*[0-9]* files, \(.*\)).*$/\1/' | awk '{print $1;}/[0-9]$/{s+=$1};/[mM][bB]$/{s+=$1*(1024*1024);next};/[kK][bB]$/{s+=$1*1024;next} END { suffix=" KMGT"; for(i=1; s>1024 && i < length(suffix); i++) s/=1024; printf "\t(all versions: %0.1f%s)",s,substr(suffix, i, 1), $3; }')"
-done
+
+def format_size(size: int) -> str:
+  value = float(size)
+
+  units = ("B", "KiB", "MiB", "GiB", "TiB")
+
+  for unit in units:
+    if value < 1024 or unit == units[-1]:
+      return f"{value:.0f} B" if unit == "B" else f"{value:.1f} {unit}"
+
+    value /= 1024
+
+  raise AssertionError("unreachable")
+
+
+def disk_usage(path: Path) -> int:
+  output = subprocess.check_output(["du", "-sk", str(path)], text=True)
+
+  blocks, separator, _ = output.partition("\t")
+
+  if not separator:
+    raise ValueError(f"unexpected output from du: {output.rstrip()}")
+
+  return int(blocks) * 1024
+
+
+def main() -> None:
+  cellar = Path(
+    subprocess.check_output(["brew", "--cellar"], text=True).strip()
+  )
+
+  formulae = sorted(
+    path
+    for path in cellar.iterdir()
+    if path.is_dir() and not path.is_symlink()
+  )
+
+  if not formulae:
+    print("No Homebrew formulae installed.")
+    return
+
+  rows = [
+    (
+      formula,
+      ", ".join(
+        sorted(
+          path.name
+          for path in formula.iterdir()
+          if path.is_dir() and not path.is_symlink()
+        )
+      ),
+    )
+    for formula in formulae
+  ]
+
+  count = len(rows)
+  count_label = f"{count} {'formula' if count == 1 else 'formulae'}"
+
+  name_width = max(len("Formula"), *(len(row[0].name) for row in rows))
+
+  version_width = max(
+    len("Version(s)"), len(count_label), *(len(row[1]) for row in rows)
+  )
+
+  size_width = len("1023.9 TiB")
+
+  print(
+    f"{'Formula':<{name_width}}  {'Version(s)':<{version_width}}  "
+    f"{'Size':>{size_width}}",
+    flush=True,
+  )
+
+  print(
+    f"{'-' * name_width}  {'-' * version_width}  {'-' * size_width}",
+    flush=True,
+  )
+
+  total = 0
+
+  with ThreadPoolExecutor(max_workers=min(4, count)) as executor:
+    futures = {
+      executor.submit(disk_usage, formula): (formula, versions)
+      for formula, versions in rows
+    }
+
+    for future in as_completed(futures):
+      formula, versions = futures[future]
+
+      size = future.result()
+
+      total += size
+
+      print(
+        f"{formula.name:<{name_width}}  {versions:<{version_width}}  "
+        f"{format_size(size):>{size_width}}",
+        flush=True,
+      )
+
+  print(f"{'-' * name_width}  {'-' * version_width}  {'-' * size_width}")
+
+  print(
+    f"{'Total':<{name_width}}  {count_label:<{version_width}}  "
+    f"{format_size(total):>{size_width}}"
+  )
+
+
+if __name__ == "__main__":
+  try:
+    main()
+  except BrokenPipeError:
+    try:
+      sys.stdout.close()
+    except BrokenPipeError:
+      pass
+    sys.exit(0)
+  except KeyboardInterrupt:
+    sys.exit(130)
+  except (OSError, subprocess.SubprocessError, ValueError) as error:
+    print(f"error: {error}", file=sys.stderr)
+    sys.exit(1)
