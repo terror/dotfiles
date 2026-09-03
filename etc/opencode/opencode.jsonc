@@ -11,28 +11,32 @@
   "autoupdate": true,
   "lsp": true,
   "mcp": {
-    "chrome-devtools": {
-      "type": "local",
-      "command": ["npx", "-y", "chrome-devtools-mcp@latest", "--autoConnect"],
-      "enabled": true
-    },
-    "playwright": {
-      "type": "local",
-      "command": ["npx", "@playwright/mcp@latest"],
-      "enabled": true
-    },
-    "x": {
-      "type": "remote",
-      "url": "https://api.x.com/mcp",
-      "enabled": false,
-      "headers": {
-        "Authorization": "Bearer {env:X_BEARER_TOKEN}"
+    "servers": {
+      "chrome-devtools": {
+        "type": "local",
+        "command": ["npx", "-y", "chrome-devtools-mcp@latest", "--autoConnect"]
+      },
+      "playwright": {
+        "type": "local",
+        "command": ["npx", "@playwright/mcp@latest"]
+      },
+      "shadcn": {
+        "type": "local",
+        "command": ["npx", "-y", "shadcn@latest", "mcp"]
+      },
+      "x": {
+        "type": "remote",
+        "url": "https://api.x.com/mcp",
+        "disabled": true,
+        "headers": {
+          "Authorization": "Bearer {env:X_BEARER_TOKEN}"
+        }
+      },
+      "x-docs": {
+        "type": "remote",
+        "url": "https://docs.x.com/mcp",
+        "disabled": true
       }
-    },
-    "x-docs": {
-      "type": "remote",
-      "url": "https://docs.x.com/mcp",
-      "enabled": false
     }
   }
 }
