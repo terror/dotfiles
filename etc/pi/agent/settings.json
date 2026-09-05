@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.80.6",
+  "lastChangelogVersion": "0.84.4",
   "defaultProvider": "deepseek",
   "defaultModel": "deepseek-v4-pro",
   "hideThinkingBlock": true,
