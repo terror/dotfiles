@@ -7,12 +7,22 @@ alias c := check
 default:
   just --list
 
-all: rustup formulae crates tpm
+all: codex rustup formulae crates tpm
 
 [group: 'dev']
 check:
   shellcheck bin/*
   stylua --check .
+
+[group: 'install']
+codex:
+  #!/usr/bin/env bash
+  set -euo pipefail
+  codex_config={{quote(justfile_directory() / "etc/codex/config.toml")}}
+  if [[ "$(readlink /etc/codex/config.toml || true)" != "$codex_config" ]]; then
+    sudo /usr/bin/install -d -m 755 /etc/codex
+    sudo /bin/ln -s "$codex_config" /etc/codex/config.toml
+  fi
 
 [group: 'install']
 crates:
