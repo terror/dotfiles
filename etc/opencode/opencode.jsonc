@@ -24,6 +24,10 @@
         "type": "local",
         "command": ["npx", "-y", "shadcn@latest", "mcp"]
       },
+      "vercel": {
+        "type": "remote",
+        "url": "https://mcp.vercel.com"
+      },
       "x": {
         "type": "remote",
         "url": "https://api.x.com/mcp",

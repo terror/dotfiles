@@ -18,6 +18,9 @@ args = ["@playwright/mcp@latest"]
 command = "npx"
 args = ["-y", "shadcn@latest", "mcp"]
 
+[mcp_servers.vercel]
+url = "https://mcp.vercel.com"
+
 [mcp_servers.x]
 url = "https://api.x.com/mcp"
 enabled = false
