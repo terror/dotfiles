@@ -1,29 +1,16 @@
 Development
 ===========
 
-Mannerisms
-----------
+Prompts
+-------
 
-Do not end responses with suggestions for next steps, such as running tests or
-adding additional features, unless those suggestions are interesting and
-non-obvious.
-
-If you notice issues unrelated to the current task, mention them.
-
-Overview
---------
-
-Run the following command when starting work, to get an overview of the layout of the project:
-
-```shell
-rg --files
-```
+Don't make any changes if a prompt ends with `...`.
 
 Documentation
 -------------
 
-Always consult the local source code for information about Rust dependencies,
-which is guaranteed to be up-to-date for the correct version.
+Prefer consulting the local source code for information about Rust
+dependencies.
 
 Run `cargo dep NAME` to find the source directory for a dependency:
 
@@ -31,17 +18,6 @@ Run `cargo dep NAME` to find the source directory for a dependency:
 $ cargo dep serde
 /Users/liam/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/
 ```
-
-Local docs can be built with:
-
-```shell
-cargo doc --workspace --document-private-items
-```
-
-Which will output documentation for crate `NAME` in
-`target/doc/NAME/index.html`.
-
-Read source code and docs as appropriate.
 
 Dependencies
 ------------
@@ -71,7 +47,8 @@ module and be inherited by child modules with `use super::*`.
 Style
 -----
 
-Do not write comments. Comments will be added by the user as necessary.
+Do not write comments or documentation, or modify existing comments or
+documentation. Both will be added by the user as necessary.
 
 Don't create mutable variables that are initialized in a conditional:
 
@@ -93,45 +70,6 @@ let foo = if bar {
 };
 ```
 
-Passing primitives into functions creates opportunities for confusion:
-
-```rust bad
-struct Config {
-  a: bool,
-  b: bool,
-}
-
-fn foo(a: bool) {
-}
-
-let config = Config {
-  a: true,
-  b: false,
-};
-
-foo(config.b);
-```
-
-Where possible, pass the object where the primitive originates:
-
-```rust good
-struct Config {
-  a: bool,
-  b: bool,
-}
-
-fn foo(config: &Config) {
-  // use config.a
-}
-
-let config = Config {
-  a: true,
-  b: false,
-};
-
-foo(&config);
-```
-
 When converting a value, shadowing the previous variable is often ideal. The
 type system prevents confusing the two values, and shadowing the previous
 variable prevents it from being unintentionally used later:
@@ -143,31 +81,6 @@ let name_string = name.to_string();
 ```rust good
 let name = name.to_string();
 ```
-
-Collect related data and functions into structs and methods.
-
-Testing
--------
-
-Do not perform any manual testing. All tests should be in the form of unit and
-integration tests.
-
-Tests should use `foo`, `bar`, and similar placeholders in strings to make
-clear that the values themselves are not significant.
-
-```rust bad
-std::fs::write("file.txt"), "contents").unwrap();
-```
-
-```rust good
-std::fs::write("foo"), "bar").unwrap();
-```
-
-Individual tests should use as little code as possible to exercise the feature
-under test.
-
-Testing is white-box style. Write tests according to the implementation. Avoid
-writing tests which do not exercise unique code paths.
 
 Prefer turbofish over type ascription:
 
@@ -181,22 +94,81 @@ let foo = foo.parse::<T>().unwrap();
 let bar = foo.into_iter().collect::<Vec<u8>>();
 ```
 
-Use modern Rust when available.
+Testing
+-------
 
-Style
------
+Testing is white-box style. Write tests needed to exercise the implementation.
+Add only the minimum number of tests needed to cover new and changed code.
 
-Run `cargo fmt` to ensure code is correctly formatted.
+Do not perform manual testing. All testing should be done via unit and
+integration tests.
 
-Performance
------------
+Headless browser testing is slow. Do not use a headless browser for manual
+testing or reproducing issues unless asked.
 
-Correctness and clarity are more important than performance.
+Individual tests should use as little code as possible to exercise the feature
+under test.
 
-Always measure baseline performance before optimizing.
+Tests should use `foo`, `bar`, and similar placeholders in strings to make
+clear that the values themselves are not significant.
 
-Always profile before optimizing, picking optimization targets is notoriously
-difficult.
+```rust bad
+std::fs::write("file.txt"), "contents").unwrap();
+```
+
+```rust good
+std::fs::write("foo"), "bar").unwrap();
+```
+
+Prefer asserting the entire contents of values:
+
+```rust bad
+assert!(path.ends_with("foo/bar"));
+```
+
+```rust good
+assert_eq!(path, "/home/user/foo/bar");
+```
+
+Prefer asserting error messages exactly:
+
+```rust bad
+assert!(Regex::new("I/O failed").unwrap().is_match(error));
+```
+
+```rust good
+assert_eq!(message, "error: I/O failed at `foo/bar/baz`");
+````
+
+If nondeterminism forces you to match an error message with a regular
+expression, always match the entire message:
+
+```rust bad
+assert!(Regex::new("bad thing").unwrap().is_match(error));
+```
+
+```rust good
+assert!(Regex::new("^error: bad thing ID [0-9]+$").unwrap().is_match(error));
+````
+
+Prefer matching complete patterns:
+
+```rust bad
+assert_matches!(result, Err(Error::Foo { .. }));
+```
+
+```rust good
+assert_matches!(result, Err(Error::Foo { message: "bar" }));
+```
+
+Git
+---
+
+Do not commit changes, amend history, or stage or unstage changes unless
+explicitly asked.
+
+Mannerisms
+----------
 
 Tips
 ----
@@ -216,3 +188,5 @@ assert_eq!(
   "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
 );
 ```
+
+Avoid lossy conversions from invalid UTF-8 bytes to strings.
