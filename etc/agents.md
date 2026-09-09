@@ -29,7 +29,7 @@ Run `cargo dep NAME` to find the source directory for a dependency:
 
 ```console
 $ cargo dep serde
-/Users/rodarmor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/
+/Users/liam/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/
 ```
 
 Local docs can be built with:
@@ -168,39 +168,6 @@ under test.
 
 Testing is white-box style. Write tests according to the implementation. Avoid
 writing tests which do not exercise unique code paths.
-
-De-duplicate similar tests with a case function:
-
-```rust bad
-#[test]
-fn bar() {
-  assert_eq!("bar".parse().unwrap(), Foo::Bar);
-}
-
-#[test]
-fn baz() {
-  assert_eq!("baz".parse().unwrap(), Foo::Baz);
-}
-
-#[test]
-fn bob() {
-  assert_eq!("bob".parse().unwrap(), Foo::Bob);
-}
-```
-
-```rust good
-#[test]
-fn parsing() {
-  #[track_caller]
-  fn case(s: &str, expected: Foo) {
-    assert_eq!(s.parse().unwrap(), expected);
-  }
-
-  case("bar", Foo::Bar);
-  case("baz", Foo::Baz);
-  case("bob", Foo::Bob);
-}
-```
 
 Prefer turbofish over type ascription:
 
