@@ -2,6 +2,10 @@ personality = "pragmatic"
 model = "gpt-6-astra"
 model_reasoning_effort = "max"
 
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 10000
+
 [tui]
 notifications = false
 show_tooltips = false
