@@ -151,6 +151,39 @@ assert!(Regex::new("bad thing").unwrap().is_match(error));
 assert!(Regex::new("^error: bad thing ID [0-9]+$").unwrap().is_match(error));
 ````
 
+De-duplicate similar tests with a case function:
+
+```rust bad
+#[test]
+fn bar() {
+  assert_eq!("bar".parse().unwrap(), Foo::Bar);
+}
+
+#[test]
+fn baz() {
+  assert_eq!("baz".parse().unwrap(), Foo::Baz);
+}
+
+#[test]
+fn bob() {
+  assert_eq!("bob".parse().unwrap(), Foo::Bob);
+}
+```
+
+```rust good
+#[test]
+fn parsing() {
+  #[track_caller]
+  fn case(s: &str, expected: Foo) {
+    assert_eq!(s.parse().unwrap(), expected);
+  }
+
+  case("bar", Foo::Bar);
+  case("baz", Foo::Baz);
+  case("bob", Foo::Bob);
+}
+```
+
 Prefer matching complete patterns:
 
 ```rust bad
