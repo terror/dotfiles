@@ -12,6 +12,7 @@ alternate_screen = "never"
 notifications = false
 resume_cwd = "session"
 show_tooltips = false
+vim_mode_default = true
 
 [mcp_servers.chrome-devtools]
 command = "npx"
