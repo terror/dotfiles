@@ -9,7 +9,7 @@ max_concurrent_threads_per_session = 10000
 
 [tui]
 alternate_screen = "never"
-animations = false
+animations = true
 notifications = false
 resume_cwd = "session"
 show_tooltips = false
