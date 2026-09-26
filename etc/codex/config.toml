@@ -10,6 +10,7 @@ max_concurrent_threads_per_session = 10000
 [tui]
 alternate_screen = "never"
 notifications = false
+resume_cwd = "session"
 show_tooltips = false
 
 [mcp_servers.chrome-devtools]
