@@ -1,6 +1,7 @@
 personality = "pragmatic"
 model = "gpt-6-astra"
 model_reasoning_effort = "max"
+plan_mode_reasoning_effort = "max"
 
 [agents]
 enabled = true
