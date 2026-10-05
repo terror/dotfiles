@@ -3,5 +3,6 @@
   "defaultProvider": "deepseek",
   "defaultModel": "deepseek-v4-pro",
   "hideThinkingBlock": true,
-  "theme": "dark"
+  "theme": "dark",
+  "deviceId": "5b8a1616-bad1-4035-aabf-3b703a4d17f9"
 }
