@@ -1,7 +1,7 @@
 {
   "lastChangelogVersion": "1.0.3",
   "defaultProvider": "deepseek",
-  "defaultModel": "deepseek-v4-pro",
+  "defaultModel": "deepseek-flash",
   "enabledModels": [
     "deepseek/*",
     "openai/gpt-6*"
