@@ -1,5 +1,9 @@
 {
   "mcpServers": {
+    "agent-browser": {
+      "command": "npx",
+      "args": ["-y", "agent-browser@latest", "mcp"]
+    },
     "chrome-devtools": {
       "command": "npx",
       "args": ["-y", "chrome-devtools-mcp@latest", "--autoConnect"]
