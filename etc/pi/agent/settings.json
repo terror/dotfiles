@@ -2,6 +2,10 @@
   "lastChangelogVersion": "1.0.3",
   "defaultProvider": "deepseek",
   "defaultModel": "deepseek-v4-pro",
+  "enabledModels": [
+    "deepseek/*",
+    "openai/gpt-6*"
+  ],
   "hideThinkingBlock": true,
   "theme": "dark",
   "deviceId": "5b8a1616-bad1-4035-aabf-3b703a4d17f9"
