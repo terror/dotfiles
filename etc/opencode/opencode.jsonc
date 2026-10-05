@@ -26,19 +26,6 @@
       "vercel": {
         "type": "remote",
         "url": "https://mcp.vercel.com"
-      },
-      "x": {
-        "type": "remote",
-        "url": "https://api.x.com/mcp",
-        "disabled": true,
-        "headers": {
-          "Authorization": "Bearer {env:X_BEARER_TOKEN}"
-        }
-      },
-      "x-docs": {
-        "type": "remote",
-        "url": "https://docs.x.com/mcp",
-        "disabled": true
       }
     }
   }
