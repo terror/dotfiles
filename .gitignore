@@ -13,6 +13,7 @@
 /etc/pi/agent/bin/
 /etc/pi/agent/crashes.json
 /etc/pi/agent/git/
+/etc/pi/agent/mcp-auth.json
 /etc/pi/agent/models-store.json
 /etc/pi/agent/npm/
 /etc/pi/agent/oauth.json
