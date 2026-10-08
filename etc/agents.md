@@ -97,6 +97,8 @@ let bar = foo.into_iter().collect::<Vec<u8>>();
 Testing
 -------
 
+Do not add tests until explicitly told to do so.
+
 Testing is white-box style. Write tests needed to exercise the implementation.
 Add only the minimum number of tests needed to cover new and changed code.
 
