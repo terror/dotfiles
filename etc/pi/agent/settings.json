@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.0.3",
+  "lastChangelogVersion": "1.1.0",
   "defaultProvider": "deepseek",
   "defaultModel": "deepseek-flash",
   "modelThinkingLevels": {
