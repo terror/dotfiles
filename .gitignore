@@ -21,6 +21,7 @@
 /etc/pi/agent/sessions/
 /etc/pi/agent/settings.json.bak.*
 /etc/pi/agent/tmp/
+/etc/pi/agent/web-search-cache/
 
 /etc/vim/black
 /etc/vim/plugged/*
