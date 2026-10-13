@@ -10,6 +10,7 @@
     "openai/gpt-6*"
   ],
   "hideThinkingBlock": true,
+  "collapseChangelog": true,
   "theme": "dark",
   "deviceId": "5b8a1616-bad1-4035-aabf-3b703a4d17f9",
   "packages": [
