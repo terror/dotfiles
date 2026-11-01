@@ -17,6 +17,7 @@
   "packages": [
     "git:github.com/terror/pi-prompt-history@master",
     "npm:@tintinweb/pi-subagents",
-    "npm:pi-web-access"
+    "npm:pi-web-access",
+    "git:github.com/terror/pi-statusline@master"
   ]
 }
