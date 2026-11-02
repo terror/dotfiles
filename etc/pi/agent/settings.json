@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.4.0",
+  "lastChangelogVersion": "1.5.0",
   "defaultProvider": "deepseek",
   "defaultModel": "deepseek-flash",
   "modelThinkingLevels": {
@@ -19,5 +19,9 @@
     "npm:@tintinweb/pi-subagents",
     "npm:pi-web-access",
     "git:github.com/terror/pi-statusline@master"
-  ]
+  ],
+  "extensionChangelogVersions": {
+    "{\"source\":\"npm:@tintinweb/pi-subagents\",\"scope\":\"user\"}": "0.22.1",
+    "{\"source\":\"npm:pi-web-access\",\"scope\":\"user\"}": "0.46.0"
+  }
 }
