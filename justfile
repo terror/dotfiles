@@ -7,12 +7,16 @@ alias c := check
 default:
   just --list
 
-all: codex rustup formulae crates tpm
+all: codex rustup formulae agent-browser crates tpm
 
 [group: 'dev']
 check:
   shellcheck bin/*
   stylua --check .
+
+[group: 'install']
+agent-browser:
+  agent-browser install
 
 [group: 'install']
 codex:

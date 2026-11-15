@@ -591,3 +591,4 @@ cask "vagrant"
 # Multiplayer code editor
 cask "zed"
 npm "@earendil-works/pi-coding-agent"
+npm "agent-browser"
