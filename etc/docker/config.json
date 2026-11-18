@@ -1,8 +1,0 @@
-{
-  "credsStore" : "desktop",
-  "experimental" : "disabled",
-  "auths" : {
-    "https://index.docker.io/v1/" : {}
-  },
-  "stackOrchestrator" : "swarm"
-}
