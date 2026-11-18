@@ -14,6 +14,7 @@
   },
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
+  "spinnerTipsEnabled": false,
   "attribution": {
     "commit": ""
   },
