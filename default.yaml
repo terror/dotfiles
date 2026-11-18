@@ -22,6 +22,7 @@
     ~/.bp: etc/bp
     ~/.brewfile: brew/Brewfile
     ~/.claude/CLAUDE.md: etc/agents.md
+    ~/.claude/settings.json: etc/claude/settings.json
     ~/.claude/skills/dotfiles: etc/claude/plugin
     ~/.codex/AGENTS.md: etc/agents.md
     ~/.config/alacritty/alacritty.toml: etc/alacritty.toml
