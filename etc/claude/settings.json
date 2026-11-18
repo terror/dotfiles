@@ -16,7 +16,8 @@
   "skipDangerousModePermissionPrompt": true,
   "spinnerTipsEnabled": false,
   "attribution": {
-    "commit": ""
+    "commit": "",
+    "pr": ""
   },
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_CODE_MODE": "1"
