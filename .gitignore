@@ -8,6 +8,8 @@
 
 /etc/configstore
 
+/etc/gh/hosts.yml
+
 /etc/pi/agent/*.lock/
 /etc/pi/agent/auth.json
 /etc/pi/agent/bin/
