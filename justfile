@@ -38,11 +38,11 @@ formulae:
 
 [group: 'install']
 rustup:
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  command -v rustup > /dev/null || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 [group: 'install']
 tpm:
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  test -d ~/.tmux/plugins/tpm || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 [group: 'dev']
 update-brewfile:

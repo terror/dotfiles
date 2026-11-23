@@ -38,6 +38,7 @@ CRATES: list[Crate] = [
   Crate("cargo-unused-features"),
   Crate("cargo-watch"),
   Crate("https://github.com/terror/typo", Source.GIT),
+  Crate("strew"),
   Crate("typos-cli"),
   Crate("vim-profiler"),
   Crate("zk-cli"),

@@ -28,6 +28,21 @@ jobs:
       - name: Check workflow
         run: ${{ steps.actionlint.outputs.executable }} -color
 
+  check-config:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install strew
+        run: |
+          curl -fsSL https://github.com/terror/strew/releases/download/0.1.0/strew-0.1.0-x86_64-unknown-linux-musl.tar.gz \
+            | tar xz -C "$RUNNER_TEMP" ./strew
+          echo "$RUNNER_TEMP" >> "$GITHUB_PATH"
+
+      - name: Check config
+        run: HOME="$(mktemp -d)" strew --dry-run
+
   check:
     runs-on: ubuntu-latest
 

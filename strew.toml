@@ -4,7 +4,7 @@ create = ["~/.cargo", "~/.config/git", "~/src", "~/tmp"]
 
 shell = [
   ["git submodule update --init --recursive", "Installing submodules"],
-  '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"',
+  'command -v brew > /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"',
   "brew install just",
   "just all",
 ]
@@ -46,7 +46,6 @@ shell = [
 "~/.pi" = "etc/pi"
 "~/.ripgreprc" = "etc/ripgreprc"
 "~/.skeleton" = "etc/skeleton"
-"~/.submodules" = "submodules"
 "~/.tmux.conf" = "etc/tmux.conf"
 "~/.vim" = "etc/vim"
 "~/.vimrc" = "etc/vimrc"
