@@ -2,7 +2,7 @@
 
 [![build](https://img.shields.io/github/actions/workflow/status/terror/dotfiles/ci.yaml?branch=master&style=flat&labelColor=1d1d1d&color=424242&logo=GitHub%20Actions&logoColor=white&label=build)](https://github.com/terror/dotfiles/actions/workflows/ci.yaml)
 
-My preferences for macOS. I use [dotbot](https://github.com/anishathalye/dotbot) to manage everything.
+My preferences for macOS. I use [strew](https://github.com/terror/strew) to manage everything.
 
 ![](./assets/neovim.png)
 
