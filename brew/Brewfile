@@ -203,9 +203,6 @@ brew "google-java-format"
 # Deliver Go binaries as fast and easily as possible
 brew "goreleaser"
 
-# Validating, recursive, caching DNS resolver
-brew "unbound"
-
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
 
@@ -350,6 +347,9 @@ brew "prettier"
 # Linter for prose
 brew "proselint"
 
+# Show ps output as a tree
+brew "pstree"
+
 # Fast static code analyzer & language server for Python
 brew "pylyzer"
 
@@ -363,7 +363,7 @@ brew "qemu"
 brew "qt"
 
 # Software environment for statistical computing
-brew "r"
+brew "r", link: false
 
 # Develop and deploy code with zero configuration
 brew "railway"
@@ -434,6 +434,9 @@ brew "typst"
 # Beautiful and reliable typst code formatter
 brew "typstyle"
 
+# Validating, recursive, caching DNS resolver
+brew "unbound"
+
 # Maintained ctags implementation
 brew "universal-ctags"
 
@@ -466,6 +469,9 @@ brew "yarn"
 
 # Programming language designed for robustness, optimality, and clarity
 brew "zig"
+
+# Programming language designed for robustness, optimality, and clarity
+brew "zig@0.15"
 
 # Find security issues in GitHub Actions setups
 brew "zizmor"
@@ -530,6 +536,9 @@ cask "blackhole-2ch"
 # Virtual Audio Driver
 cask "blackhole-64ch"
 
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+
 # Anthropic's official Claude AI desktop app
 cask "claude"
 
@@ -541,6 +550,9 @@ cask "codex"
 
 # Command-line agent for Cursor
 cask "cursor-cli"
+
+# Plugin-based AI agent desktop application
+cask "deepseek-harness"
 
 # Voice and text chat software
 cask "discord"
@@ -585,10 +597,16 @@ cask "slack"
 # Music streaming service
 cask "spotify"
 
+# Minimal GUI for AI code agents
+cask "t3-code"
+
 # Development environment
 cask "vagrant"
 
 # Multiplayer code editor
 cask "zed"
+
+# Gecko based web browser
+cask "zen"
 npm "@earendil-works/pi-coding-agent"
 npm "agent-browser"
