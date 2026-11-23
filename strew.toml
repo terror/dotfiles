@@ -1,0 +1,55 @@
+clean = ["~", "~/.cargo", "~/.config"]
+
+create = ["~/.cargo", "~/.config/git", "~/src", "~/tmp"]
+
+shell = [
+  ["git submodule update --init --recursive", "Installing submodules"],
+  '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"',
+  "brew install just",
+  "just all",
+]
+
+[link]
+"~/.aliases" = "etc/bash/aliases"
+"~/.bash_profile" = "etc/bash/bash_profile"
+"~/.bashrc" = "etc/bash/bashrc"
+"~/.bin" = "bin"
+"~/.bp" = "etc/bp"
+"~/.brewfile" = "brew/Brewfile"
+"~/.claude/CLAUDE.md" = "etc/agents.md"
+"~/.claude/settings.json" = "etc/claude/settings.json"
+"~/.claude/skills/dotfiles" = "etc/claude/plugin"
+"~/.codex/AGENTS.md" = "etc/agents.md"
+"~/.config/alacritty/alacritty.toml" = "etc/alacritty.toml"
+"~/.config/gitconfig" = "etc/gitconfig"
+"~/.config/htoprc" = "etc/htoprc"
+"~/.config/jj/config.toml" = "etc/jj.toml"
+"~/.config/kotomori" = "etc/kotomori"
+"~/.config/mise" = "etc/mise"
+"~/.config/fastfetch/config.jsonc" = "etc/fastfetch/config.jsonc"
+"~/.config/nvim" = "etc/nvim"
+"~/.config/opencode/cli.json" = "etc/opencode/cli.json"
+"~/.config/opencode/opencode.jsonc" = "etc/opencode/opencode.jsonc"
+"~/.config/opencode/themes/transparent.json" = "etc/opencode/themes/transparent.json"
+"~/.config/opencode/tui.json" = "etc/opencode/tui.json"
+"~/.config/ocs" = "etc/ocs"
+"~/.config/starship.toml" = "etc/starship.toml"
+"~/.config/wt/config.toml" = "etc/wt.toml"
+"~/.config/zed/settings.json" = "etc/zed/settings.json"
+"~/.functions" = "etc/bash/functions"
+"~/.gitconfig" = "etc/gitconfig"
+"~/.gitignore.global" = "etc/gitignore.global"
+"~/.haxornewsconfig" = "etc/haxornewsconfig"
+"~/.hushlogin" = "etc/hushlogin"
+"~/.macos" = "etc/macos"
+"~/.npmrc" = "etc/npmrc"
+"~/.pi" = "etc/pi"
+"~/.ripgreprc" = "etc/ripgreprc"
+"~/.skeleton" = "etc/skeleton"
+"~/.submodules" = "submodules"
+"~/.tmux.conf" = "etc/tmux.conf"
+"~/.vim" = "etc/vim"
+"~/.vimrc" = "etc/vimrc"
+"~/.vscode" = "etc/vscode"
+"~/.zsh" = "etc/zsh"
+"~/.zshrc" = "etc/zshrc"

@@ -2,5 +2,32 @@
 
 set -euo pipefail
 
-git submodule update --init --recursive .
-SHELL=sh ./submodules/dotbot/bin/dotbot -c default.yaml -v
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+version=0.1.0
+
+case "$(uname -sm)" in
+  'Darwin arm64') target=aarch64-apple-darwin ;;
+  'Darwin x86_64') target=x86_64-apple-darwin ;;
+  'Linux aarch64') target=aarch64-unknown-linux-musl ;;
+  'Linux x86_64') target=x86_64-unknown-linux-musl ;;
+  *)
+    echo "error: unsupported platform: $(uname -sm)" >&2
+    exit 1
+    ;;
+esac
+
+archive=strew-$version-$target.tar.gz
+url=https://github.com/terror/strew/releases/download/$version
+
+tmp=$(mktemp -d)
+trap 'rm -rf "$tmp"' EXIT
+
+curl -fsSL "$url/$archive" -o "$tmp/$archive"
+curl -fsSL "$url/SHA256SUMS" -o "$tmp/SHA256SUMS"
+
+(cd "$tmp" && grep " ./$archive\$" SHA256SUMS | shasum -a 256 -c -)
+
+tar xzf "$tmp/$archive" -C "$tmp"
+
+"$tmp/strew" --verbose

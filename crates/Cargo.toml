@@ -1,4 +1,0 @@
-[workspace]
-members = ["symlink"]
-resolver = "3"
-
