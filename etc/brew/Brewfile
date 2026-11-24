@@ -53,9 +53,6 @@ brew "aws-cdk"
 # Official Amazon AWS command-line interface
 brew "awscli"
 
-# Microsoft Azure CLI 2.0
-brew "azure-cli"
-
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 
@@ -530,6 +527,9 @@ cask "antigravity-cli"
 # Chromium based browser
 cask "arc"
 
+# Microsoft Azure CLI 2.0
+cask "azure-cli"
+
 # Virtual Audio Driver
 cask "blackhole-2ch"
 
@@ -608,5 +608,3 @@ cask "zed"
 
 # Gecko based web browser
 cask "zen"
-npm "@earendil-works/pi-coding-agent"
-npm "agent-browser"

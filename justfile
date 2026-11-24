@@ -7,7 +7,7 @@ alias c := check
 default:
   just --list
 
-all: codex rustup formulae agent-browser crates tpm
+all: codex rustup formulae mise agent-browser crates tpm
 
 [group: 'dev']
 check:
@@ -35,6 +35,10 @@ crates:
 [group: 'install']
 formulae:
   brew bundle install --file=etc/brew/Brewfile
+
+[group: 'install']
+mise:
+  mise install
 
 [group: 'install']
 rustup:

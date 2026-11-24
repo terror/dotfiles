@@ -1,5 +1,7 @@
 [tools]
 node = "latest"
+"npm:@earendil-works/pi-coding-agent" = "latest"
+"npm:agent-browser" = "latest"
 python = "3.12"
 
 [settings]
