@@ -34,7 +34,7 @@ crates:
 
 [group: 'install']
 formulae:
-  brew bundle install --file=brew/Brewfile
+  brew bundle install --file=etc/brew/Brewfile
 
 [group: 'install']
 rustup:
@@ -46,4 +46,4 @@ tpm:
 
 [group: 'dev']
 update-brewfile:
-  cd brew && brew dump
+  cd etc/brew && brew dump

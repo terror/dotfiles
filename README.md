@@ -9,7 +9,7 @@ My preferences for macOS. I use [strew](https://github.com/terror/strew) to mana
 ### ls /etc | less
 
 - [`bin`](https://github.com/terror/dotfiles/tree/master/bin): scripts
-- [`brewfile`](https://github.com/terror/dotfiles/blob/master/brew/brewfile): programs
+- [`brewfile`](https://github.com/terror/dotfiles/blob/master/etc/brew/Brewfile): programs
 - [`etc`](https://github.com/terror/dotfiles/tree/master/etc): various configuration files
 - [`functions`](https://github.com/terror/dotfiles/blob/master/etc/bash/functions): miscellaneous bash snippets
 - [`macos`](https://github.com/terror/dotfiles/blob/master/etc/macos): macos-specific settings
