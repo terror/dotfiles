@@ -4,7 +4,7 @@
 
 My preferences for macOS. I use [strew](https://github.com/terror/strew) to manage everything.
 
-![](./assets/neovim.png)
+<img width="1667" alt="dotfiles" src="screenshot.png" />
 
 ### ls /etc | less
 
