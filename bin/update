@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-require brew colour crates nvim rustup
+require brew colour crates nvim pi rustup
 
 colour cyan "==> Homebrew"
 brew evolve
@@ -15,6 +15,10 @@ crates
 
 colour cyan "==> Neovim plugins and language servers"
 nvim --headless "+Lazy! sync" "+MasonUpdate" +qa
+
+colour cyan "==> Pi"
+pi update
+pi update --extensions
 
 colour green ""
 colour green "All updates complete ✔"
