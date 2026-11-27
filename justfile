@@ -7,7 +7,7 @@ alias c := check
 default:
   just --list
 
-all: codex rustup formulae mise agent-browser crates tpm
+all: codex rustup nix formulae mise agent-browser crates tpm
 
 [group: 'dev']
 check:
@@ -39,6 +39,10 @@ formulae:
 [group: 'install']
 mise:
   mise install
+
+[group: 'install']
+nix:
+  command -v nix > /dev/null || curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 
 [group: 'install']
 rustup:
