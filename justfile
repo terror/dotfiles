@@ -33,6 +33,16 @@ crates:
   ./bin/crates
 
 [group: 'install']
+darwin: nix
+  #!/usr/bin/env bash
+  set -euo pipefail
+  if command -v darwin-rebuild > /dev/null; then
+    sudo darwin-rebuild switch --flake ./etc/nix-darwin
+  else
+    sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ./etc/nix-darwin
+  fi
+
+[group: 'install']
 formulae:
   brew bundle install --file=etc/brew/Brewfile
 
